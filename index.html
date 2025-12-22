@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA RON'S COFFEE BAY POS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; font-size: 2.5rem; margin: 20px 0; }
+        input, button { font-size: 1.8rem; padding: 15px; margin: 10px 0; width: 100%; border-radius: 10px; }
+        button { background: #d4a373; color: #000; border: none; cursor: pointer; }
+        #items { list-style: none; padding: 0; }
+        li { background: #111; padding: 15px; margin: 10px 0; border-radius: 10px; font-size: 1.6rem; }
+        #total { font-size: 2.5rem; text-align: center; margin: 20px 0; color: #d4a373; }
+        #login, #stockIn { text-align: center; margin-top: 50px; }
+        #pos { display: none; }
+        .stock-info { font-size: 1.4rem; color: #aaa; margin: 15px 0; text-align: center; }
+        .low-stock { color: #ff4444; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h1>PAPA RON'S COFFEE BAY</h1>
+
+    <div id="login">
+        <h2>Enter PIN to Start Sale</h2>
+        <input type="password" id="pin" placeholder="Your PIN" autofocus />
+        <button onclick="login()">Login for Sale</button>
+        <button onclick="stockInMode()">Stock In (No PIN)</button>
+    </div>
+
+    <div id="pos">
+        <button onclick="logout()">Logout</button>
+        <input type="text" id="barcode" placeholder="Scan or type barcode" autofocus />
+        <button onclick="addItem()">Add to Sale</button>
+        <button onclick="clearCart()">Clear Cart</button>
+        <button onclick="printReceipt()">Print Receipt & Pay</button>
+        <ul id="items"></ul>
+        <div id="total">Total: R0.00</div>
+        <div id="stockStatus" class="stock-info"></div>
+    </div>
+
+    <div id="stockIn" style="display:none;">
+        <h2>Stock In Mode</h2>
+        <button onclick="logout()">Back to Login</button>
+        <input type="text" id="stockBarcode" placeholder="Scan incoming stock" autofocus />
+        <div id="stockInStatus" class="stock-info"></div>
+    </div>
+
+    <!-- Sounds from your repo -->
+    <audio id="clickSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/click.wav" preload="auto"></audio>
+    <audio id="eatSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/eat.wav" preload="auto"></audio>
+    <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav" preload="auto"></audio>
+
+    <script>
+        // Play sounds
+        function playClick() { document.getElementById("clickSound").play().catch(() => {}); }
+        function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
+        function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
+
+        // Add click sound to all buttons
+        document.querySelectorAll('button').forEach(btn => btn.addEventListener('click', playClick));
+
+        // STAFF PINS
+        const STAFF = {
+            "1234": "Staff 1",
+            "5678": "Staff 2",
+            "9012": "Staff 3",
+            "3456": "Manager"
+            // Add more as needed
+        };
+
+        let currentPIN = "";
+        let currentStaffName = "";
+
+        // Load inventory from localStorage or use default
+        let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
+            // FOOD
+            "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0 },
+            "1002": { name: "HAWAIIAN PIZZA", price: 135, stock: 0, sold: 0 },
+            "1003": { name: "FLAMING SPARE RIB PIZZA", price: 150, stock: 0, sold: 0 },
+            "1004": { name: "CHEESE BURGER", price: 120, stock: 0, sold: 0 },
+            "1005": { name: "CHEESY STRIPS (5)", price: 50, stock: 0, sold: 0 },
+            "1006": { name: "BOERIE ROLL", price: 50, stock: 0, sold: 0 },
+            "1007": { name: "RUMP STEAK", price: 160, stock: 0, sold: 0 },
+            "1008": { name: "RIB RACK", price: 200, stock: 0, sold: 0 },
+            "1009": { name: "SCHNITZEL", price: 120, stock: 0, sold: 0 },
+            "1010": { name: "PREGO ROLL", price: 50, stock: 0, sold: 0 },
+            "1011": { name: "MUNCHIE PLATTER", price: 350, stock: 0, sold: 0 },
+            "1012": { name: "CHEESY POPS", price: 50, stock: 0, sold: 0 },
+            "1013": { name: "CHICKEN PERI NACHO", price: 160, stock: 0, sold: 0 },
+            "1014": { name: "WINGLETS 5", price: 60, stock: 0, sold: 0 },
+            "1015": { name: "WINGLETS 10", price: 100, stock: 0, sold: 0 },
+            "1016": { name: "PLATTER FOR 2", price: 350, stock: 0, sold: 0 },
+            "1017": { name: "BREAKFAST", price: 80, stock: 0, sold: 0 },
+            "1018": { name: "SIDE CHIPS", price: 20, stock: 0, sold: 0 },
+            "1019": { name: "SIDE SALAD", price: 20, stock: 0, sold: 0 },
+            "1020": { name: "GREEK SALAD", price: 20, stock: 0, sold: 0 },
+
+            // SOFT DRINKS
+            "2001": { name: "Coke 500ml", price: 15, stock: 0, sold: 0 },
+            "2002": { name: "Fanta 500ml", price: 15, stock: 0, sold: 0 },
+            "2003": { name: "Sprite 500ml", price: 15, stock: 0, sold: 0 },
+            "2004": { name: "Powerade 500ml", price: 15, stock: 0, sold: 0 },
+            "2005": { name: "Liquifruit 300ml", price: 15, stock: 0, sold: 0 },
+            "2006": { name: "Appletizer 300ml", price: 15, stock: 0, sold: 0 },
+            "2007": { name: "Mr Orange 300ml", price: 10, stock: 0, sold: 0 },
+            "2008": { name: "Stoney 500ml", price: 15, stock: 0, sold: 0 },
+            "2009": { name: "Tonic Water 200ml", price: 15, stock: 0, sold: 0 },
+            "2010": { name: "Dry Lemon 200ml", price: 15, stock: 0, sold: 0 },
+            "2011": { name: "Mineral Water 500ml", price: 10, stock: 0, sold: 0 },
+            "2012": { name: "Sparkling Water 500ml", price: 15, stock: 0, sold: 0 },
+            "2013": { name: "Mineral Water 1L", price: 15, stock: 0, sold: 0 },
+
+            // BEERS
+            "2101": { name: "Black Label 500ml", price: 30, stock: 0, sold: 0 },
+            "2102": { name: "Black Label 330ml", price: 30, stock: 0, sold: 0 },
+            "2103": { name: "Castle Lager 330ml", price: 30, stock: 0, sold: 0 },
+            "2104": { name: "Castle Light 330ml", price: 30, stock: 0, sold: 0 },
+            "2105": { name: "Windhoek 500ml", price: 30, stock: 0, sold: 0 },
+
+            // CIDERS & COOLERS
+            "2201": { name: "Hunters Dry 330ml", price: 35, stock: 0, sold: 0 },
+            "2202": { name: "Hunters Gold 330ml", price: 35, stock: 0, sold: 0 },
+            "2203": { name: "Smirnoff Ice 440ml", price: 35, stock: 0, sold: 0 },
+            "2204": { name: "Ruby Apple 275ml", price: 35, stock: 0, sold: 0 },
+            "2205": { name: "Flying Fish 500ml", price: 35, stock: 0, sold: 0 },
+            "2206": { name: "Savanna 330ml", price: 35, stock: 0, sold: 0 },
+            "2207": { name: "Corona Extra 355ml", price: 35, stock: 0, sold: 0 },
+            "2208": { name: "Extreme 330ml", price: 35, stock: 0, sold: 0 },
+            "2209": { name: "Sodaze 250ml", price: 60, stock: 0, sold: 0 },
+            "2210": { name: "Lucky Club 250ml", price: 70, stock: 0, sold: 0 }
+        };
+
+        // Save inventory on change
+        function saveInventory() {
+            localStorage.setItem('posInventory', JSON.stringify(inventory));
+        }
+
+        let cart = [];
+
+        function login() {
+            const pin = document.getElementById("pin").value.trim();
+            if (STAFF[pin]) {
+                currentPIN = pin;
+                currentStaffName = STAFF[pin];
+                document.getElementById("login").style.display = "none";
+                document.getElementById("pos").style.display = "block";
+                document.getElementById("barcode").focus();
+            } else {
+                alert("Invalid PIN");
+            }
+        }
+
+        function stockInMode() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("stockIn").style.display = "block";
+            document.getElementById("stockBarcode").focus();
+        }
+
+        function logout() {
+            cart = [];
+            updateCart();
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("stockIn").style.display = "none";
+            document.getElementById("login").style.display = "block";
+            document.getElementById("pin").value = "";
+            currentPIN = "";
+            currentStaffName = "";
+        }
+
+        function addItem() {
+            const code = document.getElementById("barcode").value.trim();
+            const item = inventory[code];
+            if (!item) {
+                alert("Item not found: " + code);
+                document.getElementById("barcode").value = "";
+                return;
+            }
+            if (item.stock <= 0) {
+                alert("OUT OF STOCK: " + item.name);
+                document.getElementById("barcode").value = "";
+                return;
+            }
+            cart.push({ ...item });
+            item.stock--;
+            item.sold++;
+            playEat();
+            saveInventory();
+            updateCart();
+            updateStockStatus(item);
+            document.getElementById("barcode").value = "";
+            document.getElementById("barcode").focus();
+        }
+
+        document.getElementById("stockBarcode").addEventListener("change", () => {
+            const code = document.getElementById("stockBarcode").value.trim();
+            const item = inventory[code];
+            if (item) {
+                item.stock++;
+                playSparkle();
+                saveInventory();
+                document.getElementById("stockInStatus").textContent = 
+                    item.name + " added — Stock: " + item.stock + " | Sold today: " + item.sold;
+            } else {
+                alert("Unknown barcode");
+            }
+            document.getElementById("stockBarcode").value = "";
+            document.getElementById("stockBarcode").focus();
+        });
+
+        function updateCart() {
+            const list = document.getElementById("items");
+            list.innerHTML = "";
+            let total = 0;
+            cart.forEach(it => {
+                total += it.price;
+                const li = document.createElement("li");
+                li.textContent = `\( {it.name} - R \){it.price} (Stock left: ${inventory[it.code].stock})`;
+                list.appendChild(li);
+            });
+            document.getElementById("total").textContent = "Total: R" + total.toFixed(2);
+        }
+
+        function updateStockStatus(item) {
+            let msg = `\( {item.name} — Stock: \){item.stock} | Sold today: ${item.sold}`;
+            if (item.stock < 5) msg += " ⚠️ LOW STOCK!";
+            document.getElementById("stockStatus").innerHTML = "<span class='low-stock'>" + msg + "</span>";
+        }
+
+        function clearCart() {
+            cart.forEach(it => {
+                inventory[it.code].stock++;
+                inventory[it.code].sold--;
+            });
+            saveInventory();
+            cart = [];
+            updateCart();
+            document.getElementById("stockStatus").textContent = "";
+        }
+
+        function printReceipt() {
+            if (cart.length === 0) return alert("Cart empty");
+
+            let receipt = "PAPA RON'S COFFEE BAY\n";
+            receipt += "============================\n";
+            receipt += new Date().toLocaleString() + "\n";
+            receipt += "Served by: " + currentStaffName + " (PIN: " + currentPIN + ")\n\n";
+
+            let total = 0;
+            cart.forEach(it => {
+                receipt += it.name.padEnd(25) + "R" + it.price.toFixed(2) + "\n";
+                total += it.price;
+            });
+
+            receipt += "============================\n";
+            receipt += "TOTAL: ".padEnd(25) + "R" + total.toFixed(2) + "\n";
+            receipt += "Thank you! Come again!\n\n\n";
+
+            const win = window.open('', '', 'width=600,height=600');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
+            win.document.close();
+            win.focus();
+            win.print();
+            win.close();
+
+            clearCart();
+        }
+
+        // Enter key adds item
+        document.getElementById("barcode").addEventListener("keyup", e => {
+            if (e.key === "Enter") addItem();
+        });
+
+        // Load on start
+        updateCart();
+    </script>
+</body>
+</html>
