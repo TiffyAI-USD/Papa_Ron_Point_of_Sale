@@ -79,7 +79,6 @@
         let currentStaffName = "";
 
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
-            // FOOD
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0 },
             "1002": { name: "HAWAIIAN PIZZA", price: 135, stock: 0, sold: 0 },
             "1003": { name: "FLAMING SPARE RIB PIZZA", price: 150, stock: 0, sold: 0 },
@@ -100,8 +99,6 @@
             "1018": { name: "SIDE CHIPS", price: 20, stock: 0, sold: 0 },
             "1019": { name: "SIDE SALAD", price: 20, stock: 0, sold: 0 },
             "1020": { name: "GREEK SALAD", price: 20, stock: 0, sold: 0 },
-
-            // SOFT DRINKS
             "2001": { name: "Coke 500ml", price: 15, stock: 0, sold: 0 },
             "2002": { name: "Fanta 500ml", price: 15, stock: 0, sold: 0 },
             "2003": { name: "Sprite 500ml", price: 15, stock: 0, sold: 0 },
@@ -115,15 +112,11 @@
             "2011": { name: "Mineral Water 500ml", price: 10, stock: 0, sold: 0 },
             "2012": { name: "Sparkling Water 500ml", price: 15, stock: 0, sold: 0 },
             "2013": { name: "Mineral Water 1L", price: 15, stock: 0, sold: 0 },
-
-            // BEERS
             "2101": { name: "Black Label 500ml", price: 30, stock: 0, sold: 0 },
             "2102": { name: "Black Label 330ml", price: 30, stock: 0, sold: 0 },
             "2103": { name: "Castle Lager 330ml", price: 30, stock: 0, sold: 0 },
             "2104": { name: "Castle Light 330ml", price: 30, stock: 0, sold: 0 },
             "2105": { name: "Windhoek 500ml", price: 30, stock: 0, sold: 0 },
-
-            // CIDERS & COOLERS
             "2201": { name: "Hunters Dry 330ml", price: 35, stock: 0, sold: 0 },
             "2202": { name: "Hunters Gold 330ml", price: 35, stock: 0, sold: 0 },
             "2203": { name: "Smirnoff Ice 440ml", price: 35, stock: 0, sold: 0 },
@@ -180,11 +173,11 @@
             const list = document.getElementById("inventoryList");
             list.innerHTML = "";
 
-            const sortedItems = Object.values(inventory).sort((a, b) => a.name.localeCompare(b.name));
+            const sorted = Object.values(inventory).sort((a, b) => a.name.localeCompare(b.name));
 
-            sortedItems.forEach(item => {
+            sorted.forEach(item => {
                 const li = document.createElement("li");
-                let text = `\( {item.name} — Stock: \){item.stock} | Sold today: ${item.sold}`;
+                let text = item.name + " — Stock: " + item.stock + " | Sold today: " + item.sold;
                 if (item.stock < 5) text += " ⚠️ LOW STOCK";
                 li.textContent = text;
                 list.appendChild(li);
@@ -253,7 +246,7 @@
         function updateStockStatus(item) {
             let msg = item.name + " — Stock: " + item.stock + " | Sold today: " + item.sold;
             if (item.stock < 5) msg += " ⚠️ LOW STOCK - REORDER!";
-            document.getElementById("stockStatus").innerHTML = "<span class='low-stock'>" + msg + "</span>";
+            document.getElementById("stockStatus").textContent = msg;
         }
 
         function clearCart() {
