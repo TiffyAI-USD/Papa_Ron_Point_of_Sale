@@ -57,24 +57,19 @@
         function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
         function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
 
-        // Add click sound to all buttons
         document.querySelectorAll('button').forEach(btn => btn.addEventListener('click', playClick));
 
-        // STAFF PINS
         const STAFF = {
             "1234": "Staff 1",
             "5678": "Staff 2",
             "9012": "Staff 3",
             "3456": "Manager"
-            // Add more as needed
         };
 
         let currentPIN = "";
         let currentStaffName = "";
 
-        // Load inventory from localStorage or use default
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
-            // FOOD
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0 },
             "1002": { name: "HAWAIIAN PIZZA", price: 135, stock: 0, sold: 0 },
             "1003": { name: "FLAMING SPARE RIB PIZZA", price: 150, stock: 0, sold: 0 },
@@ -95,8 +90,6 @@
             "1018": { name: "SIDE CHIPS", price: 20, stock: 0, sold: 0 },
             "1019": { name: "SIDE SALAD", price: 20, stock: 0, sold: 0 },
             "1020": { name: "GREEK SALAD", price: 20, stock: 0, sold: 0 },
-
-            // SOFT DRINKS
             "2001": { name: "Coke 500ml", price: 15, stock: 0, sold: 0 },
             "2002": { name: "Fanta 500ml", price: 15, stock: 0, sold: 0 },
             "2003": { name: "Sprite 500ml", price: 15, stock: 0, sold: 0 },
@@ -110,15 +103,11 @@
             "2011": { name: "Mineral Water 500ml", price: 10, stock: 0, sold: 0 },
             "2012": { name: "Sparkling Water 500ml", price: 15, stock: 0, sold: 0 },
             "2013": { name: "Mineral Water 1L", price: 15, stock: 0, sold: 0 },
-
-            // BEERS
             "2101": { name: "Black Label 500ml", price: 30, stock: 0, sold: 0 },
             "2102": { name: "Black Label 330ml", price: 30, stock: 0, sold: 0 },
             "2103": { name: "Castle Lager 330ml", price: 30, stock: 0, sold: 0 },
             "2104": { name: "Castle Light 330ml", price: 30, stock: 0, sold: 0 },
             "2105": { name: "Windhoek 500ml", price: 30, stock: 0, sold: 0 },
-
-            // CIDERS & COOLERS
             "2201": { name: "Hunters Dry 330ml", price: 35, stock: 0, sold: 0 },
             "2202": { name: "Hunters Gold 330ml", price: 35, stock: 0, sold: 0 },
             "2203": { name: "Smirnoff Ice 440ml", price: 35, stock: 0, sold: 0 },
@@ -131,7 +120,6 @@
             "2210": { name: "Lucky Club 250ml", price: 70, stock: 0, sold: 0 }
         };
 
-        // Save inventory on change
         function saveInventory() {
             localStorage.setItem('posInventory', JSON.stringify(inventory));
         }
@@ -181,7 +169,7 @@
                 document.getElementById("barcode").value = "";
                 return;
             }
-            cart.push({ ...item });
+            cart.push({ name: item.name, price: item.price, code: code });
             item.stock--;
             item.sold++;
             playEat();
@@ -215,15 +203,15 @@
             cart.forEach(it => {
                 total += it.price;
                 const li = document.createElement("li");
-                li.textContent = `\( {it.name} - R \){it.price} (Stock left: ${inventory[it.code].stock})`;
+                li.textContent = it.name + " - R" + it.price.toFixed(2) + " (Stock left: " + inventory[it.code].stock + ")";
                 list.appendChild(li);
             });
             document.getElementById("total").textContent = "Total: R" + total.toFixed(2);
         }
 
         function updateStockStatus(item) {
-            let msg = `\( {item.name} — Stock: \){item.stock} | Sold today: ${item.sold}`;
-            if (item.stock < 5) msg += " ⚠️ LOW STOCK!";
+            let msg = item.name + " — Stock: " + item.stock + " | Sold today: " + item.sold;
+            if (item.stock < 5) msg += " ⚠️ LOW STOCK - REORDER!";
             document.getElementById("stockStatus").innerHTML = "<span class='low-stock'>" + msg + "</span>";
         }
 
@@ -256,12 +244,17 @@
             receipt += "TOTAL: ".padEnd(25) + "R" + total.toFixed(2) + "\n";
             receipt += "Thank you! Come again!\n\n\n";
 
-            const win = window.open('', '', 'width=600,height=600');
-            win.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
-            win.document.close();
-            win.focus();
-            win.print();
-            win.close();
+            // Better print method - iframe
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentWindow.document;
+            doc.open();
+            doc.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
+            doc.close();
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+            setTimeout(() => document.body.removeChild(iframe), 1000);
 
             clearCart();
         }
