@@ -83,7 +83,6 @@
         let currentPIN = "";
         let currentStaffName = "";
 
-        // Load inventory and daily sales
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0 },
             "1002": { name: "HAWAIIAN PIZZA", price: 135, stock: 0, sold: 0 },
@@ -224,17 +223,25 @@
 
         function showZReading() {
             const totalSales = dailySales.cash + dailySales.card;
-            let report = `Z READING - ${dailySales.date}\n\n`;
-            report += `Total Sales: R${totalSales.toFixed(2)}\n`;
-            report += `Cash: R${dailySales.cash.toFixed(2)}\n`;
-            report += `Card: R${dailySales.card.toFixed(2)}\n\n`;
-            report += `Transactions: ${dailySales.transactions.length}\n\n`;
+            let report = "Z READING - " + dailySales.date + "\n\n";
+            report += "Total Sales: R" + totalSales.toFixed(2) + "\n";
+            report += "Cash: R" + dailySales.cash.toFixed(2) + "\n";
+            report += "Card: R" + dailySales.card.toFixed(2) + "\n\n";
+            report += "Transactions: " + dailySales.transactions.length + "\n\n";
             report += "Items sold today:\n";
             dailySales.transactions.forEach(t => {
-                report += `${t}\n`;
+                report += t + "\n";
             });
 
+            // Show in alert
             alert(report);
+
+            // Also open printable version
+            const printWin = window.open('', '_blank');
+            printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
+            printWin.document.close();
+            printWin.focus();
+            printWin.print();
         }
 
         function addItem() {
