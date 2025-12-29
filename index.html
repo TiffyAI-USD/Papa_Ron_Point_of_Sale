@@ -13,13 +13,15 @@
         li { background: #111; padding: 15px; margin: 10px 0; border-radius: 10px; font-size: 1.6rem; }
         #total { font-size: 2.5rem; text-align: center; margin: 20px 0; color: #d4a373; }
         #login, #stockIn, #inventoryView { text-align: center; margin-top: 50px; }
-        #pos, #inventoryView { display: none; }
+        #pos, #inventoryView, #multiplierPopup { display: none; }
         .stock-info { font-size: 1.4rem; color: #aaa; margin: 15px 0; text-align: center; }
         .low-stock { color: #ff4444; font-weight: bold; }
         #inventoryList { list-style: none; padding: 0; max-height: 70vh; overflow-y: auto; }
         #inventoryList li { background: #111; padding: 12px; margin: 8px 0; border-radius: 8px; font-size: 1.4rem; }
         .in-stock { color: #44ff44; }
         .low-stock-item { color: #ff4444; }
+        #multiplierPopup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 20px; width: 90%; max-width: 400px; z-index: 1000; box-shadow: 0 0 20px rgba(212,163,115,0.5); }
+        #multiplierPopup input { margin: 15px 0; text-align: center; }
     </style>
 </head>
 <body>
@@ -47,7 +49,7 @@
         <div id="stockStatus" class="stock-info"></div>
     </div>
 
-    <div id="stockIn" style="display:none;">
+    <div id="stockIn">
         <h2>Stock In Mode</h2>
         <button onclick="logout()">Back to Login</button>
         <input type="text" id="stockBarcode" placeholder="Scan incoming stock" autofocus />
@@ -58,6 +60,16 @@
         <h2>Current Inventory</h2>
         <button onclick="backToPOS()">Back to Sale</button>
         <ul id="inventoryList"></ul>
+    </div>
+
+    <!-- Multiplier Popup – THIS WAS MISSING -->
+    <div id="multiplierPopup">
+        <h2 id="popupItemName"></h2>
+        <p>Enter quantity (leave blank for 1 single)</p>
+        <input type="number" id="packsInput" placeholder="Packs (×6)" min="0" />
+        <input type="number" id="casesInput" placeholder="Cases (×24)" min="0" />
+        <button onclick="confirmMultiplier()">Confirm</button>
+        <button onclick="cancelMultiplier()">Cancel (add 1 single)</button>
     </div>
 
     <!-- Sounds from your repo -->
