@@ -65,11 +65,11 @@
     <!-- Multiplier Popup -->
     <div id="multiplierPopup">
         <h2 id="popupItemName"></h2>
-        <p>Enter quantity (leave blank for 1)</p>
-        <input type="number" id="packsInput" placeholder="Packs (6 units)" min="0" />
-        <input type="number" id="casesInput" placeholder="Cases (24 units)" min="0" />
+        <p>Enter quantity (leave blank for 1 single)</p>
+        <input type="number" id="packsInput" placeholder="Packs (×6)" min="0" />
+        <input type="number" id="casesInput" placeholder="Cases (×24)" min="0" />
         <button onclick="confirmMultiplier()">Confirm</button>
-        <button onclick="cancelMultiplier()">Cancel (add 1)</button>
+        <button onclick="cancelMultiplier()">Cancel (add 1 single)</button>
     </div>
 
     <!-- Sounds from your repo -->
@@ -312,13 +312,19 @@
         function confirmMultiplier() {
             const packs = parseInt(document.getElementById("packsInput").value) || 0;
             const cases = parseInt(document.getElementById("casesInput").value) || 0;
-            const quantity = 1 + (packs * 6) + (cases * 24);
+            const quantity = (packs * 6) + (cases * 24);
             const item = inventory[pendingStockCode];
-            item.stock += quantity;
+            if (quantity === 0) {
+                item.stock += 1; // both blank = single
+                quantityAdded = 1;
+            } else {
+                item.stock += quantity;
+                quantityAdded = quantity;
+            }
             playSparkle();
             saveAll();
             document.getElementById("stockInStatus").textContent = 
-                item.name + " added " + quantity + " units — Stock: " + item.stock + " | Sold today: " + item.sold;
+                item.name + " added " + quantityAdded + " units — Stock: " + item.stock + " | Sold today: " + item.sold;
             document.getElementById("multiplierPopup").style.display = "none";
             document.getElementById("stockBarcode").focus();
         }
