@@ -313,6 +313,8 @@
                 report += "\n";
             });
 
+            alert(report); // Show in alert for quick check
+
             const printWin = window.open('', '_blank');
             printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
             printWin.document.close();
@@ -559,6 +561,7 @@
             cart = [];
             updateCart();
             document.getElementById("stockStatus").textContent = "";
+            createNewTransaction(); // Start new after payment
         }
 
         // Enter key adds item
@@ -567,7 +570,8 @@
         });
 
         // Load on start
-        updateCart();
+        if (transactions.length === 0) createNewTransaction();
+        updateUI();
     </script>
 </body>
 </html>
