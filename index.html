@@ -315,11 +315,17 @@
 
             alert(report); // Quick check
 
-            const printWin = window.open('', '_blank');
-            printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
-            printWin.document.close();
-            printWin.focus();
-            printWin.print();
+            // Direct iframe print (more reliable)
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentWindow.document;
+            doc.open();
+            doc.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
+            doc.close();
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+            setTimeout(() => document.body.removeChild(iframe), 2000);
         }
 
         function showTransactions() {
@@ -550,11 +556,17 @@
             }
             receipt += "Thank you! Come Again!\n\n\n";
 
-            const printWin = window.open('', '_blank');
-            printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
-            printWin.document.close();
-            printWin.focus();
-            printWin.print();
+            // Reliable print using iframe
+            const iframe = document.createElement('iframe');
+            iframe.style.display = 'none';
+            document.body.appendChild(iframe);
+            const doc = iframe.contentWindow.document;
+            doc.open();
+            doc.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
+            doc.close();
+            iframe.contentWindow.focus();
+            iframe.contentWindow.print();
+            setTimeout(() => document.body.removeChild(iframe), 3000); // Clean up after print dialog
         }
 
         function completeSale() {
