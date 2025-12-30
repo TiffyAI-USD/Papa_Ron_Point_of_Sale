@@ -49,7 +49,7 @@
         <button onclick="printPreview()">Print Preview (Kitchen & Bar Tabs)</button>
         <button onclick="payCash()">Cash Payment</button>
         <button onclick="payCard()">Card Payment</button>
-        <h3>Current Transaction: <span id="currentTransNum">1</span></h3>
+        <h3>Current Transaction: <span id="currentTransNum">1</span> <span id="transStatus"></span></h3>
         <ul id="items"></ul>
         <div id="total">Total: R0.00</div>
         <div id="stockStatus" class="stock-info"></div>
@@ -69,7 +69,7 @@
     </div>
 
     <div id="transactionsView">
-        <h2>Active Transactions</h2>
+        <h2>Transactions</h2>
         <button onclick="backToPOS()">Back to Sale</button>
         <div id="transList"></div>
     </div>
@@ -176,33 +176,55 @@
             "2210": { name: "Lucky Club 250ml", price: 70, stock: 0, sold: 0, category: "drink" }
         };
 
+        let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+        let currentTransIndex = -1;
+
         let dailySales = JSON.parse(localStorage.getItem('dailySales')) || {
             date: new Date().toDateString(),
             cash: 0,
-            card: 0,
-            transactions: []
+            card: 0
         };
 
         if (dailySales.date !== new Date().toDateString()) {
-            dailySales = {
-                date: new Date().toDateString(),
-                cash: 0,
-                card: 0,
-                transactions: []
-            };
+            dailySales = { date: new Date().toDateString(), cash: 0, card: 0 };
             localStorage.setItem('dailySales', JSON.stringify(dailySales));
         }
 
         function saveAll() {
             localStorage.setItem('posInventory', JSON.stringify(inventory));
+            localStorage.setItem('transactions', JSON.stringify(transactions));
             localStorage.setItem('dailySales', JSON.stringify(dailySales));
         }
 
         let cart = [];
 
-        // Multiplier variables
-        let pendingStockCode = "";
-        let pendingItemName = "";
+        function createNewTransaction() {
+            const trans = {
+                id: transactions.length + 1,
+                items: [],
+                total: 0,
+                status: "active",
+                timestamp: new Date().toLocaleString(),
+                staff: currentStaffName
+            };
+            transactions.push(trans);
+            currentTransIndex = transactions.length - 1;
+            cart = trans.items;
+            saveAll();
+            updateUI();
+        }
+
+        function loadTransaction(index) {
+            currentTransIndex = index;
+            cart = transactions[index].items;
+            updateUI();
+        }
+
+        function updateUI() {
+            document.getElementById("currentTransNum").textContent = currentTransIndex === -1 ? "None" : transactions[currentTransIndex].id;
+            document.getElementById("transStatus").textContent = currentTransIndex === -1 ? "" : transactions[currentTransIndex].status === "active" ? "(Active)" : "(Paid)";
+            updateCart();
+        }
 
         function login() {
             const pin = document.getElementById("pin").value.trim();
@@ -211,6 +233,11 @@
                 currentStaffName = STAFF[pin];
                 document.getElementById("login").style.display = "none";
                 document.getElementById("pos").style.display = "block";
+                if (transactions.length === 0 || transactions[transactions.length - 1].status === "paid") {
+                    createNewTransaction();
+                } else {
+                    loadTransaction(transactions.length - 1);
+                }
                 document.getElementById("barcode").focus();
             } else {
                 alert("Invalid PIN");
@@ -229,6 +256,7 @@
             document.getElementById("pos").style.display = "none";
             document.getElementById("stockIn").style.display = "none";
             document.getElementById("inventoryView").style.display = "none";
+            document.getElementById("transactionsView").style.display = "none";
             document.getElementById("multiplierPopup").style.display = "none";
             document.getElementById("tenderPopup").style.display = "none";
             document.getElementById("login").style.display = "block";
@@ -265,6 +293,7 @@
 
         function backToPOS() {
             document.getElementById("inventoryView").style.display = "none";
+            document.getElementById("transactionsView").style.display = "none";
             document.getElementById("pos").style.display = "block";
             document.getElementById("barcode").focus();
         }
@@ -275,10 +304,11 @@
             report += "Total Sales: R" + totalSales.toFixed(2) + "\n";
             report += "Cash: R" + dailySales.cash.toFixed(2) + "\n";
             report += "Card: R" + dailySales.card.toFixed(2) + "\n\n";
-            report += "Transactions: " + dailySales.transactions.length + "\n\n";
-            report += "Items sold today:\n";
-            dailySales.transactions.forEach(t => {
-                report += t + "\n";
+            report += "Transactions (" + transactions.length + "):\n";
+            transactions.forEach(t => {
+                report += `Transaction ${t.id} - \( {t.status.toUpperCase()} - R \){t.total.toFixed(2)} - ${t.timestamp} - ${t.staff}\n`;
+                t.items.forEach(it => report += "  - " + it.name + " R" + it.price.toFixed(2) + "\n");
+                report += "\n";
             });
 
             const printWin = window.open('', '_blank');
@@ -286,6 +316,31 @@
             printWin.document.close();
             printWin.focus();
             printWin.print();
+        }
+
+        function showTransactions() {
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("transactionsView").style.display = "block";
+            const list = document.getElementById("transList");
+            list.innerHTML = "";
+            transactions.forEach((trans, i) => {
+                const btn = document.createElement("button");
+                btn.className = "transaction-btn";
+                btn.textContent = `Transaction ${trans.id} - ${trans.status === "active" ? "Active" : "Paid"}`;
+                btn.classList.add(trans.status === "active" ? "active-trans" : "paid-trans");
+                btn.onclick = () => {
+                    loadTransaction(i);
+                    backToPOS();
+                };
+                list.appendChild(btn);
+            });
+            const newBtn = document.createElement("button");
+            newBtn.textContent = "New Transaction";
+            newBtn.onclick = () => {
+                createNewTransaction();
+                backToPOS();
+            };
+            list.appendChild(newBtn);
         }
 
         function addItem() {
@@ -312,7 +367,7 @@
             document.getElementById("barcode").focus();
         }
 
-        // Stock In with multiplier – Enter key
+        // Stock In with multiplier
         document.getElementById("stockBarcode").addEventListener("keyup", e => {
             if (e.key === "Enter") {
                 const code = document.getElementById("stockBarcode").value.trim();
@@ -388,33 +443,41 @@
             document.getElementById("stockStatus").textContent = "";
         }
 
-        function printReceipt(tender = 0, change = 0) {
+        function printPreview() {
             if (cart.length === 0) return alert("Cart empty");
 
-            let receipt = "PAPA RON'S COFFEE BAY\n";
-            receipt += "============================\n";
-            receipt += new Date().toLocaleString() + "\n";
-            receipt += "Served by: " + currentStaffName + " (PIN: " + currentPIN + ")\n\n";
+            const now = new Date().toLocaleString();
+            const transId = currentTransIndex === -1 ? "N/A" : transactions[currentTransIndex].id;
 
-            let total = 0;
+            let kitchen = "KITCHEN TAB - Transaction " + transId + "\n";
+            kitchen += now + "\n";
+            kitchen += "Served by: " + currentStaffName + "\n\n";
+            let hasFood = false;
             cart.forEach(it => {
-                receipt += it.name.padEnd(25) + "R" + it.price.toFixed(2) + "\n";
-                total += it.price;
+                if (inventory[it.code].category === "food") {
+                    kitchen += it.name + " - R" + it.price.toFixed(2) + "\n";
+                    hasFood = true;
+                }
             });
+            if (!hasFood) kitchen += "No food items\n";
 
-            receipt += "============================\n";
-            receipt += "TOTAL: ".padEnd(25) + "R" + total.toFixed(2) + "\n";
-            if (tender > 0) {
-                receipt += "Tendered: ".padEnd(25) + "R" + tender.toFixed(2) + "\n";
-                receipt += "Change: ".padEnd(25) + "R" + change.toFixed(2) + "\n";
-            }
-            receipt += "Thank you! Come Again!\n\n\n";
+            let bar = "BAR TAB - Transaction " + transId + "\n";
+            bar += now + "\n";
+            bar += "Served by: " + currentStaffName + "\n\n";
+            let hasDrink = false;
+            cart.forEach(it => {
+                if (inventory[it.code].category === "drink") {
+                    bar += it.name + " - R" + it.price.toFixed(2) + "\n";
+                    hasDrink = true;
+                }
+            });
+            if (!hasDrink) bar += "No drink items\n";
 
-            const printWin = window.open('', '_blank');
-            printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
-            printWin.document.close();
-            printWin.focus();
-            printWin.print();
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + kitchen + '\n\n---\n\n' + bar + '</pre>');
+            win.document.close();
+            win.focus();
+            win.print();
         }
 
         function payCash() {
@@ -459,6 +522,35 @@
             printReceipt();
             alert("Card payment received!");
             completeSale();
+        }
+
+        function printReceipt(tender = 0, change = 0) {
+            if (cart.length === 0) return alert("Cart empty");
+
+            let receipt = "PAPA RON'S COFFEE BAY\n";
+            receipt += "============================\n";
+            receipt += new Date().toLocaleString() + "\n";
+            receipt += "Served by: " + currentStaffName + " (PIN: " + currentPIN + ")\n\n";
+
+            let total = 0;
+            cart.forEach(it => {
+                receipt += it.name.padEnd(25) + "R" + it.price.toFixed(2) + "\n";
+                total += it.price;
+            });
+
+            receipt += "============================\n";
+            receipt += "TOTAL: ".padEnd(25) + "R" + total.toFixed(2) + "\n";
+            if (tender > 0) {
+                receipt += "Tendered: ".padEnd(25) + "R" + tender.toFixed(2) + "\n";
+                receipt += "Change: ".padEnd(25) + "R" + change.toFixed(2) + "\n";
+            }
+            receipt += "Thank you! Come Again!\n\n\n";
+
+            const printWin = window.open('', '_blank');
+            printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
+            printWin.document.close();
+            printWin.focus();
+            printWin.print();
         }
 
         function completeSale() {
