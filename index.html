@@ -318,21 +318,12 @@
                 });
                 report += "\n";
             });
+            report += "\nPress Ctrl+P (or Cmd+P on Mac) to print this report.";
 
-            alert(report);
-
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            const doc = iframe.contentWindow.document;
-            doc.open();
-            doc.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
-            doc.close();
-            iframe.contentWindow.focus();
-            setTimeout(() => {
-                iframe.contentWindow.print();
-                setTimeout(() => document.body.removeChild(iframe), 2000);
-            }, 500);
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + report + '</pre>');
+            win.document.close();
+            win.focus();
         }
 
         function showTransactions() {
@@ -408,7 +399,7 @@
         });
 
         document.getElementById("stockBarcode").addEventListener("input", function() {
-            if (this.value.length > 8) { // typical barcode length
+            if (this.value.length > 8) {
                 processStockInput();
             }
         });
