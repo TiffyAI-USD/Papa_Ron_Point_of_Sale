@@ -304,10 +304,12 @@
             report += "Total Sales: R" + totalSales.toFixed(2) + "\n";
             report += "Cash: R" + dailySales.cash.toFixed(2) + "\n";
             report += "Card: R" + dailySales.card.toFixed(2) + "\n\n";
-            report += "Transactions (" + transactions.length + "):\n";
+            report += "Transactions (" + transactions.length + "):\n\n";
             transactions.forEach(t => {
                 report += `Transaction ${t.id} - \( {t.status.toUpperCase()} - R \){t.total.toFixed(2)} - ${t.timestamp} - ${t.staff}\n`;
-                t.items.forEach(it => report += "  - " + it.name + " R" + it.price.toFixed(2) + "\n");
+                t.items.forEach(it => {
+                    report += `  - \( {it.name} R \){it.price.toFixed(2)}\n`;
+                });
                 report += "\n";
             });
 
