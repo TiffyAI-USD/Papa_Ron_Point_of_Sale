@@ -29,6 +29,7 @@
         #stockInputRow { display: flex; gap: 10px; }
         #stockInputRow input { flex: 1; }
         #stockInputRow button { flex: 0 0 auto; width: auto; }
+        #printReceiptBtn { background: #ff9800; color: white; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -52,6 +53,7 @@
         <button onclick="printPreview()">Print Preview (Kitchen & Bar Tabs)</button>
         <button onclick="payCash()">Cash Payment</button>
         <button onclick="payCard()">Card Payment</button>
+        <button id="printReceiptBtn" onclick="printLastReceipt()" style="display:none;">Print Last Receipt</button>
         <h3>Current Transaction: <span id="currentTransNum">1</span> <span id="transStatus"></span></h3>
         <ul id="items"></ul>
         <div id="total">Total: R0.00</div>
@@ -122,6 +124,7 @@
 
         let currentPIN = "";
         let currentStaffName = "";
+        let lastReceiptContent = ""; // Store last receipt for reprint
 
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
@@ -521,7 +524,9 @@
             dailySales.cash += total;
             dailySales.transactions.push("Cash sale R" + total.toFixed(2) + " (Tender R" + tender.toFixed(2) + ", Change R" + change.toFixed(2) + ") - " + cart.map(function(it) { return it.name; }).join(", "));
             saveAll();
-            printReceipt(tender, change);
+            generateReceipt(tender, change);
+            printLastReceipt(); // Auto open print tab
+            document.getElementById("printReceiptBtn").style.display = "block"; // Show reprint button
             document.getElementById("tenderPopup").style.display = "none";
             alert("Cash payment received! Change: R" + change.toFixed(2));
             completeSale();
@@ -537,14 +542,14 @@
             dailySales.card += total;
             dailySales.transactions.push("Card sale R" + total.toFixed(2) + " - " + cart.map(function(it) { return it.name; }).join(", "));
             saveAll();
-            printReceipt();
+            generateReceipt();
+            printLastReceipt(); // Auto open print tab
+            document.getElementById("printReceiptBtn").style.display = "block"; // Show reprint button
             alert("Card payment received!");
             completeSale();
         }
 
-        function printReceipt(tender = 0, change = 0) {
-            if (cart.length === 0) return alert("Cart empty");
-
+        function generateReceipt(tender = 0, change = 0) {
             let receipt = "PAPA RON'S COFFEE BAY\n";
             receipt += "============================\n";
             receipt += new Date().toLocaleString() + "\n";
@@ -565,8 +570,14 @@
             receipt += "Thank you! Come Again!\n\n\n";
             receipt += "Press Ctrl+P (or Cmd+P on Mac) to print this receipt.";
 
+            lastReceiptContent = receipt;
+        }
+
+        function printLastReceipt() {
+            if (lastReceiptContent === "") return alert("No recent receipt to print");
+
             const win = window.open('', '_blank');
-            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + receipt + '</pre>');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + lastReceiptContent + '</pre>');
             win.document.close();
             win.focus();
         }
