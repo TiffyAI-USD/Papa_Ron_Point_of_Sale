@@ -13,15 +13,16 @@
         li { background: #111; padding: 15px; margin: 10px 0; border-radius: 10px; font-size: 1.6rem; }
         #total { font-size: 2.5rem; text-align: center; margin: 20px 0; color: #d4a373; }
         #login, #stockIn, #inventoryView { text-align: center; margin-top: 50px; }
-        #pos, #inventoryView, #multiplierPopup { display: none; }
+        #pos, #inventoryView, #multiplierPopup, #tenderPopup { display: none; }
         .stock-info { font-size: 1.4rem; color: #aaa; margin: 15px 0; text-align: center; }
         .low-stock { color: #ff4444; font-weight: bold; }
         #inventoryList { list-style: none; padding: 0; max-height: 70vh; overflow-y: auto; }
         #inventoryList li { background: #111; padding: 12px; margin: 8px 0; border-radius: 8px; font-size: 1.4rem; }
         .in-stock { color: #44ff44; }
         .low-stock-item { color: #ff4444; }
-        #multiplierPopup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 20px; width: 90%; max-width: 400px; z-index: 1000; box-shadow: 0 0 20px rgba(212,163,115,0.5); }
-        #multiplierPopup input { margin: 15px 0; text-align: center; }
+        #multiplierPopup, #tenderPopup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 20px; width: 90%; max-width: 400px; z-index: 1000; box-shadow: 0 0 20px rgba(212,163,115,0.5); }
+        #multiplierPopup input, #tenderPopup input { margin: 15px 0; text-align: center; }
+        #tenderResult { font-size: 2rem; color: #44ff44; text-align: center; margin: 10px 0; }
     </style>
 </head>
 <body>
@@ -62,7 +63,7 @@
         <ul id="inventoryList"></ul>
     </div>
 
-    <!-- Multiplier Popup -->
+    <!-- Multiplier Popup for Stock In -->
     <div id="multiplierPopup">
         <h2 id="popupItemName"></h2>
         <p>Enter quantity (leave blank for 1 single)</p>
@@ -72,13 +73,23 @@
         <button onclick="cancelMultiplier()">Cancel (add 1 single)</button>
     </div>
 
+    <!-- Tender Popup for Cash -->
+    <div id="tenderPopup">
+        <h2>Cash Tender</h2>
+        <p>Enter amount customer is paying with (R)</p>
+        <input type="number" id="tenderAmount" placeholder="e.g. 100" min="0" step="0.01" autofocus />
+        <div id="tenderResult"></div>
+        <button onclick="confirmTender()">Confirm Payment</button>
+        <button onclick="cancelTender()">Cancel</button>
+    </div>
+
     <!-- Sounds -->
     <audio id="clickSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/click.wav" preload="auto"></audio>
     <audio id="eatSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/eat.wav" preload="auto"></audio>
     <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav" preload="auto"></audio>
 
     <script>
-        // Play sounds
+        // Sounds
         function playClick() { document.getElementById("clickSound").play().catch(() => {}); }
         function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
         function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
@@ -208,6 +219,7 @@
             document.getElementById("stockIn").style.display = "none";
             document.getElementById("inventoryView").style.display = "none";
             document.getElementById("multiplierPopup").style.display = "none";
+            document.getElementById("tenderPopup").style.display = "none";
             document.getElementById("login").style.display = "block";
             document.getElementById("pin").value = "";
             currentPIN = "";
@@ -289,7 +301,7 @@
             document.getElementById("barcode").focus();
         }
 
-        // Stock In with multiplier – fixed with keyup
+        // Stock In with multiplier – Enter key
         document.getElementById("stockBarcode").addEventListener("keyup", e => {
             if (e.key === "Enter") {
                 const code = document.getElementById("stockBarcode").value.trim();
@@ -313,7 +325,7 @@
             const packs = parseInt(document.getElementById("packsInput").value) || 0;
             const cases = parseInt(document.getElementById("casesInput").value) || 0;
             let quantity = (packs * 6) + (cases * 24);
-            if (quantity === 0) quantity = 1; // blank = single
+            if (quantity === 0) quantity = 1;
             const item = inventory[pendingStockCode];
             item.stock += quantity;
             playSparkle();
@@ -393,12 +405,34 @@
         function payCash() {
             if (cart.length === 0) return alert("Cart empty");
             const total = cart.reduce((sum, it) => sum + it.price, 0);
+            document.getElementById("tenderPopup").style.display = "block";
+            document.getElementById("tenderAmount").value = total.toFixed(2);
+            document.getElementById("tenderAmount").focus();
+            document.getElementById("tenderResult").textContent = "";
+            window.pendingTotal = total; // Store total for tender
+        }
+
+        function confirmTender() {
+            const tender = parseFloat(document.getElementById("tenderAmount").value) || 0;
+            const total = window.pendingTotal;
+            if (tender < total) {
+                document.getElementById("tenderResult").textContent = "Not enough – needs at least R" + total.toFixed(2);
+                return;
+            }
+            const change = tender - total;
+            document.getElementById("tenderResult").textContent = "Change: R" + change.toFixed(2);
+
             dailySales.cash += total;
-            dailySales.transactions.push(`Cash sale R${total.toFixed(2)} - ${cart.map(it => it.name).join(", ")}`);
+            dailySales.transactions.push(`Cash sale R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)}, Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`);
             saveAll();
             printReceipt();
-            alert("Cash payment received!");
+            alert("Cash payment received! Change: R" + change.toFixed(2));
+            document.getElementById("tenderPopup").style.display = "none";
             completeSale();
+        }
+
+        function cancelTender() {
+            document.getElementById("tenderPopup").style.display = "none";
         }
 
         function payCard() {
