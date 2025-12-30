@@ -305,15 +305,15 @@
             report += "Cash: R" + dailySales.cash.toFixed(2) + "\n";
             report += "Card: R" + dailySales.card.toFixed(2) + "\n\n";
             report += "Transactions (" + transactions.length + "):\n\n";
-            transactions.forEach(t => {
-                report += `Transaction ${t.id} - \( {t.status.toUpperCase()} - R \){t.total.toFixed(2)} - ${t.timestamp} - ${t.staff}\n`;
-                t.items.forEach(it => {
-                    report += `  - \( {it.name} R \){it.price.toFixed(2)}\n`;
+            transactions.forEach(function(t) {
+                report += "Transaction " + t.id + " - " + t.status.toUpperCase() + " - R" + t.total.toFixed(2) + " - " + t.timestamp + " - " + t.staff + "\n";
+                t.items.forEach(function(it) {
+                    report += "  - " + it.name + " R" + it.price.toFixed(2) + "\n";
                 });
                 report += "\n";
             });
 
-            alert(report); // For quick check
+            alert(report); // Quick check
 
             const printWin = window.open('', '_blank');
             printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
@@ -327,12 +327,12 @@
             document.getElementById("transactionsView").style.display = "block";
             const list = document.getElementById("transList");
             list.innerHTML = "";
-            transactions.forEach((trans, i) => {
+            transactions.forEach(function(trans, i) {
                 const btn = document.createElement("button");
                 btn.className = "transaction-btn";
-                btn.textContent = `Transaction ${trans.id} - ${trans.status === "active" ? "Active" : "Paid"}`;
+                btn.textContent = "Transaction " + trans.id + " - " + (trans.status === "active" ? "Active" : "Paid");
                 btn.classList.add(trans.status === "active" ? "active-trans" : "paid-trans");
-                btn.onclick = () => {
+                btn.onclick = function() {
                     loadTransaction(i);
                     backToPOS();
                 };
@@ -340,7 +340,7 @@
             });
             const newBtn = document.createElement("button");
             newBtn.textContent = "New Transaction";
-            newBtn.onclick = () => {
+            newBtn.onclick = function() {
                 createNewTransaction();
                 backToPOS();
             };
@@ -372,7 +372,7 @@
         }
 
         // Stock In with multiplier
-        document.getElementById("stockBarcode").addEventListener("keyup", e => {
+        document.getElementById("stockBarcode").addEventListener("keyup", function(e) {
             if (e.key === "Enter") {
                 const code = document.getElementById("stockBarcode").value.trim();
                 const item = inventory[code];
@@ -421,7 +421,7 @@
             const list = document.getElementById("items");
             list.innerHTML = "";
             let total = 0;
-            cart.forEach(it => {
+            cart.forEach(function(it) {
                 total += it.price;
                 const li = document.createElement("li");
                 li.textContent = it.name + " - R" + it.price.toFixed(2) + " (Stock left: " + inventory[it.code].stock + ")";
@@ -437,7 +437,7 @@
         }
 
         function clearCart() {
-            cart.forEach(it => {
+            cart.forEach(function(it) {
                 inventory[it.code].stock++;
                 inventory[it.code].sold--;
             });
@@ -457,7 +457,7 @@
             kitchen += now + "\n";
             kitchen += "Served by: " + currentStaffName + "\n\n";
             let hasFood = false;
-            cart.forEach(it => {
+            cart.forEach(function(it) {
                 if (inventory[it.code].category === "food") {
                     kitchen += it.name + " - R" + it.price.toFixed(2) + "\n";
                     hasFood = true;
@@ -469,7 +469,7 @@
             bar += now + "\n";
             bar += "Served by: " + currentStaffName + "\n\n";
             let hasDrink = false;
-            cart.forEach(it => {
+            cart.forEach(function(it) {
                 if (inventory[it.code].category === "drink") {
                     bar += it.name + " - R" + it.price.toFixed(2) + "\n";
                     hasDrink = true;
@@ -486,7 +486,7 @@
 
         function payCash() {
             if (cart.length === 0) return alert("Cart empty");
-            const total = cart.reduce((sum, it) => sum + it.price, 0);
+            const total = cart.reduce(function(sum, it) { return sum + it.price; }, 0);
             document.getElementById("tenderTotal").textContent = total.toFixed(2);
             document.getElementById("tenderPopup").style.display = "block";
             document.getElementById("tenderAmount").value = "";
@@ -505,7 +505,7 @@
             const change = tender - total;
             document.getElementById("tenderResult").textContent = "Change: R" + change.toFixed(2);
             dailySales.cash += total;
-            dailySales.transactions.push(`Cash sale R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)}, Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`);
+            dailySales.transactions.push("Cash sale R" + total.toFixed(2) + " (Tender R" + tender.toFixed(2) + ", Change R" + change.toFixed(2) + ") - " + cart.map(function(it) { return it.name; }).join(", "));
             saveAll();
             printReceipt(tender, change);
             document.getElementById("tenderPopup").style.display = "none";
@@ -519,9 +519,9 @@
 
         function payCard() {
             if (cart.length === 0) return alert("Cart empty");
-            const total = cart.reduce((sum, it) => sum + it.price, 0);
+            const total = cart.reduce(function(sum, it) { return sum + it.price; }, 0);
             dailySales.card += total;
-            dailySales.transactions.push(`Card sale R${total.toFixed(2)} - ${cart.map(it => it.name).join(", ")}`);
+            dailySales.transactions.push("Card sale R" + total.toFixed(2) + " - " + cart.map(function(it) { return it.name; }).join(", "));
             saveAll();
             printReceipt();
             alert("Card payment received!");
@@ -537,7 +537,7 @@
             receipt += "Served by: " + currentStaffName + " (PIN: " + currentPIN + ")\n\n";
 
             let total = 0;
-            cart.forEach(it => {
+            cart.forEach(function(it) {
                 receipt += it.name.padEnd(25) + "R" + it.price.toFixed(2) + "\n";
                 total += it.price;
             });
@@ -565,7 +565,7 @@
         }
 
         // Enter key adds item
-        document.getElementById("barcode").addEventListener("keyup", e => {
+        document.getElementById("barcode").addEventListener("keyup", function(e) {
             if (e.key === "Enter") addItem();
         });
 
