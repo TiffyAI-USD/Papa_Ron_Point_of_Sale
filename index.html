@@ -321,7 +321,6 @@
 
             alert(report);
 
-            // Reliable print using iframe
             const iframe = document.createElement('iframe');
             iframe.style.display = 'none';
             document.body.appendChild(iframe);
@@ -388,6 +387,7 @@
         // Stock In with multiplier - fixed
         function processStockInput() {
             const code = document.getElementById("stockBarcode").value.trim();
+            if (code === "") return;
             const item = inventory[code];
             if (item) {
                 pendingStockCode = code;
@@ -396,9 +396,9 @@
                 document.getElementById("packsInput").value = "";
                 document.getElementById("casesInput").value = "";
                 document.getElementById("multiplierPopup").style.display = "block";
-                document.getElementById("packsInput").focus();
+                setTimeout(() => document.getElementById("packsInput").focus(), 100);
             } else {
-                alert("Unknown barcode");
+                alert("Unknown barcode: " + code);
             }
             document.getElementById("stockBarcode").value = "";
         }
@@ -408,8 +408,7 @@
         });
 
         document.getElementById("stockBarcode").addEventListener("input", function() {
-            // Auto process if scanner pastes full barcode
-            if (this.value.length > 5) { // arbitrary length for barcode
+            if (this.value.length > 8) { // typical barcode length
                 processStockInput();
             }
         });
@@ -500,18 +499,12 @@
             });
             if (!hasDrink) bar += "No drink items\n";
 
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            const doc = iframe.contentWindow.document;
-            doc.open();
-            doc.write('<pre style="font-family: monospace; font-size: 14pt;">' + kitchen + '\n\n---\n\n' + bar + '</pre>');
-            doc.close();
-            iframe.contentWindow.focus();
-            setTimeout(() => {
-                iframe.contentWindow.print();
-                setTimeout(() => document.body.removeChild(iframe), 2000);
-            }, 500);
+            const content = kitchen + "\n\n---\n\n" + bar + "\n\nPress Ctrl+P (or Cmd+P on Mac) to print these tabs.";
+
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + content + '</pre>');
+            win.document.close();
+            win.focus();
         }
 
         function payCash() {
@@ -579,19 +572,12 @@
                 receipt += "Change: ".padEnd(25) + "R" + change.toFixed(2) + "\n";
             }
             receipt += "Thank you! Come Again!\n\n\n";
+            receipt += "Press Ctrl+P (or Cmd+P on Mac) to print this receipt.";
 
-            const iframe = document.createElement('iframe');
-            iframe.style.display = 'none';
-            document.body.appendChild(iframe);
-            const doc = iframe.contentWindow.document;
-            doc.open();
-            doc.write('<pre style="font-family: monospace; font-size: 14pt;">' + receipt + '</pre>');
-            doc.close();
-            iframe.contentWindow.focus();
-            setTimeout(() => {
-                iframe.contentWindow.print();
-                setTimeout(() => document.body.removeChild(iframe), 2000);
-            }, 500);
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + receipt + '</pre>');
+            win.document.close();
+            win.focus();
         }
 
         function completeSale() {
