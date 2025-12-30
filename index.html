@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA RON'S COFFEE BAY POS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; font-size: 2.5rem; margin: 20px 0; }
+        input, button { font-size: 1.8rem; padding: 15px; margin: 10px 0; width: 100%; border-radius: 10px; }
+        button { background: #d4a373; color: #000; border: none; cursor: pointer; }
+        #items { list-style: none; padding: 0; }
+        li { background: #111; padding: 15px; margin: 10px 0; border-radius: 10px; font-size: 1.6rem; }
+        #total { font-size: 2.5rem; text-align: center; margin: 20px 0; color: #d4a373; }
+        #login, #stockIn, #inventoryView, #transactionsView { text-align: center; margin-top: 50px; }
+        #pos, #inventoryView, #multiplierPopup { display: none; }
+        .stock-info { font-size: 1.4rem; color: #aaa; margin: 15px 0; text-align: center; }
+        .low-stock { color: #ff4444; font-weight: bold; }
+        #inventoryList { list-style: none; padding: 0; max-height: 70vh; overflow-y: auto; }
+        #inventoryList li { background: #111; padding: 12px; margin: 8px 0; border-radius: 8px; font-size: 1.4rem; }
+        .in-stock { color: #44ff44; }
+        .low-stock-item { color: #ff4444; }
+        #multiplierPopup { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 20px; width: 90%; max-width: 400px; z-index: 1000; box-shadow: 0 0 20px rgba(212,163,115,0.5); }
+        #multiplierPopup input { margin: 15px 0; text-align: center; }
+        .active-trans { color: #44ff44; font-weight: bold; }
+        .paid-trans { color: #d4a373; font-weight: bold; }
+        .transaction-btn { margin: 5px; padding: 10px; font-size: 1.4rem; }
+    </style>
+</head>
+<body>
+    <h1>PAPA RON'S COFFEE BAY</h1>
+
+    <div id="login">
+        <h2>Enter PIN to Start Sale</h2>
+        <input type="password" id="pin" placeholder="Your PIN" autofocus />
+        <button onclick="login()">Login for Sale</button>
+        <button onclick="stockInMode()">Replenish Stock</button>
+    </div>
+
+    <div id="pos">
+        <button onclick="logout()">Logout</button>
+        <button onclick="showInventory()">View Inventory</button>
+        <button onclick="showZReading()">Z Reading (Daily Report)</button>
+        <button onclick="showTransactions()">Manage Transactions</button>
+        <input type="text" id="barcode" placeholder="Scan or type barcode" autofocus />
+        <button onclick="addItem()">Add to Sale</button>
+        <button onclick="clearCart()">Clear Current Transaction</button>
+        <button onclick="printPreview()">Print Preview (Kitchen & Bar Tabs)</button>
+        <button onclick="payCash()">Cash Payment</button>
+        <button onclick="payCard()">Card Payment</button>
+        <h3>Current Transaction: <span id="currentTransNum">1</span></h3>
+        <ul id="items"></ul>
+        <div id="total">Total: R0.00</div>
+        <div id="stockStatus" class="stock-info"></div>
+    </div>
+
+    <div id="stockIn">
+        <h2>Stock In Mode</h2>
+        <button onclick="logout()">Back to Login</button>
+        <input type="text" id="stockBarcode" placeholder="Scan incoming stock" autofocus />
+        <div id="stockInStatus" class="stock-info"></div>
+    </div>
+
+    <div id="inventoryView">
+        <h2>Current Inventory</h2>
+        <button onclick="backToPOS()">Back to Sale</button>
+        <ul id="inventoryList"></ul>
+    </div>
+
+    <div id="transactionsView">
+        <h2>Active Transactions</h2>
+        <button onclick="backToPOS()">Back to Sale</button>
+        <div id="transList"></div>
+    </div>
+
+    <!-- Multiplier Popup -->
+    <div id="multiplierPopup">
+        <h2 id="popupItemName"></h2>
+        <p>Enter quantity (leave blank for 1 single)</p>
+        <input type="number" id="packsInput" placeholder="Packs (×6)" min="0" />
+        <input type="number" id="casesInput" placeholder="Cases (×24)" min="0" />
+        <button onclick="confirmMultiplier()">Confirm</button>
+        <button onclick="cancelMultiplier()">Cancel (add 1 single)</button>
+    </div>
+
+    <!-- Sounds -->
+    <audio id="clickSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/click.wav" preload="auto"></audio>
+    <audio id="eatSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/eat.wav" preload="auto"></audio>
+    <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav" preload="auto"></audio>
+
+    <script>
+        // Sounds
+        function playClick() { document.getElementById("clickSound").play().catch(() => {}); }
+        function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
+        function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
+
+        document.querySelectorAll('button').forEach(btn => btn.addEventListener('click', playClick));
+
+        const STAFF = {
+            "1234": "Staff 1",
+            "5678": "Staff 2",
+            "9012": "Staff 3",
+            "3456": "Manager"
+        };
+
+        let currentPIN = "";
+        let currentStaffName = "";
+
+        let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
+            "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
+            "1002": { name: "HAWAIIAN PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
+            "1003": { name: "FLAMING SPARE RIB PIZZA", price: 150, stock: 0, sold: 0, category: "food" },
+            "1004": { name: "CHEESE BURGER", price: 120, stock: 0, sold: 0, category: "food" },
+            "1005": { name: "CHEESY STRIPS (5)", price: 50, stock: 0, sold: 0, category: "food" },
+            "1006": { name: "BOERIE ROLL", price: 50, stock: 0, sold: 0, category: "food" },
+            "1007": { name: "RUMP STEAK", price: 160, stock: 0, sold: 0, category: "food" },
+            "1008": { name: "RIB RACK", price: 200, stock: 0, sold: 0, category: "food" },
+            "1009": { name: "SCHNITZEL", price: 120, stock: 0, sold: 0, category: "food" },
+            "1010": { name: "PREGO ROLL", price: 50, stock: 0, sold: 0, category: "food" },
+            "1011": { name: "MUNCHIE PLATTER", price: 350, stock: 0, sold: 0, category: "food" },
+            "1012": { name: "CHEESY POPS", price: 50, stock: 0, sold: 0, category: "food" },
+            "1013": { name: "CHICKEN PERI NACHO", price: 160, stock: 0, sold: 0, category: "food" },
+            "1014": { name: "WINGLETS 5", price: 60, stock: 0, sold: 0, category: "food" },
+            "1015": { name: "WINGLETS 10", price: 100, stock: 0, sold: 0, category: "food" },
+            "1016": { name: "PLATTER FOR 2", price: 350, stock: 0, sold: 0, category: "food" },
+            "1017": { name: "BREAKFAST", price: 80, stock: 0, sold: 0, category: "food" },
+            "1018": { name: "SIDE CHIPS", price: 20, stock: 0, sold: 0, category: "food" },
+            "1019": { name: "SIDE SALAD", price: 20, stock: 0, sold: 0, category: "food" },
+            "1020": { name: "GREEK SALAD", price: 20, stock: 0, sold: 0, category: "food" },
+            "5449000000453": { name: "Coke 500ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "5449000050809": { name: "Fanta 500ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "5449000332967": { name: "Sprite 500ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "2004": { name: "Powerade 500ml", price: 15, stock: 0, sold: 0, category: "drink" },
+            "6001240239490": { name: "Liquifruit 300ml", price: 15, stock: 0, sold: 0, category: "drink" },
+            "6001048003323": { name: "Appletizer 275ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "2007": { name: "Mr Orange 300ml", price: 10, stock: 0, sold: 0, category: "drink" },
+            "5449000332981": { name: "Stoney 500ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "5449000096111": { name: "Tonic Water 200ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "5449000284280": { name: "Dry Lemon 200ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "2011": { name: "Mineral Water 500ml", price: 10, stock: 0, sold: 0, category: "drink" },
+            "6001324217253": { name: "Energade 500ml", price: 20, stock: 0, sold: 0, category: "drink" },
+            "2012": { name: "Sparkling Water 500ml", price: 15, stock: 0, sold: 0, category: "drink" },
+            "6009604170014": { name: "Tsitsikamma Still Water 500ml", price: 10, stock: 0, sold: 0, category: "drink" },
+            "2013": { name: "Mineral Water 1L", price: 15, stock: 0, sold: 0, category: "drink" },
+            "6003326012041": { name: "Black Label 500ml", price: 30, stock: 0, sold: 0, category: "drink" },
+            "6003326015790": { name: "Black Label 330ml", price: 30, stock: 0, sold: 0, category: "drink" },
+            "6003326015820": { name: "Castle Lager 330ml", price: 30, stock: 0, sold: 0, category: "drink" },
+            "6003326015721": { name: "Castle Light 330ml", price: 30, stock: 0, sold: 0, category: "drink" },
+            "6001760007715": { name: "Windhoek 500ml", price: 30, stock: 0, sold: 0, category: "drink" },
+            "6001108064264": { name: "Hunters Dry 440ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6001108055231": { name: "Hunters Gold 330ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6001398128400": { name: "Smirnoff Ice Pine Twist 440ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6003326013949": { name: "Brutal Fruit Spitzer Ruby Apple 275ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "5010677554398": { name: "Breezer Watermelon 275ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6003326013918": { name: "Flying Fish 500ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6001108028044": { name: "Savanna 330ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "5410228141266": { name: "Stella Artois 330ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6003326015691": { name: "Black Crown 440ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "5000289938297": { name: "Gordons Pink & Tonic 440ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "5000289938280": { name: "Gordons & Tonic 440ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "6001108097217": { name: "Extreme 275ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "2211": { name: "Sodaze 250ml", price: 60, stock: 0, sold: 0, category: "drink" },
+            "6001108112064": { name: "Bernini Mimosa 500ml", price: 35, stock: 0, sold: 0, category: "drink" },
+            "9002490100070": { name: "Red Bull 250ml", price: 25, stock: 0, sold: 0, category: "drink" },
+            "2210": { name: "Lucky Club 250ml", price: 70, stock: 0, sold: 0, category: "drink" }
+        };
+
+        let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+        let currentTransIndex = -1;
+
+        let dailySales = JSON.parse(localStorage.getItem('dailySales')) || {
+            date: new Date().toDateString(),
+            cash: 0,
+            card: 0
+        };
+
+        if (dailySales.date !== new Date().toDateString()) {
+            dailySales = { date: new Date().toDateString(), cash: 0, card: 0 };
+            localStorage.setItem('dailySales', JSON.stringify(dailySales));
+        }
+
+        function saveAll() {
+            localStorage.setItem('posInventory', JSON.stringify(inventory));
+            localStorage.setItem('transactions', JSON.stringify(transactions));
+            localStorage.setItem('dailySales', JSON.stringify(dailySales));
+        }
+
+        let cart = [];
+
+        // Multiplier variables
+        let pendingStockCode = "";
+        let pendingItemName = "";
+
+        function createNewTransaction() {
+            const trans = {
+                id: transactions.length + 1,
+                items: [],
+                total: 0,
+                status: "active",
+                timestamp: new Date().toLocaleString(),
+                staff: currentStaffName
+            };
+            transactions.push(trans);
+            currentTransIndex = transactions.length - 1;
+            cart = trans.items;
+            saveAll();
+            updateUI();
+        }
+
+        function loadTransaction(index) {
+            currentTransIndex = index;
+            cart = transactions[index].items;
+            updateUI();
+        }
+
+        function markPaid(method) {
+            if (currentTransIndex === -1 || cart.length === 0) return alert("No active transaction");
+            const trans = transactions[currentTransIndex];
+            trans.status = "paid";
+            trans.paymentMethod = method;
+            trans.total = cart.reduce((sum, it) => sum + it.price * it.qty, 0);
+            if (method === "cash") dailySales.cash += trans.total;
+            else dailySales.card += trans.total;
+            saveAll();
+            alert(`Transaction \( {trans.id} marked as Paid ( \){method})`);
+            updateUI();
+        }
+
+        function updateUI() {
+            document.getElementById("currentTransNum").textContent = currentTransIndex === -1 ? "None" : transactions[currentTransIndex].id;
+            updateCart();
+        }
+
+        function login() {
+            const pin = document.getElementById("pin").value.trim();
+            if (STAFF[pin]) {
+                currentPIN = pin;
+                currentStaffName = STAFF[pin];
+                document.getElementById("login").style.display = "none";
+                document.getElementById("pos").style.display = "block";
+                if (transactions.length === 0 || transactions[transactions.length - 1].status === "paid") {
+                    createNewTransaction();
+                } else {
+                    loadTransaction(transactions.length - 1);
+                }
+                document.getElementById("barcode").focus();
+            } else {
+                alert("Invalid PIN");
+            }
+        }
+
+        // Rest of functions (stockInMode, logout, showInventory, backToPOS, showZReading, addItem, confirmMultiplier, cancelMultiplier, updateCart, updateStockStatus, clearCart, printPreview, payCash, payCard, completeSale)
+
+        function showZReading() {
+            let report = "Z READING - " + dailySales.date + "\n\n";
+            report += "Total Sales: R" + (dailySales.cash + dailySales.card).toFixed(2) + "\n";
+            report += "Cash: R" + dailySales.cash.toFixed(2) + "\n";
+            report += "Card: R" + dailySales.card.toFixed(2) + "\n\n";
+            report += "Transactions (" + transactions.length + "):\n";
+            transactions.forEach(t => {
+                report += `Transaction ${t.id} - \( {t.status.toUpperCase()} - R \){t.total.toFixed(2)} - ${t.timestamp} - ${t.staff}\n`;
+                t.items.forEach(it => report += "  - " + it.name + " x" + it.qty + " R" + (it.price * it.qty).toFixed(2) + "\n");
+                report += "\n";
+            });
+
+            const printWin = window.open('', '_blank');
+            printWin.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + report + '</pre>');
+            printWin.document.close();
+            printWin.focus();
+            printWin.print();
+        }
+
+        function showTransactions() {
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("transactionsView").style.display = "block";
+            const list = document.getElementById("transList");
+            list.innerHTML = "";
+            transactions.forEach((trans, i) => {
+                const btn = document.createElement("button");
+                btn.className = "transaction-btn";
+                btn.textContent = `Transaction ${trans.id} - ${trans.status === "active" ? "Active" : "Paid"}`;
+                btn.classList.add(trans.status === "active" ? "active-trans" : "paid-trans");
+                btn.onclick = () => {
+                    loadTransaction(i);
+                    backToPOS();
+                };
+                list.appendChild(btn);
+            });
+            const newBtn = document.createElement("button");
+            newBtn.textContent = "New Transaction";
+            newBtn.onclick = () => {
+                createNewTransaction();
+                backToPOS();
+            };
+            list.appendChild(newBtn);
+        }
+
+        function printPreview() {
+            if (cart.length === 0) return alert("Cart empty");
+
+            let kitchen = "KITCHEN TAB - Transaction " + transactions[currentTransIndex].id + "\n";
+            kitchen += new Date().toLocaleString() + "\n";
+            kitchen += "Served by: " + currentStaffName + "\n\n";
+            let hasFood = false;
+            cart.forEach(it => {
+                if (inventory[it.code].category === "food") {
+                    kitchen += it.name + " x" + (it.qty || 1) + "\n";
+                    hasFood = true;
+                }
+            });
+            if (!hasFood) kitchen += "No food items\n";
+
+            let bar = "BAR TAB - Transaction " + transactions[currentTransIndex].id + "\n";
+            bar += new Date().toLocaleString() + "\n";
+            bar += "Served by: " + currentStaffName + "\n\n";
+            let hasDrink = false;
+            cart.forEach(it => {
+                if (inventory[it.code].category === "drink") {
+                    bar += it.name + " x" + (it.qty || 1) + "\n";
+                    hasDrink = true;
+                }
+            });
+            if (!hasDrink) bar += "No drink items\n";
+
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt;">' + kitchen + '\n\n---\n\n' + bar + '</pre>');
+            win.document.close();
+            win.focus();
+            win.print();
+        }
+
+        // Add qty to cart items (for multiplier in sale – optional, but useful)
+        function addItem() {
+            const code = document.getElementById("barcode").value.trim();
+            const item = inventory[code];
+            if (!item) return alert("Item not found");
+            if (item.stock <= 0) return alert("OUT OF STOCK");
+
+            // Simple add 1 – multiplier can be added later
+            const existing = cart.find(i => i.code === code);
+            if (existing) existing.qty = (existing.qty || 1) + 1;
+            else cart.push({ code, name: item.name, price: item.price, qty: 1 });
+
+            item.stock--;
+            item.sold++;
+            playEat();
+            saveAll();
+            updateCart();
+            document.getElementById("barcode").value = "";
+        }
+
+        function updateCart() {
+            const list = document.getElementById("items");
+            list.innerHTML = "";
+            let total = 0;
+            cart.forEach(it => {
+                const qty = it.qty || 1;
+                const price = it.price * qty;
+                total += price;
+                const li = document.createElement("li");
+                li.textContent = it.name + " x" + qty + " - R" + price.toFixed(2) + " (Stock left: " + inventory[it.code].stock + ")";
+                list.appendChild(li);
+            });
+            document.getElementById("total").textContent = "Total: R" + total.toFixed(2);
+            transactions[currentTransIndex].total = total;
+            saveAll();
+        }
+
+        function payCash() {
+            markPaid("cash");
+            alert("Cash payment received!");
+            createNewTransaction(); // Start new after payment
+        }
+
+        function payCard() {
+            markPaid("card");
+            alert("Card payment received!");
+            createNewTransaction();
+        }
+
+        // Other functions (stock in, multiplier, etc.) remain as in your code
+
+        // Initial load
+        if (transactions.length > 0) loadTransaction(transactions.length - 1);
+    </script>
+</body>
+</html>
