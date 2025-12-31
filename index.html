@@ -45,16 +45,16 @@
     <div id="pos">
         <button onclick="logout()">Logout</button>
         <button onclick="showInventory()">View Inventory</button>
-        <button onclick="showZReading()">Z Reading</button>
-        <button class="print-btn" onclick="printZReport()" style="display:none;" id="printZBtn">Print Z Report</button>
+        <button onclick="showZReading()">Z Reading (Daily Report)</button>
+        <button class="print-btn" onclick="printZReport()">Print Z Report</button>
         <button onclick="showTransactions()">Manage Transactions</button>
         <input type="text" id="barcode" placeholder="Scan or type barcode" autofocus />
         <button onclick="addItem()">Add to Sale</button>
         <button onclick="clearCart()">Clear Current Transaction</button>
-        <button onclick="printPreview()">Print Preview (Kitchen & Bar)</button>
+        <button onclick="printPreview()">Print Preview (Kitchen & Bar Tabs)</button>
         <button onclick="payCash()">Cash Payment</button>
         <button onclick="payCard()">Card Payment</button>
-        <button class="print-btn" onclick="printLastReceipt()" style="display:none;" id="printReceiptBtn">Print Last Receipt</button>
+        <button class="print-btn" onclick="printLastReceipt()" style="display:none;" id="printReceiptBtn">Print Receipt</button>
         <h3>Current Transaction: <span id="currentTransNum">1</span> <span id="transStatus"></span></h3>
         <ul id="items"></ul>
         <div id="total">Total: R0.00</div>
@@ -125,7 +125,6 @@
 
         let currentPIN = "";
         let currentStaffName = "";
-        let lastReceiptContent = ""; // Store last receipt for reprint
 
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
@@ -270,12 +269,10 @@
             document.getElementById("multiplierPopup").style.display = "none";
             document.getElementById("tenderPopup").style.display = "none";
             document.getElementById("printReceiptBtn").style.display = "none";
-            document.getElementById("printZBtn").style.display = "none";
             document.getElementById("login").style.display = "block";
             document.getElementById("pin").value = "";
             currentPIN = "";
             currentStaffName = "";
-            lastReceiptContent = "";
         }
 
         function showInventory() {
@@ -529,10 +526,10 @@
             dailySales.transactions.push("Cash sale R" + total.toFixed(2) + " (Tender R" + tender.toFixed(2) + ", Change R" + change.toFixed(2) + ") - " + cart.map(function(it) { return it.name; }).join(", "));
             saveAll();
             generateReceipt(tender, change);
-            printLastReceipt(); // Auto open on payment
+            printLastReceipt();
             document.getElementById("printReceiptBtn").style.display = "block";
             document.getElementById("tenderPopup").style.display = "none";
-            alert("Cash payment received! Change: R" + change.toFixed(2) + "\n\nReceipt opened in new tab – press Ctrl+P to print.");
+            alert("Cash payment received! Change: R" + change.toFixed(2));
             completeSale();
         }
 
@@ -547,9 +544,9 @@
             dailySales.transactions.push("Card sale R" + total.toFixed(2) + " - " + cart.map(function(it) { return it.name; }).join(", "));
             saveAll();
             generateReceipt();
-            printLastReceipt(); // Auto open on payment
+            printLastReceipt();
             document.getElementById("printReceiptBtn").style.display = "block";
-            alert("Card payment received!\n\nReceipt opened in new tab – press Ctrl+P to print.");
+            alert("Card payment received!");
             completeSale();
         }
 
@@ -572,7 +569,6 @@
                 receipt += "Change: ".padEnd(25) + "R" + change.toFixed(2) + "\n";
             }
             receipt += "Thank you! Come Again!\n\n\n";
-            receipt += "Press Ctrl+P (or Cmd+P on Mac) to print this receipt.";
 
             lastReceiptContent = receipt;
         }
@@ -584,10 +580,6 @@
             win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + lastReceiptContent + '</pre>');
             win.document.close();
             win.focus();
-        }
-
-        function printZReport() {
-            showZReading(); // Re-run to generate and open
         }
 
         function completeSale() {
