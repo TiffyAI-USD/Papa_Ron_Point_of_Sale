@@ -125,6 +125,7 @@
         let currentPIN = "";
         let currentStaffName = "";
         let lastReceiptContent = "";
+        let pendingStockCode = "";  // Global so it persists across functions
 
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
@@ -206,8 +207,6 @@
         }
 
         let cart = [];
-        let lastReceiptContent = "";
-        let pendingStockCode = "";  // Explicitly declared here so it persists
 
         function createNewTransaction() {
             const trans = {
@@ -275,8 +274,6 @@
             document.getElementById("pin").value = "";
             currentPIN = "";
             currentStaffName = "";
-            lastReceiptContent = "";
-            pendingStockCode = "";
         }
 
         function showInventory() {
@@ -383,7 +380,6 @@
             document.getElementById("barcode").focus();
         }
 
-        // Stock In with multiplier - FIXED
         function processStockInput() {
             const code = document.getElementById("stockBarcode").value.trim();
             if (code === "") return;
@@ -524,7 +520,6 @@
             const change = tender - total;
             document.getElementById("tenderResult").textContent = "Change: R" + change.toFixed(2);
 
-            // Update daily sales
             dailySales.cash += total;
             dailySales.transactions.push(`Cash sale R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)}, Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`);
 
@@ -535,9 +530,8 @@
             }
             saveAll();
 
-            // Generate and open receipt
             generateReceipt(tender, change);
-            printLastReceipt();
+            printLastReceipt(); // Auto-open receipt
             document.getElementById("printReceiptBtn").style.display = "block";
 
             document.getElementById("tenderPopup").style.display = "none";
@@ -564,9 +558,8 @@
             }
             saveAll();
 
-            // Generate and open receipt
             generateReceipt();
-            printLastReceipt();
+            printLastReceipt(); // Auto-open receipt
             document.getElementById("printReceiptBtn").style.display = "block";
 
             alert("Card payment received!");
@@ -611,7 +604,7 @@
             cart = [];
             updateCart();
             document.getElementById("stockStatus").textContent = "";
-            createNewTransaction();  // Start fresh active transaction
+            createNewTransaction();
         }
 
         // Enter key adds item
