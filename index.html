@@ -124,7 +124,7 @@
 
         let currentPIN = "";
         let currentStaffName = "";
-        let lastReceiptContent = ""; // For reprint
+        let lastReceiptContent = "";
 
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
@@ -207,6 +207,7 @@
 
         let cart = [];
         let lastReceiptContent = "";
+        let pendingStockCode = "";  // Explicitly declared here so it persists
 
         function createNewTransaction() {
             const trans = {
@@ -275,6 +276,7 @@
             currentPIN = "";
             currentStaffName = "";
             lastReceiptContent = "";
+            pendingStockCode = "";
         }
 
         function showInventory() {
@@ -381,14 +383,13 @@
             document.getElementById("barcode").focus();
         }
 
-        // Stock In with multiplier
+        // Stock In with multiplier - FIXED
         function processStockInput() {
             const code = document.getElementById("stockBarcode").value.trim();
             if (code === "") return;
             const item = inventory[code];
             if (item) {
                 pendingStockCode = code;
-                pendingItemName = item.name;
                 document.getElementById("popupItemName").textContent = item.name;
                 document.getElementById("packsInput").value = "";
                 document.getElementById("casesInput").value = "";
@@ -527,16 +528,16 @@
             dailySales.cash += total;
             dailySales.transactions.push(`Cash sale R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)}, Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`);
 
-            // Mark transaction as paid
+            // Mark current transaction as paid
             if (currentTransIndex !== -1) {
                 transactions[currentTransIndex].status = "paid";
                 transactions[currentTransIndex].total = total;
             }
             saveAll();
 
-            // Generate and print receipt
+            // Generate and open receipt
             generateReceipt(tender, change);
-            printLastReceipt(); // Auto-open receipt tab
+            printLastReceipt();
             document.getElementById("printReceiptBtn").style.display = "block";
 
             document.getElementById("tenderPopup").style.display = "none";
@@ -545,24 +546,27 @@
             completeSale();
         }
 
+        function cancelTender() {
+            document.getElementById("tenderPopup").style.display = "none";
+        }
+
         function payCard() {
             if (cart.length === 0) return alert("Cart empty");
             const total = cart.reduce((sum, it) => sum + it.price, 0);
 
-            // Update daily sales
             dailySales.card += total;
             dailySales.transactions.push(`Card sale R${total.toFixed(2)} - ${cart.map(it => it.name).join(", ")}`);
 
-            // Mark transaction as paid
+            // Mark current transaction as paid
             if (currentTransIndex !== -1) {
                 transactions[currentTransIndex].status = "paid";
                 transactions[currentTransIndex].total = total;
             }
             saveAll();
 
-            // Generate and print receipt
+            // Generate and open receipt
             generateReceipt();
-            printLastReceipt(); // Auto-open receipt tab
+            printLastReceipt();
             document.getElementById("printReceiptBtn").style.display = "block";
 
             alert("Card payment received!");
@@ -607,8 +611,7 @@
             cart = [];
             updateCart();
             document.getElementById("stockStatus").textContent = "";
-            // Create new active transaction immediately after payment
-            createNewTransaction();
+            createNewTransaction();  // Start fresh active transaction
         }
 
         // Enter key adds item
