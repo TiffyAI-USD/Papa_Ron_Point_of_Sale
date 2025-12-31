@@ -192,11 +192,12 @@
         let dailySales = JSON.parse(localStorage.getItem('dailySales')) || {
             date: new Date().toDateString(),
             cash: 0,
-            card: 0
+            card: 0,
+            transactions: []
         };
 
         if (dailySales.date !== new Date().toDateString()) {
-            dailySales = { date: new Date().toDateString(), cash: 0, card: 0 };
+            dailySales = { date: new Date().toDateString(), cash: 0, card: 0, transactions: [] };
             localStorage.setItem('dailySales', JSON.stringify(dailySales));
         }
 
@@ -215,7 +216,10 @@
                 total: 0,
                 status: "active",
                 timestamp: new Date().toLocaleString(),
-                staff: currentStaffName
+                staff: currentStaffName,
+                paymentMethod: null,
+                tender: null,
+                change: null
             };
             transactions.push(trans);
             currentTransIndex = transactions.length - 1;
@@ -231,8 +235,18 @@
         }
 
         function updateUI() {
-            document.getElementById("currentTransNum").textContent = currentTransIndex === -1 ? "None" : transactions[currentTransIndex].id;
-            document.getElementById("transStatus").textContent = currentTransIndex === -1 ? "" : transactions[currentTransIndex].status === "active" ? "(Active)" : "(Paid)";
+            const transNumEl = document.getElementById("currentTransNum");
+            const statusEl   = document.getElementById("transStatus");
+
+            if (currentTransIndex === -1) {
+                transNumEl.textContent = "None";
+                statusEl.textContent = "";
+            } else {
+                const t = transactions[currentTransIndex];
+                transNumEl.textContent = t.id;
+                statusEl.textContent = t.status === "active" ? "(Active)" : "(Paid)";
+                statusEl.className = t.status === "active" ? "active-trans" : "paid-trans";
+            }
             updateCart();
         }
 
@@ -290,7 +304,7 @@
 
             sorted.forEach(item => {
                 const li = document.createElement("li");
-                let text = item.name + " — Stock: " + item.stock + " | Sold today: " + item.sold;
+                let text = `${item.name} — Stock: ${item.stock} | Sold today: ${item.sold}`;
                 if (item.stock >= 5) {
                     li.classList.add("in-stock");
                 } else if (item.stock > 0) {
@@ -311,15 +325,17 @@
 
         function showZReading() {
             const totalSales = dailySales.cash + dailySales.card;
-            let report = "Z READING - " + dailySales.date + "\n\n";
-            report += "Total Sales: R" + totalSales.toFixed(2) + "\n";
-            report += "Cash: R" + dailySales.cash.toFixed(2) + "\n";
-            report += "Card: R" + dailySales.card.toFixed(2) + "\n\n";
-            report += "Transactions (" + transactions.length + "):\n\n";
-            transactions.forEach(function(t) {
-                report += "Transaction " + t.id + " - " + t.status.toUpperCase() + " - R" + t.total.toFixed(2) + " - " + t.timestamp + " - " + t.staff + "\n";
-                t.items.forEach(function(it) {
-                    report += "  - " + it.name + " R" + it.price.toFixed(2) + "\n";
+            let report = `Z READING - ${dailySales.date}\n\n`;
+            report += `Total Sales: R${totalSales.toFixed(2)}\n`;
+            report += `Cash: R${dailySales.cash.toFixed(2)}\n`;
+            report += `Card: R${dailySales.card.toFixed(2)}\n\n`;
+            report += `Transactions (${transactions.length}):\n\n`;
+            transactions.forEach(t => {
+                report += `Transaction ${t.id} - \( {t.status.toUpperCase()} - R \){t.total.toFixed(2)} - ${t.timestamp} - ${t.staff}`;
+                if (t.paymentMethod) report += ` (${t.paymentMethod})`;
+                report += "\n";
+                t.items.forEach(it => {
+                    report += `  - \( {it.name} R \){it.price.toFixed(2)}\n`;
                 });
                 report += "\n";
             });
@@ -336,39 +352,34 @@
             document.getElementById("transactionsView").style.display = "block";
             const list = document.getElementById("transList");
             list.innerHTML = "";
-            transactions.forEach(function(trans, i) {
+            transactions.forEach((trans, i) => {
                 const btn = document.createElement("button");
                 btn.className = "transaction-btn";
-                btn.textContent = "Transaction " + trans.id + " - " + (trans.status === "active" ? "Active" : "Paid");
+                btn.textContent = `Transaction ${trans.id} - ${trans.status === "active" ? "Active" : "Paid"}`;
                 btn.classList.add(trans.status === "active" ? "active-trans" : "paid-trans");
-                btn.onclick = function() {
-                    loadTransaction(i);
-                    backToPOS();
-                };
+                btn.onclick = () => { loadTransaction(i); backToPOS(); };
                 list.appendChild(btn);
             });
             const newBtn = document.createElement("button");
             newBtn.textContent = "New Transaction";
-            newBtn.onclick = function() {
-                createNewTransaction();
-                backToPOS();
-            };
+            newBtn.onclick = () => { createNewTransaction(); backToPOS(); };
             list.appendChild(newBtn);
         }
 
         function addItem() {
             const code = document.getElementById("barcode").value.trim();
+            if (!code) return;
+
             const item = inventory[code];
             if (!item) {
                 alert("Item not found: " + code);
-                document.getElementById("barcode").value = "";
                 return;
             }
             if (item.stock <= 0) {
                 alert("OUT OF STOCK: " + item.name);
-                document.getElementById("barcode").value = "";
                 return;
             }
+
             cart.push({ name: item.name, price: item.price, code: code });
             item.stock--;
             item.sold++;
@@ -376,13 +387,14 @@
             saveAll();
             updateCart();
             updateStockStatus(item);
+
             document.getElementById("barcode").value = "";
             document.getElementById("barcode").focus();
         }
 
         function processStockInput() {
             const code = document.getElementById("stockBarcode").value.trim();
-            if (code === "") return;
+            if (!code) return;
             const item = inventory[code];
             if (item) {
                 pendingStockCode = code;
@@ -397,7 +409,7 @@
             document.getElementById("stockBarcode").value = "";
         }
 
-        document.getElementById("stockBarcode").addEventListener("keyup", function(e) {
+        document.getElementById("stockBarcode").addEventListener("keyup", e => {
             if (e.key === "Enter") processStockInput();
         });
 
@@ -415,7 +427,7 @@
             playSparkle();
             saveAll();
             document.getElementById("stockInStatus").textContent = 
-                item.name + " added " + quantity + " units — Stock: " + item.stock + " | Sold today: " + item.sold;
+                `${item.name} added ${quantity} units — Stock: ${item.stock} | Sold today: ${item.sold}`;
             document.getElementById("multiplierPopup").style.display = "none";
             document.getElementById("stockBarcode").focus();
         }
@@ -426,7 +438,7 @@
             playSparkle();
             saveAll();
             document.getElementById("stockInStatus").textContent = 
-                item.name + " added 1 unit — Stock: " + item.stock + " | Sold today: " + item.sold;
+                `${item.name} added 1 unit — Stock: ${item.stock} | Sold today: ${item.sold}`;
             document.getElementById("multiplierPopup").style.display = "none";
             document.getElementById("stockBarcode").focus();
         }
@@ -435,23 +447,23 @@
             const list = document.getElementById("items");
             list.innerHTML = "";
             let total = 0;
-            cart.forEach(function(it) {
+            cart.forEach(it => {
                 total += it.price;
                 const li = document.createElement("li");
-                li.textContent = it.name + " - R" + it.price.toFixed(2) + " (Stock left: " + inventory[it.code].stock + ")";
+                li.textContent = `\( {it.name} - R \){it.price.toFixed(2)} (Stock left: ${inventory[it.code].stock})`;
                 list.appendChild(li);
             });
-            document.getElementById("total").textContent = "Total: R" + total.toFixed(2);
+            document.getElementById("total").textContent = `Total: R${total.toFixed(2)}`;
         }
 
         function updateStockStatus(item) {
-            let msg = item.name + " — Stock: " + item.stock + " | Sold today: " + item.sold;
+            let msg = `${item.name} — Stock: ${item.stock} | Sold today: ${item.sold}`;
             if (item.stock < 5) msg += " ⚠️ LOW STOCK - REORDER!";
             document.getElementById("stockStatus").textContent = msg;
         }
 
         function clearCart() {
-            cart.forEach(function(it) {
+            cart.forEach(it => {
                 inventory[it.code].stock++;
                 inventory[it.code].sold--;
             });
@@ -467,25 +479,25 @@
             const now = new Date().toLocaleString();
             const transId = currentTransIndex === -1 ? "N/A" : transactions[currentTransIndex].id;
 
-            let kitchen = "KITCHEN TAB - Transaction " + transId + "\n";
-            kitchen += now + "\n";
-            kitchen += "Served by: " + currentStaffName + "\n\n";
+            let kitchen = `KITCHEN TAB - Transaction ${transId}\n`;
+            kitchen += `${now}\n`;
+            kitchen += `Served by: ${currentStaffName}\n\n`;
             let hasFood = false;
-            cart.forEach(function(it) {
+            cart.forEach(it => {
                 if (inventory[it.code].category === "food") {
-                    kitchen += it.name + " - R" + it.price.toFixed(2) + "\n";
+                    kitchen += `\( {it.name} - R \){it.price.toFixed(2)}\n`;
                     hasFood = true;
                 }
             });
             if (!hasFood) kitchen += "No food items\n";
 
-            let bar = "BAR TAB - Transaction " + transId + "\n";
-            bar += now + "\n";
-            bar += "Served by: " + currentStaffName + "\n\n";
+            let bar = `BAR TAB - Transaction ${transId}\n`;
+            bar += `${now}\n`;
+            bar += `Served by: ${currentStaffName}\n\n`;
             let hasDrink = false;
-            cart.forEach(function(it) {
+            cart.forEach(it => {
                 if (inventory[it.code].category === "drink") {
-                    bar += it.name + " - R" + it.price.toFixed(2) + "\n";
+                    bar += `\( {it.name} - R \){it.price.toFixed(2)}\n`;
                     hasDrink = true;
                 }
             });
@@ -500,8 +512,9 @@
         }
 
         function payCash() {
-            if (cart.length === 0) return alert("Cart empty");
+            if (cart.length === 0) return alert("Cart is empty");
             const total = cart.reduce((sum, it) => sum + it.price, 0);
+
             document.getElementById("tenderTotal").textContent = total.toFixed(2);
             document.getElementById("tenderPopup").style.display = "block";
             document.getElementById("tenderAmount").value = "";
@@ -512,31 +525,23 @@
 
         function confirmTender() {
             const tender = parseFloat(document.getElementById("tenderAmount").value) || 0;
-            const total = window.pendingTotal;
+            const total = window.pendingTotal || 0;
+
             if (tender < total) {
-                document.getElementById("tenderResult").textContent = "Not enough – needs at least R" + total.toFixed(2);
+                document.getElementById("tenderResult").textContent = 
+                    `Not enough – needs at least R${total.toFixed(2)}`;
                 return;
             }
+
             const change = tender - total;
-            document.getElementById("tenderResult").textContent = "Change: R" + change.toFixed(2);
+            document.getElementById("tenderResult").textContent = `Change: R${change.toFixed(2)}`;
 
             dailySales.cash += total;
-            dailySales.transactions.push(`Cash sale R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)}, Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`);
+            dailySales.transactions.push(
+                `Cash R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)} → Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`
+            );
 
-            if (currentTransIndex !== -1) {
-                transactions[currentTransIndex].status = "paid";
-                transactions[currentTransIndex].total = total;
-            }
-            saveAll();
-
-            generateReceipt(tender, change);
-            printLastReceipt(); // auto open
-            document.getElementById("printReceiptBtn").style.display = "block";
-
-            document.getElementById("tenderPopup").style.display = "none";
-            alert("Cash payment received! Change: R" + change.toFixed(2));
-
-            completeSale();
+            finalizeSale("Cash", total, tender, change);
         }
 
         function cancelTender() {
@@ -545,53 +550,72 @@
         }
 
         function payCard() {
-            if (cart.length === 0) return alert("Cart empty");
+            if (cart.length === 0) return alert("Cart is empty");
             const total = cart.reduce((sum, it) => sum + it.price, 0);
 
             dailySales.card += total;
-            dailySales.transactions.push(`Card sale R${total.toFixed(2)} - ${cart.map(it => it.name).join(", ")}`);
+            dailySales.transactions.push(
+                `Card R${total.toFixed(2)} - ${cart.map(it => it.name).join(", ")}`
+            );
 
+            finalizeSale("Card", total);
+        }
+
+        function finalizeSale(method, total, tender = 0, change = 0) {
             if (currentTransIndex !== -1) {
-                transactions[currentTransIndex].status = "paid";
-                transactions[currentTransIndex].total = total;
+                const trans = transactions[currentTransIndex];
+                trans.status = "paid";
+                trans.total = total;
+                trans.paymentMethod = method;
+                trans.tender = tender > 0 ? tender : null;
+                trans.change = change > 0 ? change : null;
+                trans.timestamp = new Date().toLocaleString();
             }
+
             saveAll();
 
-            generateReceipt();
-            printLastReceipt(); // auto open
+            generateReceipt(tender, change, method);
+            printLastReceipt();  // automatically open print window
             document.getElementById("printReceiptBtn").style.display = "block";
 
-            alert("Card payment received!");
+            if (document.getElementById("tenderPopup").style.display === "block") {
+                document.getElementById("tenderPopup").style.display = "none";
+            }
+
+            alert(`${method} payment completed!`);
 
             completeSale();
         }
 
-        function generateReceipt(tender = 0, change = 0) {
+        function generateReceipt(tender = 0, change = 0, method = "") {
             let receipt = "PAPA RON'S COFFEE BAY\n";
             receipt += "============================\n";
             receipt += new Date().toLocaleString() + "\n";
-            receipt += "Served by: " + currentStaffName + " (PIN: " + currentPIN + ")\n\n";
+            receipt += `Served by: ${currentStaffName} (PIN: ${currentPIN})\n`;
+            receipt += `Payment: ${method}\n\n`;
 
             let total = 0;
-            cart.forEach(function(it) {
-                receipt += it.name.padEnd(25) + "R" + it.price.toFixed(2) + "\n";
+            cart.forEach(it => {
+                receipt += `\( {it.name.padEnd(28)} R \){it.price.toFixed(2)}\n`;
                 total += it.price;
             });
 
             receipt += "============================\n";
-            receipt += "TOTAL: ".padEnd(25) + "R" + total.toFixed(2) + "\n";
+            receipt += `\( {"TOTAL:".padEnd(28)} R \){total.toFixed(2)}\n`;
+
             if (tender > 0) {
-                receipt += "Tendered: ".padEnd(25) + "R" + tender.toFixed(2) + "\n";
-                receipt += "Change: ".padEnd(25) + "R" + change.toFixed(2) + "\n";
+                receipt += `\( {"Tendered:".padEnd(28)} R \){tender.toFixed(2)}\n`;
+                receipt += `\( {"Change:".padEnd(28)}   R \){change.toFixed(2)}\n`;
             }
-            receipt += "Thank you! Come Again!\n\n\n";
-            receipt += "Press Ctrl+P (or Cmd+P on Mac) to print this receipt.";
+
+            receipt += "\nThank you! Come Again!\n\n\n";
+            receipt += "Press Ctrl+P (or Cmd+P on Mac) to print.";
 
             lastReceiptContent = receipt;
         }
 
         function printLastReceipt() {
-            if (lastReceiptContent === "") return alert("No recent receipt to print");
+            if (!lastReceiptContent) return alert("No recent receipt to print");
 
             const win = window.open('', '_blank');
             win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + lastReceiptContent + '</pre>');
@@ -604,15 +628,20 @@
             updateCart();
             document.getElementById("stockStatus").textContent = "";
             createNewTransaction();
+            document.getElementById("barcode").focus();
         }
 
-        // Enter key adds item
-        document.getElementById("barcode").addEventListener("keyup", function(e) {
+        // Enter key to add item
+        document.getElementById("barcode").addEventListener("keyup", e => {
             if (e.key === "Enter") addItem();
         });
 
-        // Load on start
-        if (transactions.length === 0) createNewTransaction();
+        // Initial setup
+        if (transactions.length === 0 || transactions[transactions.length-1].status === "paid") {
+            createNewTransaction();
+        } else {
+            loadTransaction(transactions.length - 1);
+        }
         updateUI();
     </script>
 </body>
