@@ -125,7 +125,7 @@
         let currentPIN = "";
         let currentStaffName = "";
         let lastReceiptContent = "";
-        let pendingStockCode = "";  // Global for stock in
+        let pendingStockCode = "";
 
         let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
             "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
@@ -523,22 +523,25 @@
             dailySales.cash += total;
             dailySales.transactions.push(`Cash sale R\( {total.toFixed(2)} (Tender R \){tender.toFixed(2)}, Change R${change.toFixed(2)}) - ${cart.map(it => it.name).join(", ")}`);
 
-            // Finalize transaction
             if (currentTransIndex !== -1) {
                 transactions[currentTransIndex].status = "paid";
                 transactions[currentTransIndex].total = total;
             }
             saveAll();
 
-            // Generate & open receipt
             generateReceipt(tender, change);
-            printLastReceipt();
+            printLastReceipt(); // auto open
             document.getElementById("printReceiptBtn").style.display = "block";
 
             document.getElementById("tenderPopup").style.display = "none";
             alert("Cash payment received! Change: R" + change.toFixed(2));
 
             completeSale();
+        }
+
+        function cancelTender() {
+            document.getElementById("tenderPopup").style.display = "none";
+            document.getElementById("tenderResult").textContent = "";
         }
 
         function payCard() {
@@ -548,16 +551,14 @@
             dailySales.card += total;
             dailySales.transactions.push(`Card sale R${total.toFixed(2)} - ${cart.map(it => it.name).join(", ")}`);
 
-            // Finalize transaction
             if (currentTransIndex !== -1) {
                 transactions[currentTransIndex].status = "paid";
                 transactions[currentTransIndex].total = total;
             }
             saveAll();
 
-            // Generate & open receipt
             generateReceipt();
-            printLastReceipt();
+            printLastReceipt(); // auto open
             document.getElementById("printReceiptBtn").style.display = "block";
 
             alert("Card payment received!");
