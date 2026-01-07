@@ -133,6 +133,7 @@
     <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav" preload="auto"></audio>
 
     <script>
+        // Sounds
         function playClick() { document.getElementById("clickSound").play().catch(() => {}); }
         function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
         function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
@@ -260,7 +261,7 @@
 
         function updateUI() {
             const transNumEl = document.getElementById("currentTransNum");
-            const statusEl   = document.getElementById("transStatus");
+            const statusEl = document.getElementById("transStatus");
 
             if (currentTransIndex === -1) {
                 transNumEl.textContent = "None";
