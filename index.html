@@ -650,36 +650,41 @@
         }
 
         function generateReceipt(tender = 0, change = 0, method = "") {
-            let receipt = "PAPA RON'S COFFEE BAY\n";
-            receipt += "============================\n";
-            receipt += new Date().toLocaleString('en-ZA', { 
-                year: 'numeric', month: '2-digit', day: '2-digit', 
-                hour: '2-digit', minute: '2-digit', second: '2-digit', 
-                hour12: false 
-            }) + "\n";
-            receipt += `Served by: ${currentStaffName} (PIN: ${currentPIN})\n`;
-            receipt += `Payment: ${method}\n\n`;
+    let receipt = "PAPA RON'S COFFEE BAY\n";
+    receipt += "============================\n";
+    receipt += new Date().toLocaleString('en-ZA', { 
+        year: 'numeric', month: '2-digit', day: '2-digit', 
+        hour: '2-digit', minute: '2-digit', second: '2-digit', 
+        hour12: false 
+    }) + "\n";
+    receipt += `Served by: ${currentStaffName} (PIN: ${currentPIN})\n`;
+    receipt += `Payment: ${method}\n\n`;
 
-            let total = 0;
-            cart.forEach(it => {
-                const namePadded = it.name.padEnd(28);
-                receipt += `$( {namePadded} R) \){it.price.toFixed(2)}\n`;
-                total += it.price;
-            });
+    let total = 0;
+    cart.forEach(it => {
+        const namePadded = it.name.padEnd(28).slice(0, 28); // prevent overflow
+        const priceStr = it.price.toFixed(2).padStart(7);
+        receipt += `${namePadded} R ${priceStr}\n`;
+        total += it.price;
+    });
 
-            receipt += "============================\n";
-            receipt += `$( {"TOTAL:".padEnd(28)} R) \){total.toFixed(2)}\n`;
+    receipt += "============================\n";
 
-            if (tender > 0) {
-                receipt += `$( {"Tendered:".padEnd(28)} R) \){tender.toFixed(2)}\n`;
-                receipt += `$( {"Change:".padEnd(28)}   R) \){change.toFixed(2)}\n`;
-            }
+    const totalStr = total.toFixed(2).padStart(7);
+    receipt += `${"TOTAL:".padEnd(28)} R ${totalStr}\n`;
 
-            receipt += "\nThank you! Come Again!\n\n\n";
-            receipt += "Press Ctrl+P (or Cmd+P on Mac) to print.";
+    if (tender > 0) {
+        const tenderStr = tender.toFixed(2).padStart(7);
+        const changeStr = change.toFixed(2).padStart(7);
+        receipt += `${"Tendered:".padEnd(28)} R ${tenderStr}\n`;
+        receipt += `${"Change:".padEnd(28)}   R ${changeStr}\n`;
+    }
 
-            lastReceiptContent = receipt;
-        }
+    receipt += "\nThank you! Come Again!\n\n\n";
+    receipt += "Press Ctrl+P (or Cmd+P on Mac) to print.";
+
+    lastReceiptContent = receipt;
+}
 
         function printLastReceipt() {
             if (!lastReceiptContent) return alert("No recent receipt to print");
