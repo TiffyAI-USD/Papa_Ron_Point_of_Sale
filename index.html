@@ -652,23 +652,27 @@
         function generateReceipt(tender = 0, change = 0, method = "") {
             let receipt = "PAPA RON'S COFFEE BAY\n";
             receipt += "============================\n";
-            receipt += new Date().toLocaleString() + "\n";
+            receipt += new Date().toLocaleString('en-ZA', { 
+                year: 'numeric', month: '2-digit', day: '2-digit', 
+                hour: '2-digit', minute: '2-digit', second: '2-digit', 
+                hour12: false 
+            }) + "\n";
             receipt += `Served by: ${currentStaffName} (PIN: ${currentPIN})\n`;
             receipt += `Payment: ${method}\n\n`;
 
             let total = 0;
             cart.forEach(it => {
                 const namePadded = it.name.padEnd(28);
-                receipt += `\( {namePadded} R \){it.price.toFixed(2)}\n`;
+                receipt += `(\( {namePadded} R) \){it.price.toFixed(2)}\n`;
                 total += it.price;
             });
 
             receipt += "============================\n";
-            receipt += `\( {"TOTAL:".padEnd(28)} R \){total.toFixed(2)}\n`;
+            receipt += `(\( {"TOTAL:".padEnd(28)} R) \){total.toFixed(2)}\n`;
 
             if (tender > 0) {
-                receipt += `\( {"Tendered:".padEnd(28)} R \){tender.toFixed(2)}\n`;
-                receipt += `\( {"Change:".padEnd(28)}   R \){change.toFixed(2)}\n`;
+                receipt += `(\( {"Tendered:".padEnd(28)} R) \){tender.toFixed(2)}\n`;
+                receipt += `(\( {"Change:".padEnd(28)}   R) \){change.toFixed(2)}\n`;
             }
 
             receipt += "\nThank you! Come Again!\n\n\n";
@@ -701,6 +705,7 @@
             if (e.key === "Enter") addItem();
         });
 
+        // Initial UI setup
         updateUI();
     </script>
 </body>
