@@ -663,16 +663,16 @@
             let total = 0;
             cart.forEach(it => {
                 const namePadded = it.name.padEnd(28);
-                receipt += `($( {namePadded} R) \){it.price.toFixed(2)}\n`;
+                receipt += `$( {namePadded} R) \){it.price.toFixed(2)}\n`;
                 total += it.price;
             });
 
             receipt += "============================\n";
-            receipt += `($( {"TOTAL:".padEnd(28)} R) \){total.toFixed(2)}\n`;
+            receipt += `$( {"TOTAL:".padEnd(28)} R) \){total.toFixed(2)}\n`;
 
             if (tender > 0) {
-                receipt += `($( {"Tendered:".padEnd(28)} R) \){tender.toFixed(2)}\n`;
-                receipt += `($( {"Change:".padEnd(28)}   R) \){change.toFixed(2)}\n`;
+                receipt += `$( {"Tendered:".padEnd(28)} R) \){tender.toFixed(2)}\n`;
+                receipt += `$( {"Change:".padEnd(28)}   R) \){change.toFixed(2)}\n`;
             }
 
             receipt += "\nThank you! Come Again!\n\n\n";
