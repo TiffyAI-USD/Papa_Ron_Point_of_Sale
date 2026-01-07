@@ -133,10 +133,10 @@
     <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav" preload="auto"></audio>
 
     <script>
-        // Sounds
         function playClick() { document.getElementById("clickSound").play().catch(() => {}); }
         function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
         function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
+
         document.querySelectorAll('button').forEach(btn => btn.addEventListener('click', playClick));
 
         const STAFF = {
