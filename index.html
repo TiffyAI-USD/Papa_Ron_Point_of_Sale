@@ -394,10 +394,10 @@
 
     transactions.forEach(t => {
         const statusUpper = t.status.toUpperCase();
-        const totalStr = t.total.toFixed(2);  // or .padStart(8) if you want fixed width
+        const totalStr = t.total.toFixed(2);
 
-        // ── FIXED LINE ──
-        let line = `Transaction \( {t.id} - ( \){statusUpper} - R)${totalStr}`;
+        // ✅ FIXED — REAL TEMPLATE LITERAL
+        let line = `Transaction ${t.id} - ${statusUpper} - R${totalStr}`;
         line += ` - ${t.timestamp} - ${t.staff}`;
         if (t.paymentMethod) line += ` (${t.paymentMethod})`;
 
@@ -414,10 +414,15 @@
     report += "\nPress Ctrl+P (or Cmd+P on Mac) to print this report.";
 
     const win = window.open('', '_blank');
-    win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + report + '</pre>');
+    win.document.write(
+        '<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' +
+        report +
+        '</pre>'
+    );
     win.document.close();
     win.focus();
 }
+
 
         function showTransactions() {
             document.getElementById("pos").style.display = "none";
