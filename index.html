@@ -385,28 +385,38 @@
         }
 
         function showZReading() {
-            const totalSales = dailySales.cash + dailySales.card;
-            let report = `Z READING - ${dailySales.date}\n\n`;
-            report += `Total Sales: R${totalSales.toFixed(2)}\n`;
-            report += `Cash: R${dailySales.cash.toFixed(2)}\n`;
-            report += `Card: R${dailySales.card.toFixed(2)}\n\n`;
-            report += `Transactions (${transactions.length}):\n\n`;
-            transactions.forEach(t => {
-                report += `Transaction ${t.id} - \( {t.status.toUpperCase()} - R \){t.total.toFixed(2)} - ${t.timestamp} - ${t.staff}`;
-                if (t.paymentMethod) report += ` (${t.paymentMethod})`;
-                report += "\n";
-                t.items.forEach(it => {
-                    report += `  - \( {it.name} R \){it.price.toFixed(2)}\n`;
-                });
-                report += "\n";
-            });
-            report += "\nPress Ctrl+P (or Cmd+P on Mac) to print this report.";
+    const totalSales = dailySales.cash + dailySales.card;
+    let report = `Z READING - ${dailySales.date}\n\n`;
+    report += `Total Sales: R${totalSales.toFixed(2)}\n`;
+    report += `Cash: R${dailySales.cash.toFixed(2)}\n`;
+    report += `Card: R${dailySales.card.toFixed(2)}\n\n`;
+    report += `Transactions (${transactions.length}):\n\n`;
 
-            const win = window.open('', '_blank');
-            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + report + '</pre>');
-            win.document.close();
-            win.focus();
-        }
+    transactions.forEach(t => {
+        const statusUpper = t.status.toUpperCase();
+        const totalStr = t.total.toFixed(2).padStart(8);
+        
+        // Correct: clean interpolation, no escapes
+        let line = `Transaction ${t.id} - \( {statusUpper} - R \){totalStr}`;
+        line += ` - ${t.timestamp} - ${t.staff}`;
+        if (t.paymentMethod) line += ` (${t.paymentMethod})`;
+        report += line + "\n";
+
+        t.items.forEach(it => {
+            const namePadded = it.name.padEnd(28).slice(0, 28);
+            const priceStr = it.price.toFixed(2).padStart(7);
+            report += `  ${namePadded} R ${priceStr}\n`;
+        });
+        report += "\n";
+    });
+
+    report += "\nPress Ctrl+P (or Cmd+P on Mac) to print this report.";
+
+    const win = window.open('', '_blank');
+    win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + report + '</pre>');
+    win.document.close();
+    win.focus();
+}
 
         function showTransactions() {
             document.getElementById("pos").style.display = "none";
