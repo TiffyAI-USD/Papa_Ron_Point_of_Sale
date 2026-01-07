@@ -505,17 +505,25 @@
         }
 
         function updateCart() {
-            const list = document.getElementById("items");
-            list.innerHTML = "";
-            let total = 0;
-            cart.forEach(it => {
-                total += it.price;
-                const li = document.createElement("li");
-                li.textContent = `\( {it.name} - R \){it.price.toFixed(2)} (Stock left: ${inventory[it.code].stock})`;
-                list.appendChild(li);
-            });
-            document.getElementById("total").textContent = `Total: R${total.toFixed(2)}`;
-        }
+    const list = document.getElementById("items");
+    list.innerHTML = "";
+    let total = 0;
+
+    cart.forEach(it => {
+        total += it.price;
+        const item = inventory[it.code];
+        const stockLeft = item ? item.stock : 0;
+
+        const namePadded = it.name.padEnd(28).slice(0, 28);
+        const priceStr = it.price.toFixed(2).padStart(7);
+
+        const li = document.createElement("li");
+        li.textContent = `${namePadded} R ${priceStr}   (Stock: ${stockLeft})`;
+        list.appendChild(li);
+    });
+
+    document.getElementById("total").textContent = `Total: R${total.toFixed(2)}`;
+}
 
         function updateStockStatus(item) {
             let msg = `${item.name} — Stock: ${item.stock} | Sold today: ${item.sold}`;
