@@ -560,28 +560,32 @@
             const transId = currentTransIndex === -1 ? "N/A" : transactions[currentTransIndex].id;
 
             let kitchen = `KITCHEN TAB - Transaction ${transId}\n`;
-            kitchen += `${now}\n`;
-            kitchen += `Served by: ${currentStaffName}\n\n`;
-            let hasFood = false;
-            cart.forEach(it => {
-                if (inventory[it.code].category === "food") {
-                    kitchen += `\( {it.name} - R \){it.price.toFixed(2)}\n`;
-                    hasFood = true;
-                }
-            });
-            if (!hasFood) kitchen += "No food items\n";
+kitchen += `${now}\n`;
+kitchen += `Served by: ${currentStaffName}\n\n`;
 
-            let bar = `BAR TAB - Transaction ${transId}\n`;
-            bar += `${now}\n`;
-            bar += `Served by: ${currentStaffName}\n\n`;
-            let hasDrink = false;
-            cart.forEach(it => {
-                if (inventory[it.code].category === "drink") {
-                    bar += `\( {it.name} - R \){it.price.toFixed(2)}\n`;
-                    hasDrink = true;
-                }
-            });
-            if (!hasDrink) bar += "No drink items\n";
+let hasFood = false;
+cart.forEach(it => {
+    if (inventory[it.code]?.category === "food") {
+        const namePadded = it.name.padEnd(28).slice(0, 28);
+        kitchen += `${namePadded} R ${it.price.toFixed(2)}\n`;
+        hasFood = true;
+    }
+});
+if (!hasFood) kitchen += "No food items\n";
+
+let bar = `BAR TAB - Transaction ${transId}\n`;
+bar += `${now}\n`;
+bar += `Served by: ${currentStaffName}\n\n`;
+
+let hasDrink = false;
+cart.forEach(it => {
+    if (inventory[it.code]?.category === "drink") {
+        const namePadded = it.name.padEnd(28).slice(0, 28);
+        bar += `${namePadded} R ${it.price.toFixed(2)}\n`;
+        hasDrink = true;
+    }
+});
+if (!hasDrink) bar += "No drink items\n";
 
             const content = kitchen + "\n\n---\n\n" + bar + "\n\nPress Ctrl+P (or Cmd+P on Mac) to print these tabs.";
 
