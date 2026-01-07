@@ -394,12 +394,13 @@
 
     transactions.forEach(t => {
         const statusUpper = t.status.toUpperCase();
-        const totalStr = t.total.toFixed(2).padStart(8);
-        
-        // Correct: clean interpolation, no escapes
-        let line = `Transaction ${t.id} - \( {statusUpper} - R \){totalStr}`;
+        const totalStr = t.total.toFixed(2);  // or .padStart(8) if you want fixed width
+
+        // ── FIXED LINE ──
+        let line = `Transaction \( {t.id} - ( \){statusUpper} - R)${totalStr}`;
         line += ` - ${t.timestamp} - ${t.staff}`;
         if (t.paymentMethod) line += ` (${t.paymentMethod})`;
+
         report += line + "\n";
 
         t.items.forEach(it => {
