@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA RON'S COFFEE BAY POS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; font-size: 2.5rem; margin: 20px 0; }
+        input, button { font-size: 1.8rem; padding: 15px; margin: 10px 0; width: 100%; border-radius: 10px; box-sizing: border-box; }
+        button { background: #d4a373; color: #000; border: none; cursor: pointer; }
+        #items { list-style: none; padding: 0; max-height: 35vh; overflow-y: auto; }
+        li { background: #111; padding: 15px; margin: 10px 0; border-radius: 10px; font-size: 1.6rem; }
+        #total { font-size: 2.5rem; text-align: center; margin: 20px 0; color: #d4a373; }
+        #login, #stockIn, #inventoryView, #transactionsView { text-align: center; margin-top: 50px; }
+        #pos, #inventoryView, #multiplierPopup, #tenderPopup, #stockIn { display: none; }
+        .stock-info { font-size: 1.4rem; color: #aaa; margin: 15px 0; text-align: center; }
+        #inventoryList li { background: #111; padding: 12px; margin: 8px 0; border-radius: 8px; font-size: 1.4rem; list-style: none; }
+        .in-stock { color: #44ff44; }
+        .low-stock-item { color: #ff4444; }
+        #multiplierPopup, #tenderPopup { 
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            background: #111; padding: 20px; border-radius: 20px; width: 90%; max-width: 400px; 
+            z-index: 1000; box-shadow: 0 0 20px rgba(212,163,115,0.5); 
+        }
+        .active-trans { color: #44ff44; font-weight: bold; }
+        .paid-trans { color: #d4a373; font-weight: bold; }
+        .trans-row { background: #111; border: 1px solid #333; margin: 10px; padding: 15px; border-radius: 10px; text-align: left; }
+        .trans-details { font-size: 1.2rem; color: #ccc; margin-top: 5px; }
+        .del-btn { background: #ff4444; color: white; width: 80px; font-size: 1.2rem; padding: 10px; }
+        .print-btn { background: #ff9800; color: white; font-weight: bold; margin: 15px 0; padding: 18px; font-size: 1.8rem; }
+
+        .category-section { width: 48%; }
+        .category-title { text-align: center; color: #d4a373; margin-bottom: 8px; font-size: 1.6rem; }
+        .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-height: 45vh; overflow-y: auto; }
+        .product-btn { font-size: 1.1rem; padding: 12px; color: white; border-radius: 8px; border: none; }
+        .food-btn { background: #8b5a2b; }
+        .drink-btn { background: #1e88e5; }
+
+        .specials-row { display: flex; gap: 10px; background: #222; padding: 10px; border-radius: 10px; margin-bottom: 10px; }
+        .specials-row input { font-size: 1.2rem; margin: 0; }
+        .specials-row button { width: 150px; background: #44ff44; margin: 0; }
+    </style>
+</head>
+<body>
+    <h1>PAPA RON'S COFFEE BAY</h1>
+
+    <div id="login">
+        <h2>Enter PIN</h2>
+        <input type="password" id="pin" placeholder="PIN" autofocus />
+        <button onclick="login()">Login</button>
+        <button onclick="stockInMode()">Stock In Mode</button>
+    </div>
+
+    <div id="pos">
+        <button onclick="logout()">Logout</button>
+        <button onclick="showInventory()">Raw Stock Levels</button>
+        <button onclick="showZReading()">Z Reading (Today)</button>
+        <button onclick="showTransactions()">Manage Transactions</button>
+
+        <div class="specials-row">
+            <input type="text" id="specName" placeholder="Special Name">
+            <input type="number" id="specPrice" placeholder="Price">
+            <button onclick="addSpecial()">Charge Special</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; gap: 15px; margin: 15px 0;">
+            <div class="category-section">
+                <div class="category-title">Food</div>
+                <div id="foodGrid" class="category-grid"></div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">Drinks</div>
+                <div id="drinkGrid" class="category-grid"></div>
+            </div>
+        </div>
+
+        <button onclick="printPreview()">Print Kitchen/Bar Tabs</button>
+        <button onclick="payCash()">Cash</button>
+        <button onclick="payCard()">Card</button>
+        <button class="print-btn" onclick="printLastReceipt()" style="display:none;" id="printReceiptBtn">Print Customer Receipt</button>
+
+        <h3>Trans: <span id="currentTransNum">1</span> <span id="transStatus"></span></h3>
+        <ul id="items"></ul>
+        <div id="total">Total: R0.00</div>
+    </div>
+
+    <div id="stockIn">
+        <h2>Add Raw Ingredients</h2>
+        <button onclick="logout()">Back to Login</button>
+        <div id="stockInStatus" class="stock-info"></div>
+        <div id="ingredientStockGrid" class="category-grid" style="grid-template-columns: repeat(3, 1fr);"></div>
+    </div>
+
+    <div id="inventoryView">
+        <h2>Live Raw Stock</h2>
+        <button onclick="backToPOS()">Back</button>
+        <ul id="inventoryList"></ul>
+    </div>
+
+    <div id="transactionsView">
+        <h2>Manage Transactions</h2>
+        <button onclick="backToPOS()">Back</button>
+        <div id="transList"></div>
+    </div>
+
+    <div id="multiplierPopup">
+        <h2 id="popupItemName"></h2>
+        <input type="number" id="packsInput" placeholder="Qty" />
+        <button onclick="confirmMultiplier()">Update Stock</button>
+        <button onclick="document.getElementById('multiplierPopup').style.display='none'">Cancel</button>
+    </div>
+
+    <div id="tenderPopup">
+        <h2>Cash: R<span id="tenderTotal"></span></h2>
+        <input type="number" id="tenderAmount" placeholder="Amount Paid" autofocus />
+        <button onclick="confirmTender()">Confirm Cash Payment</button>
+        <button onclick="document.getElementById('tenderPopup').style.display='none'">Cancel</button>
+    </div>
+
+    <audio id="eatSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/eat.wav"></audio>
+    <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav"></audio>
+
+    <script>
+        const STAFF = {"1234": "Staff 1", "3456": "Manager"};
+        
+        // RAW INGREDIENTS
+        let rawStock = JSON.parse(localStorage.getItem('papaRawStock')) || {
+            "PizzaDough": 50, "Cheese_g": 5000, "BaconStrips": 100, "BeefPatty": 50, "BurgerBun": 50,
+            "ChickenBreast": 30, "RibRack": 20, "Steak": 20, "Chips_g": 10000, "BoerieSausage": 40,
+            "Russian": 20, "Coke500": 24, "Beer330": 48
+        };
+
+        // MENU WITH RECIPES
+        const inventory = {
+            "1001": { name: "SOMETHING MEATY PIZZA", price: 135, category: "food", recipe: {"PizzaDough": 1, "Cheese_g": 200, "BaconStrips": 4} },
+            "1002": { name: "HAWAIIAN PIZZA", price: 135, category: "food", recipe: {"PizzaDough": 1, "Cheese_g": 200} },
+            "1003": { name: "FLAMING SPARE RIB PIZZA", price: 150, category: "food", recipe: {"PizzaDough": 1, "Cheese_g": 200, "RibRack": 0.5} },
+            "1004": { name: "CHEESE BURGER", price: 120, category: "food", recipe: {"BeefPatty": 1, "BurgerBun": 1, "BaconStrips": 2, "Chips_g": 200} },
+            "1006": { name: "BOERIE ROLL", price: 40, category: "food", recipe: {"BoerieSausage": 1, "BurgerBun": 1} },
+            "1007": { name: "RUMP STEAK", price: 160, category: "food", recipe: {"Steak": 1, "Chips_g": 250} },
+            "1008": { name: "RIB RACK", price: 200, category: "food", recipe: {"RibRack": 1, "Chips_g": 250} },
+            "1011": { name: "MUNCHIE PLATTER", price: 350, category: "food", recipe: {"BeefPatty": 2, "Chips_g": 500} },
+            "1021": { name: "AFRICAN MEATY", price: 150, category: "food", recipe: {"PizzaDough": 1, "Cheese_g": 200, "Steak": 0.5} },
+            "1022": { name: "MILLIONAIRE", price: 200, category: "food", recipe: {"PizzaDough": 1, "Cheese_g": 300, "Steak": 1} },
+            "1023": { name: "RUSSIAN ROLL AND CHIPS", price: 50, category: "food", recipe: {"Russian": 1, "BurgerBun": 1, "Chips_g": 200} },
+            "D001": { name: "Coke 500ml", price: 20, category: "drink", recipe: {"Coke500": 1} },
+            "D002": { name: "Beer 330ml", price: 30, category: "drink", recipe: {"Beer330": 1} }
+        };
+
+        let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+        let currentTransIndex = -1, cart = [], currentStaffName = "", pendingIng = "";
+
+        function save() {
+            localStorage.setItem('papaRawStock', JSON.stringify(rawStock));
+            localStorage.setItem('transactions', JSON.stringify(transactions));
+        }
+
+        function login() {
+            const pin = document.getElementById("pin").value;
+            if(STAFF[pin]) {
+                currentStaffName = STAFF[pin];
+                document.getElementById("login").style.display = "none";
+                document.getElementById("pos").style.display = "block";
+                genButtons();
+                if (transactions.length === 0 || transactions[transactions.length-1].status === "paid") newTrans();
+                else loadTrans(transactions.length - 1);
+            } else alert("Bad PIN");
+        }
+
+        function stockInMode() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("stockIn").style.display = "block";
+            const grid = document.getElementById("ingredientStockGrid");
+            grid.innerHTML = "";
+            for(let ing in rawStock) {
+                const btn = document.createElement("button");
+                btn.className = "product-btn food-btn";
+                btn.textContent = ing;
+                btn.onclick = () => { pendingIng = ing; document.getElementById("popupItemName").textContent = ing; document.getElementById("multiplierPopup").style.display = "block"; };
+                grid.appendChild(btn);
+            }
+        }
+
+        function confirmMultiplier() {
+            const qty = parseInt(document.getElementById("packsInput").value) || 0;
+            rawStock[pendingIng] += qty;
+            document.getElementById("multiplierPopup").style.display = "none";
+            document.getElementById("packsInput").value = "";
+            save();
+        }
+
+        function newTrans() {
+            const t = { id: transactions.length + 1, items: [], total: 0, status: "active", staff: currentStaffName, date: new Date().toDateString(), time: new Date().toLocaleTimeString(), method: "" };
+            transactions.push(t);
+            currentTransIndex = transactions.length - 1;
+            cart = t.items;
+            save(); updateUI();
+        }
+
+        function loadTrans(idx) {
+            currentTransIndex = idx;
+            cart = transactions[idx].items;
+            updateUI();
+        }
+
+        function genButtons() {
+            const fG = document.getElementById("foodGrid"), dG = document.getElementById("drinkGrid");
+            fG.innerHTML = ""; dG.innerHTML = "";
+            for(let code in inventory) {
+                const item = inventory[code];
+                const btn = document.createElement("button");
+                btn.className = `product-btn ${item.category}-btn`;
+                btn.innerHTML = `${item.name}<br>R${item.price}`;
+                btn.onclick = () => quickAdd(code);
+                if(item.category === "food") fG.appendChild(btn); else dG.appendChild(btn);
+            }
+        }
+
+        function quickAdd(code) {
+            const item = inventory[code];
+            for(let ing in item.recipe) {
+                if(rawStock[ing] < item.recipe[ing]) return alert("OUT OF STOCK: " + ing);
+            }
+            cart.push({ name: item.name, price: item.price, category: item.category, recipe: item.recipe });
+            for(let ing in item.recipe) { rawStock[ing] -= item.recipe[ing]; }
+            document.getElementById("eatSound").play();
+            save(); updateUI();
+        }
+
+        function addSpecial() {
+            const n = document.getElementById("specName").value.toUpperCase();
+            const p = parseFloat(document.getElementById("specPrice").value);
+            if(!n || isNaN(p)) return;
+            cart.push({ name: n, price: p, category: "food", recipe: {} });
+            save(); updateUI();
+            document.getElementById("specName").value = ""; document.getElementById("specPrice").value = "";
+        }
+
+        function updateUI() {
+            const list = document.getElementById("items"); list.innerHTML = "";
+            let total = 0;
+            cart.forEach(i => {
+                total += i.price;
+                list.innerHTML += `<li>${i.name.padEnd(20).slice(0,20)} R${i.price.toFixed(2)}</li>`;
+            });
+            document.getElementById("total").textContent = `Total: R${total.toFixed(2)}`;
+            document.getElementById("currentTransNum").textContent = transactions[currentTransIndex].id;
+        }
+
+        function showTransactions() {
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("transactionsView").style.display = "block";
+            const list = document.getElementById("transList"); list.innerHTML = "";
+            transactions.slice().reverse().forEach((t, idx) => {
+                const i = transactions.length - 1 - idx;
+                list.innerHTML += `<div class="trans-row">
+                    <span class="${t.status}-trans">Trans ${t.id} - R${t.total}</span>
+                    <button onclick="loadTrans(${i}); backToPOS();">Open</button>
+                    <div class="trans-details">${t.items.map(it => it.name).join(", ")}</div>
+                </div>`;
+            });
+        }
+
+        function printPreview() {
+            const win = window.open('', '_blank');
+            let content = `TAB - Trans ${transactions[currentTransIndex].id}\n\n`;
+            cart.forEach(i => content += `- ${i.name}\n`);
+            win.document.write(`<pre style="font-size:20pt; font-weight:bold;">${content}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function finalize(method) {
+            const t = transactions[currentTransIndex];
+            t.total = cart.reduce((s,i)=>s+i.price, 0);
+            t.status = "paid"; t.method = method;
+            save();
+            document.getElementById("printReceiptBtn").style.display = "block";
+        }
+
+        function printLastReceipt() {
+            const t = transactions[currentTransIndex];
+            let r = `PAPA RON'S\n${t.date}\n\n`;
+            cart.forEach(i => r += `${i.name} R${i.price}\n`);
+            r += `\nTOTAL: R${t.total}\n${t.method}`;
+            const win = window.open('', '_blank');
+            win.document.write(`<pre style="font-size:20pt; font-weight:bold;">${r}</pre>`);
+            win.document.close(); win.print();
+            document.getElementById("printReceiptBtn").style.display = "none";
+            newTrans();
+        }
+
+        function payCash() {
+            document.getElementById("tenderTotal").textContent = cart.reduce((s,i)=>s+i.price,0);
+            document.getElementById("tenderPopup").style.display = "block";
+        }
+
+        function confirmTender() {
+            document.getElementById("tenderPopup").style.display = "none";
+            finalize("Cash");
+        }
+
+        function payCard() { finalize("Card"); }
+        function logout() { location.reload(); }
+        function backToPOS() { document.getElementById("pos").style.display = "block"; document.getElementById("inventoryView").style.display = "none"; document.getElementById("transactionsView").style.display = "none"; }
+        
+        function showInventory() {
+            document.getElementById("pos").style.display = "none"; document.getElementById("inventoryView").style.display = "block";
+            const l = document.getElementById("inventoryList"); l.innerHTML = "";
+            for(let ing in rawStock) {
+                l.innerHTML += `<li class="${rawStock[ing] < 10 ? 'low-stock-item' : 'in-stock'}">${ing}: ${rawStock[ing]}</li>`;
+            }
+        }
+
+        function showZReading() {
+            const today = new Date().toDateString();
+            const sales = transactions.filter(t => t.date === today && t.status === "paid");
+            let total = sales.reduce((s,t) => s + t.total, 0);
+            alert("Z-REPORT TOTAL: R" + total);
+        }
+    </script>
+</body>
+</html>
