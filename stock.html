@@ -44,18 +44,9 @@
         .food-btn { background: #8b5a2b; }
         .drink-btn { background: #1e88e5; }
 
-        /* STOCK REPLENISH GRID */
-        #stockReplenishGrid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
-            gap: 10px; 
-            margin-top: 20px; 
-            max-height: 50vh; 
-            overflow-y: auto; 
-            padding: 10px;
-            background: #050505;
-            border-radius: 15px;
-        }
+        /* NEW: Stock Replenish Grid Styles */
+        #stockReplenishSection { margin-top: 20px; border-top: 1px solid #333; padding-top: 20px; }
+        #stockGrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 10px; max-height: 50vh; overflow-y: auto; padding: 10px; }
     </style>
 </head>
 <body>
@@ -108,9 +99,12 @@
             <input type="text" id="stockBarcode" placeholder="Scan incoming stock" autofocus />
             <button onclick="processStockInput()">Add Stock</button>
         </div>
-        <div id="stockInStatus" class="stock-info">Tap an item below to replenish:</div>
-        
-        <div id="stockReplenishGrid"></div>
+        <div id="stockInStatus" class="stock-info"></div>
+
+        <div id="stockReplenishSection">
+            <h3 style="color: #d4a373;">Select Product to Replenish</h3>
+            <div id="stockGrid"></div>
+        </div>
     </div>
 
     <div id="inventoryView">
@@ -148,6 +142,7 @@
     <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav" preload="auto"></audio>
 
     <script>
+        // Sounds
         function playClick() { document.getElementById("clickSound").play().catch(() => {}); }
         function playEat() { document.getElementById("eatSound").play().catch(() => {}); }
         function playSparkle() { document.getElementById("sparkleSound").play().catch(() => {}); }
@@ -227,7 +222,13 @@
 
         let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
         let currentTransIndex = -1;
-        let dailySales = JSON.parse(localStorage.getItem('dailySales')) || { date: new Date().toDateString(), cash: 0, card: 0, transactions: [] };
+
+        let dailySales = JSON.parse(localStorage.getItem('dailySales')) || {
+            date: new Date().toDateString(),
+            cash: 0,
+            card: 0,
+            transactions: []
+        };
 
         if (dailySales.date !== new Date().toDateString()) {
             dailySales = { date: new Date().toDateString(), cash: 0, card: 0, transactions: [] };
@@ -242,46 +243,18 @@
 
         let cart = [];
 
-        function login() {
-            const pin = document.getElementById("pin").value.trim();
-            if (STAFF[pin]) {
-                currentPIN = pin;
-                currentStaffName = STAFF[pin];
-                document.getElementById("login").style.display = "none";
-                document.getElementById("pos").style.display = "block";
-                generateQuickButtons();
-                if (transactions.length === 0 || transactions[transactions.length - 1].status === "paid") createNewTransaction();
-                else loadTransaction(transactions.length - 1);
-                document.getElementById("barcode").focus();
-            } else alert("Invalid PIN");
-        }
-
-        function stockInMode() {
-            document.getElementById("login").style.display = "none";
-            document.getElementById("stockIn").style.display = "block";
-            generateStockButtons();
-            document.getElementById("stockBarcode").focus();
-        }
-
-        function generateStockButtons() {
-            const grid = document.getElementById("stockReplenishGrid");
-            grid.innerHTML = "";
-            Object.keys(inventory).sort((a,b) => inventory[a].name.localeCompare(inventory[b].name)).forEach(code => {
-                const item = inventory[code];
-                const btn = document.createElement("button");
-                btn.className = `product-btn ${item.category === 'food' ? 'food-btn' : 'drink-btn'}`;
-                btn.textContent = `${item.name} (${item.stock})`;
-                btn.onclick = () => {
-                    pendingStockCode = code;
-                    document.getElementById("popupItemName").textContent = item.name;
-                    document.getElementById("multiplierPopup").style.display = "block";
-                };
-                grid.appendChild(btn);
-            });
-        }
-
         function createNewTransaction() {
-            const trans = { id: transactions.length + 1, items: [], total: 0, status: "active", timestamp: new Date().toLocaleString(), staff: currentStaffName };
+            const trans = {
+                id: transactions.length + 1,
+                items: [],
+                total: 0,
+                status: "active",
+                timestamp: new Date().toLocaleString(),
+                staff: currentStaffName,
+                paymentMethod: null,
+                tender: null,
+                change: null
+            };
             transactions.push(trans);
             currentTransIndex = transactions.length - 1;
             cart = trans.items;
@@ -298,8 +271,11 @@
         function updateUI() {
             const transNumEl = document.getElementById("currentTransNum");
             const statusEl = document.getElementById("transStatus");
-            if (currentTransIndex === -1) { transNumEl.textContent = "None"; statusEl.textContent = ""; }
-            else {
+
+            if (currentTransIndex === -1) {
+                transNumEl.textContent = "None";
+                statusEl.textContent = "";
+            } else {
                 const t = transactions[currentTransIndex];
                 transNumEl.textContent = t.id;
                 statusEl.textContent = t.status === "active" ? "(Active)" : "(Paid)";
@@ -311,161 +287,443 @@
         function generateQuickButtons() {
             const foodGrid = document.getElementById("foodGrid");
             const drinkGrid = document.getElementById("drinkGrid");
-            foodGrid.innerHTML = ""; drinkGrid.innerHTML = "";
+            foodGrid.innerHTML = "";
+            drinkGrid.innerHTML = "";
+
             Object.keys(inventory).forEach(code => {
                 const item = inventory[code];
                 const btn = document.createElement("button");
                 btn.className = `product-btn ${item.category === "food" ? "food-btn" : "drink-btn"}`;
                 btn.textContent = item.name;
                 btn.onclick = () => quickAddItem(code);
+
                 if (item.category === "food") foodGrid.appendChild(btn);
-                else drinkGrid.appendChild(btn);
+                else if (item.category === "drink") drinkGrid.appendChild(btn);
+            });
+        }
+
+        // NEW: Function to generate Stock Replenish Buttons
+        function generateStockButtons() {
+            const grid = document.getElementById("stockGrid");
+            grid.innerHTML = "";
+
+            // Sort alphabetical
+            const sortedKeys = Object.keys(inventory).sort((a,b) => inventory[a].name.localeCompare(inventory[b].name));
+
+            sortedKeys.forEach(code => {
+                const item = inventory[code];
+                const btn = document.createElement("button");
+                btn.className = `product-btn ${item.category === "food" ? "food-btn" : "drink-btn"}`;
+                btn.textContent = `${item.name} (${item.stock})`;
+                btn.onclick = () => {
+                    pendingStockCode = code;
+                    document.getElementById("popupItemName").textContent = item.name;
+                    document.getElementById("packsInput").value = "";
+                    document.getElementById("casesInput").value = "";
+                    document.getElementById("multiplierPopup").style.display = "block";
+                    setTimeout(() => document.getElementById("packsInput").focus(), 100);
+                };
+                grid.appendChild(btn);
             });
         }
 
         function quickAddItem(code) {
             const item = inventory[code];
-            if (!item) return;
+            if (!item) return alert("Item not found: " + code);
             if (item.stock <= 0) return alert("OUT OF STOCK: " + item.name);
+
             cart.push({ name: item.name, price: item.price, code: code });
-            item.stock--; item.sold++;
-            playEat(); saveAll(); updateCart(); updateStockStatus(item);
+            item.stock--;
+            item.sold++;
+            playEat();
+            saveAll();
+            updateCart();
+            updateStockStatus(item);
+            document.getElementById("barcode").focus();
+        }
+
+        function login() {
+            const pin = document.getElementById("pin").value.trim();
+            if (STAFF[pin]) {
+                currentPIN = pin;
+                currentStaffName = STAFF[pin];
+                document.getElementById("login").style.display = "none";
+                document.getElementById("pos").style.display = "block";
+
+                generateQuickButtons();
+
+                if (transactions.length === 0 || transactions[transactions.length - 1].status === "paid") {
+                    createNewTransaction();
+                } else {
+                    loadTransaction(transactions.length - 1);
+                }
+                document.getElementById("barcode").focus();
+            } else {
+                alert("Invalid PIN");
+            }
+        }
+
+        function stockInMode() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("stockIn").style.display = "block";
+            generateStockButtons(); // Load the buttons
+            document.getElementById("stockBarcode").focus();
+        }
+
+        function logout() {
+            cart = [];
+            updateCart();
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("stockIn").style.display = "none";
+            document.getElementById("inventoryView").style.display = "none";
+            document.getElementById("transactionsView").style.display = "none";
+            document.getElementById("multiplierPopup").style.display = "none";
+            document.getElementById("tenderPopup").style.display = "none";
+            document.getElementById("printReceiptBtn").style.display = "none";
+            document.getElementById("login").style.display = "block";
+            document.getElementById("pin").value = "";
+            currentPIN = "";
+            currentStaffName = "";
+        }
+
+        function showInventory() {
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("inventoryView").style.display = "block";
+
+            const list = document.getElementById("inventoryList");
+            list.innerHTML = "";
+
+            const sorted = Object.keys(inventory).map(code => ({
+                code,
+                ...inventory[code]
+            })).sort((a, b) => a.name.localeCompare(b.name));
+
+            sorted.forEach(item => {
+                const li = document.createElement("li");
+                let text = `${item.name} — Stock: ${item.stock} | Sold today: ${item.sold}`;
+                if (item.stock >= 5) {
+                    li.classList.add("in-stock");
+                } else if (item.stock > 0) {
+                    li.classList.add("low-stock-item");
+                    text += " ⚠️ LOW STOCK";
+                }
+                li.textContent = text;
+                list.appendChild(li);
+            });
+        }
+
+        function backToPOS() {
+            document.getElementById("inventoryView").style.display = "none";
+            document.getElementById("transactionsView").style.display = "none";
+            document.getElementById("pos").style.display = "block";
+            document.getElementById("barcode").focus();
+        }
+
+        function showZReading() {
+            const totalSales = dailySales.cash + dailySales.card;
+            let report = `Z READING - ${dailySales.date}\n\n`;
+            report += `Total Sales: R${totalSales.toFixed(2)}\n`;
+            report += `Cash: R${dailySales.cash.toFixed(2)}\n`;
+            report += `Card: R${dailySales.card.toFixed(2)}\n\n`;
+            report += `Transactions (${transactions.length}):\n\n`;
+
+            transactions.forEach(t => {
+                const statusUpper = t.status.toUpperCase();
+                const totalStr = t.total.toFixed(2);
+                let line = `Transaction ${t.id} - ${statusUpper} - R${totalStr}`;
+                line += ` - ${t.timestamp} - ${t.staff}`;
+                if (t.paymentMethod) line += ` (${t.paymentMethod})`;
+
+                report += line + "\n";
+
+                t.items.forEach(it => {
+                    const namePadded = it.name.padEnd(28).slice(0, 28);
+                    const priceStr = it.price.toFixed(2).padStart(7);
+                    report += `  ${namePadded} R ${priceStr}\n`;
+                });
+                report += "\n";
+            });
+
+            report += "\nPress Ctrl+P (or Cmd+P on Mac) to print this report.";
+
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + report + '</pre>');
+            win.document.close();
+            win.focus();
+        }
+
+        function showTransactions() {
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("transactionsView").style.display = "block";
+            const list = document.getElementById("transList");
+            list.innerHTML = "";
+            transactions.forEach((trans, i) => {
+                const btn = document.createElement("button");
+                btn.className = "transaction-btn";
+                btn.textContent = `Transaction ${trans.id} - ${trans.status === "active" ? "Active" : "Paid"}`;
+                btn.classList.add(trans.status === "active" ? "active-trans" : "paid-trans");
+                btn.onclick = () => { loadTransaction(i); backToPOS(); };
+                list.appendChild(btn);
+            });
+            const newBtn = document.createElement("button");
+            newBtn.textContent = "New Transaction";
+            newBtn.onclick = () => { createNewTransaction(); backToPOS(); };
+            list.appendChild(newBtn);
         }
 
         function addItem() {
             const code = document.getElementById("barcode").value.trim();
-            if (inventory[code]) quickAddItem(code);
-            else alert("Not found");
+            if (!code) return;
+
+            const item = inventory[code];
+            if (!item) {
+                alert("Item not found: " + code);
+                return;
+            }
+            if (item.stock <= 0) {
+                alert("OUT OF STOCK: " + item.name);
+                return;
+            }
+
+            cart.push({ name: item.name, price: item.price, code: code });
+            item.stock--;
+            item.sold++;
+            playEat();
+            saveAll();
+            updateCart();
+            updateStockStatus(item);
+
             document.getElementById("barcode").value = "";
+            document.getElementById("barcode").focus();
         }
 
         function processStockInput() {
             const code = document.getElementById("stockBarcode").value.trim();
-            if (inventory[code]) {
+            if (!code) return;
+            const item = inventory[code];
+            if (item) {
                 pendingStockCode = code;
-                document.getElementById("popupItemName").textContent = inventory[code].name;
+                document.getElementById("popupItemName").textContent = item.name;
+                document.getElementById("packsInput").value = "";
+                document.getElementById("casesInput").value = "";
                 document.getElementById("multiplierPopup").style.display = "block";
+                setTimeout(() => document.getElementById("packsInput").focus(), 100);
+            } else {
+                alert("Unknown barcode: " + code);
             }
             document.getElementById("stockBarcode").value = "";
         }
 
+        document.getElementById("stockBarcode").addEventListener("keyup", e => {
+            if (e.key === "Enter") processStockInput();
+        });
+
+        document.getElementById("stockBarcode").addEventListener("input", function() {
+            if (this.value.length > 8) processStockInput();
+        });
+
         function confirmMultiplier() {
             const packs = parseInt(document.getElementById("packsInput").value) || 0;
             const cases = parseInt(document.getElementById("casesInput").value) || 0;
-            const single = parseInt(document.getElementById("singleIn")?.value) || 0; // fallback logic
-            let qty = (packs * 6) + (cases * 24);
-            if (qty === 0) qty = 1;
-            inventory[pendingStockCode].stock += qty;
-            playSparkle(); saveAll();
+            let quantity = (packs * 6) + (cases * 24);
+            if (quantity === 0) quantity = 1;
+            const item = inventory[pendingStockCode];
+            item.stock += quantity;
+            playSparkle();
+            saveAll();
+            document.getElementById("stockInStatus").textContent = 
+                `${item.name} added ${quantity} units — Stock: ${item.stock} | Sold today: ${item.sold}`;
             document.getElementById("multiplierPopup").style.display = "none";
+            
+            // Refresh stock buttons if visible
             if(document.getElementById("stockIn").style.display === "block") generateStockButtons();
+            
+            document.getElementById("stockBarcode").focus();
         }
 
         function cancelMultiplier() {
-            inventory[pendingStockCode].stock += 1;
-            playSparkle(); saveAll();
+            const item = inventory[pendingStockCode];
+            item.stock += 1;
+            playSparkle();
+            saveAll();
+            document.getElementById("stockInStatus").textContent = 
+                `${item.name} added 1 unit — Stock: ${item.stock} | Sold today: ${item.sold}`;
             document.getElementById("multiplierPopup").style.display = "none";
+            
+            // Refresh stock buttons if visible
             if(document.getElementById("stockIn").style.display === "block") generateStockButtons();
+            
+            document.getElementById("stockBarcode").focus();
         }
 
         function updateCart() {
             const list = document.getElementById("items");
-            list.innerHTML = ""; let total = 0;
+            list.innerHTML = "";
+            let total = 0;
+
             cart.forEach(it => {
                 total += it.price;
+                const item = inventory[it.code];
+                const stockLeft = item ? item.stock : 0;
+                const namePadded = it.name.padEnd(28).slice(0, 28);
+                const priceStr = it.price.toFixed(2).padStart(7);
                 const li = document.createElement("li");
-                li.textContent = `${it.name.padEnd(20)} R${it.price.toFixed(2)}`;
+                li.textContent = `${namePadded} R ${priceStr}   (Stock: ${stockLeft})`;
                 list.appendChild(li);
             });
+
             document.getElementById("total").textContent = `Total: R${total.toFixed(2)}`;
         }
 
         function updateStockStatus(item) {
-            document.getElementById("stockStatus").textContent = `${item.name} Stock: ${item.stock}`;
+            let msg = `${item.name} — Stock: ${item.stock} | Sold today: ${item.sold}`;
+            if (item.stock < 5) msg += " ⚠️ LOW STOCK - REORDER!";
+            document.getElementById("stockStatus").textContent = msg;
         }
 
-        function finalizeSale(method, total, tender = 0, change = 0) {
-            const trans = transactions[currentTransIndex];
-            trans.status = "paid"; trans.total = total; trans.paymentMethod = method;
+        function clearCart() {
+            cart.forEach(it => {
+                inventory[it.code].stock++;
+                inventory[it.code].sold--;
+            });
             saveAll();
-            generateReceipt(tender, change, method);
-            document.getElementById("printReceiptBtn").style.display = "block";
-            alert("Payment Done. Print Receipt to close.");
+            cart = [];
+            updateCart();
+            document.getElementById("stockStatus").textContent = "";
+            document.getElementById("printReceiptBtn").style.display = "none";
+        }
+
+        function printPreview() {
+            if (cart.length === 0) return alert("Cart empty");
+            const now = new Date().toLocaleString();
+            const transId = currentTransIndex === -1 ? "N/A" : transactions[currentTransIndex].id;
+
+            let kitchen = `KITCHEN TAB - Transaction ${transId}\n${now}\nServed by: ${currentStaffName}\n\n`;
+            let hasFood = false;
+            cart.forEach(it => {
+                if (inventory[it.code]?.category === "food") {
+                    kitchen += `${it.name.padEnd(28).slice(0, 28)} R ${it.price.toFixed(2)}\n`;
+                    hasFood = true;
+                }
+            });
+            if (!hasFood) kitchen += "No food items\n";
+
+            let bar = `BAR TAB - Transaction ${transId}\n${now}\nServed by: ${currentStaffName}\n\n`;
+            let hasDrink = false;
+            cart.forEach(it => {
+                if (inventory[it.code]?.category === "drink") {
+                    bar += `${it.name.padEnd(28).slice(0, 28)} R ${it.price.toFixed(2)}\n`;
+                    hasDrink = true;
+                }
+            });
+            if (!hasDrink) bar += "No drink items\n";
+
+            const content = kitchen + "\n\n---\n\n" + bar + "\n\nPress Ctrl+P (or Cmd+P on Mac) to print these tabs.";
+            const win = window.open('', '_blank');
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + content + '</pre>');
+            win.document.close();
+            win.focus();
         }
 
         function payCash() {
+            if (cart.length === 0) return alert("Cart is empty");
             const total = cart.reduce((sum, it) => sum + it.price, 0);
-            if (total === 0) return;
-            window.pendingTotal = total;
             document.getElementById("tenderTotal").textContent = total.toFixed(2);
             document.getElementById("tenderPopup").style.display = "block";
+            document.getElementById("tenderAmount").value = "";
+            document.getElementById("tenderAmount").focus();
+            document.getElementById("tenderResult").textContent = "";
+            window.pendingTotal = total;
         }
 
         function confirmTender() {
             const tender = parseFloat(document.getElementById("tenderAmount").value) || 0;
-            if (tender < window.pendingTotal) return alert("Short");
-            const change = tender - window.pendingTotal;
-            dailySales.cash += window.pendingTotal;
-            finalizeSale("Cash", window.pendingTotal, tender, change);
+            const total = window.pendingTotal || 0;
+            if (tender < total) {
+                document.getElementById("tenderResult").textContent = `Not enough – needs at least R${total.toFixed(2)}`;
+                return;
+            }
+            const change = tender - total;
+            document.getElementById("tenderResult").textContent = `Change: R${change.toFixed(2)}`;
+            dailySales.cash += total;
+            saveAll();
+            finalizeSale("Cash", total, tender, change);
+        }
+
+        function cancelTender() {
             document.getElementById("tenderPopup").style.display = "none";
+            document.getElementById("tenderResult").textContent = "";
         }
 
         function payCard() {
+            if (cart.length === 0) return alert("Cart is empty");
             const total = cart.reduce((sum, it) => sum + it.price, 0);
-            if (total === 0) return;
             dailySales.card += total;
+            saveAll();
             finalizeSale("Card", total);
         }
 
-        function generateReceipt(tender, change, method) {
-            let r = `PAPA RON'S\n${new Date().toLocaleString()}\nStaff: ${currentStaffName}\n`;
-            cart.forEach(i => r += `${i.name} R${i.price}\n`);
-            r += `Total: R${window.pendingTotal}\nMethod: ${method}\n`;
-            if (tender) r += `Tender: R${tender}\nChange: R${change}\n`;
-            lastReceiptContent = r;
+        function finalizeSale(method, total, tender = 0, change = 0) {
+            if (currentTransIndex !== -1) {
+                const trans = transactions[currentTransIndex];
+                trans.status = "paid";
+                trans.total = total;
+                trans.paymentMethod = method;
+                trans.tender = tender > 0 ? tender : null;
+                trans.change = change > 0 ? change : null;
+                trans.timestamp = new Date().toLocaleString();
+                trans.items = cart.map(item => ({ ...item }));
+            }
+            saveAll();
+            generateReceipt(tender, change, method);
+            document.getElementById("printReceiptBtn").style.display = "block";
+            if (document.getElementById("tenderPopup").style.display === "block") {
+                document.getElementById("tenderPopup").style.display = "none";
+            }
+            alert(`${method} payment completed! Now tap "Print Receipt & Close Sale".`);
+        }
+
+        function generateReceipt(tender = 0, change = 0, method = "") {
+            let receipt = "PAPA RON'S COFFEE BAY\n============================\n";
+            receipt += new Date().toLocaleString('en-ZA', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false }) + "\n";
+            receipt += `Served by: ${currentStaffName} (PIN: ${currentPIN})\nPayment: ${method}\n\n`;
+            let total = 0;
+            cart.forEach(it => {
+                receipt += `${it.name.padEnd(28).slice(0, 28)} R ${it.price.toFixed(2).padStart(7)}\n`;
+                total += it.price;
+            });
+            receipt += "============================\n";
+            receipt += `${"TOTAL:".padEnd(28)} R ${total.toFixed(2).padStart(7)}\n`;
+            if (tender > 0) {
+                receipt += `${"Tendered:".padEnd(28)} R ${tender.toFixed(2).padStart(7)}\n`;
+                receipt += `${"Change:".padEnd(28)}   R ${change.toFixed(2).padStart(7)}\n`;
+            }
+            receipt += "\nThank you! Come Again!\n\n\nPress Ctrl+P to print.";
+            lastReceiptContent = receipt;
         }
 
         function printLastReceipt() {
+            if (!lastReceiptContent) return alert("No recent receipt");
             const win = window.open('', '_blank');
-            win.document.write('<pre>' + lastReceiptContent + '</pre>');
-            win.document.close(); win.print();
+            win.document.write('<pre style="font-family: monospace; font-size: 14pt; white-space: pre-wrap;">' + lastReceiptContent + '</pre>');
+            win.document.close();
+            win.focus();
             completeSale();
         }
 
         function completeSale() {
-            cart = []; updateCart();
+            cart = [];
+            updateCart();
+            document.getElementById("stockStatus").textContent = "";
             document.getElementById("printReceiptBtn").style.display = "none";
             createNewTransaction();
+            document.getElementById("barcode").focus();
         }
 
-        function logout() { location.reload(); }
-        function backToPOS() { 
-            document.getElementById("inventoryView").style.display = "none"; 
-            document.getElementById("transactionsView").style.display = "none";
-            document.getElementById("pos").style.display = "block"; 
-        }
-        function showInventory() {
-            document.getElementById("pos").style.display = "none";
-            document.getElementById("inventoryView").style.display = "block";
-            const list = document.getElementById("inventoryList");
-            list.innerHTML = "";
-            Object.values(inventory).forEach(item => {
-                const li = document.createElement("li");
-                li.textContent = `${item.name}: ${item.stock}`;
-                list.appendChild(li);
-            });
-        }
-        
-        function showTransactions() {
-            document.getElementById("pos").style.display = "none";
-            document.getElementById("transactionsView").style.display = "block";
-        }
+        document.getElementById("barcode").addEventListener("keyup", e => {
+            if (e.key === "Enter") addItem();
+        });
 
-        function showZReading() {
-            alert(`Daily Cash: R${dailySales.cash}\nDaily Card: R${dailySales.card}`);
-        }
-
-        document.getElementById("barcode").addEventListener("keyup", e => { if (e.key === "Enter") addItem(); });
         updateUI();
     </script>
 </body>
