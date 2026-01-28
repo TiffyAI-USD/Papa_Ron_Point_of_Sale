@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA RON'S COFFEE BAY POS</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; font-size: 2.5rem; margin: 20px 0; }
+        input, button { font-size: 1.8rem; padding: 15px; margin: 10px 0; width: 100%; border-radius: 10px; box-sizing: border-box; }
+        button { background: #d4a373; color: #000; border: none; cursor: pointer; }
+        #items { list-style: none; padding: 0; max-height: 35vh; overflow-y: auto; }
+        li { background: #111; padding: 15px; margin: 10px 0; border-radius: 10px; font-size: 1.6rem; }
+        #total { font-size: 2.5rem; text-align: center; margin: 20px 0; color: #d4a373; }
+        #login, #stockIn, #inventoryView, #transactionsView { text-align: center; margin-top: 50px; }
+        #pos, #inventoryView, #multiplierPopup, #tenderPopup, #stockIn { display: none; }
+        .stock-info { font-size: 1.4rem; color: #aaa; margin: 15px 0; text-align: center; }
+        #inventoryList li { background: #111; padding: 12px; margin: 8px 0; border-radius: 8px; font-size: 1.4rem; list-style: none; }
+        .in-stock { color: #44ff44; }
+        .low-stock-item { color: #ff4444; }
+        #multiplierPopup, #tenderPopup { 
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            background: #111; padding: 20px; border-radius: 20px; width: 90%; max-width: 400px; 
+            z-index: 1000; box-shadow: 0 0 20px rgba(212,163,115,0.5); 
+        }
+        .category-section { width: 48%; }
+        .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; max-height: 45vh; overflow-y: auto; }
+        .product-btn { font-size: 1.1rem; padding: 12px; color: white; border-radius: 8px; border: none; }
+        .food-btn { background: #8b5a2b; }
+        .drink-btn { background: #1e88e5; }
+        .ing-btn { background: #444; } /* Gray for raw ingredients */
+    </style>
+</head>
+<body>
+    <h1>PAPA RON'S COFFEE BAY</h1>
+
+    <div id="login">
+        <h2>Enter PIN</h2>
+        <input type="password" id="pin" placeholder="PIN" autofocus />
+        <button onclick="login()">Login</button>
+        <button onclick="stockInMode()">Stock In Mode</button>
+    </div>
+
+    <div id="pos">
+        <button onclick="logout()">Logout</button>
+        <button onclick="showInventory()">Inventory</button>
+        <button onclick="showZReading()">Z Reading (Today)</button>
+        
+        <div style="display: flex; justify-content: space-between; gap: 15px; margin: 15px 0;">
+            <div class="category-section">
+                <div id="foodGrid" class="category-grid"></div>
+            </div>
+            <div class="category-section">
+                <div id="drinkGrid" class="category-grid"></div>
+            </div>
+        </div>
+
+        <ul id="items"></ul>
+        <div id="total">Total: R0.00</div>
+        <button onclick="payCash()">Cash</button>
+        <button onclick="payCard()">Card</button>
+    </div>
+
+    <div id="stockIn">
+        <h2>Stock Replenishment</h2>
+        <button onclick="logout()">Back</button>
+        <div style="display: flex; justify-content: space-between; gap: 10px;">
+            <div class="category-section"><h3>Products</h3><div id="mainStockGrid" class="category-grid"></div></div>
+            <div class="category-section"><h3>Ingredients</h3><div id="ingStockGrid" class="category-grid"></div></div>
+        </div>
+    </div>
+
+    <div id="inventoryView">
+        <h2>Live Stock</h2>
+        <button onclick="backToPOS()">Back</button>
+        <ul id="inventoryList"></ul>
+    </div>
+
+    <div id="multiplierPopup">
+        <h2 id="popupItemName"></h2>
+        <input type="number" id="packsInput" placeholder="Packs (x6)" />
+        <input type="number" id="casesInput" placeholder="Cases (x24)" />
+        <button onclick="confirmMultiplier()">Update Stock</button>
+        <button onclick="cancelMultiplier()">+1 Single Only</button>
+    </div>
+
+    <script>
+        const STAFF = {"1234": "Staff 1", "3456": "Manager"};
+        
+        // BASE INVENTORY DATA
+        let inventory = JSON.parse(localStorage.getItem('posInventory')) || {};
+
+        const ingredientList = {
+            "ing_bacon": { name: "Bacon Strips", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_patty": { name: "Beef Patty", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_bun": { name: "Burger Buns", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_cheese": { name: "Cheese Slices", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_egg": { name: "Eggs", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_steak": { name: "Rump Steak Piece", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_chicken": { name: "Crumbed Chicken Breast", price: 0, stock: 0, sold: 0, category: "ing" },
+            "ing_griller": { name: "Cheese Grillers", price: 0, stock: 0, sold: 0, category: "ing" }
+        };
+
+        const products = {
+            "1004": { name: "CHEESE BURGER", price: 120, stock: 0, sold: 0, category: "food" },
+            "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 0, sold: 0, category: "food" },
+            "1005": { name: "CHEESY STRIPS (5)", price: 50, stock: 0, sold: 0, category: "food" }
+        };
+
+        // FORCE INJECT MISSING ITEMS (So they actually show up)
+        Object.assign(inventory, products, ingredientList, inventory);
+        localStorage.setItem('posInventory', JSON.stringify(inventory));
+
+        const recipes = {
+            "1004": { "ing_patty": 1, "ing_bun": 1, "ing_cheese": 1, "ing_bacon": 2 } // Cheese Burger uses 2 bacon
+        };
+
+        let cart = [];
+        let pendingStockCode = "";
+
+        function login() {
+            if(STAFF[document.getElementById("pin").value]) {
+                document.getElementById("login").style.display = "none";
+                document.getElementById("pos").style.display = "block";
+                genButtons();
+            } else alert("Bad PIN");
+        }
+
+        function stockInMode() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("stockIn").style.display = "block";
+            genButtons();
+        }
+
+        function genButtons() {
+            const foodGrid = document.getElementById("foodGrid");
+            const mainStockGrid = document.getElementById("mainStockGrid");
+            const ingStockGrid = document.getElementById("ingStockGrid");
+            
+            foodGrid.innerHTML = ""; mainStockGrid.innerHTML = ""; ingStockGrid.innerHTML = "";
+
+            Object.keys(inventory).forEach(code => {
+                const item = inventory[code];
+                const btn = document.createElement("button");
+                btn.className = `product-btn ${item.category === 'food' ? 'food-btn' : 'ing-btn'}`;
+                btn.textContent = item.name;
+
+                if (item.category !== "ing") {
+                    const posBtn = btn.cloneNode(true);
+                    posBtn.onclick = () => quickAdd(code);
+                    foodGrid.appendChild(posBtn);
+                    
+                    const stBtn = btn.cloneNode(true);
+                    stBtn.onclick = () => openStock(code);
+                    mainStockGrid.appendChild(stBtn);
+                } else {
+                    const stBtn = btn.cloneNode(true);
+                    stBtn.onclick = () => openStock(code);
+                    ingStockGrid.appendChild(stBtn);
+                }
+            });
+        }
+
+        function quickAdd(code) {
+            const item = inventory[code];
+            if (recipes[code]) {
+                for (let ing in recipes[code]) {
+                    if (inventory[ing]) inventory[ing].stock -= recipes[code][ing];
+                }
+            }
+            cart.push(item);
+            item.stock--;
+            updateUI();
+            localStorage.setItem('posInventory', JSON.stringify(inventory));
+        }
+
+        function updateUI() {
+            const list = document.getElementById("items"); list.innerHTML = "";
+            let total = 0;
+            cart.forEach(i => {
+                total += i.price;
+                const li = document.createElement("li");
+                li.textContent = `${i.name} - R${i.price}`;
+                list.appendChild(li);
+            });
+            document.getElementById("total").textContent = `Total: R${total.toFixed(2)}`;
+        }
+
+        function openStock(code) {
+            pendingStockCode = code;
+            document.getElementById("popupItemName").textContent = inventory[code].name;
+            document.getElementById("multiplierPopup").style.display = "block";
+        }
+
+        function confirmMultiplier() {
+            const qty = (parseInt(document.getElementById("packsInput").value) || 0) * 6 + (parseInt(document.getElementById("casesInput").value) || 0) * 24;
+            inventory[pendingStockCode].stock += qty || 1;
+            localStorage.setItem('posInventory', JSON.stringify(inventory));
+            document.getElementById("multiplierPopup").style.display = "none";
+        }
+
+        function cancelMultiplier() { 
+            inventory[pendingStockCode].stock += 1; 
+            localStorage.setItem('posInventory', JSON.stringify(inventory));
+            document.getElementById("multiplierPopup").style.display = "none"; 
+        }
+
+        function showInventory() {
+            document.getElementById("pos").style.display = "none"; 
+            document.getElementById("inventoryView").style.display = "block";
+            const l = document.getElementById("inventoryList"); l.innerHTML = "";
+            Object.values(inventory).forEach(i => {
+                const li = document.createElement("li");
+                li.textContent = `${i.name}: ${i.stock} in stock`;
+                l.appendChild(li);
+            });
+        }
+
+        function backToPOS() { document.getElementById("pos").style.display = "block"; document.getElementById("inventoryView").style.display = "none"; }
+        function logout() { location.reload(); }
+    </script>
+</body>
+</html>
