@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA RON'S COFFEE BAY - PROFESSIONAL POS</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; font-size: 3rem; margin: 20px 0; text-shadow: 2px 2px #444; }
+        
+        /* INPUTS & BUTTONS */
+        input, button { font-size: 1.8rem; padding: 15px; margin: 10px 0; width: 100%; border-radius: 12px; box-sizing: border-box; transition: 0.3s; }
+        button { background: #d4a373; color: #000; border: none; cursor: pointer; font-weight: bold; }
+        button:active { transform: scale(0.95); background: #b5895b; }
+        
+        /* LISTS */
+        #items { list-style: none; padding: 0; max-height: 30vh; overflow-y: auto; border: 1px solid #333; border-radius: 10px; }
+        li { background: #111; padding: 15px; margin: 5px; border-radius: 8px; font-size: 1.6rem; display: flex; justify-content: space-between; border-left: 5px solid #d4a373; }
+        
+        /* TOTALS */
+        #total { font-size: 3.5rem; text-align: center; margin: 20px 0; color: #44ff44; font-weight: bold; }
+        
+        /* LAYOUT SECTIONS */
+        #pos, #inventoryView, #multiplierPopup, #tenderPopup, #stockIn, #transactionsView { display: none; }
+        .category-section { width: 49%; }
+        .category-title { text-align: center; color: #d4a373; margin-bottom: 10px; font-size: 1.8rem; text-decoration: underline; }
+        .category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; max-height: 45vh; overflow-y: auto; padding: 5px; }
+        
+        /* PRODUCT BUTTONS */
+        .product-btn { font-size: 1.2rem; padding: 15px; color: white; border-radius: 10px; border: none; min-height: 80px; box-shadow: 0 4px #000; }
+        .food-btn { background: #5d4037; border-bottom: 4px solid #3e2723; }
+        .drink-btn { background: #1565c0; border-bottom: 4px solid #0d47a1; }
+        .ing-btn { background: #37474f; border-bottom: 4px solid #263238; }
+
+        /* INVENTORY COLOURS */
+        .in-stock { color: #44ff44; }
+        .low-stock { color: #ffeb3b; }
+        .out-of-stock { color: #ff4444; font-weight: bold; }
+        #inventoryList li { border-left: 5px solid #555; font-size: 1.4rem; }
+
+        /* TRANSACTION LIST */
+        .trans-row { background: #111; border: 1px solid #d4a373; margin: 10px; padding: 20px; border-radius: 15px; }
+        .active-trans { color: #44ff44; font-weight: bold; font-size: 1.6rem; }
+        .paid-trans { color: #d4a373; font-weight: bold; font-size: 1.6rem; }
+
+        /* POPUPS */
+        #multiplierPopup, #tenderPopup { 
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            background: #1a1a1a; padding: 30px; border-radius: 25px; width: 90%; max-width: 500px; 
+            z-index: 1000; box-shadow: 0 0 40px rgba(212,163,115,0.7); border: 2px solid #d4a373;
+        }
+
+        /* SPECIALS */
+        .specials-row { display: flex; gap: 10px; background: #1a1a1a; padding: 15px; border-radius: 12px; margin-bottom: 15px; border: 1px dashed #d4a373; }
+        .specials-row input { font-size: 1.2rem; margin: 0; }
+        .specials-row button { width: 180px; background: #2e7d32; color: white; margin: 0; }
+    </style>
+</head>
+<body onload="checkLogin()">
+    <h1>PAPA RON'S COFFEE BAY</h1>
+
+    <div id="login" style="text-align: center; margin-top: 100px;">
+        <input type="password" id="pin" placeholder="ENTER STAFF PIN" style="width: 300px; text-align: center;" autofocus />
+        <button onclick="login()" style="width: 300px;">LOGIN</button>
+        <button onclick="stockInMode()" style="width: 300px; background: #555; color: #fff; margin-top: 20px;">STOCK REPLENISH</button>
+    </div>
+
+    <div id="pos">
+        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
+            <button style="width: 23%; background: #c62828; color: white;" onclick="logout()">LOGOUT</button>
+            <button style="width: 23%;" onclick="showInventory()">LIVE STOCK</button>
+            <button style="width: 23%;" onclick="showZReading()">Z-READING</button>
+            <button style="width: 23%; background: #2e7d32; color: white;" onclick="showTransactions()">TRANSACTIONS</button>
+        </div>
+
+        <div class="specials-row">
+            <input type="text" id="specName" placeholder="Special Item Name">
+            <input type="number" id="specPrice" placeholder="Price">
+            <button onclick="addSpecial()">ADD SPECIAL</button>
+        </div>
+
+        <div style="display: flex; justify-content: space-between; gap: 15px;">
+            <div class="category-section">
+                <div class="category-title">FOOD MENU</div>
+                <div id="foodGrid" class="category-grid"></div>
+            </div>
+            <div class="category-section">
+                <div class="category-title">DRINKS & COFFEE</div>
+                <div id="drinkGrid" class="category-grid"></div>
+            </div>
+        </div>
+
+        <div style="margin-top: 20px; display: flex; gap: 10px;">
+            <input type="text" id="barcode" placeholder="SCAN BARCODE" style="flex: 2;" />
+            <button onclick="addItem()" style="flex: 1; background: #1565c0; color: white;">ADD</button>
+            <button onclick="clearCart()" style="flex: 1; background: #616161; color: white;">CLEAR</button>
+        </div>
+
+        <div id="total">TOTAL: R0.00</div>
+        
+        <div style="display: flex; gap: 15px;">
+            <button onclick="printPreview()" style="background: #ff9800; font-size: 2rem;">PRINT TABS</button>
+            <button onclick="payCash()" style="background: #4caf50; font-size: 2rem;">CASH</button>
+            <button onclick="payCard()" style="background: #03a9f4; font-size: 2rem;">CARD</button>
+        </div>
+
+        <h3>Trans: #<span id="currentTransNum">1</span> <span id="transStatus" style="color:#d4a373"></span></h3>
+        <ul id="items"></ul>
+    </div>
+
+    <div id="inventoryView">
+        <h2 style="color: #d4a373; font-size: 2.5rem;">LIVE INVENTORY STATUS</h2>
+        <button onclick="backToPOS()" style="background: #555; color: white;">BACK TO SALES</button>
+        <ul id="inventoryList"></ul>
+    </div>
+
+    <div id="transactionsView">
+        <h2 style="color: #d4a373;">TRANSACTION HISTORY</h2>
+        <button onclick="backToPOS()" style="background: #555;">BACK</button>
+        <div id="transList"></div>
+    </div>
+
+    <div id="stockIn">
+        <h2>STOCK REPLENISHMENT</h2>
+        <button onclick="logout()">BACK TO LOGIN</button>
+        <input type="text" id="stockBarcode" placeholder="SCAN ITEM TO ADD STOCK" />
+        <div style="display: flex; gap: 10px;">
+            <div class="category-section"><div class="category-title">FOOD</div><div id="foodStockGrid" class="category-grid"></div></div>
+            <div class="category-section"><div class="category-title">DRINK</div><div id="drinkStockGrid" class="category-grid"></div></div>
+            <div class="category-section"><div class="category-title">INGREDIENTS</div><div id="ingStockGrid" class="category-grid"></div></div>
+        </div>
+    </div>
+
+    <div id="multiplierPopup">
+        <h2 id="popupItemName" style="color: #d4a373;"></h2>
+        <p>Enter quantity to add to stock:</p>
+        <div style="display: flex; gap: 10px;">
+            <input type="number" id="packsInput" placeholder="Packs (x6)" />
+            <input type="number" id="casesInput" placeholder="Cases (x24)" />
+        </div>
+        <button onclick="confirmMultiplier()" style="background: #4caf50;">UPDATE STOCK</button>
+        <button onclick="cancelMultiplier()" style="background: #616161;">ADD SINGLE (+1)</button>
+        <button onclick="document.getElementById('multiplierPopup').style.display='none'">CANCEL</button>
+    </div>
+
+    <audio id="eatSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/eat.wav"></audio>
+    <audio id="sparkleSound" src="https://tiffyai-usd.github.io/Papa_Ron_Point_of_Sale/sparcle.wav"></audio>
+
+    <script>
+        const STAFF = {"1234": "Staff 1", "5678": "Staff 2", "3456": "Manager"};
+        
+        // RECIPE DEFINITIONS
+        const recipes = {
+            "1004": { "ing_patty": 1, "ing_bun": 1, "ing_cheese": 1, "ing_bacon": 2 },
+            "1009": { "ing_breast": 2 },
+            "1012": { "ing_cheesy_pops": 5 },
+            "1017": { "ing_egg": 2, "ing_bacon": 2 }
+        };
+
+        let inventory = JSON.parse(localStorage.getItem('posInventory')) || {
+            "1001": { name: "SOMETHING MEATY PIZZA", price: 135, stock: 50, sold: 0, category: "food" },
+            "1004": { name: "CHEESE BURGER", price: 120, stock: 50, sold: 0, category: "food" },
+            "1009": { name: "SCHNITZEL", price: 120, stock: 50, sold: 0, category: "food" },
+            "ing_breast": { name: "Crumbed Chicken Breast", price: 0, stock: 100, sold: 0, category: "ing" },
+            "ing_patty": { name: "Beef Patty", price: 0, stock: 100, sold: 0, category: "ing" },
+            "ing_bun": { name: "Burger Buns", price: 0, stock: 100, sold: 0, category: "ing" }
+        };
+
+        // JANITOR: MERGE DUPLICATES IMMEDIATELY
+        (function forceClean() {
+            if (!inventory["ing_breast"]) inventory["ing_breast"] = { name: "Crumbed Chicken Breast", price: 0, stock: 0, sold: 0, category: "ing" };
+            for (let key in inventory) {
+                if (inventory[key].name === "Crumbed Chicken Breast" && key !== "ing_breast") {
+                    inventory["ing_breast"].stock += (inventory[key].stock || 0);
+                    inventory["ing_breast"].sold += (inventory[key].sold || 0);
+                    delete inventory[key];
+                }
+            }
+            localStorage.setItem('posInventory', JSON.stringify(inventory));
+        })();
+
+        let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
+        let currentTransIndex = -1;
+        let cart = [];
+        let currentStaffName = "";
+        let pendingStockCode = "";
+
+        function playEat() { document.getElementById("eatSound").play().catch(()=>{}); }
+        function playSparkle() { document.getElementById("sparkleSound").play().catch(()=>{}); }
+        function save() { localStorage.setItem('posInventory', JSON.stringify(inventory)); localStorage.setItem('transactions', JSON.stringify(transactions)); }
+
+        function login() {
+            const pin = document.getElementById("pin").value;
+            if(STAFF[pin]) {
+                currentStaffName = STAFF[pin];
+                document.getElementById("login").style.display = "none";
+                document.getElementById("pos").style.display = "block";
+                genButtons();
+                if (transactions.length === 0 || transactions[transactions.length-1].status === "paid") newTrans();
+                else loadTrans(transactions.length - 1);
+            } else alert("INVALID PIN");
+        }
+
+        function stockInMode() {
+            document.getElementById("login").style.display = "none";
+            document.getElementById("stockIn").style.display = "block";
+            genButtons();
+        }
+
+        function newTrans() {
+            const t = { id: transactions.length + 1, items: [], total: 0, status: "active", staff: currentStaffName, date: new Date().toDateString(), time: new Date().toLocaleTimeString(), method: "" };
+            transactions.push(t);
+            currentTransIndex = transactions.length - 1;
+            cart = t.items;
+            save(); updateUI();
+        }
+
+        function loadTrans(idx) { 
+            currentTransIndex = idx; 
+            cart = transactions[idx].items; 
+            updateUI(); 
+        }
+
+        function genButtons() {
+            const grids = ["foodGrid", "drinkGrid", "foodStockGrid", "drinkStockGrid", "ingStockGrid"];
+            grids.forEach(id => { if(document.getElementById(id)) document.getElementById(id).innerHTML = ""; });
+
+            Object.keys(inventory).sort((a,b)=>inventory[a].name.localeCompare(inventory[b].name)).forEach(code => {
+                const item = inventory[code];
+                const btn = document.createElement("button");
+                btn.className = `product-btn ${item.category === 'food' ? 'food-btn' : item.category === 'drink' ? 'drink-btn' : 'ing-btn'}`;
+                btn.innerHTML = `${item.name}<br><small>Stock: ${item.stock}</small>`;
+                
+                if (item.category !== 'ing') {
+                    const posBtn = btn.cloneNode(true);
+                    posBtn.onclick = () => quickAdd(code);
+                    document.getElementById(item.category === 'food' ? 'foodGrid' : 'drinkGrid').appendChild(posBtn);
+                }
+                
+                const stBtn = btn.cloneNode(true);
+                stBtn.onclick = () => { 
+                    pendingStockCode = code; 
+                    document.getElementById("popupItemName").textContent = item.name;
+                    document.getElementById("multiplierPopup").style.display = "block"; 
+                };
+                
+                let target = item.category === 'food' ? 'foodStockGrid' : item.category === 'drink' ? 'drinkStockGrid' : 'ingStockGrid';
+                if(document.getElementById(target)) document.getElementById(target).appendChild(stBtn);
+            });
+        }
+
+        function quickAdd(code) {
+            const item = inventory[code];
+            if (!item) return;
+
+            // RECIPE DEDUCTION LOGIC
+            if (recipes[code]) {
+                for (let ingKey in recipes[code]) {
+                    const qty = recipes[code][ingKey];
+                    if (inventory[ingKey]) {
+                        inventory[ingKey].stock -= qty;
+                        inventory[ingKey].sold += qty;
+                    }
+                }
+            }
+
+            cart.push({ name: item.name, price: item.price, code: code, category: item.category });
+            item.stock--; 
+            item.sold++;
+            playEat(); save(); updateUI();
+        }
+
+        function updateUI() {
+            const list = document.getElementById("items"); list.innerHTML = "";
+            let total = 0;
+            cart.forEach(i => {
+                total += i.price;
+                const li = document.createElement("li");
+                li.innerHTML = `<span>${i.name}</span> <span>R${i.price.toFixed(2)}</span>`;
+                list.appendChild(li);
+            });
+            document.getElementById("total").textContent = `TOTAL: R${total.toFixed(2)}`;
+            document.getElementById("currentTransNum").textContent = transactions[currentTransIndex].id;
+        }
+
+        function showInventory() {
+            document.getElementById("pos").style.display = "none";
+            document.getElementById("inventoryView").style.display = "block";
+            const l = document.getElementById("inventoryList"); l.innerHTML = "";
+            Object.values(inventory).sort((a,b)=>a.name.localeCompare(b.name)).forEach(i => {
+                const li = document.createElement("li");
+                let statusClass = "in-stock";
+                if(i.stock <= 0) statusClass = "out-of-stock";
+                else if(i.stock < 10) statusClass = "low-stock";
+                
+                li.innerHTML = `<span>${i.name}</span> <span class="${statusClass}">${i.stock} in stock (Sold: ${i.sold})</span>`;
+                l.appendChild(li);
+            });
+        }
+
+        function showZReading() {
+            const today = new Date().toDateString();
+            const sales = transactions.filter(t => t.date === today && t.status === "paid");
+            const total = sales.reduce((s,t)=>s+t.total,0);
+            const cash = sales.filter(t=>t.method === "Cash").reduce((s,t)=>s+t.total,0);
+            const card = sales.filter(t=>t.method === "Card").reduce((s,t)=>s+t.total,0);
+            alert(`--- Z-READING (${today}) ---\n\nCASH: R${cash.toFixed(2)}\nCARD: R${card.toFixed(2)}\nTOTAL: R${total.toFixed(2)}`);
+        }
+
+        function printPreview() {
+            if(cart.length === 0) return;
+            let content = `<div style="text-align:center; font-family:monospace;">
+                <h2>PAPA RON'S KITCHEN</h2>
+                <h3>TRANS #${transactions[currentTransIndex].id}</h3>
+                <hr>
+                <div style="font-size:24pt; font-weight:bold; text-align:left;">`;
+            cart.forEach(i => { if(i.category === "food") content += `[ ] ${i.name}<br>`; });
+            content += `</div><hr></div>`;
+            const win = window.open('', '_blank');
+            win.document.write(content); win.document.close(); win.print();
+        }
+
+        function finalize(method) {
+            const t = transactions[currentTransIndex];
+            t.status = "paid"; t.method = method; t.total = cart.reduce((s,i)=>s+i.price, 0);
+            save(); newTrans(); alert(`Payment Processed: ${method}`);
+        }
+
+        function payCash() { finalize("Cash"); }
+        function payCard() { finalize("Card"); }
+        function backToPOS() { document.querySelectorAll('>div').forEach(d=>d.style.display='none'); document.getElementById("pos").style.display="block"; }
+        function logout() { location.reload(); }
+
+        function confirmMultiplier() {
+            const p = parseInt(document.getElementById("packsInput").value) || 0;
+            const c = parseInt(document.getElementById("casesInput").value) || 0;
+            inventory[pendingStockCode].stock += (p * 6) + (c * 24);
+            playSparkle(); save(); document.getElementById('multiplierPopup').style.display='none';
+        }
+        function cancelMultiplier() { inventory[pendingStockCode].stock += 1; save(); document.getElementById('multiplierPopup').style.display='none'; }
+    </script>
+</body>
+</html>
