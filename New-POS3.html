@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSAL RESTAURANT POS</title>
+    <style>
+        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; margin: 10px 0; }
+        input, button, select { font-size: 1.2rem; padding: 12px; margin: 5px 0; width: 100%; border-radius: 8px; box-sizing: border-box; border: 1px solid #333; }
+        button { background: #d4a373; color: #000; cursor: pointer; font-weight: bold; }
+        
+        .grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .tab-content { display: none; margin-top: 15px; }
+        .active-tab { display: block; }
+        
+        /* Grid for Food/Drinks */
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; background: #111; padding: 10px; border-radius: 10px; min-height: 200px; }
+        .product-btn { position: relative; min-height: 70px; font-size: 0.9rem; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px; }
+        .food-btn { background: #5d4037; }
+        .drink-btn { background: #1565c0; }
+        .btn-del-x { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 22px; height: 22px; font-size: 12px; line-height: 22px; text-align: center; }
+
+        /* Cart */
+        #cart-list { background: #111; border-radius: 10px; padding: 10px; margin: 10px 0; max-height: 200px; overflow-y: auto; }
+        .cart-row { display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding: 5px 0; }
+        #total-view { font-size: 2rem; color: #44ff44; text-align: center; margin-bottom: 10px; }
+
+        /* Tables/Transactions */
+        #trans-tabs { display: flex; gap: 5px; overflow-x: auto; padding: 10px 0; }
+        .tab-btn { width: auto; padding: 10px 20px; background: #333; color: #fff; white-space: nowrap; }
+        .tab-btn.active { background: #d4a373; color: #000; }
+
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 15px; width: 90%; max-width: 400px; z-index: 1000; border: 2px solid #d4a373; display: none;}
+    </style>
+</head>
+<body>
+
+    <h1 id="rest-name">RESTAURANT SYSTEM</h1>
+
+    <div class="grid-main">
+        <button onclick="switchTab('pos-tab')">SALES</button>
+        <button onclick="switchTab('menu-tab')">BUILDER</button>
+        <button onclick="switchTab('stock-tab')">STOCK</button>
+        <button onclick="showZReading()">Z-READING</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs"></div>
+        <button onclick="createNewTransaction()" style="background:#44ff44; width:auto; padding: 10px;">+ NEW TABLE</button>
+
+        <div class="grid-main" style="margin-top:10px;">
+            <div><div class="category-grid" id="foodGrid"></div></div>
+            <div><div class="category-grid" id="drinkGrid"></div></div>
+        </div>
+
+        <div id="cart-list"></div>
+        <div id="total-view">R 0.00</div>
+
+        <div class="grid-main">
+            <button onclick="openTender()" style="background:#4caf50;">CASH</button>
+            <button onclick="finalizeSale('Card')">CARD</button>
+            <button onclick="printKitchenTab()" style="background:#666;">KITCHEN TAB</button>
+            <button onclick="deleteCurrentTransaction()" style="background:#ff4444;">DEL TABLE</button>
+        </div>
+    </div>
+
+    <div id="menu-tab" class="tab-content">
+        <div style="background:#1a1a1a; padding:15px; border-radius:10px;">
+            <h3>Create Menu Item</h3>
+            <input type="text" id="m-name" placeholder="Item Name">
+            <input type="number" id="m-price" placeholder="Price">
+            <select id="m-cat"><option value="food">Food</option><option value="drink">Drink</option></select>
+            <h4>Ingredients</h4>
+            <div id="ing-rows">
+                <div class="grid-main"><input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty (e.g. 0.5)"></div>
+            </div>
+            <button onclick="addIngRow()" style="background:#555;">+ Add Ingredient</button>
+            <button onclick="saveNewProduct()" style="background:#44ff44;">SAVE PRODUCT</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <button onclick="printStock()" style="background:#fff; color:#000;">PRINT STOCK LIST</button>
+        <div id="inventory-display" style="margin-top:15px;"></div>
+    </div>
+
+    <div id="stock-modal" class="modal">
+        <h2 id="stock-item-name"></h2>
+        <input type="number" id="stock-add-amt" placeholder="Add Amount (grams/units)">
+        <button onclick="confirmStockAdd()" style="background:#44ff44;">ADD STOCK</button>
+        <button onclick="closeModal()">CANCEL</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h2>Cash Payment</h2>
+        <input type="number" id="cash-amt" placeholder="Cash Given">
+        <button onclick="finalizeSale('Cash')" style="background:#44ff44;">PAID</button>
+        <button onclick="closeModal()">CANCEL</button>
+    </div>
+
+    <script>
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [{id: 1, items: [], status: 'active'}];
+        let currentTransIdx = 0;
+        let selectedStockKey = "";
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+        }
+
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        // MENU BUILDER LOGIC
+        function addIngRow() {
+            const div = document.createElement('div');
+            div.className = "grid-main";
+            div.innerHTML = `<input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty">`;
+            document.getElementById('ing-rows').appendChild(div);
+        }
+
+        function saveNewProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase();
+            const price = parseFloat(document.getElementById('m-price').value);
+            const cat = document.getElementById('m-cat').value;
+            const id = "P_" + Date.now();
+            if(!name || !price) return;
+
+            let recipe = {};
+            const names = document.querySelectorAll('.i-name');
+            const qtys = document.querySelectorAll('.i-qty');
+            names.forEach((n, i) => {
+                const iname = n.value.toUpperCase();
+                const iqty = parseFloat(qtys[i].value);
+                if(iname && iqty) {
+                    recipe[iname] = iqty;
+                    if(!inventory[iname]) inventory[iname] = { name: iname, stock: 0, category: 'ingredient' };
+                }
+            });
+
+            inventory[id] = { name, price, category: cat, stock: 0 };
+            if(Object.keys(recipe).length > 0) recipes[id] = recipe;
+            save(); location.reload();
+        }
+
+        // POS LOGIC
+        function createNewTransaction() {
+            transactions.push({ id: transactions.length + 1, items: [], status: 'active', date: new Date().toDateString() });
+            currentTransIdx = transactions.length - 1;
+            save(); renderPOS();
+        }
+
+        function renderPOS() {
+            const f = document.getElementById('foodGrid'); const d = document.getElementById('drinkGrid');
+            f.innerHTML = ''; d.innerHTML = '';
+            
+            Object.keys(inventory).forEach(key => {
+                if(inventory[key].category === 'ingredient') return;
+                const btn = document.createElement('div');
+                btn.className = `product-btn ${inventory[key].category}-btn`;
+                btn.innerHTML = `<div class="btn-del-x" onclick="deleteBtn(event, '${key}')">X</div>
+                                 <div onclick="addToCart('${key}')">${inventory[key].name}<br>R${inventory[key].price}</div>`;
+                inventory[key].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
+            });
+
+            const tTabs = document.getElementById('trans-tabs');
+            tTabs.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const btn = document.createElement('button');
+                btn.className = `tab-btn ${i === currentTransIdx ? 'active' : ''}`;
+                btn.textContent = `Table ${t.id}`;
+                btn.onclick = () => { currentTransIdx = i; renderPOS(); };
+                tTabs.appendChild(btn);
+            });
+
+            const cartList = document.getElementById('cart-list');
+            cartList.innerHTML = '';
+            let total = 0;
+            transactions[currentTransIdx].items.forEach((item, i) => {
+                total += item.price;
+                cartList.innerHTML += `<div class="cart-row"><span>${item.name}</span> <span>R${item.price} <button onclick="removeFromCart(${i})" style="background:red; width:25px; padding:2px;">X</button></span></div>`;
+            });
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function addToCart(key) {
+            transactions[currentTransIdx].items.push({...inventory[key], code: key});
+            save(); renderPOS();
+        }
+
+        function removeFromCart(i) {
+            transactions[currentTransIdx].items.splice(i, 1);
+            save(); renderPOS();
+        }
+
+        function deleteBtn(e, key) {
+            e.stopPropagation();
+            if(confirm("Delete this product?")) { delete inventory[key]; delete recipes[key]; save(); renderPOS(); }
+        }
+
+        function deleteCurrentTransaction() {
+            if(confirm("Delete this whole table?")) {
+                transactions.splice(currentTransIdx, 1);
+                if(transactions.length === 0) createNewTransaction();
+                else currentTransIdx = 0;
+                save(); renderPOS();
+            }
+        }
+
+        // STOCK LOGIC
+        function renderStock() {
+            const cont = document.getElementById('inventory-display');
+            cont.innerHTML = '';
+            Object.keys(inventory).forEach(key => {
+                const item = inventory[key];
+                cont.innerHTML += `
+                    <div class="cart-row" style="padding:10px; background:#111; margin-bottom:5px;">
+                        <span>${item.name} (${item.stock.toFixed(2)})</span>
+                        <button onclick="openStockIn('${key}')" style="width:auto; padding:5px 15px; background:#44ff44;">+ STOCK</button>
+                    </div>`;
+            });
+        }
+
+        function openStockIn(key) {
+            selectedStockKey = key;
+            document.getElementById('stock-item-name').textContent = inventory[key].name;
+            document.getElementById('stock-modal').style.display = 'block';
+        }
+
+        function confirmStockAdd() {
+            const amt = parseFloat(document.getElementById('stock-add-amt').value);
+            if(!isNaN(amt)) {
+                inventory[selectedStockKey].stock += amt;
+                save(); renderStock(); closeModal();
+            }
+        }
+
+        // FINALIZE & PRINTING
+        function openTender() { document.getElementById('tender-modal').style.display = 'block'; }
+        
+        function finalizeSale(method) {
+            const t = transactions[currentTransIdx];
+            const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
+            const total = t.items.reduce((s, i) => s + i.price, 0);
+
+            // Deduct Stock
+            t.items.forEach(item => {
+                const recipe = recipes[item.code];
+                if(recipe) {
+                    for(let ing in recipe) if(inventory[ing]) inventory[ing].stock -= recipe[ing];
+                } else {
+                    inventory[item.code].stock--;
+                }
+            });
+
+            t.status = 'paid';
+            t.method = method;
+            t.total = total;
+            t.paidAmt = cash;
+            
+            printReceipt(t);
+            save();
+            createNewTransaction();
+            closeModal();
+        }
+
+        function printReceipt(t) {
+            let win = window.open('', '', 'width=300,height=600');
+            let items = t.items.map(i => `${i.name.padEnd(15)} R${i.price}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace;">RECEIPT\nTable: ${t.id}\n----------------\n${items}\n----------------\nTOTAL: R${t.total}\nMethod: ${t.method}\nTHANK YOU</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function printKitchenTab() {
+            const t = transactions[currentTransIdx];
+            let win = window.open('', '', 'width=300,height=400');
+            let items = t.items.map(i => `[ ] ${i.name}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace; font-size:20pt; font-weight:bold;">KITCHEN TAB\nTable: ${t.id}\n----------------\n${items}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function showZReading() {
+            const today = new Date().toDateString();
+            const sales = transactions.filter(t => t.status === 'paid' && t.date === today);
+            let total = 0;
+            let report = `Z-READING: ${today}\n----------------\n`;
+            sales.forEach(s => {
+                report += `Trans ${s.id}: R${s.total} (${s.method})\n`;
+                total += s.total;
+            });
+            report += `----------------\nGRAND TOTAL: R${total.toFixed(2)}`;
+            let win = window.open('', '', 'width=300,height=600');
+            win.document.write(`<pre style="font-family:monospace;">${report}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function printStock() {
+            let report = `STOCK LEVELS\n----------------\n`;
+            Object.values(inventory).forEach(i => report += `${i.name.padEnd(15)}: ${i.stock.toFixed(2)}\n`);
+            let win = window.open('', '', 'width=300,height=600');
+            win.document.write(`<pre style="font-family:monospace;">${report}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function closeModal() { 
+            document.querySelectorAll('.modal').forEach(m => m.style.display = 'none'); 
+            document.getElementById('cash-amt').value = '';
+            document.getElementById('stock-add-amt').value = '';
+        }
+
+        window.onload = () => { renderPOS(); renderStock(); };
+    </script>
+</body>
+</html>
