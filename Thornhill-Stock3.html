@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTER POS: PROFIT & MARGIN</title>
+    <style>
+        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; margin: 10px 0; }
+        input, button, select { font-size: 1.1rem; padding: 10px; margin: 5px 0; width: 100%; border-radius: 8px; box-sizing: border-box; border: 1px solid #333; }
+        button { background: #d4a373; color: #000; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        button:active { transform: scale(0.98); }
+        
+        .grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .tab-content { display: none; margin-top: 15px; }
+        .active-tab { display: block; }
+        
+        /* POS Grid */
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; background: #111; padding: 10px; border-radius: 10px; min-height: 200px; }
+        .product-btn { position: relative; min-height: 75px; font-size: 0.9rem; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px; }
+        .food-btn { background: #5d4037; }
+        .drink-btn { background: #1565c0; }
+        .btn-del-x { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 24px; height: 24px; font-size: 12px; line-height: 24px; text-align: center; z-index: 10; border: 1px solid white; }
+
+        /* Multi-Table Tabs */
+        #trans-tabs { display: flex; gap: 5px; overflow-x: auto; padding: 5px 0; }
+        .tab-btn { width: auto; padding: 10px 20px; background: #333; color: #fff; white-space: nowrap; border: 1px solid #444; }
+        .tab-btn.active { background: #d4a373; color: #000; border-color: #fff; }
+
+        /* Cart */
+        #cart-list { background: #111; border-radius: 10px; padding: 10px; margin: 10px 0; max-height: 200px; overflow-y: auto; border: 1px solid #222; }
+        .cart-row { display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding: 8px 0; align-items: center; }
+        #total-view { font-size: 2.5rem; color: #44ff44; text-align: center; margin: 10px 0; font-family: monospace; }
+
+        /* Stock & Profit Layout */
+        .stock-row { display: grid; grid-template-columns: 30px 1.5fr 1fr 0.8fr 120px; align-items: center; background: #111; margin-bottom: 5px; padding: 10px; border-radius: 5px; gap: 8px; border: 1px solid #222; font-size: 0.85rem; }
+        .stock-row input[type="checkbox"] { width: 18px; height: 18px; }
+        .profit-pos { color: #44ff44; font-weight: bold; }
+        .profit-neg { color: #ff4444; font-weight: bold; }
+
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 25px; border-radius: 15px; width: 90%; max-width: 400px; z-index: 1000; border: 2px solid #d4a373; display: none; box-shadow: 0 0 50px rgba(0,0,0,1); }
+        .stock-footer { background: #1a1a1a; padding: 20px; border-radius: 10px; margin-top: 20px; border: 1px dashed #d4a373; text-align: center; display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    </style>
+</head>
+<body>
+
+    <h1>Papa Ron's Master POS</h1>
+
+    <div class="grid-main">
+        <button onclick="switchTab('pos-tab')">SALES</button>
+        <button onclick="switchTab('menu-tab')">BUILDER</button>
+        <button onclick="switchTab('stock-tab')">INVENTORY</button>
+        <button onclick="showZReading()" style="background: #666; color: white;">Z-REPORT</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs"></div>
+        <button onclick="createNewTransaction()" style="background:#44ff44; width:auto; padding: 10px 20px;">+ NEW TABLE</button>
+        <div class="grid-main" style="margin-top:10px;">
+            <div><h4 style="text-align:center;margin:5px">FOOD</h4><div class="category-grid" id="foodGrid"></div></div>
+            <div><h4 style="text-align:center;margin:5px">DRINKS</h4><div class="category-grid" id="drinkGrid"></div></div>
+        </div>
+        <div id="cart-list"></div>
+        <div id="total-view">R 0.00</div>
+        <div class="grid-main">
+            <button onclick="openTender()" style="background:#4caf50; height: 60px;">CASH</button>
+            <button onclick="finalizeSale('Card')" style="background:#2196f3; height: 60px;">CARD</button>
+            <button onclick="printKitchenTab()" style="background:#555;">KITCHEN SLIP</button>
+            <button onclick="deleteCurrentTransaction()" style="background:#ff4444;">VOID TABLE</button>
+        </div>
+    </div>
+
+    <div id="menu-tab" class="tab-content">
+        <div style="background:#1a1a1a; padding:15px; border-radius:10px; border: 1px solid #333;">
+            <h3>New Product & Profit Margin</h3>
+            <input type="text" id="m-name" placeholder="Item Name">
+            <div class="grid-main">
+                <div><small>Selling Price (R)</small><input type="number" id="m-price" placeholder="0.00"></div>
+                <div><small>Cost Price (R)</small><input type="number" id="m-cost" placeholder="0.00"></div>
+            </div>
+            <select id="m-cat"><option value="food">Category: Food</option><option value="drink">Category: Drink</option></select>
+            <h4>Recipe Ingredients</h4>
+            <div id="ing-rows">
+                <div class="grid-main"><input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty"></div>
+            </div>
+            <button onclick="addIngRow()" style="background:#444; color:white;">+ Add Ingredient</button>
+            <button onclick="saveNewProduct()" style="background:#44ff44; margin-top:20px;">SAVE PRODUCT</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <div style="background:#222; padding:10px; border-radius:10px; margin-bottom:15px; display:flex; gap:10px; flex-wrap: wrap;">
+            <button onclick="printSelectedStock()" style="background:#fff; color:#000; width:auto; flex-grow:1;">PRINT CHECKED ORDER</button>
+            <button onclick="selectAll(true)" style="background:#444; width:auto;">All</button>
+            <button onclick="selectAll(false)" style="background:#444; width:auto;">None</button>
+        </div>
+        <div style="display: grid; grid-template-columns: 30px 1.5fr 1fr 0.8fr 120px; padding: 5px 10px; font-weight: bold; font-size: 0.7rem; color: #d4a373;">
+            <span>PICK</span><span>ITEM / COST</span><span>STOCK</span><span>PROFIT</span><span>ACTION</span>
+        </div>
+        <div id="inventory-display"></div>
+        <div class="stock-footer" id="stock-summary"></div>
+    </div>
+
+    <div id="stock-modal" class="modal">
+        <h2 id="stock-item-name"></h2>
+        <input type="number" id="stock-add-amt" placeholder="Qty to add">
+        <button onclick="confirmStockAdd()" style="background:#44ff44;">CONFIRM</button>
+        <button onclick="closeModal()">CANCEL</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h2 style="text-align:center;">Cash Payment</h2>
+        <h1 id="cash-total-needed" style="text-align:center; color:#44ff44;"></h1>
+        <input type="number" id="cash-amt" placeholder="Amount Received" oninput="calculateChange()" autofocus>
+        <h2 id="change-due" style="text-align:center;">Change: R0.00</h2>
+        <button onclick="finalizeSale('Cash')" style="background:#44ff44; height: 60px;">COMPLETE</button>
+        <button onclick="closeModal()">BACK</button>
+    </div>
+
+    <script>
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [{id: 1, items: [], status: 'active', date: new Date().toDateString()}];
+        let currentTransIdx = 0;
+        let selectedStockKey = "";
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+        }
+
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        function addIngRow() {
+            const div = document.createElement('div'); div.className = "grid-main";
+            div.innerHTML = `<input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty">`;
+            document.getElementById('ing-rows').appendChild(div);
+        }
+
+        function saveNewProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase();
+            const price = parseFloat(document.getElementById('m-price').value);
+            const cost = parseFloat(document.getElementById('m-cost').value) || 0;
+            const cat = document.getElementById('m-cat').value;
+            const id = "P_" + Date.now();
+            if(!name || isNaN(price)) return alert("Check Name and Selling Price");
+
+            let recipe = {};
+            document.querySelectorAll('.i-name').forEach((n, i) => {
+                const iname = n.value.toUpperCase();
+                const iqty = parseFloat(document.querySelectorAll('.i-qty')[i].value);
+                if(iname && !isNaN(iqty)) {
+                    recipe[iname] = iqty;
+                    if(!inventory[iname]) inventory[iname] = { name: iname, stock: 0, cost: 0, category: 'ingredient' };
+                }
+            });
+            inventory[id] = { name, price, cost, category: cat, stock: 0 };
+            if(Object.keys(recipe).length > 0) recipes[id] = recipe;
+            save(); alert("Product Created"); location.reload();
+        }
+
+        function createNewTransaction() {
+            const newId = transactions.length > 0 ? Math.max(...transactions.map(t => t.id)) + 1 : 1;
+            transactions.push({ id: newId, items: [], status: 'active', date: new Date().toDateString() });
+            currentTransIdx = transactions.length - 1;
+            save(); renderPOS();
+        }
+
+        function renderPOS() {
+            const f = document.getElementById('foodGrid'); const d = document.getElementById('drinkGrid');
+            f.innerHTML = ''; d.innerHTML = '';
+            Object.keys(inventory).forEach(key => {
+                if(inventory[key].category === 'ingredient') return;
+                const btn = document.createElement('div');
+                btn.className = `product-btn ${inventory[key].category}-btn`;
+                btn.innerHTML = `<div class="btn-del-x" onclick="deleteMenuBtn(event, '${key}')">X</div>
+                                 <div onclick="addToCart('${key}')"><b>${inventory[key].name}</b><br>R${inventory[key].price.toFixed(2)}</div>`;
+                inventory[key].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
+            });
+            const tTabs = document.getElementById('trans-tabs');
+            tTabs.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const btn = document.createElement('button');
+                btn.className = `tab-btn ${i === currentTransIdx ? 'active' : ''}`;
+                btn.textContent = `Table ${t.id}`;
+                btn.onclick = () => { currentTransIdx = i; renderPOS(); };
+                tTabs.appendChild(btn);
+            });
+            updateCartUI();
+        }
+
+        function addToCart(key) { transactions[currentTransIdx].items.push({...inventory[key], code: key}); save(); updateCartUI(); }
+        function removeFromCart(i) { transactions[currentTransIdx].items.splice(i, 1); save(); updateCartUI(); }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-list'); list.innerHTML = '';
+            let total = 0;
+            if(transactions[currentTransIdx]) {
+                transactions[currentTransIdx].items.forEach((it, i) => {
+                    total += it.price;
+                    list.innerHTML += `<div class="cart-row"><span>${it.name}</span><span>R${it.price.toFixed(2)} <button onclick="removeFromCart(${i})" style="background:red; width:30px; padding:2px; margin-left:10px; color:white;">X</button></span></div>`;
+                });
+            }
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function renderStock() {
+            const cont = document.getElementById('inventory-display');
+            cont.innerHTML = '';
+            let totalVal = 0;
+            let totalProfit = 0;
+
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key];
+                const selling = itm.price || 0;
+                const cost = itm.cost || 0;
+                const profit = selling - cost;
+                const margin = selling > 0 ? ((profit / selling) * 100).toFixed(0) : 0;
+                
+                totalVal += (itm.stock * cost);
+                
+                cont.innerHTML += `
+                    <div class="stock-row">
+                        <input type="checkbox" class="stock-check" data-id="${key}">
+                        <div><b>${itm.name}</b><br><small>Cost: R${cost.toFixed(2)}</small></div>
+                        <div style="color:#44ff44;">${itm.stock.toFixed(2)}</div>
+                        <div class="${profit >= 0 ? 'profit-pos' : 'profit-neg'}">
+                            R${profit.toFixed(2)}<br><small>${margin}%</small>
+                        </div>
+                        <div style="display:flex; gap:3px; justify-content:flex-end;">
+                            <button onclick="openStockIn('${key}')" style="background:#44ff44; font-size:0.7rem;">+In</button>
+                            <button onclick="deleteStockItem('${key}')" style="background:red; color:white; font-size:0.7rem;">X</button>
+                        </div>
+                    </div>`;
+            });
+            document.getElementById('stock-summary').innerHTML = `
+                <div><small>STK VALUE</small><br>R${totalVal.toFixed(2)}</div>
+                <div><small>ITEMS TRACKED</small><br>${Object.keys(inventory).length}</div>
+            `;
+        }
+
+        function deleteMenuBtn(e, k) { e.stopPropagation(); if(confirm("Delete menu button?")) { delete inventory[k]; delete recipes[k]; save(); renderPOS(); } }
+        function deleteStockItem(k) { if(confirm("Delete stock record?")) { delete inventory[k]; save(); renderStock(); } }
+        function selectAll(v) { document.querySelectorAll('.stock-check').forEach(c => c.checked = v); }
+
+        function printSelectedStock() {
+            const supplier = prompt("Enter Supplier Name:", "General");
+            let list = `ORDER: ${supplier}\nDate: ${new Date().toLocaleDateString()}\n----------------------------\n`;
+            document.querySelectorAll('.stock-check:checked').forEach(cb => {
+                const item = inventory[cb.getAttribute('data-id')];
+                list += `[ ] ${item.name.padEnd(15).slice(0,15)} (Cost: R${item.cost.toFixed(2)})\n`;
+            });
+            const win = window.open('', '', 'width=400,height=600');
+            win.document.write(`<pre style="font-family:monospace;">${list}\n\nSigned: ________________</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function openTender() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            document.getElementById('cash-total-needed').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('tender-modal').style.display = 'block';
+            calculateChange();
+        }
+
+        function calculateChange() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
+            const diff = cash - total;
+            const disp = document.getElementById('change-due');
+            disp.textContent = `Change: R${diff.toFixed(2)}`;
+            disp.style.color = diff >= 0 ? "#44ff44" : "#ff4444";
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentTransIdx];
+            const total = t.items.reduce((s, i) => s + i.price, 0);
+            t.items.forEach(it => {
+                if(recipes[it.code]) { for(let ing in recipes[it.code]) if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing]; }
+                else if(inventory[it.code]) inventory[it.code].stock--;
+            });
+            t.status = 'paid'; t.method = method; t.total = total;
+            printReceipt(t); save(); createNewTransaction(); closeModal();
+        }
+
+        function printReceipt(t) {
+            let win = window.open('', '', 'width=300,height=600');
+            let items = t.items.map(i => `${i.name.padEnd(15).slice(0,15)} R${i.price.toFixed(2)}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace;">RECEIPT\nTable: ${t.id}\n----------------\n${items}\n----------------\nTOTAL: R${t.total.toFixed(2)}\nMethod: ${t.method}\nTHANK YOU</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function printKitchenTab() {
+            const t = transactions[currentTransIdx];
+            let win = window.open('', '', 'width=300,height=400');
+            let items = t.items.map(i => `[ ] ${i.name}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace; font-size:18pt; font-weight:bold;">KITCHEN ORDER\nTable: ${t.id}\n----------------\n${items}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function showZReading() {
+            const today = new Date().toDateString();
+            const sales = transactions.filter(t => t.status === 'paid' && t.date === today);
+            let total = 0; let report = `Z-REPORT: ${today}\n----------------\n`;
+            sales.forEach(s => { report += `Table ${s.id}: R${s.total.toFixed(2)} (${s.method})\n`; total += s.total; });
+            report += `----------------\nTOTAL: R${total.toFixed(2)}`;
+            const win = window.open('', '', 'width=300,height=600');
+            win.document.write(`<pre style="font-family:monospace;">${report}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function openStockIn(k) { selectedStockKey = k; document.getElementById('stock-item-name').textContent = inventory[k].name; document.getElementById('stock-modal').style.display = 'block'; }
+        function confirmStockAdd() { const a = parseFloat(document.getElementById('stock-add-amt').value); if(!isNaN(a)) { inventory[selectedStockKey].stock += a; save(); renderStock(); closeModal(); } }
+        function deleteCurrentTransaction() { if(confirm("Void table?")) { transactions.splice(currentTransIdx, 1); if(transactions.filter(t => t.status === 'active').length === 0) createNewTransaction(); else currentTransIdx = 0; save(); renderPOS(); } }
+        function closeModal() { document.querySelectorAll('.modal').forEach(m => m.style.display='none'); }
+
+        window.onload = () => { renderPOS(); renderStock(); };
+    </script>
+</body>
+</html>
