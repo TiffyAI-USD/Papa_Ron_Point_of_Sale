@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSAL POS & STOCK</title>
+    <style>
+        body { font-family: sans-serif; background: #000; color: #fff; margin: 0; padding: 10px; }
+        h1 { text-align: center; color: #d4a373; margin: 10px 0; }
+        input, button, select { font-size: 1.1rem; padding: 10px; margin: 5px 0; width: 100%; border-radius: 8px; box-sizing: border-box; border: 1px solid #333; }
+        button { background: #d4a373; color: #000; cursor: pointer; font-weight: bold; }
+        
+        .grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .tab-content { display: none; margin-top: 15px; }
+        .active-tab { display: block; }
+        
+        /* Grid for Food/Drinks */
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 10px; background: #111; padding: 10px; border-radius: 10px; min-height: 200px; }
+        .product-btn { position: relative; min-height: 70px; font-size: 0.9rem; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px; }
+        .food-btn { background: #5d4037; }
+        .drink-btn { background: #1565c0; }
+        .btn-del-x { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 22px; height: 22px; font-size: 12px; line-height: 22px; text-align: center; z-index: 10; }
+
+        /* Stock Rows */
+        .stock-row { display: grid; grid-template-columns: 40px 1fr 100px 140px; align-items: center; background: #111; margin-bottom: 5px; padding: 10px; border-radius: 5px; gap: 10px; }
+        .stock-row input[type="checkbox"] { width: 25px; height: 25px; cursor: pointer; }
+        
+        #total-view { font-size: 2.5rem; color: #44ff44; text-align: center; margin: 15px 0; }
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 15px; width: 90%; max-width: 400px; z-index: 1000; border: 2px solid #d4a373; display: none;}
+        .stock-footer { background: #1a1a1a; padding: 20px; border-radius: 10px; margin-top: 20px; border: 1px dashed #d4a373; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <h1 id="rest-name">Papa Ron's Mthatha Thornhill</h1>
+
+    <div class="grid-main">
+        <button onclick="switchTab('pos-tab')">SALES</button>
+        <button onclick="switchTab('menu-tab')">BUILDER</button>
+        <button onclick="switchTab('stock-tab')">STOCK</button>
+        <button onclick="showZReading()">Z-READING</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs" style="display:flex; gap:5px; overflow-x:auto; margin-bottom:10px;"></div>
+        <button onclick="createNewTransaction()" style="background:#44ff44; width:auto;">+ NEW TABLE</button>
+        <div class="grid-main">
+            <div class="category-grid" id="foodGrid"></div>
+            <div class="category-grid" id="drinkGrid"></div>
+        </div>
+        <div id="cart-list" style="background:#111; padding:10px; margin-top:10px; border-radius:8px;"></div>
+        <div id="total-view">R 0.00</div>
+        <div class="grid-main">
+            <button onclick="openTender()" style="background:#4caf50;">CASH</button>
+            <button onclick="finalizeSale('Card')">CARD</button>
+        </div>
+    </div>
+
+    <div id="menu-tab" class="tab-content">
+        <div style="background:#1a1a1a; padding:15px; border-radius:10px;">
+            <h3>Create Product</h3>
+            <input type="text" id="m-name" placeholder="Name">
+            <div class="grid-main">
+                <input type="number" id="m-price" placeholder="Sale Price">
+                <input type="number" id="m-cost" placeholder="Unit Cost (to buy)">
+            </div>
+            <select id="m-cat"><option value="food">Food</option><option value="drink">Drink</option></select>
+            <h4>Ingredients</h4>
+            <div id="ing-rows"><div class="grid-main"><input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty"></div></div>
+            <button onclick="addIngRow()">+ Add Ingredient</button>
+            <button onclick="saveNewProduct()" style="background:#44ff44; margin-top:15px;">SAVE PRODUCT</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <div style="background:#222; padding:10px; border-radius:10px; margin-bottom:15px; display:flex; gap:10px;">
+            <button onclick="printSelectedStock()" style="background:#fff; color:#000;">PRINT ORDER (CHECKED)</button>
+            <button onclick="selectAll(true)" style="background:#555;">Select All</button>
+            <button onclick="selectAll(false)" style="background:#555;">Clear</button>
+        </div>
+        <div id="inventory-display"></div>
+        <div class="stock-footer" id="stock-summary"></div>
+    </div>
+
+    <div id="stock-modal" class="modal">
+        <h2 id="stock-item-name"></h2>
+        <input type="number" id="stock-add-amt" placeholder="Add Qty">
+        <button onclick="confirmStockAdd()" style="background:#44ff44;">ADD STOCK</button>
+        <button onclick="closeModal()">CANCEL</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h2 style="text-align:center;">Tender</h2>
+        <h1 id="cash-total-needed" style="text-align:center; color:#44ff44;"></h1>
+        <input type="number" id="cash-amt" placeholder="Cash Given" oninput="calculateChange()">
+        <h2 id="change-due" style="text-align:center;">Change: R0.00</h2>
+        <button onclick="finalizeSale('Cash')" style="background:#44ff44;">PAID</button>
+        <button onclick="closeModal()">CANCEL</button>
+    </div>
+
+    <script>
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [{id: 1, items: [], status: 'active'}];
+        let currentTransIdx = 0;
+        let selectedStockKey = "";
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+        }
+
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        // BUILDER
+        function addIngRow() {
+            const d = document.createElement('div'); d.className = "grid-main";
+            d.innerHTML = `<input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty">`;
+            document.getElementById('ing-rows').appendChild(d);
+        }
+
+        function saveNewProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase();
+            const price = parseFloat(document.getElementById('m-price').value);
+            const cost = parseFloat(document.getElementById('m-cost').value) || 0;
+            const cat = document.getElementById('m-cat').value;
+            const id = "P_" + Date.now();
+            if(!name || isNaN(price)) return alert("Enter Name/Price");
+
+            let recipe = {};
+            document.querySelectorAll('.i-name').forEach((n, i) => {
+                const iname = n.value.toUpperCase();
+                const iqty = parseFloat(document.querySelectorAll('.i-qty')[i].value);
+                if(iname && iqty) {
+                    recipe[iname] = iqty;
+                    if(!inventory[iname]) inventory[iname] = { name: iname, stock: 0, cost: 0, category: 'ingredient' };
+                }
+            });
+            inventory[id] = { name, price, cost, category: cat, stock: 0 };
+            if(Object.keys(recipe).length > 0) recipes[id] = recipe;
+            save(); location.reload();
+        }
+
+        // STOCK LOGIC
+        function renderStock() {
+            const cont = document.getElementById('inventory-display');
+            cont.innerHTML = '';
+            let totalVal = 0;
+
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key];
+                const itemVal = itm.stock * (itm.cost || 0);
+                totalVal += itemVal;
+                cont.innerHTML += `
+                    <div class="stock-row">
+                        <input type="checkbox" class="stock-check" data-id="${key}">
+                        <div><b>${itm.name}</b><br><small>Cost: R${(itm.cost||0).toFixed(2)}</small></div>
+                        <div style="color:#44ff44;">${itm.stock.toFixed(2)}</div>
+                        <div style="display:flex; gap:5px;">
+                            <button onclick="openStockIn('${key}')" style="padding:5px;">+In</button>
+                            <button onclick="deleteStockItem('${key}')" style="background:red;">X</button>
+                        </div>
+                    </div>`;
+            });
+            document.getElementById('stock-summary').innerHTML = `<h3>Total Stock Value: R${totalVal.toFixed(2)}</h3>`;
+        }
+
+        function selectAll(val) { document.querySelectorAll('.stock-check').forEach(c => c.checked = val); }
+
+        function printSelectedStock() {
+            const supplier = prompt("Enter Supplier Name (or leave blank):", "General");
+            let list = `PURCHASE ORDER: ${supplier}\nDate: ${new Date().toLocaleDateString()}\n----------------------------\n`;
+            let count = 0;
+            
+            document.querySelectorAll('.stock-check:checked').forEach(cb => {
+                const id = cb.getAttribute('data-id');
+                const item = inventory[id];
+                list += `[ ] ${item.name.padEnd(15)} (Curr: ${item.stock.toFixed(2)})\n`;
+                count++;
+            });
+
+            if(count === 0) return alert("Select items first!");
+            const win = window.open('', '', 'width=400,height=600');
+            win.document.write(`<pre style="font-size:14pt; font-family:monospace;">${list}\n\nSigned: ____________</pre>`);
+            win.document.close(); win.print();
+        }
+
+        // POS & SALES
+        function createNewTransaction() {
+            const id = transactions.length + 1;
+            transactions.push({id, items: [], status:'active', date: new Date().toDateString()});
+            currentTransIdx = transactions.length -1;
+            renderPOS();
+        }
+
+        function renderPOS() {
+            const f = document.getElementById('foodGrid'); const d = document.getElementById('drinkGrid');
+            f.innerHTML = ''; d.innerHTML = '';
+            Object.keys(inventory).forEach(k => {
+                if(inventory[k].category === 'ingredient') return;
+                const btn = document.createElement('div');
+                btn.className = `product-btn ${inventory[k].category}-btn`;
+                btn.innerHTML = `<div class="btn-del-x" onclick="deleteBtn(event, '${k}')">X</div>
+                                 <div onclick="addToCart('${k}')">${inventory[k].name}<br>R${inventory[k].price}</div>`;
+                inventory[k].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
+            });
+            updateCartUI();
+        }
+
+        function addToCart(k) { transactions[currentTransIdx].items.push({...inventory[k], code: k}); updateCartUI(); }
+        
+        function updateCartUI() {
+            const list = document.getElementById('cart-list'); list.innerHTML = '';
+            let total = 0;
+            transactions[currentTransIdx].items.forEach((it, i) => {
+                total += it.price;
+                list.innerHTML += `<div style="display:flex; justify-content:space-between;">${it.name} <span>R${it.price}</span></div>`;
+            });
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function openTender() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            document.getElementById('cash-total-needed').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('tender-modal').style.display = 'block';
+        }
+
+        function calculateChange() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
+            document.getElementById('change-due').textContent = `Change: R${(cash - total).toFixed(2)}`;
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentTransIdx];
+            t.items.forEach(it => {
+                if(recipes[it.code]) {
+                    for(let ing in recipes[it.code]) if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing];
+                } else { if(inventory[it.code]) inventory[it.code].stock--; }
+            });
+            t.status = 'paid';
+            save(); createNewTransaction(); closeModal();
+        }
+
+        function openStockIn(k) { selectedStockKey = k; document.getElementById('stock-item-name').textContent = inventory[k].name; document.getElementById('stock-modal').style.display = 'block'; }
+        function confirmStockAdd() { const a = parseFloat(document.getElementById('stock-add-amt').value); if(a) { inventory[selectedStockKey].stock += a; save(); renderStock(); closeModal(); } }
+        function deleteStockItem(k) { if(confirm("Delete?")) { delete inventory[k]; save(); renderStock(); } }
+        function deleteBtn(e, k) { e.stopPropagation(); delete inventory[k]; save(); renderPOS(); }
+        function closeModal() { document.querySelectorAll('.modal').forEach(m => m.style.display='none'); }
+
+        window.onload = () => { renderPOS(); renderStock(); };
+    </script>
+</body>
+</html>
