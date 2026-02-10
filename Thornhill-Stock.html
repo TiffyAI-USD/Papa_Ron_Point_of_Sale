@@ -19,11 +19,11 @@
         .product-btn { position: relative; min-height: 70px; font-size: 0.9rem; color: white; border: none; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px; }
         .food-btn { background: #5d4037; }
         .drink-btn { background: #1565c0; }
-        .btn-del-x { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 22px; height: 22px; font-size: 12px; line-height: 22px; text-align: center; }
+        .btn-del-x { position: absolute; top: -5px; right: -5px; background: red; color: white; border-radius: 50%; width: 22px; height: 22px; font-size: 12px; line-height: 22px; text-align: center; z-index: 10; }
 
         /* Cart */
         #cart-list { background: #111; border-radius: 10px; padding: 10px; margin: 10px 0; max-height: 200px; overflow-y: auto; }
-        .cart-row { display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding: 5px 0; }
+        .cart-row { display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding: 5px 0; align-items: center; }
         #total-view { font-size: 2rem; color: #44ff44; text-align: center; margin-bottom: 10px; }
 
         /* Tables/Transactions */
@@ -32,6 +32,9 @@
         .tab-btn.active { background: #d4a373; color: #000; }
 
         .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 20px; border-radius: 15px; width: 90%; max-width: 400px; z-index: 1000; border: 2px solid #d4a373; display: none;}
+        
+        .stock-footer { background: #222; padding: 15px; border-radius: 10px; margin-top: 20px; border-top: 2px solid #d4a373; text-align: center; }
+        .change-display { font-size: 1.8rem; color: #44ff44; text-align: center; margin-top: 10px; font-weight: bold; }
     </style>
 </head>
 <body>
@@ -73,16 +76,17 @@
             <select id="m-cat"><option value="food">Food</option><option value="drink">Drink</option></select>
             <h4>Ingredients</h4>
             <div id="ing-rows">
-                <div class="grid-main"><input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty (e.g. 0.5)"></div>
+                <div class="grid-main"><input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty"></div>
             </div>
             <button onclick="addIngRow()" style="background:#555;">+ Add Ingredient</button>
-            <button onclick="saveNewProduct()" style="background:#44ff44;">SAVE PRODUCT</button>
+            <button onclick="saveNewProduct()" style="background:#44ff44; margin-top: 10px;">SAVE PRODUCT</button>
         </div>
     </div>
 
     <div id="stock-tab" class="tab-content">
         <button onclick="printStock()" style="background:#fff; color:#000;">PRINT STOCK LIST</button>
         <div id="inventory-display" style="margin-top:15px;"></div>
+        <div class="stock-footer" id="stock-summary"></div>
     </div>
 
     <div id="stock-modal" class="modal">
@@ -93,9 +97,11 @@
     </div>
 
     <div id="tender-modal" class="modal">
-        <h2>Cash Payment</h2>
-        <input type="number" id="cash-amt" placeholder="Cash Given">
-        <button onclick="finalizeSale('Cash')" style="background:#44ff44;">PAID</button>
+        <h2 style="text-align: center;">Cash Payment</h2>
+        <p style="text-align: center; color: #aaa;">Total: <span id="cash-total-needed"></span></p>
+        <input type="number" id="cash-amt" placeholder="Cash Given" oninput="calculateChange()">
+        <div id="change-due" class="change-display">Change: R0.00</div>
+        <button id="paid-btn" onclick="finalizeSale('Cash')" style="background:#44ff44; margin-top: 10px;">PAID</button>
         <button onclick="closeModal()">CANCEL</button>
     </div>
 
@@ -132,7 +138,7 @@
             const price = parseFloat(document.getElementById('m-price').value);
             const cat = document.getElementById('m-cat').value;
             const id = "P_" + Date.now();
-            if(!name || !price) return;
+            if(!name || isNaN(price)) return alert("Please enter Name and Price");
 
             let recipe = {};
             const names = document.querySelectorAll('.i-name');
@@ -148,12 +154,13 @@
 
             inventory[id] = { name, price, category: cat, stock: 0 };
             if(Object.keys(recipe).length > 0) recipes[id] = recipe;
-            save(); location.reload();
+            save(); alert("Product Saved!"); location.reload();
         }
 
         // POS LOGIC
         function createNewTransaction() {
-            transactions.push({ id: transactions.length + 1, items: [], status: 'active', date: new Date().toDateString() });
+            const newId = transactions.length > 0 ? Math.max(...transactions.map(t => t.id)) + 1 : 1;
+            transactions.push({ id: newId, items: [], status: 'active', date: new Date().toDateString() });
             currentTransIdx = transactions.length - 1;
             save(); renderPOS();
         }
@@ -167,7 +174,7 @@
                 const btn = document.createElement('div');
                 btn.className = `product-btn ${inventory[key].category}-btn`;
                 btn.innerHTML = `<div class="btn-del-x" onclick="deleteBtn(event, '${key}')">X</div>
-                                 <div onclick="addToCart('${key}')">${inventory[key].name}<br>R${inventory[key].price}</div>`;
+                                 <div onclick="addToCart('${key}')">${inventory[key].name}<br>R${inventory[key].price.toFixed(2)}</div>`;
                 inventory[key].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
             });
 
@@ -185,10 +192,12 @@
             const cartList = document.getElementById('cart-list');
             cartList.innerHTML = '';
             let total = 0;
-            transactions[currentTransIdx].items.forEach((item, i) => {
-                total += item.price;
-                cartList.innerHTML += `<div class="cart-row"><span>${item.name}</span> <span>R${item.price} <button onclick="removeFromCart(${i})" style="background:red; width:25px; padding:2px;">X</button></span></div>`;
-            });
+            if(transactions[currentTransIdx]) {
+                transactions[currentTransIdx].items.forEach((item, i) => {
+                    total += item.price;
+                    cartList.innerHTML += `<div class="cart-row"><span>${item.name}</span> <span>R${item.price.toFixed(2)} <button onclick="removeFromCart(${i})" style="background:red; width:30px; padding:2px; margin-left:10px;">X</button></span></div>`;
+                });
+            }
             document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
         }
 
@@ -204,14 +213,14 @@
 
         function deleteBtn(e, key) {
             e.stopPropagation();
-            if(confirm("Delete this product?")) { delete inventory[key]; delete recipes[key]; save(); renderPOS(); }
+            if(confirm("Delete this product button?")) { delete inventory[key]; delete recipes[key]; save(); renderPOS(); }
         }
 
         function deleteCurrentTransaction() {
-            if(confirm("Delete this whole table?")) {
+            if(confirm("Delete this table?")) {
                 transactions.splice(currentTransIdx, 1);
-                if(transactions.length === 0) createNewTransaction();
-                else currentTransIdx = 0;
+                if(transactions.filter(t => t.status === 'active').length === 0) createNewTransaction();
+                else currentTransIdx = transactions.findIndex(t => t.status === 'active');
                 save(); renderPOS();
             }
         }
@@ -220,14 +229,41 @@
         function renderStock() {
             const cont = document.getElementById('inventory-display');
             cont.innerHTML = '';
-            Object.keys(inventory).forEach(key => {
+            let totalItems = 0;
+
+            Object.keys(inventory).sort().forEach(key => {
                 const item = inventory[key];
+                totalItems++;
                 cont.innerHTML += `
                     <div class="cart-row" style="padding:10px; background:#111; margin-bottom:5px;">
-                        <span>${item.name} (${item.stock.toFixed(2)})</span>
-                        <button onclick="openStockIn('${key}')" style="width:auto; padding:5px 15px; background:#44ff44;">+ STOCK</button>
+                        <span>${item.name} <br><small style="color:#888;">Qty: ${item.stock.toFixed(2)}</small></span>
+                        <div style="display:flex; gap:5px;">
+                            <button onclick="openStockIn('${key}')" style="width:auto; padding:5px 15px; background:#44ff44;">+ STOCK</button>
+                            <button onclick="deleteStockItem('${key}')" style="width:40px; background:red;">X</button>
+                        </div>
                     </div>`;
             });
+
+            document.getElementById('stock-summary').innerHTML = `
+                <h3 style="margin:0; color:#d4a373;">Inventory Analytics</h3>
+                <p style="font-size:1.4rem;">Total Tracked Items: <b>${totalItems}</b></p>
+            `;
+        }
+
+        function deleteStockItem(key) {
+            // Check if used in a recipe
+            let inUse = false;
+            Object.values(recipes).forEach(r => { if(r[key]) inUse = true; });
+
+            if(inUse) {
+                alert("Cannot delete: This item is part of a food recipe. Delete the recipe first.");
+                return;
+            }
+
+            if(confirm(`Delete "${inventory[key].name}" from stock records?`)) {
+                delete inventory[key];
+                save(); renderStock();
+            }
         }
 
         function openStockIn(key) {
@@ -244,13 +280,39 @@
             }
         }
 
-        // FINALIZE & PRINTING
-        function openTender() { document.getElementById('tender-modal').style.display = 'block'; }
+        // TENDER & CHANGE
+        function calculateChange() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
+            const change = cash - total;
+            const display = document.getElementById('change-due');
+            
+            if (change >= 0) {
+                display.textContent = `Change: R${change.toFixed(2)}`;
+                display.style.color = "#44ff44";
+            } else {
+                display.textContent = `Short: R${Math.abs(change).toFixed(2)}`;
+                display.style.color = "red";
+            }
+        }
+
+        function openTender() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            if(total === 0) return;
+            document.getElementById('cash-total-needed').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('tender-modal').style.display = 'block';
+            calculateChange();
+        }
         
         function finalizeSale(method) {
             const t = transactions[currentTransIdx];
             const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
             const total = t.items.reduce((s, i) => s + i.price, 0);
+
+            if(method === 'Cash' && cash < total) {
+                alert("Insufficient cash provided.");
+                return;
+            }
 
             // Deduct Stock
             t.items.forEach(item => {
@@ -258,7 +320,7 @@
                 if(recipe) {
                     for(let ing in recipe) if(inventory[ing]) inventory[ing].stock -= recipe[ing];
                 } else {
-                    inventory[item.code].stock--;
+                    if(inventory[item.code]) inventory[item.code].stock--;
                 }
             });
 
@@ -266,6 +328,7 @@
             t.method = method;
             t.total = total;
             t.paidAmt = cash;
+            t.changeDue = method === 'Cash' ? cash - total : 0;
             
             printReceipt(t);
             save();
@@ -275,8 +338,11 @@
 
         function printReceipt(t) {
             let win = window.open('', '', 'width=300,height=600');
-            let items = t.items.map(i => `${i.name.padEnd(15)} R${i.price}`).join('\n');
-            win.document.write(`<pre style="font-family:monospace;">RECEIPT\nTable: ${t.id}\n----------------\n${items}\n----------------\nTOTAL: R${t.total}\nMethod: ${t.method}\nTHANK YOU</pre>`);
+            let items = t.items.map(i => `${i.name.padEnd(15).slice(0,15)} R${i.price.toFixed(2)}`).join('\n');
+            let content = `RECEIPT\nTable: ${t.id}\nDate: ${t.date}\n----------------\n${items}\n----------------\nTOTAL: R${t.total.toFixed(2)}\nMethod: ${t.method}`;
+            if(t.method === 'Cash') content += `\nPaid: R${t.paidAmt.toFixed(2)}\nChange: R${t.changeDue.toFixed(2)}`;
+            content += `\n\nTHANK YOU`;
+            win.document.write(`<pre style="font-family:monospace;">${content}</pre>`);
             win.document.close(); win.print();
         }
 
@@ -294,7 +360,7 @@
             let total = 0;
             let report = `Z-READING: ${today}\n----------------\n`;
             sales.forEach(s => {
-                report += `Trans ${s.id}: R${s.total} (${s.method})\n`;
+                report += `Trans ${s.id}: R${s.total.toFixed(2)} (${s.method})\n`;
                 total += s.total;
             });
             report += `----------------\nGRAND TOTAL: R${total.toFixed(2)}`;
@@ -305,7 +371,7 @@
 
         function printStock() {
             let report = `STOCK LEVELS\n----------------\n`;
-            Object.values(inventory).forEach(i => report += `${i.name.padEnd(15)}: ${i.stock.toFixed(2)}\n`);
+            Object.values(inventory).forEach(i => report += `${i.name.padEnd(15).slice(0,15)}: ${i.stock.toFixed(2)}\n`);
             let win = window.open('', '', 'width=300,height=600');
             win.document.write(`<pre style="font-family:monospace;">${report}</pre>`);
             win.document.close(); win.print();
