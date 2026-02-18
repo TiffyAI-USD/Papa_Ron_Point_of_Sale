@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PAPA RON'S PREMIUM POS SYSTEM</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --primary-dark: #b38b59;
+            --bg: #000000;
+            --surface: #121212;
+            --surface-light: #1e1e1e;
+            --accent: #44ff44;
+            --danger: #ff4444;
+            --warning: #ff9800;
+            --gold-grad: linear-gradient(145deg, #d4a373, #8a6d4b);
+            --dark-grad: linear-gradient(145deg, #1a1a1a, #000000);
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg); 
+            color: #fff; 
+            margin: 0; 
+            padding: 10px; 
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* PREMIUM HEADERS */
+        h1 { 
+            text-align: center; 
+            color: var(--primary); 
+            font-size: 1.8rem; 
+            letter-spacing: 4px; 
+            text-transform: uppercase; 
+            margin: 15px 0; 
+            font-weight: 900; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+
+        h3 { 
+            color: var(--primary); 
+            margin: 10px 0; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* INPUTS & PREMIUM BUTTONS */
+        input, select { 
+            background: #1a1a1a; 
+            color: #fff; 
+            border: 1px solid #333; 
+            padding: 15px; 
+            font-size: 1.1rem; 
+            border-radius: 8px; 
+            width: 100%; 
+            box-sizing: border-box; 
+            font-weight: 700;
+            margin-bottom: 10px;
+            transition: border 0.3s;
+        }
+
+        input:focus { border-color: var(--primary); outline: none; }
+
+        button { 
+            background: var(--gold-grad); 
+            color: #000; 
+            border: none; 
+            padding: 15px; 
+            border-radius: 8px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            letter-spacing: 1px;
+        }
+
+        button:active { transform: scale(0.95); filter: brightness(1.2); }
+        
+        /* NAVIGATION */
+        .nav-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 10px; 
+            margin-bottom: 15px; 
+        }
+
+        .tab-content { display: none; animation: slideIn 0.4s ease-out; }
+        .active-tab { display: block; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* SALES INTERFACE */
+        .category-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); 
+            gap: 10px; 
+            background: var(--surface); 
+            padding: 12px; 
+            border-radius: 15px; 
+            border: 1px solid #222;
+        }
+
+        .product-btn { 
+            position: relative; 
+            min-height: 80px; 
+            font-size: 0.85rem; 
+            color: white; 
+            border: none; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            border-radius: 10px; 
+            font-weight: 900; 
+            padding: 8px; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .food-btn { background: linear-gradient(145deg, #3d2b1f, #2a1d15); border-bottom: 4px solid #5d4037; }
+        .drink-btn { background: linear-gradient(145deg, #0d47a1, #0a2e66); border-bottom: 4px solid #1565c0; }
+        
+        .btn-del-x { 
+            position: absolute; 
+            top: -10px; 
+            right: -10px; 
+            background: var(--danger); 
+            color: white; 
+            border-radius: 50%; 
+            width: 28px; 
+            height: 28px; 
+            font-size: 14px; 
+            line-height: 28px; 
+            text-align: center; 
+            z-index: 100; 
+            border: 2px solid #fff; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+        }
+
+        /* TRANSACTION TABS */
+        #trans-tabs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 10px; scrollbar-width: none; }
+        #trans-tabs::-webkit-scrollbar { display: none; }
+
+        .tab-btn { 
+            width: auto; 
+            padding: 12px 25px; 
+            background: #1a1a1a; 
+            color: #666; 
+            white-space: nowrap; 
+            border: 1px solid #333; 
+            border-radius: 8px;
+            font-weight: 800;
+        }
+
+        .tab-btn.active { 
+            background: var(--gold-grad); 
+            color: #000; 
+            border-color: #fff; 
+            box-shadow: 0 0 15px rgba(212,163,115,0.3);
+        }
+
+        /* CART & TOTAL */
+        #cart-list { 
+            background: var(--surface); 
+            border-radius: 12px; 
+            padding: 15px; 
+            margin: 15px 0; 
+            max-height: 250px; 
+            overflow-y: auto; 
+            border: 1px solid #222; 
+        }
+
+        .cart-row { 
+            display: flex; 
+            justify-content: space-between; 
+            border-bottom: 1px solid #222; 
+            padding: 12px 0; 
+            font-size: 1.1rem; 
+            font-weight: 700;
+            align-items: center;
+        }
+
+        #total-view { 
+            font-size: 4rem; 
+            color: var(--accent); 
+            text-align: center; 
+            margin: 15px 0; 
+            font-family: 'Courier New', monospace; 
+            font-weight: 900; 
+            text-shadow: 0 0 20px rgba(68,255,68,0.3); 
+        }
+
+        /* STOCK MANAGEMENT */
+        .stock-row { 
+            display: grid; 
+            grid-template-columns: 50px 2fr 1fr 1fr 120px; 
+            align-items: center; 
+            background: var(--surface); 
+            margin-bottom: 8px; 
+            padding: 15px; 
+            border-radius: 10px; 
+            gap: 10px; 
+            border: 1px solid #222; 
+            font-size: 1rem; 
+            text-align: center; 
+            font-weight: 700; 
+        }
+
+        .stock-check { transform: scale(1.8); cursor: pointer; }
+        
+        .stock-status-low { 
+            color: var(--danger); 
+            font-weight: 900; 
+            animation: pulse 1.5s infinite; 
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.4; }
+            100% { opacity: 1; }
+        }
+
+        .stock-footer { 
+            background: var(--surface-light); 
+            padding: 20px; 
+            border-radius: 15px; 
+            margin-top: 20px; 
+            border: 1px dashed var(--primary); 
+            text-align: center; 
+            font-weight: 800; 
+            font-size: 1.2rem;
+            color: #fff;
+        }
+
+        /* MODALS */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+            display: none;
+            backdrop-filter: blur(5px);
+        }
+
+        .modal { 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            background: #000; 
+            padding: 30px; 
+            border-radius: 20px; 
+            width: 90%; 
+            max-width: 450px; 
+            z-index: 1001; 
+            border: 3px solid var(--primary); 
+            box-shadow: 0 0 50px rgba(212,163,115,0.4); 
+        }
+        
+        /* LOGIN SYSTEM */
+        #login-screen { 
+            position: fixed; 
+            inset: 0; 
+            background: #000; 
+            z-index: 5000; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 30px; 
+        }
+
+        .manager-only { display: none; }
+        
+        /* BUILDER STYLING */
+        .ing-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .distro-box { 
+            background: var(--surface-light); 
+            border: 2px solid var(--warning); 
+            padding: 20px; 
+            border-radius: 15px; 
+            margin-top: 25px; 
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <div style="text-align:center; margin-bottom: 40px;">
+            <h1 style="border:none; font-size: 3rem; margin:0;">PAPA RON'S</h1>
+            <div style="color:var(--primary); letter-spacing: 5px; font-weight: 900;">PREMIUM POS v2.0</div>
+        </div>
+        <div style="width: 100%; max-width: 300px;">
+            <p style="text-align:center; color:#666; margin-bottom: 10px;">ENTER ACCESS PIN</p>
+            <input type="password" id="sys-pin" inputmode="numeric" placeholder="••••" style="text-align: center; font-size: 3rem; letter-spacing: 15px; border: none; border-bottom: 4px solid var(--primary); background: transparent;">
+            <button onclick="login()" style="width: 100%; height: 70px; font-size: 1.5rem; margin-top: 20px;">AUTHORIZE</button>
+        </div>
+    </div>
+
+    <h1>Papa Ron's Premium</h1>
+
+    <div class="nav-grid">
+        <button onclick="switchTab('pos-tab')">Sales</button>
+        <button id="nav-builder" class="manager-only" onclick="switchTab('menu-tab')">Builder</button>
+        <button onclick="switchTab('stock-tab')">Stock</button>
+        <button onclick="switchTab('report-tab')" style="background:#222; color:#fff;">Reports</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs"></div>
+        <button onclick="createNewTransaction()" style="background:var(--accent); color:#000; height: 60px; margin-bottom: 15px; font-size: 1.2rem; width:100%;">+ OPEN NEW TABLE</button>
+        
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <div>
+                <h3><span style="color:var(--accent)">●</span> Food Menu</h3>
+                <div class="category-grid" id="foodGrid"></div>
+            </div>
+            <div>
+                <h3><span style="color:#1565c0">●</span> Drinks Menu</h3>
+                <div class="category-grid" id="drinkGrid"></div>
+            </div>
+        </div>
+
+        <div id="cart-list"></div>
+        <div id="total-view">R 0.00</div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+            <button onclick="openTender()" style="background:#2e7d32; color:#fff; height:90px; font-size: 1.8rem;">CASH</button>
+            <button onclick="finalizeSale('Card')" style="background:#1565c0; color:#fff; height:90px; font-size: 1.8rem;">CARD</button>
+            <button onclick="printKitchenSlip()" style="background:#333; color:#fff; height:60px;">KITCHEN SLIP</button>
+            <button class="manager-only" id="void-btn" onclick="deleteCurrentTransaction()" style="background:transparent; border: 2px solid var(--danger); color:var(--danger); height:60px;">VOID TRANSACTION</button>
+        </div>
+    </div>
+
+    <div id="menu-tab" class="tab-content">
+        <div style="background:var(--surface); padding:25px; border-radius:20px; border:1px solid var(--primary);">
+            <h3 style="font-size:1.5rem;">Product & Recipe Builder</h3>
+            <p style="color:#888; margin-bottom: 20px;">Create new menu items and link them to raw inventory.</p>
+            
+            <input type="text" id="m-name" placeholder="PRODUCT DISPLAY NAME">
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <input type="number" id="m-price" placeholder="Selling Price (R)">
+                <input type="number" id="m-cost" placeholder="Direct Cost (R)">
+            </div>
+            <select id="m-cat">
+                <option value="food">Category: Food</option>
+                <option value="drink">Category: Drink</option>
+            </select>
+            
+            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #333;">
+                <h3>Recipe Linkage</h3>
+                <div id="ing-rows">
+                    <div class="ing-row">
+                        <input type="text" class="i-name" placeholder="Ingredient Name">
+                        <input type="number" class="i-qty" placeholder="Qty">
+                        <input type="number" class="i-cost" placeholder="Unit Cost">
+                    </div>
+                </div>
+                <button onclick="addIngRow()" style="background:#222; color:#fff; width: auto; padding: 10px 20px;">+ ADD INGREDIENT LINE</button>
+            </div>
+
+            <button onclick="saveNewProduct()" style="background:var(--accent); color:#000; margin-top:30px; height: 70px; font-size: 1.5rem; width: 100%;">PUBLISH TO MENU</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <div style="background:var(--surface); padding:15px; border-radius:15px; margin-bottom:20px; border:1px solid #333;">
+            <div style="display:flex; gap:10px;">
+                <button onclick="printSelectedStock()" style="background:#fff; color:#000; flex:1;">PRINT ORDER LIST</button>
+                <button onclick="selectAll(true)" style="width: auto;">SELECT ALL</button>
+                <button onclick="selectAll(false)" style="width: auto;">CLEAR</button>
+            </div>
+            <button class="manager-only" onclick="printFullValuationReport()" style="background:var(--primary); color:#000; margin-top:15px; width:100%; font-size: 1.1rem;">GENERATE STOCK VALUATION REPORT (PDF)</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 50px 2fr 1fr 1fr 120px; padding: 10px; font-weight: 900; color: var(--primary); font-size: 0.9rem; text-align: center; text-transform: uppercase;">
+            <span>Pick</span><span>Item</span><span>Stock</span><span>GP</span><span>Action</span>
+        </div>
+        
+        <div id="inventory-display"></div>
+        
+        <div class="stock-footer" id="stock-summary">
+            </div>
+
+        <div class="distro-box manager-only">
+            <h3>Branch Stock Transfer</h3>
+            <input type="text" id="distro-to" placeholder="DESTINATION BRANCH NAME">
+            <input type="number" id="distro-amt" placeholder="QUANTITY TO TRANSFER">
+            <button onclick="processDistro()" style="background:var(--warning); color:#000; margin-top:10px; height:60px; width: 100%;">EXECUTE TRANSFER</button>
+        </div>
+    </div>
+
+    <div id="report-tab" class="tab-content">
+        <div style="background:var(--surface); padding:25px; border-radius:20px; border:1px solid #333;">
+            <h3 id="user-display">Logged in as: </h3>
+            <div style="display:grid; gap:15px; margin-top:20px;">
+                <button onclick="generateReport('daily')" style="height:70px; font-size: 1.2rem;">MY DAILY SALES</button>
+                
+                <div class="manager-only" style="margin-top:30px; border-top: 1px dashed #444; padding-top:30px;">
+                    <h3 style="color:var(--accent)">MANAGER Z-REPORTS</h3>
+                    <button onclick="generateReport('daily', true)" style="margin-bottom:10px; width:100%; background:#333; color:var(--accent);">CONSOLIDATED DAILY TOTAL</button>
+                    <button onclick="generateReport('weekly', true)" style="width:100%; background:#333; color:var(--primary);">CONSOLIDATED WEEKLY SUMMARY</button>
+                </div>
+
+                <button onclick="location.reload()" style="background:var(--danger); color:#fff; margin-top:50px;">LOGOUT & LOCK SYSTEM</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="overlay" onclick="closeModal()"></div>
+    
+    <div id="stock-modal" class="modal">
+        <h2 id="stock-item-name" style="text-align:center; color:var(--primary); text-transform: uppercase;"></h2>
+        <p style="text-align:center; color:#888;">Enter received stock amount</p>
+        <input type="number" id="stock-add-amt" placeholder="0.00" style="font-size: 2rem; text-align: center;">
+        <button onclick="confirmStockAdd()" style="height:70px; width: 100%; margin-top:20px;">UPDATE INVENTORY</button>
+        <button onclick="closeModal()" style="background:transparent; color:#fff; margin-top:15px; width: 100%;">CANCEL</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h1 style="text-align:center; margin:0; font-size: 1.2rem; color:#888;">TOTAL DUE</h1>
+        <h1 id="cash-total-needed" style="text-align:center; color:var(--accent); font-size: 4rem; margin: 10px 0;"></h1>
+        <input type="number" id="cash-amt" placeholder="CASH RECEIVED" oninput="calculateChange()" style="font-size: 3rem; text-align:center; height: 100px; color: var(--accent);">
+        <h2 id="change-due" style="text-align:center; font-size: 2.5rem; color: #fff;">Change: R0.00</h2>
+        <button onclick="finalizeSale('Cash')" style="height:80px; width:100%; font-size: 1.5rem; margin-top:20px;">COMPLETE TRANSACTION</button>
+        <button onclick="closeModal()" style="background:transparent; color:#fff; margin-top:15px; width: 100%;">BACK</button>
+    </div>
+
+    <script>
+        // DATA STORAGE
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [];
+        
+        let isManager = false;
+        let currentUser = "";
+        let currentTransIdx = -1;
+        let selectedStockKey = "";
+
+        // AUTHENTICATION LOGIC
+        function login() {
+            const pin = document.getElementById('sys-pin').value;
+            if(pin === "1234") { 
+                isManager = true; 
+                currentUser = "MANAGER"; 
+            } else if(["1111", "2222"].includes(pin)) { 
+                isManager = false; 
+                currentUser = "STAFF-" + pin; 
+            } else { 
+                alert("ACCESS DENIED: INVALID PIN"); 
+                return; 
+            }
+            
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('user-display').textContent = "Logged in as: " + currentUser;
+            
+            // Apply role-based visibility
+            const mgElements = document.querySelectorAll('.manager-only');
+            mgElements.forEach(el => el.style.display = isManager ? 'block' : 'none');
+            
+            // Start POS
+            if (transactions.filter(t => t.status === 'active').length === 0) {
+                createNewTransaction();
+            }
+            currentTransIdx = transactions.findIndex(t => t.status === 'active');
+            
+            renderPOS();
+            renderStock();
+        }
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+            updateValuation();
+        }
+
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        // POS CORE
+        function renderPOS() {
+            const f = document.getElementById('foodGrid'); 
+            const d = document.getElementById('drinkGrid');
+            f.innerHTML = ''; d.innerHTML = '';
+            
+            Object.keys(inventory).forEach(key => {
+                if(inventory[key].category === 'ingredient') return;
+                
+                const btn = document.createElement('div');
+                btn.className = `product-btn ${inventory[key].category}-btn`;
+                btn.innerHTML = `
+                    ${isManager ? `<div class="btn-del-x" onclick="deleteMenuBtn(event, '${key}')">×</div>` : ''}
+                    <div style="width:100%" onclick="addToCart('${key}')">
+                        <div style="font-size:1rem; margin-bottom:5px;">${inventory[key].name}</div>
+                        <div style="color:var(--primary)">R${inventory[key].price.toFixed(2)}</div>
+                    </div>
+                `;
+                inventory[key].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
+            });
+
+            const tTabs = document.getElementById('trans-tabs'); 
+            tTabs.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const btn = document.createElement('button');
+                btn.className = `tab-btn ${i === currentTransIdx ? 'active' : ''}`;
+                btn.textContent = `TABLE ${t.id}`;
+                btn.onclick = () => { currentTransIdx = i; renderPOS(); };
+                tTabs.appendChild(btn);
+            });
+            updateCartUI();
+        }
+
+        function addToCart(key) {
+            if(!transactions[currentTransIdx]) return;
+            transactions[currentTransIdx].items.push({...inventory[key], code: key});
+            save();
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-list');
+            list.innerHTML = '';
+            let total = 0;
+            
+            if(transactions[currentTransIdx]) {
+                transactions[currentTransIdx].items.forEach((it, i) => {
+                    total += it.price;
+                    list.innerHTML += `
+                        <div class="cart-row">
+                            <span>${it.name}</span>
+                            <span>R${it.price.toFixed(2)} 
+                                <button onclick="removeFromCart(${i})" style="background:var(--danger); padding:5px 10px; margin-left:10px; width:auto;">×</button>
+                            </span>
+                        </div>`;
+                });
+            }
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(index) {
+            transactions[currentTransIdx].items.splice(index, 1);
+            save();
+            updateCartUI();
+        }
+
+        // FINALIZE & PRINTING
+        function openTender() {
+            const total = transactions[currentTransIdx].items.reduce((sum, item) => sum + item.price, 0);
+            if(total === 0) return;
+            document.getElementById('cash-total-needed').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('tender-modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            document.getElementById('cash-amt').focus();
+        }
+
+        function calculateChange() {
+            const total = transactions[currentTransIdx].items.reduce((sum, item) => sum + item.price, 0);
+            const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
+            document.getElementById('change-due').textContent = `Change: R${(cash - total).toFixed(2)}`;
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentTransIdx];
+            if (!t || t.items.length === 0) return;
+            
+            t.total = t.items.reduce((s, i) => s + i.price, 0);
+            t.method = method;
+            t.status = 'paid';
+            t.date = Date.now();
+            t.waiter = currentUser;
+            
+            // Deduct Stock
+            t.items.forEach(it => {
+                if(inventory[it.code]) inventory[it.code].stock--;
+                if(recipes[it.code]) {
+                    for(let ing in recipes[it.code]) {
+                        if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing];
+                    }
+                }
+            });
+            
+            printSlip(t);
+            save();
+            createNewTransaction();
+            closeModal();
+        }
+
+        function printSlip(t) {
+            const win = window.open('', '', 'width=300,height=600');
+            let itemsHTML = t.items.map(i => `${i.name.padEnd(15).slice(0,15)} R${i.price.toFixed(2)}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace; font-size:10pt;">
+   PAPA RON'S PREMIUM
+----------------------------
+Waiter: ${t.waiter}
+Table: ${t.id}
+Date: ${new Date(t.date).toLocaleString()}
+----------------------------
+${itemsHTML}
+----------------------------
+TOTAL: R${t.total.toFixed(2)}
+METHOD: ${t.method}
+----------------------------
+   THANK YOU - COME AGAIN
+            </pre>`);
+            win.document.close();
+            win.print();
+        }
+
+        function printKitchenSlip() {
+            const t = transactions[currentTransIdx];
+            if(!t || t.items.length === 0) return;
+            const win = window.open('', '', 'width=300,height=400');
+            let items = t.items.map(i => `[ ] ${i.name}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace; font-size:16pt; font-weight:bold;">
+KITCHEN ORDER
+Table: ${t.id}
+Time: ${new Date().toLocaleTimeString()}
+-------------------------
+${items}
+-------------------------
+</pre>`);
+            win.document.close();
+            win.print();
+        }
+
+        // STOCK LOGIC
+        function renderStock() {
+            const cont = document.getElementById('inventory-display');
+            cont.innerHTML = '';
+            
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key];
+                const gp = (itm.price || 0) - (itm.cost || 0);
+                const isLow = itm.stock <= 5;
+                
+                cont.innerHTML += `
+                    <div class="stock-row">
+                        <input type="checkbox" class="stock-check" value="${key}">
+                        <div style="text-align:left;"><b>${itm.name}</b></div>
+                        <div class="${isLow ? 'stock-status-low' : ''}">${itm.stock.toFixed(1)}</div>
+                        <div style="color:var(--primary);">R${gp.toFixed(2)}</div>
+                        <div>
+                            <button onclick="openStockIn('${key}')" style="padding:8px; font-size:0.8rem; width:100%;">+ STOCK</button>
+                        </div>
+                    </div>`;
+            });
+            updateValuation();
+        }
+
+        function updateValuation() {
+            let costVal = 0, retailVal = 0;
+            Object.values(inventory).forEach(i => {
+                if(i.stock > 0) {
+                    costVal += (i.stock * (i.cost || 0));
+                    retailVal += (i.stock * (i.price || 0));
+                }
+            });
+            const summary = document.getElementById('stock-summary');
+            if(summary) {
+                summary.innerHTML = `
+                    TOTAL ASSET VALUE (COST): R${costVal.toFixed(2)}<br>
+                    <span style="color:var(--accent)">POTENTIAL GROSS PROFIT: R${(retailVal - costVal).toFixed(2)}</span>
+                `;
+            }
+        }
+
+        // BUILDER LOGIC
+        function addIngRow() {
+            const div = document.createElement('div');
+            div.className = "ing-row";
+            div.innerHTML = `
+                <input type="text" class="i-name" placeholder="Ingredient Name">
+                <input type="number" class="i-qty" placeholder="Qty">
+                <input type="number" class="i-cost" placeholder="Unit Cost">
+            `;
+            document.getElementById('ing-rows').appendChild(div);
+        }
+
+        function saveNewProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase();
+            const price = parseFloat(document.getElementById('m-price').value);
+            const cost = parseFloat(document.getElementById('m-cost').value) || 0;
+            const cat = document.getElementById('m-cat').value;
+            
+            if(!name || isNaN(price)) return alert("ERROR: NAME & PRICE ARE REQUIRED");
+            
+            const id = "P_" + Date.now();
+            let recipe = {};
+            
+            const rows = document.querySelectorAll('.ing-row');
+            rows.forEach(row => {
+                const iname = row.querySelector('.i-name').value.toUpperCase();
+                const iqty = parseFloat(row.querySelector('.i-qty').value);
+                const icost = parseFloat(row.querySelector('.i-cost').value) || 0;
+                
+                if(iname && iqty) {
+                    recipe[iname] = iqty;
+                    if(!inventory[iname]) {
+                        inventory[iname] = { name: iname, stock: 0, cost: icost, category: 'ingredient', price: 0 };
+                    }
+                }
+            });
+
+            inventory[id] = { name, price, cost, category: cat, stock: 0 };
+            if(Object.keys(recipe).length > 0) recipes[id] = recipe;
+            
+            save();
+            alert("SUCCESS: PRODUCT ADDED TO MENU");
+            location.reload();
+        }
+
+        // UTILITIES
+        function createNewTransaction() {
+            const newId = transactions.length > 0 ? transactions[transactions.length-1].id + 1 : 1;
+            transactions.push({id: newId, items: [], status: 'active', date: Date.now()});
+            currentTransIdx = transactions.length - 1;
+            renderPOS();
+        }
+
+        function deleteCurrentTransaction() {
+            if(!isManager) return;
+            if(confirm("VOID ENTIRE TABLE? THIS CANNOT BE UNDONE.")) {
+                transactions.splice(currentTransIdx, 1);
+                if(transactions.filter(t => t.status === 'active').length === 0) {
+                    createNewTransaction();
+                } else {
+                    currentTransIdx = transactions.findIndex(t => t.status === 'active');
+                }
+                save();
+                renderPOS();
+            }
+        }
+
+        function openStockIn(key) {
+            selectedStockKey = key;
+            document.getElementById('stock-item-name').textContent = inventory[key].name;
+            document.getElementById('stock-modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        function confirmStockAdd() {
+            const amt = parseFloat(document.getElementById('stock-add-amt').value);
+            if(amt) {
+                inventory[selectedStockKey].stock += amt;
+                save();
+                renderStock();
+                closeModal();
+            }
+        }
+
+        function closeModal() {
+            document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('cash-amt').value = '';
+            document.getElementById('stock-add-amt').value = '';
+        }
+
+        function selectAll(val) {
+            document.querySelectorAll('.stock-check').forEach(c => c.checked = val);
+        }
+
+        function deleteMenuBtn(e, key) {
+            e.stopPropagation();
+            if(confirm("REMOVE PRODUCT FROM MENU?")) {
+                delete inventory[key];
+                save();
+                renderPOS();
+            }
+        }
+
+        function generateReport(type, consolidated = false) {
+            let start = type === 'daily' ? new Date().setHours(0,0,0,0) : Date.now() - (7 * 86400000);
+            let filter = transactions.filter(t => t.status === 'paid' && t.date >= start);
+            
+            if(!consolidated) filter = filter.filter(t => t.waiter === currentUser);
+            
+            let total = 0;
+            let report = `REPORTS: ${type.toUpperCase()}\n------------------------\n`;
+            filter.forEach(t => {
+                report += `T${t.id} | ${t.method} | R${t.total.toFixed(2)}\n`;
+                total += t.total;
+            });
+            report += `------------------------\nGRAND TOTAL: R${total.toFixed(2)}`;
+            
+            const win = window.open('', '', 'width=400,height=600');
+            win.document.write(`<pre style="font-family:monospace; padding:20px;">${report}</pre>`);
+            win.document.close();
+            win.print();
+        }
+    </script>
+</body>
+</html>
