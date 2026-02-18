@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PAPA RON'S PREMIUM POS</title>
+    <style>
+        :root {
+            --gold: #d4a373;
+            --gold-grad: linear-gradient(145deg, #d4a373, #b38b59);
+            --bg: #000000;
+            --card: #111111;
+            --accent: #44ff44;
+            --danger: #ff4444;
+            --warning: #ffb300;
+        }
+
+        body { font-family: 'Arial Black', Gadget, sans-serif; background: var(--bg); color: #fff; margin: 0; padding: 10px; -webkit-font-smoothing: antialiased; }
+        
+        /* HEADERS */
+        h1 { text-align: center; color: var(--gold); font-size: 2.2rem; letter-spacing: 5px; text-transform: uppercase; margin: 10px 0; border-bottom: 2px solid var(--gold); }
+        h3 { color: var(--gold); text-transform: uppercase; font-size: 1.1rem; margin: 5px 0; letter-spacing: 2px; }
+
+        /* INPUTS & LARGE BUTTONS */
+        input, select { background: #1a1a1a; color: #fff; border: 1px solid #444; padding: 15px; font-size: 1rem; border-radius: 8px; width: 100%; box-sizing: border-box; font-weight: 900; }
+        button { background: var(--gold-grad); color: #000; border: none; padding: 15px; border-radius: 8px; font-weight: 900; text-transform: uppercase; cursor: pointer; transition: 0.2s; }
+        button:active { transform: scale(0.95); filter: brightness(1.3); }
+
+        /* NAVIGATION */
+        .nav-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
+        .tab-content { display: none; }
+        .active-tab { display: block; }
+
+        /* SALES GRID */
+        .pos-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+        .menu-area { display: grid; grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; background: var(--card); padding: 12px; border-radius: 12px; border: 1px solid #333; }
+        .prod-item { position: relative; height: 90px; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; border-radius: 10px; font-size: 0.85rem; padding: 5px; cursor: pointer; border: 1px solid rgba(255,255,255,0.1); }
+        .prod-item b { font-size: 1rem; }
+        .del-x { position: absolute; top: -10px; right: -10px; background: var(--danger); color: #fff; width: 28px; height: 28px; border-radius: 50%; border: 2px solid #fff; line-height: 24px; text-align: center; font-size: 14px; z-index: 10; }
+
+        /* CART & TOTAL */
+        #cart-window { background: var(--card); border: 2px solid #222; border-radius: 12px; margin: 15px 0; padding: 10px; max-height: 250px; overflow-y: auto; }
+        .cart-item { display: flex; justify-content: space-between; padding: 12px; border-bottom: 1px solid #222; font-size: 1.1rem; }
+        #total-display { font-size: 4rem; color: var(--accent); text-align: center; font-family: 'Courier New', monospace; font-weight: 900; text-shadow: 0 0 15px rgba(68,255,68,0.3); margin: 10px 0; }
+
+        /* STOCK ROW - HIGH VISIBILITY */
+        .stock-row { display: grid; grid-template-columns: 50px 2fr 1fr 1fr 120px; gap: 10px; background: var(--card); padding: 15px; margin-bottom: 8px; border-radius: 10px; align-items: center; border: 1px solid #333; }
+        .stock-row span { font-size: 1.2rem; font-weight: 900; text-align: center; }
+        .gp-text { color: var(--gold); font-size: 1.2rem !important; }
+        .level-text { font-size: 1.5rem !important; }
+        .stock-check { transform: scale(1.8); }
+
+        /* MODALS */
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #000; border: 3px solid var(--gold); padding: 30px; border-radius: 20px; width: 90%; max-width: 400px; z-index: 10000; display: none; box-shadow: 0 0 100px rgba(0,0,0,1); }
+        
+        /* SYSTEM HIDER */
+        .manager-only { display: none; }
+        #login-screen { position: fixed; inset: 0; background: #000; z-index: 20000; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <h1>PAPA RON'S</h1>
+        <input type="password" id="sys-pin" inputmode="numeric" placeholder="••••" style="width: 200px; text-align: center; font-size: 3rem; letter-spacing: 10px; border: none; border-bottom: 4px solid var(--gold);">
+        <button onclick="login()" style="width: 200px; margin-top: 30px; height: 70px; font-size: 1.5rem;">ACCESS</button>
+    </div>
+
+    <h1>Papa Ron's POS</h1>
+
+    <div class="nav-grid">
+        <button onclick="tab('pos')">SALES</button>
+        <button class="manager-only" onclick="tab('build')">BUILDER</button>
+        <button onclick="tab('stock')">STOCK</button>
+        <button onclick="tab('cash')">CASH UP</button>
+    </div>
+
+    <div id="pos" class="tab-content active-tab">
+        <div id="table-bar" style="display:flex; gap:8px; margin-bottom:10px; overflow-x:auto;"></div>
+        <button onclick="newTable()" style="background:var(--accent)!important; width:100%; margin-bottom:15px;">+ OPEN NEW TABLE</button>
+        
+        <div class="pos-grid">
+            <div>
+                <h3>FOOD</h3>
+                <div class="menu-area" id="food-menu"></div>
+            </div>
+            <div>
+                <h3>DRINKS</h3>
+                <div class="menu-area" id="drink-menu"></div>
+            </div>
+        </div>
+
+        <div id="cart-window"></div>
+        <div id="total-display">R 0.00</div>
+
+        <div class="nav-grid">
+            <button onclick="tender('Cash')" style="background:#2e7d32!important; color:#fff!important; height:80px;">CASH</button>
+            <button onclick="tender('Card')" style="background:#1565c0!important; color:#fff!important; height:80px;">CARD</button>
+            <button onclick="kitchenPrint()" style="background:#333!important; color:#fff!important;">KITCHEN</button>
+            <button class="manager-only" onclick="voidTable()" style="background:var(--danger)!important; color:#fff!important;">VOID</button>
+        </div>
+    </div>
+
+    <div id="build" class="tab-content">
+        <div style="background:var(--card); padding:20px; border-radius:15px; border:2px solid var(--gold);">
+            <h3>CREATE NEW PRODUCT</h3>
+            <input type="text" id="p-name" placeholder="PRODUCT NAME">
+            <div class="pos-grid" style="margin:10px 0;">
+                <input type="number" id="p-price" placeholder="RETAIL PRICE">
+                <input type="number" id="p-cost" placeholder="BASE COST">
+            </div>
+            <select id="p-cat">
+                <option value="food">FOOD</option>
+                <option value="drink">DRINK</option>
+            </select>
+            <p style="color:var(--gold); margin: 20px 0 10px 0;">LINK RECIPE INGREDIENTS</p>
+            <div id="ing-list">
+                <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap:5px; margin-bottom:5px;">
+                    <input type="text" class="i-n" placeholder="Ingredient Name">
+                    <input type="number" class="i-q" placeholder="Qty">
+                    <input type="number" class="i-c" placeholder="Cost">
+                </div>
+            </div>
+            <button onclick="addIngLine()" style="background:#222!important; color:#fff!important; width:auto; padding:10px 20px; margin-bottom:20px;">+ ADD LINE</button>
+            <button onclick="saveProduct()" style="width:100%; height:60px; font-size:1.2rem;">SAVE TO DATABASE</button>
+        </div>
+    </div>
+
+    <div id="stock" class="tab-content">
+        <div style="background:var(--card); padding:15px; border-radius:12px; margin-bottom:15px;">
+            <div style="display:flex; gap:10px;">
+                <button onclick="printOrderSheet()" style="background:#fff!important; color:#000!important; flex:1;">PRINT ORDER LIST</button>
+                <button onclick="bulk(true)">ALL</button>
+                <button onclick="bulk(false)">NONE</button>
+            </div>
+            <button class="manager-only" onclick="printValuation()" style="width:100%; margin-top:10px; background:var(--gold-grad)!important;">PRINT STOCK VALUATION REPORT</button>
+        </div>
+
+        <div style="display:grid; grid-template-columns: 50px 2fr 1fr 1fr 120px; padding:10px; color:var(--gold); font-size:0.8rem;">
+            <span>PICK</span><span>ITEM NAME</span><span>STOCK</span><span>GP</span><span>ACTION</span>
+        </div>
+        <div id="stock-list"></div>
+
+        <div class="manager-only" id="valuation-footer" style="background:var(--gold-grad); color:#000; padding:20px; border-radius:15px; margin-top:20px; text-align:center;"></div>
+
+        <div class="manager-only" style="background:var(--card); border:2px solid var(--warning); padding:20px; border-radius:15px; margin-top:20px;">
+            <h3>STOCK DISTRIBUTION</h3>
+            <input type="text" id="dist-name" placeholder="BRANCH NAME / DRIVER">
+            <input type="number" id="dist-qty" placeholder="QUANTITY TO TRANSFER">
+            <button onclick="runDistro()" style="background:var(--warning)!important; color:#000!important; width:100%; margin-top:10px;">EXECUTE TRANSFER</button>
+        </div>
+    </div>
+
+    <div id="cash" class="tab-content">
+        <div style="background:var(--card); padding:25px; border-radius:15px;">
+            <h3>WAITER: <span id="waiter-tag"></span></h3>
+            <button onclick="runReport('daily', false)" style="margin-bottom:10px; width:100%;">PRINT MY DAILY SALES</button>
+            
+            <div class="manager-only" style="margin-top:40px; border-top:2px dashed #444; padding-top:20px;">
+                <h3 style="color:var(--accent);">MANAGER Z-REPORTS</h3>
+                <button onclick="runReport('daily', true)" style="margin-bottom:10px; width:100%;">Z-REPORT: DAILY STORE TOTAL</button>
+                <button onclick="runReport('weekly', true)" style="margin-bottom:10px; width:100%;">Z-REPORT: WEEKLY SUMMARY</button>
+            </div>
+            <button onclick="location.reload()" style="background:#333!important; color:#fff!important; width:100%; margin-top:50px;">LOGOUT SYSTEM</button>
+        </div>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h1 id="t-needed" style="font-size:3rem; text-align:center; color:var(--accent);"></h1>
+        <input type="number" id="t-input" placeholder="CASH GIVEN" oninput="doChange()" style="font-size:2.5rem; text-align:center;">
+        <h2 id="t-change" style="text-align:center; font-size:2rem; margin:20px 0;">CHANGE: R0.00</h2>
+        <button onclick="pay('Cash')" style="width:100%; height:70px;">FINALIZE & PRINT</button>
+        <button onclick="closeModals()" style="background:#333!important; color:#fff!important; margin-top:10px; width:100%;">BACK</button>
+    </div>
+
+    <div id="stk-modal" class="modal">
+        <h2 id="stk-item-name" style="text-align:center; color:var(--gold);"></h2>
+        <input type="number" id="stk-add-val" placeholder="0">
+        <button onclick="saveStk()" style="width:100%; height:60px;">UPDATE STOCK</button>
+        <button onclick="closeModals()" style="background:#333!important; color:#fff!important; margin-top:10px; width:100%;">CANCEL</button>
+    </div>
+
+    <script>
+        let inv = JSON.parse(localStorage.getItem('pr_inv')) || {};
+        let rec = JSON.parse(localStorage.getItem('pr_rec')) || {};
+        let trans = JSON.parse(localStorage.getItem('pr_trans')) || [];
+        let isMan = false;
+        let user = "";
+        let curT = -1;
+        let activeK = "";
+
+        function login() {
+            const p = document.getElementById('sys-pin').value;
+            if(p === "1234") { isMan = true; user = "MANAGER"; start(); }
+            else if(["1111","2222","3333","4444","5555"].includes(p)) { isMan = false; user = "STAFF_"+p; start(); }
+            else { alert("ACCESS DENIED"); }
+        }
+
+        function start() {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('waiter-tag').textContent = user;
+            document.querySelectorAll('.manager-only').forEach(e => e.style.display = isMan ? 'block' : 'none');
+            if(trans.filter(t => t.status === 'open').length === 0) newTable();
+            curT = trans.findIndex(t => t.status === 'open');
+            drawPOS();
+        }
+
+        function sync() {
+            localStorage.setItem('pr_inv', JSON.stringify(inv));
+            localStorage.setItem('pr_rec', JSON.stringify(rec));
+            localStorage.setItem('pr_trans', JSON.stringify(trans));
+            drawValuation();
+        }
+
+        function tab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos') drawPOS();
+            if(id === 'stock') drawStock();
+        }
+
+        // SALES ENGINE
+        function drawPOS() {
+            const f = document.getElementById('food-menu'); const d = document.getElementById('drink-menu');
+            f.innerHTML = ''; d.innerHTML = '';
+            Object.keys(inv).forEach(k => {
+                if(inv[k].cat === 'ing') return;
+                const div = document.createElement('div');
+                div.className = 'prod-item';
+                div.style.background = 'var(--gold-grad)';
+                div.style.color = '#000';
+                div.innerHTML = `${isMan ? `<div class="del-x" onclick="delProd(event,'${k}')">X</div>` : ''}
+                                 <div onclick="addCart('${k}')" style="width:100%"><b>${inv[k].name}</b><br>R${inv[k].price.toFixed(2)}</div>`;
+                inv[k].cat === 'food' ? f.appendChild(div) : d.appendChild(div);
+            });
+            drawTables();
+            updateCart();
+        }
+
+        function drawTables() {
+            const b = document.getElementById('table-bar'); b.innerHTML = '';
+            trans.forEach((t, i) => {
+                if(t.status !== 'open') return;
+                const btn = document.createElement('button');
+                btn.textContent = `TABLE ${t.id}`;
+                btn.className = `tab-btn ${i === curT ? 'active' : ''}`;
+                btn.style.width = 'auto';
+                btn.onclick = () => { curT = i; drawPOS(); };
+                b.appendChild(btn);
+            });
+        }
+
+        function addCart(k) {
+            trans[curT].items.push({...inv[k], code: k});
+            sync(); updateCart();
+        }
+
+        function updateCart() {
+            const w = document.getElementById('cart-window'); w.innerHTML = '';
+            let total = 0;
+            if(trans[curT]) {
+                trans[curT].items.forEach((it, i) => {
+                    total += it.price;
+                    w.innerHTML += `<div class="cart-item"><span>${it.name}</span><span>R${it.price.toFixed(2)} ${isMan ? `<button onclick="removeIt(${i})" style="padding:2px 8px; background:red; color:white;">×</button>` : ''}</span></div>`;
+                });
+            }
+            document.getElementById('total-display').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function removeIt(i) { trans[curT].items.splice(i, 1); sync(); updateCart(); }
+
+        function newTable() {
+            trans.push({id: trans.length+1, items: [], status: 'open', waiter: user, date: Date.now()});
+            curT = trans.length-1; drawPOS();
+        }
+
+        // PRINT ENGINE
+        function print(txt) {
+            const w = window.open('', '', 'width=400,height=600');
+            w.document.write(`<html><body style="font-family:'Courier New'; padding:20px;"><pre style="font-size:14pt; line-height:1.2;">${txt}</pre></body></html>`);
+            w.document.close();
+            setTimeout(() => { w.print(); w.close(); }, 500);
+        }
+
+        function tender(m) {
+            const total = trans[curT].items.reduce((a,b)=>a+b.price, 0);
+            if(total === 0) return;
+            if(m === 'Card') pay('Card');
+            else {
+                document.getElementById('t-needed').textContent = `R${total.toFixed(2)}`;
+                document.getElementById('tender-modal').style.display = 'block';
+            }
+        }
+
+        function doChange() {
+            const total = trans[curT].items.reduce((a,b)=>a+b.price, 0);
+            const inpt = parseFloat(document.getElementById('t-input').value) || 0;
+            document.getElementById('t-change').textContent = `CHANGE: R${(inpt-total).toFixed(2)}`;
+        }
+
+        function pay(m) {
+            const t = trans[curT];
+            t.total = t.items.reduce((a,b)=>a+b.price, 0);
+            t.method = m; t.status = 'paid'; t.waiter = user; t.date = Date.now();
+
+            t.items.forEach(it => {
+                if(inv[it.code]) inv[it.code].stock--;
+                if(rec[it.code]) {
+                    for(let i in rec[it.code]) if(inv[i]) inv[i].stock -= rec[it.code][i];
+                }
+            });
+
+            let s = `    PAPA RON'S POS\n--------------------------\nWAITER: ${t.waiter}\nTABLE: ${t.id}\nDATE: ${new Date().toLocaleString()}\n--------------------------\n`;
+            t.items.forEach(i => s += `${i.name.padEnd(18)} R${i.price.toFixed(2)}\n`);
+            s += `--------------------------\nTOTAL: R${t.total.toFixed(2)}\nMETHOD: ${m}\n\nTHANK YOU!`;
+            
+            print(s); sync(); newTable(); closeModals();
+        }
+
+        function kitchenPrint() {
+            const t = trans[curT];
+            let s = `  ** KITCHEN ORDER **\n--------------------------\nTABLE: ${t.id}\nTIME: ${new Date().toLocaleTimeString()}\n--------------------------\n`;
+            t.items.forEach(i => s += `[ ] ${i.name}\n`);
+            print(s);
+        }
+
+        // STOCK ENGINE
+        function drawStock() {
+            const l = document.getElementById('stock-list'); l.innerHTML = '';
+            Object.keys(inv).sort().forEach(k => {
+                const i = inv[k];
+                const gp = (i.price || 0) - (i.cost || 0);
+                l.innerHTML += `<div class="stock-row">
+                    <input type="checkbox" class="stock-check" value="${k}">
+                    <div style="text-align:left;"><b>${i.name}</b></div>
+                    <span class="level-text" style="color:${i.stock <= 5 ? 'var(--danger)' : 'var(--accent)'}">${i.stock.toFixed(1)}</span>
+                    <span class="gp-text">R${gp.toFixed(2)}</span>
+                    <div>
+                        <button onclick="openStk('${k}')" style="padding:8px; width:100%;">+ STOCK</button>
+                    </div>
+                </div>`;
+            });
+            drawValuation();
+        }
+
+        function drawValuation() {
+            if(!isMan) return;
+            let c = 0, s = 0;
+            Object.values(inv).forEach(i => { if(i.stock > 0) { c += (i.stock * (i.cost||0)); s += (i.stock * (i.price||0)); } });
+            document.getElementById('valuation-footer').innerHTML = `<small>STOCK ASSET VALUE (COST)</small><br><b style="font-size:2rem;">R${c.toFixed(2)}</b><br><small>EST. RETAIL GP: R${(s-c).toFixed(2)}</small>`;
+        }
+
+        function printValuation() {
+            let s = `STOCK VALUATION\n${new Date().toLocaleDateString()}\n--------------------------\n`;
+            let t = 0;
+            Object.values(inv).forEach(i => {
+                let v = i.stock * (i.cost||0); t += v;
+                s += `${i.name.padEnd(15)} ${i.stock} x R${(i.cost||0).toFixed(2)} = R${v.toFixed(2)}\n`;
+            });
+            s += `--------------------------\nTOTAL ASSETS: R${t.toFixed(2)}`;
+            print(s);
+        }
+
+        // BUILDER LOGIC
+        function addIngLine() {
+            const d = document.createElement('div');
+            d.style = "display:grid; grid-template-columns: 2fr 1fr 1fr; gap:5px; margin-bottom:5px;";
+            d.innerHTML = `<input type="text" class="i-n" placeholder="Ingredient"><input type="number" class="i-q" placeholder="Qty"><input type="number" class="i-c" placeholder="Cost">`;
+            document.getElementById('ing-list').appendChild(d);
+        }
+
+        function saveProduct() {
+            const n = document.getElementById('p-name').value.toUpperCase(), p = parseFloat(document.getElementById('p-price').value), c = parseFloat(document.getElementById('p-cost').value) || 0, cat = document.getElementById('p-cat').value;
+            if(!n || isNaN(p)) return alert("NAME & PRICE REQ");
+            const id = "P_" + Date.now();
+            let rMap = {};
+            const names = document.querySelectorAll('.i-n'), qtys = document.querySelectorAll('.i-q'), costs = document.querySelectorAll('.i-c');
+            names.forEach((el, i) => {
+                const iname = el.value.toUpperCase(), iqty = parseFloat(qtys[i].value), icost = parseFloat(costs[i].value) || 0;
+                if(iname && iqty) {
+                    rMap[iname] = iqty;
+                    if(!inv[iname]) inv[iname] = {name: iname, stock: 0, cost: icost, cat: 'ing', price: 0};
+                }
+            });
+            inv[id] = {name: n, price: p, cost: c, cat: cat, stock: 0};
+            if(Object.keys(rMap).length > 0) rec[id] = rMap;
+            sync(); alert("SAVED!"); location.reload();
+        }
+
+        function runDistro() {
+            const d = document.getElementById('dist-name').value.toUpperCase(), q = parseFloat(document.getElementById('dist-qty').value), p = document.querySelectorAll('.stock-check:checked');
+            if(!d || isNaN(q) || p.length === 0) return alert("CHECK ITEMS & INPUTS");
+            let s = `STOCK TRANSFER: ${d}\n--------------------------\n`;
+            p.forEach(cb => { const i = inv[cb.value]; if(i.stock >= q) { i.stock -= q; s += `${q} x ${i.name}\n`; } });
+            print(s); sync(); drawStock();
+        }
+
+        function runReport(range, consolidated) {
+            const now = Date.now(); let start = 0;
+            if(range === 'daily') start = new Date().setHours(0,0,0,0);
+            let filter = trans.filter(t => t.status === 'paid' && t.date >= start);
+            if(!consolidated) filter = filter.filter(t => t.waiter === user);
+            let t = 0;
+            let s = `FINANCIAL REPORT\nUSER: ${consolidated ? 'ALL' : user}\n--------------------------\n`;
+            filter.forEach(f => { s += `T${f.id} | R${f.total.toFixed(2)} | ${f.method}\n`; t += f.total; });
+            s += `--------------------------\nTOTAL SALES: R${t.toFixed(2)}`;
+            print(s);
+        }
+
+        // UI UTILS
+        function bulk(v) { document.querySelectorAll('.stock-check').forEach(c => c.checked = v); }
+        function openStk(k) { activeK = k; document.getElementById('stk-item-name').textContent = inv[k].name; document.getElementById('stk-modal').style.display = 'block'; }
+        function saveStk() { const v = parseFloat(document.getElementById('stk-add-val').value); if(v) { inv[activeK].stock += v; sync(); drawStock(); closeModals(); } }
+        function closeModals() { document.querySelectorAll('.modal').forEach(m => m.style.display = 'none'); }
+        function delProd(e, k) { e.stopPropagation(); if(confirm("DELETE PRODUCT?")) { delete inv[k]; sync(); drawPOS(); } }
+        function voidTable() { if(confirm("VOID TABLE?")) { trans.splice(curT, 1); if(trans.filter(t=>t.status==='open').length===0) newTable(); else curT = 0; sync(); drawPOS(); } }
+
+    </script>
+</body>
+</html>
