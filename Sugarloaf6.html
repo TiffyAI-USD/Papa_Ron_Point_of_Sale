@@ -1,0 +1,954 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PAPA RON'S PREMIUM POS - ENTERPRISE EDITION</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --primary-dark: #b38b59;
+            --bg: #000000;
+            --surface: #121212;
+            --surface-light: #1e1e1e;
+            --accent: #44ff44;
+            --danger: #ff4444;
+            --warning: #ff9800;
+            --gold-grad: linear-gradient(145deg, #d4a373, #8a6d4b);
+            --dark-grad: linear-gradient(145deg, #1a1a1a, #000000);
+            --glass: rgba(255, 255, 255, 0.05);
+        }
+
+        * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg); 
+            color: #fff; 
+            margin: 0; 
+            padding: 10px; 
+            overflow-x: hidden;
+            line-height: 1.4;
+        }
+
+        /* SCROLLBAR CUSTOMIZATION */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 10px; }
+
+        h1 { 
+            text-align: center; 
+            color: var(--primary); 
+            font-size: 2rem; 
+            letter-spacing: 5px; 
+            text-transform: uppercase; 
+            margin: 20px 0; 
+            font-weight: 900; 
+            text-shadow: 0 0 15px rgba(212, 163, 115, 0.4);
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 15px;
+        }
+
+        h3 { 
+            color: var(--primary); 
+            margin: 15px 0; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* PREMIUM UI COMPONENTS */
+        .card {
+            background: var(--surface);
+            border: 1px solid #222;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        input, select { 
+            background: #111; 
+            color: #fff; 
+            border: 1px solid #333; 
+            padding: 18px; 
+            font-size: 1.1rem; 
+            border-radius: 10px; 
+            width: 100%; 
+            font-weight: 700;
+            margin-bottom: 12px;
+            transition: all 0.3s;
+        }
+
+        input:focus { border-color: var(--primary); box-shadow: 0 0 10px rgba(212, 163, 115, 0.2); outline: none; }
+
+        button { 
+            background: var(--gold-grad); 
+            color: #000; 
+            border: none; 
+            padding: 18px; 
+            border-radius: 10px; 
+            font-weight: 900; 
+            text-transform: uppercase; 
+            cursor: pointer; 
+            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+            letter-spacing: 1px;
+        }
+
+        button:hover { filter: brightness(1.1); transform: translateY(-2px); }
+        button:active { transform: translateY(1px) scale(0.98); }
+
+        /* NAVIGATION GRID */
+        .nav-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 1fr); 
+            gap: 12px; 
+            margin-bottom: 20px; 
+        }
+
+        .tab-content { display: none; animation: fadeIn 0.4s ease; }
+        .active-tab { display: block; }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* POS INTERFACE */
+        .pos-container { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; }
+        
+        .menu-section { height: 75vh; overflow-y: auto; padding-right: 5px; }
+
+        .category-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); 
+            gap: 12px; 
+            background: var(--surface-light); 
+            padding: 15px; 
+            border-radius: 18px; 
+            margin-bottom: 20px;
+        }
+
+        .product-btn { 
+            position: relative; 
+            min-height: 100px; 
+            font-size: 0.9rem; 
+            color: white; 
+            border: none; 
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            border-radius: 12px; 
+            font-weight: 800; 
+            padding: 10px; 
+            cursor: pointer; 
+            text-transform: uppercase;
+            transition: all 0.2s;
+        }
+
+        .food-btn { background: linear-gradient(145deg, #2c1e16, #1a120d); border-bottom: 5px solid #5d4037; }
+        .drink-btn { background: linear-gradient(145deg, #0a2e66, #051a3a); border-bottom: 5px solid #1565c0; }
+        
+        .product-btn:hover { transform: scale(1.03); filter: brightness(1.2); }
+
+        .btn-del-x { 
+            position: absolute; 
+            top: -12px; 
+            right: -12px; 
+            background: var(--danger); 
+            color: white; 
+            border-radius: 50%; 
+            width: 30px; 
+            height: 30px; 
+            font-size: 16px; 
+            line-height: 30px; 
+            text-align: center; 
+            z-index: 50; 
+            border: 3px solid #fff; 
+            font-weight: 900;
+        }
+
+        /* TRANSACTION TABS */
+        #trans-tabs { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 15px; }
+        .tab-btn { 
+            width: auto; 
+            padding: 15px 30px; 
+            background: #1a1a1a; 
+            color: #888; 
+            white-space: nowrap; 
+            border: 1px solid #333; 
+            border-radius: 10px;
+            font-weight: 800;
+        }
+
+        .tab-btn.active { 
+            background: var(--gold-grad); 
+            color: #000; 
+            border-color: #fff; 
+            box-shadow: 0 0 20px rgba(212,163,115,0.3);
+        }
+
+        /* CART SYSTEM */
+        .cart-section {
+            background: var(--surface);
+            border-radius: 20px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            height: 75vh;
+            border: 1px solid #222;
+        }
+
+        #cart-list { flex-grow: 1; overflow-y: auto; margin-bottom: 15px; }
+
+        .cart-row { 
+            display: flex; 
+            justify-content: space-between; 
+            border-bottom: 1px solid #222; 
+            padding: 15px 0; 
+            font-size: 1.1rem; 
+            font-weight: 700;
+            align-items: center;
+        }
+
+        #total-view { 
+            font-size: 4.5rem; 
+            color: var(--accent); 
+            text-align: center; 
+            margin: 10px 0; 
+            font-family: 'Courier New', monospace; 
+            font-weight: 900; 
+            text-shadow: 0 0 25px rgba(68,255,68,0.2);
+        }
+
+        /* STOCK GRID */
+        .stock-grid-header {
+            display: grid;
+            grid-template-columns: 60px 2fr 1fr 1fr 150px;
+            padding: 15px;
+            font-weight: 900;
+            color: var(--primary);
+            text-transform: uppercase;
+            text-align: center;
+            background: var(--surface-light);
+            border-radius: 10px 10px 0 0;
+            border-bottom: 2px solid #333;
+        }
+
+        .stock-row { 
+            display: grid; 
+            grid-template-columns: 60px 2fr 1fr 1fr 150px; 
+            align-items: center; 
+            background: var(--surface); 
+            margin-bottom: 5px; 
+            padding: 15px; 
+            gap: 10px; 
+            border: 1px solid #222; 
+            text-align: center; 
+            font-weight: 700; 
+        }
+
+        .stock-check { transform: scale(2); cursor: pointer; }
+
+        .stock-status-low { 
+            color: var(--danger); 
+            font-weight: 900; 
+            animation: pulse 1.2s infinite; 
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        /* MODALS */
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.95);
+            z-index: 2000;
+            display: none;
+            backdrop-filter: blur(8px);
+        }
+
+        .modal { 
+            position: fixed; 
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%); 
+            background: #000; 
+            padding: 40px; 
+            border-radius: 25px; 
+            width: 95%; 
+            max-width: 500px; 
+            z-index: 2001; 
+            border: 3px solid var(--primary); 
+            box-shadow: 0 0 100px rgba(212,163,115,0.3); 
+        }
+
+        /* LOGIN SCREEN */
+        #login-screen { 
+            position: fixed; 
+            inset: 0; 
+            background: #000; 
+            z-index: 9999; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 40px; 
+        }
+
+        .pin-display {
+            font-size: 4rem;
+            letter-spacing: 20px;
+            color: var(--primary);
+            margin-bottom: 30px;
+            font-family: monospace;
+            height: 60px;
+        }
+
+        /* BUILDER STYLING */
+        .builder-card {
+            background: var(--surface);
+            padding: 30px;
+            border-radius: 20px;
+            border: 1px solid var(--primary);
+        }
+
+        .ing-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 12px;
+            background: #1a1a1a;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .manager-only { display: none; }
+
+        @media (max-width: 768px) {
+            .pos-container { grid-template-columns: 1fr; }
+            .nav-grid { grid-template-columns: 1fr 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <div style="text-align:center; margin-bottom: 50px;">
+            <h1 style="border:none; font-size: 3.5rem; margin:0;">PAPA RON'S</h1>
+            <div style="color:var(--primary); letter-spacing: 10px; font-weight: 900; opacity: 0.7;">ENTERPRISE TERMINAL</div>
+        </div>
+        <div id="pin-dots" class="pin-display"></div>
+        <div style="display:grid; grid-template-columns: repeat(3, 80px); gap: 15px;">
+            <button onclick="pressPin('1')">1</button><button onclick="pressPin('2')">2</button><button onclick="pressPin('3')">3</button>
+            <button onclick="pressPin('4')">4</button><button onclick="pressPin('5')">5</button><button onclick="pressPin('6')">6</button>
+            <button onclick="pressPin('7')">7</button><button onclick="pressPin('8')">8</button><button onclick="pressPin('9')">9</button>
+            <button onclick="clearPin()" style="background:var(--danger); color:white;">C</button><button onclick="pressPin('0')">0</button>
+            <button onclick="submitLogin()" style="background:var(--accent); color:black;">OK</button>
+        </div>
+    </div>
+
+    <h1>Papa Ron's Premium POS</h1>
+
+    <div class="nav-grid">
+        <button onclick="switchTab('pos-tab')">Sales Dashboard</button>
+        <button class="manager-only" onclick="switchTab('menu-tab')">Menu Builder</button>
+        <button onclick="switchTab('stock-tab')">Inventory Mngt</button>
+        <button onclick="switchTab('report-tab')" style="background:#222; color:#fff;">System Reports</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs"></div>
+        <button onclick="createNewTransaction()" style="background:var(--accent); color:#000; height: 70px; margin-bottom: 20px; font-size: 1.3rem; width:100%; box-shadow: 0 0 20px rgba(68,255,68,0.2);">+ INITIALIZE NEW TABLE</button>
+        
+        <div class="pos-container">
+            <div class="menu-section">
+                <h3><span style="color:var(--accent)">●</span> KITCHEN MENU</h3>
+                <div class="category-grid" id="foodGrid"></div>
+                
+                <h3><span style="color:#1565c0">●</span> BEVERAGE MENU</h3>
+                <div class="category-grid" id="drinkGrid"></div>
+            </div>
+
+            <div class="cart-section">
+                <h3 style="border-bottom: 1px solid #333; padding-bottom: 10px;">CURRENT ORDER</h3>
+                <div id="cart-list"></div>
+                <div id="total-view">R 0.00</div>
+                
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                    <button onclick="openTender()" style="background:#2e7d32; color:#fff; height:100px; font-size: 1.8rem;">CASH</button>
+                    <button onclick="finalizeSale('Card')" style="background:#1565c0; color:#fff; height:100px; font-size: 1.8rem;">CARD</button>
+                    <button onclick="printKitchenSlip()" style="background:#444; color:#fff; height:65px;">KITCHEN SLIP</button>
+                    <button class="manager-only" onclick="deleteCurrentTransaction()" style="background:transparent; border: 2px solid var(--danger); color:var(--danger); height:65px;">VOID ORDER</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-tab" class="tab-content">
+        <div class="builder-card">
+            <h2 style="color:var(--primary); text-transform:uppercase;">Master Product Builder</h2>
+            <div style="display:grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 15px; margin-bottom: 20px;">
+                <input type="text" id="m-name" placeholder="PRODUCT NAME">
+                <input type="number" id="m-price" placeholder="SELL (R)">
+                <input type="number" id="m-cost" placeholder="COST (R)">
+                <select id="m-cat">
+                    <option value="food">FOOD</option>
+                    <option value="drink">DRINK</option>
+                </select>
+            </div>
+            
+            <h3 style="margin-top:40px; border-top: 1px solid #333; padding-top: 20px;">RECIPE CONSTRUCTOR</h3>
+            <p style="color:#666;">Link raw ingredients to this product. Stock will deduct automatically.</p>
+            <div id="ing-rows">
+                <div class="ing-row">
+                    <input type="text" class="i-name" placeholder="Ingredient Name (e.g. Flour)">
+                    <input type="number" class="i-qty" placeholder="Qty per unit">
+                    <input type="number" class="i-cost" placeholder="Unit Cost">
+                </div>
+            </div>
+            <button onclick="addIngRow()" style="background:#222; color:#fff; width: auto; padding: 12px 25px;">+ ADD INGREDIENT</button>
+            
+            <button onclick="saveNewProduct()" style="background:var(--accent); color:#000; margin-top:50px; height: 80px; font-size: 1.5rem; width: 100%;">AUTHORIZE & PUBLISH TO MENU</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <div class="card" style="display:flex; gap:15px; align-items:center;">
+            <button onclick="printOrderList()" style="background:#fff; color:#000; flex:1;">PRINT ORDER LIST</button>
+            <button onclick="selectAll(true)" style="width: auto;">SELECT ALL</button>
+            <button onclick="selectAll(false)" style="width: auto;">DESELECT</button>
+            <button class="manager-only" onclick="printFullValuationReport()" style="background:var(--primary); color:#000; flex:1;">FULL VALUATION REPORT (PDF)</button>
+        </div>
+
+        <div class="stock-grid-header">
+            <span>Sel</span><span>Item Description</span><span>Current Stock</span><span>GP/Unit</span><span>Actions</span>
+        </div>
+        <div id="inventory-display"></div>
+        
+        <div class="stock-footer" id="stock-summary"></div>
+
+        <div class="distro-box manager-only">
+            <h3>LOGISTICS: BRANCH STOCK TRANSFER</h3>
+            <div style="display:grid; grid-template-columns: 2fr 1fr 1fr; gap: 15px;">
+                <input type="text" id="distro-to" placeholder="DESTINATION BRANCH NAME">
+                <input type="number" id="distro-amt" placeholder="QTY">
+                <button onclick="processDistro()" style="background:var(--warning); color:#000; height:60px;">PROCESS TRANSFER</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="report-tab" class="tab-content">
+        <div class="card">
+            <h3 id="user-display">OPERATOR: </h3>
+            <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                <button onclick="generateReport('daily')" style="height:80px;">MY SESSION SALES</button>
+                <div class="manager-only">
+                    <button onclick="generateReport('daily', true)" style="height:80px; width:100%; background:#333; color:var(--accent); border: 1px solid var(--accent);">FULL STORE Z-REPORT</button>
+                </div>
+            </div>
+            <button onclick="location.reload()" style="background:var(--danger); color:#fff; margin-top:60px; width:100%; height:70px;">TERMINATE SESSION / LOGOUT</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="overlay" onclick="closeModal()"></div>
+    
+    <div id="stock-modal" class="modal">
+        <h2 id="stock-item-name" style="text-align:center; color:var(--primary); text-transform: uppercase; letter-spacing: 2px;"></h2>
+        <p style="text-align:center; color:#888;">Enter quantity received from supplier</p>
+        <input type="number" id="stock-add-amt" placeholder="0.00" style="font-size: 3rem; text-align: center; height: 100px;">
+        <button onclick="confirmStockAdd()" style="height:80px; width: 100%; font-size: 1.5rem; margin-top:20px;">UPDATE INVENTORY</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h1 style="text-align:center; margin:0; font-size: 1.2rem; color:#888;">TOTAL DUE</h1>
+        <h1 id="cash-total-needed" style="text-align:center; color:var(--accent); font-size: 5rem; margin: 10px 0;"></h1>
+        <input type="number" id="cash-amt" placeholder="CASH GIVEN" oninput="calculateChange()" style="font-size: 4rem; text-align:center; height: 120px; color: var(--accent);">
+        <h2 id="change-due" style="text-align:center; font-size: 3rem; color: #fff; margin-bottom: 20px;">Change: R0.00</h2>
+        <button onclick="finalizeSale('Cash')" style="height:100px; width:100%; font-size: 2rem;">COMPLETE SALE</button>
+    </div>
+
+    <script>
+        // CORE STATE
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [];
+        
+        let isManager = false;
+        let currentUser = "";
+        let currentTransIdx = -1;
+        let selectedStockKey = "";
+        let loginPin = "";
+
+        // AUTHENTICATION
+        function pressPin(num) {
+            if(loginPin.length < 4) {
+                loginPin += num;
+                document.getElementById('pin-dots').textContent = "•".repeat(loginPin.length);
+            }
+        }
+
+        function clearPin() {
+            loginPin = "";
+            document.getElementById('pin-dots').textContent = "";
+        }
+
+        function submitLogin() {
+            if(loginPin === "1234") {
+                isManager = true;
+                currentUser = "MANAGER";
+            } else if(["1111", "2222", "3333"].includes(loginPin)) {
+                isManager = false;
+                currentUser = "STAFF-" + loginPin;
+            } else {
+                alert("ACCESS DENIED");
+                clearPin();
+                return;
+            }
+            
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('user-display').textContent = "OPERATOR: " + currentUser;
+            
+            // Toggle Manager Visibility
+            document.querySelectorAll('.manager-only').forEach(el => {
+                el.style.display = isManager ? 'block' : 'none';
+            });
+
+            initSystem();
+        }
+
+        function initSystem() {
+            if (transactions.filter(t => t.status === 'active').length === 0) {
+                createNewTransaction();
+            }
+            currentTransIdx = transactions.findIndex(t => t.status === 'active');
+            renderPOS();
+            renderStock();
+        }
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+            updateValuation();
+        }
+
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        // SALES ENGINE
+        function renderPOS() {
+            const fGrid = document.getElementById('foodGrid');
+            const dGrid = document.getElementById('drinkGrid');
+            fGrid.innerHTML = ''; dGrid.innerHTML = '';
+            
+            Object.keys(inventory).forEach(key => {
+                if(inventory[key].category === 'ingredient') return;
+                
+                const btn = document.createElement('div');
+                btn.className = `product-btn ${inventory[key].category}-btn`;
+                btn.innerHTML = `
+                    ${isManager ? `<div class="btn-del-x" onclick="deleteMenuBtn(event, '${key}')">×</div>` : ''}
+                    <div style="width:100%" onclick="addToCart('${key}')">
+                        <div style="font-size:1.1rem; margin-bottom:5px;">${inventory[key].name}</div>
+                        <div style="color:var(--primary); font-weight:900;">R${inventory[key].price.toFixed(2)}</div>
+                    </div>
+                `;
+                inventory[key].category === 'food' ? fGrid.appendChild(btn) : dGrid.appendChild(btn);
+            });
+
+            const tTabs = document.getElementById('trans-tabs');
+            tTabs.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const btn = document.createElement('button');
+                btn.className = `tab-btn ${i === currentTransIdx ? 'active' : ''}`;
+                btn.textContent = `TABLE ${t.id}`;
+                btn.onclick = () => { currentTransIdx = i; renderPOS(); };
+                tTabs.appendChild(btn);
+            });
+            updateCartUI();
+        }
+
+        function addToCart(key) {
+            if(!transactions[currentTransIdx]) return;
+            transactions[currentTransIdx].items.push({...inventory[key], code: key});
+            save();
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-list');
+            list.innerHTML = '';
+            let total = 0;
+            
+            if(transactions[currentTransIdx]) {
+                transactions[currentTransIdx].items.forEach((it, i) => {
+                    total += it.price;
+                    list.innerHTML += `
+                        <div class="cart-row">
+                            <span>${it.name}</span>
+                            <span>R${it.price.toFixed(2)} 
+                                <button onclick="removeFromCart(${i})" style="background:var(--danger); padding:8px 12px; margin-left:15px; width:auto; border-radius:5px;">×</button>
+                            </span>
+                        </div>`;
+                });
+            }
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(idx) {
+            transactions[currentTransIdx].items.splice(idx, 1);
+            save();
+            updateCartUI();
+        }
+
+        // TENDER & FINALIZATION
+        function openTender() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            if(total === 0) return;
+            document.getElementById('cash-total-needed').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('tender-modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            setTimeout(() => document.getElementById('cash-amt').focus(), 100);
+        }
+
+        function calculateChange() {
+            const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0);
+            const cash = parseFloat(document.getElementById('cash-amt').value) || 0;
+            document.getElementById('change-due').textContent = `Change: R${(cash - total).toFixed(2)}`;
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentTransIdx];
+            if (!t || t.items.length === 0) return;
+            
+            t.total = t.items.reduce((s, i) => s + i.price, 0);
+            t.method = method;
+            t.status = 'paid';
+            t.date = Date.now();
+            t.waiter = currentUser;
+            
+            // STOCK DEDUCTION LOGIC
+            t.items.forEach(it => {
+                if(inventory[it.code]) inventory[it.code].stock--;
+                if(recipes[it.code]) {
+                    for(let ing in recipes[it.code]) {
+                        if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing];
+                    }
+                }
+            });
+            
+            printSlip(t);
+            save();
+            createNewTransaction();
+            closeModal();
+        }
+
+        function printSlip(t) {
+            const win = window.open('', '', 'width=300,height=600');
+            let itemsHTML = t.items.map(i => `${i.name.padEnd(15).slice(0,15)} R${i.price.toFixed(2)}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace; font-size:10pt; padding:10px;">
+   PAPA RON'S PREMIUM
+----------------------------
+Waiter: ${t.waiter}
+Table: ${t.id}
+Date: ${new Date(t.date).toLocaleString()}
+----------------------------
+${itemsHTML}
+----------------------------
+TOTAL: R${t.total.toFixed(2)}
+METHOD: ${t.method}
+----------------------------
+ THANK YOU FOR YOUR VISIT
+            </pre>`);
+            win.document.close();
+            win.print();
+        }
+
+        function printKitchenSlip() {
+            const t = transactions[currentTransIdx];
+            if(!t || t.items.length === 0) return;
+            const win = window.open('', '', 'width=300,height=400');
+            let items = t.items.map(i => `[ ] ${i.name}`).join('\n');
+            win.document.write(`<pre style="font-family:monospace; font-size:16pt; font-weight:bold; padding:20px;">
+KITCHEN ORDER
+Table: ${t.id}
+Time: ${new Date().toLocaleTimeString()}
+-------------------------
+${items}
+-------------------------
+</pre>`);
+            win.document.close();
+            win.print();
+        }
+
+        // INVENTORY CORE
+        function renderStock() {
+            const cont = document.getElementById('inventory-display');
+            cont.innerHTML = '';
+            
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key];
+                const gp = (itm.price || 0) - (itm.cost || 0);
+                const isLow = itm.stock <= 5;
+                
+                cont.innerHTML += `
+                    <div class="stock-row">
+                        <input type="checkbox" class="stock-check" value="${key}">
+                        <div style="text-align:left; font-size:1.1rem;"><b>${itm.name}</b></div>
+                        <div class="${isLow ? 'stock-status-low' : ''}" style="font-size:1.2rem;">${itm.stock.toFixed(1)}</div>
+                        <div style="color:var(--primary);">R${gp.toFixed(2)}</div>
+                        <div>
+                            <button onclick="openStockIn('${key}')" style="padding:10px; font-size:0.8rem; width:100%; background:#222; color:#fff;">+ ADD STOCK</button>
+                        </div>
+                    </div>`;
+            });
+            updateValuation();
+        }
+
+        function updateValuation() {
+            let costVal = 0, retailVal = 0;
+            Object.values(inventory).forEach(i => {
+                if(i.stock > 0) {
+                    costVal += (i.stock * (i.cost || 0));
+                    retailVal += (i.stock * (i.price || 0));
+                }
+            });
+            const summary = document.getElementById('stock-summary');
+            if(summary) {
+                summary.innerHTML = `
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; padding:15px; background:var(--surface-light); border-radius:10px; border:1px solid #333;">
+                        <div>TOTAL ASSET VALUE (COST): <span style="color:var(--primary)">R${costVal.toFixed(2)}</span></div>
+                        <div style="text-align:right;">UNREALIZED PROFIT (GP): <span style="color:var(--accent)">R${(retailVal - costVal).toFixed(2)}</span></div>
+                    </div>
+                `;
+            }
+            return { costVal, retailVal };
+        }
+
+        function printFullValuationReport() {
+            const data = updateValuation();
+            const win = window.open('', '', 'width=800,height=900');
+            let rows = Object.keys(inventory).sort().map(k => {
+                let itm = inventory[k];
+                return `<tr>
+                    <td style="border:1px solid #333; padding:10px;">${itm.name}</td>
+                    <td style="border:1px solid #333; padding:10px; text-align:center;">${itm.stock.toFixed(1)}</td>
+                    <td style="border:1px solid #333; padding:10px; text-align:right;">R${(itm.cost||0).toFixed(2)}</td>
+                    <td style="border:1px solid #333; padding:10px; text-align:right;">R${(itm.stock*(itm.cost||0)).toFixed(2)}</td>
+                </tr>`;
+            }).join('');
+            
+            win.document.write(`
+                <html>
+                <head><style>
+                    body { font-family: sans-serif; background: #000; color: #fff; padding: 40px; }
+                    table { width: 100%; border-collapse: collapse; margin-top: 30px; }
+                    th { background: #d4a373; color: #000; padding: 15px; text-align: left; }
+                    h1 { color: #d4a373; border-bottom: 2px solid #d4a373; padding-bottom: 10px; }
+                </style></head>
+                <body>
+                    <h1>PAPA RON'S STOCK VALUATION REPORT</h1>
+                    <p>Generated: ${new Date().toLocaleString()}</p>
+                    <table>
+                        <thead><tr><th>Item Description</th><th>In Stock</th><th>Unit Cost</th><th>Total Value</th></tr></thead>
+                        <tbody>${rows}</tbody>
+                    </table>
+                    <div style="margin-top:40px; padding:20px; border: 2px solid #d4a373; text-align:right; font-size:1.5rem;">
+                        TOTAL STOCK ASSET VALUE: R${data.costVal.toFixed(2)}
+                    </div>
+                </body>
+                </html>
+            `);
+            win.document.close();
+            win.print();
+        }
+
+        function processDistro() {
+            const dest = document.getElementById('distro-to').value.toUpperCase();
+            const qty = parseFloat(document.getElementById('distro-amt').value);
+            const checked = document.querySelectorAll('.stock-check:checked');
+            
+            if(!dest || !qty || checked.length === 0) {
+                alert("ERROR: SELECT ITEMS, ENTER QTY AND DESTINATION");
+                return;
+            }
+            
+            let slipItems = "";
+            checked.forEach(cb => {
+                const item = inventory[cb.value];
+                item.stock -= qty;
+                slipItems += `${qty} x ${item.name}\n`;
+            });
+            
+            save();
+            renderStock();
+            
+            const win = window.open('', '', 'width=350,height=500');
+            win.document.write(`<pre style="font-family:monospace; padding:30px; font-size:12pt;">
+PAPA RON'S LOGISTICS
+STOCK TRANSFER SLIP
+----------------------------
+DATE: ${new Date().toLocaleString()}
+FROM: MAIN BRANCH
+TO: ${dest}
+----------------------------
+ITEMS TRANSFERRED:
+${slipItems}
+----------------------------
+AUTHORIZED BY: ${currentUser}
+RECIPIENT SIGN: ____________
+            </pre>`);
+            win.document.close();
+            win.print();
+            
+            document.getElementById('distro-to').value = "";
+            document.getElementById('distro-amt').value = "";
+        }
+
+        // BUILDER LOGIC
+        function addIngRow() {
+            const div = document.createElement('div');
+            div.className = "ing-row";
+            div.innerHTML = `
+                <input type="text" class="i-name" placeholder="Ingredient Name">
+                <input type="number" class="i-qty" placeholder="Qty">
+                <input type="number" class="i-cost" placeholder="Unit Cost">
+            `;
+            document.getElementById('ing-rows').appendChild(div);
+        }
+
+        function saveNewProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase();
+            const price = parseFloat(document.getElementById('m-price').value);
+            const cost = parseFloat(document.getElementById('m-cost').value) || 0;
+            const cat = document.getElementById('m-cat').value;
+            
+            if(!name || isNaN(price)) {
+                alert("VALID NAME AND PRICE REQUIRED");
+                return;
+            }
+            
+            const id = "PROD_" + Date.now();
+            let recipe = {};
+            
+            document.querySelectorAll('.ing-row').forEach(row => {
+                const iname = row.querySelector('.i-name').value.toUpperCase();
+                const iqty = parseFloat(row.querySelector('.i-qty').value);
+                const icost = parseFloat(row.querySelector('.i-cost').value) || 0;
+                
+                if(iname && iqty) {
+                    recipe[iname] = iqty;
+                    if(!inventory[iname]) {
+                        inventory[iname] = { name: iname, stock: 0, cost: icost, category: 'ingredient', price: 0 };
+                    }
+                }
+            });
+
+            inventory[id] = { name, price, cost, category: cat, stock: 0 };
+            if(Object.keys(recipe).length > 0) recipes[id] = recipe;
+            
+            save();
+            alert("PRODUCT AUTHORIZED AND ADDED TO " + cat.toUpperCase());
+            location.reload();
+        }
+
+        // UTILITIES
+        function createNewTransaction() {
+            const newId = transactions.length > 0 ? transactions[transactions.length-1].id + 1 : 1;
+            transactions.push({id: newId, items: [], status: 'active', date: Date.now()});
+            currentTransIdx = transactions.length - 1;
+            renderPOS();
+        }
+
+        function deleteCurrentTransaction() {
+            if(!isManager) return;
+            if(confirm("PERMANENTLY VOID THIS TRANSACTION?")) {
+                transactions.splice(currentTransIdx, 1);
+                if(transactions.filter(t => t.status === 'active').length === 0) {
+                    createNewTransaction();
+                } else {
+                    currentTransIdx = transactions.findIndex(t => t.status === 'active');
+                }
+                save();
+                renderPOS();
+            }
+        }
+
+        function openStockIn(key) {
+            selectedStockKey = key;
+            document.getElementById('stock-item-name').textContent = inventory[key].name;
+            document.getElementById('stock-modal').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+            setTimeout(() => document.getElementById('stock-add-amt').focus(), 100);
+        }
+
+        function confirmStockAdd() {
+            const amt = parseFloat(document.getElementById('stock-add-amt').value);
+            if(amt) {
+                inventory[selectedStockKey].stock += amt;
+                save();
+                renderStock();
+                closeModal();
+            }
+        }
+
+        function closeModal() {
+            document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+            document.getElementById('overlay').style.display = 'none';
+            document.getElementById('cash-amt').value = '';
+            document.getElementById('stock-add-amt').value = '';
+        }
+
+        function selectAll(val) {
+            document.querySelectorAll('.stock-check').forEach(c => c.checked = val);
+        }
+
+        function deleteMenuBtn(e, key) {
+            e.stopPropagation();
+            if(confirm("PERMANENTLY REMOVE FROM MENU?")) {
+                delete inventory[key];
+                save();
+                renderPOS();
+            }
+        }
+
+        function generateReport(type, consolidated = false) {
+            let start = type === 'daily' ? new Date().setHours(0,0,0,0) : Date.now() - (7 * 86400000);
+            let filter = transactions.filter(t => t.status === 'paid' && t.date >= start);
+            
+            if(!consolidated) filter = filter.filter(t => t.waiter === currentUser);
+            
+            let total = 0;
+            let report = `PAPA RON'S PREMIUM REPORT\nTYPE: ${type.toUpperCase()}\nOPERATOR: ${consolidated ? 'STORE-WIDE' : currentUser}\n------------------------\n`;
+            
+            filter.forEach(t => {
+                report += `T${t.id} | ${new Date(t.date).toLocaleTimeString()} | R${t.total.toFixed(2)}\n`;
+                total += t.total;
+            });
+            
+            report += `------------------------\nGRAND TOTAL REVENUE: R${total.toFixed(2)}`;
+            
+            const win = window.open('', '', 'width=450,height=700');
+            win.document.write(`<pre style="font-family:monospace; padding:30px; font-size:11pt; background:#f9f9f9;">${report}</pre>`);
+            win.document.close();
+            win.print();
+        }
+    </script>
+</body>
+</html>
