@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PAPA RON'S PREMIUM POS - FULL SYSTEM</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --gold-grad: linear-gradient(145deg, #d4a373, #b38b59);
+            --bg: #000000;
+            --surface: #121212;
+            --surface-light: #1e1e1e;
+            --accent: #44ff44;
+            --danger: #ff4444;
+            --warning: #ff9800;
+        }
+
+        body { font-family: 'Segoe UI', sans-serif; background: var(--bg); color: #fff; margin: 0; padding: 10px; overflow-x: hidden; }
+        h1 { text-align: center; color: var(--primary); font-size: 1.6rem; letter-spacing: 3px; text-transform: uppercase; margin: 10px 0; font-weight: 900; }
+        h3 { color: var(--primary); margin: 0 0 10px 0; font-weight: 800; text-transform: uppercase; font-size: 0.9rem; }
+
+        input, button, select { font-size: 0.9rem; padding: 12px; margin: 4px 0; width: 100%; border-radius: 6px; box-sizing: border-box; border: 1px solid #333; font-weight: 800; }
+        
+        button, .product-btn { background: var(--gold-grad) !important; color: #000 !important; border: none; cursor: pointer; text-transform: uppercase; font-weight: 900; }
+        button:active { transform: scale(0.96); opacity: 0.8; }
+        
+        .grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .tab-content { display: none; margin-top: 15px; }
+        .active-tab { display: block; }
+        
+        /* POS GRID */
+        .category-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; background: var(--surface); padding: 10px; border-radius: 10px; border: 1px solid #222; }
+        .product-btn { position: relative; min-height: 70px; font-size: 0.8rem; display: flex; align-items: center; justify-content: center; text-align: center; border-radius: 8px; padding: 6px; }
+        .btn-del-x { position: absolute; top: -8px; right: -8px; background: var(--danger) !important; color: white !important; border-radius: 50%; width: 22px; height: 22px; font-size: 11px; line-height: 22px; text-align: center; border: 1px solid #fff; z-index: 5; }
+
+        /* TABS & CART */
+        #trans-tabs { display: flex; gap: 5px; overflow-x: auto; padding: 5px 0; }
+        .tab-btn { width: auto; padding: 10px 18px; background: #222 !important; color: #777 !important; border: 1px solid #333; }
+        .tab-btn.active { background: var(--gold-grad) !important; color: #000 !important; }
+
+        #cart-list { background: var(--surface); border-radius: 8px; padding: 10px; margin: 10px 0; max-height: 180px; overflow-y: auto; border: 1px solid #222; }
+        .cart-row { display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding: 8px 0; align-items: center; font-size: 0.9rem; font-weight: 700; }
+        #total-view { font-size: 2.8rem; color: var(--accent); text-align: center; margin: 8px 0; font-family: monospace; font-weight: 900; }
+
+        /* STOCK STYLING */
+        .stock-row { display: grid; grid-template-columns: 40px 1.5fr 0.8fr 0.8fr 100px; align-items: center; background: var(--surface); margin-bottom: 5px; padding: 8px; border-radius: 8px; gap: 5px; border: 1px solid #222; font-size: 0.85rem; text-align: center; font-weight: 700; }
+        .stock-check { width: 20px; height: 20px; }
+        
+        /* SECURITY & MODALS */
+        #login-screen { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #000; z-index: 9999; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .manager-only { display: none; }
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 25px; border-radius: 12px; width: 85%; max-width: 380px; z-index: 1000; border: 2px solid var(--primary); display: none; }
+
+        .ing-grid { display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr; gap: 5px; margin-bottom: 5px; }
+        .distro-box { background: var(--surface-light); border: 2px solid var(--warning); padding: 15px; border-radius: 10px; margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <h1 style="font-size: 2.5rem;">PAPA RON'S</h1>
+        <p style="color:var(--primary); font-weight:900;">SECURITY CLEARANCE REQUIRED</p>
+        <input type="password" id="pin-entry" inputmode="numeric" placeholder="PIN" style="text-align:center; width:200px; font-size: 2rem; letter-spacing: 10px; background:transparent; border:none; border-bottom:2px solid #fff; border-radius:0;">
+        <button onclick="login()" style="width:200px; margin-top:20px; height:60px;">ENTER</button>
+    </div>
+
+    <h1>Papa Ron's</h1>
+
+    <div class="grid-main">
+        <button onclick="switchTab('pos-tab')">Sales</button>
+        <button class="manager-only" onclick="switchTab('builder-tab')">Builder</button>
+        <button onclick="switchTab('stock-tab')">Stock</button>
+        <button onclick="switchTab('report-tab')" style="background:#222 !important; color:#fff !important;">Reports</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs"></div>
+        <button onclick="createNewTransaction()" style="background:var(--accent) !important; color:#000 !important; margin-bottom:10px;">+ NEW TABLE</button>
+        
+        <div class="grid-main">
+            <div>
+                <h3>Food</h3>
+                <div class="category-grid" id="foodGrid"></div>
+            </div>
+            <div>
+                <h3>Drinks</h3>
+                <div class="category-grid" id="drinkGrid"></div>
+            </div>
+        </div>
+
+        <div id="cart-list"></div>
+        <div id="total-view">R 0.00</div>
+
+        <div class="grid-main">
+            <button onclick="openTender()" style="background:#2e7d32 !important; color:#fff !important; height:65px; font-size: 1.2rem;">CASH</button>
+            <button onclick="finalizeSale('Card')" style="background:#1565c0 !important; color:#fff !important; height:65px; font-size: 1.2rem;">CARD</button>
+            <button onclick="printKitchenSlip()" style="background:#444 !important; color:#fff !important;">KITCHEN SLIP</button>
+            <button class="manager-only" onclick="voidTable()" style="background:transparent !important; border:1px solid var(--danger); color:var(--danger) !important;">VOID TABLE</button>
+            <button onclick="location.reload()" style="background:#222 !important; color:#fff !important;">LOGOUT</button>
+        </div>
+    </div>
+
+    <div id="builder-tab" class="tab-content manager-only">
+        <div style="background:var(--surface); padding:20px; border-radius:12px;">
+            <h3>Product Creation</h3>
+            <input type="text" id="m-name" placeholder="ITEM NAME">
+            <div class="grid-main">
+                <input type="number" id="m-price" placeholder="Sell Price (R)">
+                <input type="number" id="m-cost" placeholder="Direct Cost (R)">
+            </div>
+            <select id="m-cat"><option value="food">Food Item</option><option value="drink">Drink Item</option></select>
+            
+            <p style="font-size: 0.75rem; color: var(--primary); margin: 15px 0 5px 0; font-weight: 900;">RECIPE / INGREDIENTS</p>
+            <div id="ing-rows">
+                <div class="ing-grid">
+                    <input type="text" class="i-name" placeholder="Ingredient">
+                    <input type="number" class="i-qty" placeholder="Qty">
+                    <input type="number" class="i-cost" placeholder="Cost">
+                </div>
+            </div>
+            <button onclick="addIngRow()" class="btn-small" style="background:#333 !important; color:#fff !important; margin: 10px 0;">+ Add Ingredient</button>
+            <button onclick="saveProduct()" style="background:var(--accent) !important; color:#000 !important; margin-top:10px;">SAVE TO DATABASE</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <div style="background:var(--surface); padding:10px; border-radius:10px; margin-bottom:10px;">
+            <div style="display:flex; gap:10px;">
+                <button onclick="printOrderList()" style="background:#fff !important; color:#000 !important;">Print Order List</button>
+                <button onclick="toggleAllChecks(true)" class="btn-small">Select All</button>
+                <button onclick="toggleAllChecks(false)" class="btn-small">None</button>
+            </div>
+            <button class="manager-only" onclick="printValuation()" style="margin-top:10px; width: 100%;">PRINT STOCK VALUATION REPORT</button>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 40px 1.5fr 0.8fr 0.8fr 100px; padding: 5px; font-weight: 900; color: var(--primary); font-size: 0.65rem; text-align: center; text-transform: uppercase;">
+            <span>Pick</span><span>Item</span><span>Stock</span><span>Profit</span><span>Action</span>
+        </div>
+        <div id="inventory-display"></div>
+        
+        <div id="stock-totals-box" class="manager-only" style="background:var(--surface-light); padding:15px; margin-top:15px; border-radius:10px; border: 1px dashed var(--primary); text-align:center;"></div>
+
+        <div class="distro-box manager-only">
+            <h3>Stock Transfer / Distribution</h3>
+            <input type="text" id="distro-name" placeholder="BRANCH / DRIVER NAME">
+            <input type="number" id="distro-qty" placeholder="QTY TO SEND">
+            <button onclick="executeDistro()" style="background:var(--warning) !important; color:#000 !important; margin-top:5px;">PROCESS TRANSFER</button>
+        </div>
+    </div>
+
+    <div id="report-tab" class="tab-content">
+        <div style="background:var(--surface); padding:20px; border-radius:12px;">
+            <h3>Staff Cash Up</h3>
+            <p style="font-size:0.8rem; color:var(--primary);">WAITER: <span id="waiter-id-display"></span></p>
+            <button onclick="runReport('daily', false)" style="margin-bottom:10px;">My Daily Sales</button>
+            <button onclick="runReport('weekly', false)" style="margin-bottom:10px;">My Weekly Sales</button>
+
+            <div class="manager-only" style="margin-top:20px; padding-top:20px; border-top:1px solid #333;">
+                <h3 style="color:var(--accent);">Management Z-Reports</h3>
+                <button onclick="runReport('daily', true)" style="margin-bottom:10px;">Store Daily Total</button>
+                <button onclick="runReport('weekly', true)" style="margin-bottom:10px;">Store Weekly Total</button>
+                <button onclick="runReport('monthly', true)">Store Monthly Total</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="stock-modal" class="modal">
+        <h2 id="stk-name" style="text-align:center; color:var(--primary);"></h2>
+        <input type="number" id="stk-add" placeholder="Amount to add">
+        <button onclick="confirmStk()">ADD STOCK</button>
+        <button onclick="closeModals()" style="background:#333 !important; color:#fff !important; margin-top:10px;">CANCEL</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h1 id="tender-total" style="text-align:center; color:var(--accent);"></h1>
+        <input type="number" id="tender-input" placeholder="Cash Received" oninput="calcChange()" style="font-size: 1.5rem; text-align:center;">
+        <h2 id="tender-change" style="text-align:center;">Change: R0.00</h2>
+        <button onclick="finalizeSale('Cash')" style="height:60px;">FINALIZE SALE</button>
+        <button onclick="closeModals()" style="background:#333 !important; color:#fff !important; margin-top:10px;">BACK</button>
+    </div>
+
+    <script>
+        // --- DATA & AUTH ---
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [];
+        let isManager = false;
+        let activeUser = "";
+        let currentIdx = -1;
+        let selectedKey = "";
+
+        function login() {
+            const p = document.getElementById('pin-entry').value;
+            if(p === "1234") { isManager = true; activeUser = "MANAGER"; start(); }
+            else if(["1111","2222","3333","4444","5555"].includes(p)) { isManager = false; activeUser = "WAITER_"+p; start(); }
+            else { alert("Wrong PIN"); }
+        }
+
+        function start() {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('waiter-id-display').textContent = activeUser;
+            document.querySelectorAll('.manager-only').forEach(el => el.style.display = isManager ? 'block' : 'none');
+            if(transactions.filter(t => t.status === 'active').length === 0) createNewTransaction();
+            currentIdx = transactions.findIndex(t => t.status === 'active');
+            renderPOS();
+        }
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+            updateValuationUI();
+        }
+
+        // --- NAVIGATION ---
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        // --- POS LOGIC ---
+        function renderPOS() {
+            const f = document.getElementById('foodGrid'); const d = document.getElementById('drinkGrid');
+            f.innerHTML = ''; d.innerHTML = '';
+            Object.keys(inventory).forEach(k => {
+                if(inventory[k].category === 'ingredient') return;
+                const btn = document.createElement('div');
+                btn.className = 'product-btn';
+                btn.innerHTML = `${isManager ? `<div class="btn-del-x" onclick="deleteProduct(event, '${k}')">X</div>` : ''}
+                                 <div style="width:100%" onclick="addCart('${k}')"><b>${inventory[k].name}</b><br>R${inventory[k].price.toFixed(2)}</div>`;
+                inventory[k].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
+            });
+            renderTransactionTabs();
+            updateCart();
+        }
+
+        function renderTransactionTabs() {
+            const cont = document.getElementById('trans-tabs'); cont.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const b = document.createElement('button');
+                b.className = `tab-btn ${i === currentIdx ? 'active' : ''}`;
+                b.textContent = `Table ${t.id}`;
+                b.onclick = () => { currentIdx = i; renderPOS(); };
+                cont.appendChild(b);
+            });
+        }
+
+        function addCart(k) {
+            transactions[currentIdx].items.push({...inventory[k], code: k});
+            save(); updateCart();
+        }
+
+        function updateCart() {
+            const list = document.getElementById('cart-list'); list.innerHTML = '';
+            let total = 0;
+            if(transactions[currentIdx]) {
+                transactions[currentIdx].items.forEach((item, i) => {
+                    total += item.price;
+                    list.innerHTML += `<div class="cart-row"><span>${item.name}</span><span>R${item.price.toFixed(2)} ${isManager ? `<button onclick="removeCart(${i})" style="background:var(--danger)!important; width:25px; padding:2px;">×</button>` : ''}</span></div>`;
+                });
+            }
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function removeCart(i) { transactions[currentIdx].items.splice(i, 1); save(); updateCart(); }
+
+        function createNewTransaction() {
+            transactions.push({id: transactions.length + 1, items: [], status: 'active', date: new Date().getTime(), waiter: activeUser});
+            currentIdx = transactions.length - 1;
+            renderPOS();
+        }
+
+        // --- PRINTING LOGIC ---
+        function printOutput(html) {
+            const win = window.open('', '_blank', 'width=300,height=600');
+            win.document.write(`<html><body style="font-family:monospace; padding:20px; font-size:12pt;"><pre>${html}</pre></body></html>`);
+            win.document.close();
+            setTimeout(() => { win.print(); win.close(); }, 500);
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentIdx];
+            if(!t || t.items.length === 0) return;
+            t.total = t.items.reduce((s, i) => s + i.price, 0);
+            t.method = method; t.status = 'paid'; t.waiter = activeUser; t.date = new Date().getTime();
+            
+            // Deduct Stock
+            t.items.forEach(it => {
+                if(inventory[it.code]) inventory[it.code].stock--;
+                if(recipes[it.code]) { for(let ing in recipes[it.code]) if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing]; }
+            });
+
+            let receipt = `PAPA RON'S RECEIPT\nWaiter: ${t.waiter}\nTable: ${t.id}\nDate: ${new Date().toLocaleString()}\n--------------------------\n`;
+            t.items.forEach(i => receipt += `${i.name.padEnd(18)} R${i.price.toFixed(2)}\n`);
+            receipt += `--------------------------\nTOTAL: R${t.total.toFixed(2)}\nMETHOD: ${t.method}\nTHANK YOU!`;
+            
+            printOutput(receipt);
+            save(); createNewTransaction(); closeModals();
+        }
+
+        function printKitchenSlip() {
+            const t = transactions[currentIdx];
+            if(!t || t.items.length === 0) return;
+            let slip = `KITCHEN ORDER\nTable: ${t.id}\nWaiter: ${activeUser}\n--------------------------\n`;
+            t.items.forEach(i => slip += `[ ] ${i.name}\n`);
+            printOutput(slip);
+        }
+
+        // --- STOCK LOGIC ---
+        function renderStock() {
+            const cont = document.getElementById('inventory-display'); cont.innerHTML = '';
+            Object.keys(inventory).sort().forEach(k => {
+                const itm = inventory[k];
+                cont.innerHTML += `<div class="stock-row">
+                    <input type="checkbox" class="stock-check" value="${k}">
+                    <div style="text-align:left;"><b>${itm.name}</b></div>
+                    <div style="${itm.stock <= 5 ? 'color:var(--danger)' : 'color:var(--accent)'}">${itm.stock.toFixed(1)}</div>
+                    <div style="color:#777;">R${((itm.price||0)-(itm.cost||0)).toFixed(2)}</div>
+                    <div>
+                        <button onclick="openStkModal('${k}')" class="btn-small">+In</button>
+                        ${isManager ? `<button onclick="deleteStkItem('${k}')" class="btn-small" style="background:var(--danger)!important; margin-left:3px;">×</button>` : ''}
+                    </div>
+                </div>`;
+            });
+            updateValuationUI();
+        }
+
+        function updateValuationUI() {
+            if(!isManager) return;
+            let costVal = 0, sellVal = 0;
+            Object.values(inventory).forEach(i => { if(i.stock > 0) { costVal += (i.stock * (i.cost||0)); sellVal += (i.stock * (i.price||0)); } });
+            document.getElementById('stock-totals-box').innerHTML = `<small>STOCK VALUE (COST)</small><br><b style="font-size:1.4rem; color:var(--primary);">R${costVal.toFixed(2)}</b><br><small>EXPECTED PROFIT: R${(sellVal - costVal).toFixed(2)}</small>`;
+        }
+
+        function printValuation() {
+            let out = `STOCK VALUATION REPORT\nDate: ${new Date().toLocaleString()}\n--------------------------\n`;
+            let total = 0;
+            Object.values(inventory).forEach(i => {
+                let val = i.stock * (i.cost || 0);
+                total += val;
+                out += `${i.name.padEnd(15)} ${i.stock} x R${(i.cost||0).toFixed(2)} = R${val.toFixed(2)}\n`;
+            });
+            out += `--------------------------\nTOTAL COST VALUE: R${total.toFixed(2)}`;
+            printOutput(out);
+        }
+
+        // --- REPORTING ---
+        function runReport(range, consolidated) {
+            const now = new Date(); let start = 0;
+            if(range === 'daily') start = new Date(now.setHours(0,0,0,0)).getTime();
+            if(range === 'weekly') start = now.getTime() - (7 * 86400000);
+            if(range === 'monthly') start = now.getTime() - (30 * 86400000);
+
+            let sales = transactions.filter(t => t.status === 'paid' && t.date >= start);
+            if(!consolidated) sales = sales.filter(t => t.waiter === activeUser);
+
+            let total = 0, cost = 0;
+            let out = `${range.toUpperCase()} ${consolidated ? 'STORE' : 'STAFF'} REPORT\nWaiter: ${consolidated ? 'ALL' : activeUser}\n--------------------------\n`;
+            sales.forEach(s => {
+                out += `T${s.id} | R${s.total.toFixed(2)} | ${s.method}\n`;
+                total += s.total;
+                s.items.forEach(it => cost += (it.cost || 0));
+            });
+            out += `--------------------------\nTOTAL SALES: R${total.toFixed(2)}\n`;
+            if(isManager && consolidated) out += `TOTAL COST:  R${cost.toFixed(2)}\nNET PROFIT:  R${(total-cost).toFixed(2)}\n`;
+            printOutput(out);
+        }
+
+        // --- UTILS ---
+        function addIngRow() {
+            const d = document.createElement('div'); d.className = 'ing-grid';
+            d.innerHTML = `<input type="text" class="i-name" placeholder="Ingr."><input type="number" class="i-qty" placeholder="Qty"><input type="number" class="i-cost" placeholder="Cost">`;
+            document.getElementById('ing-rows').appendChild(d);
+        }
+
+        function saveProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase(), price = parseFloat(document.getElementById('m-price').value), cost = parseFloat(document.getElementById('m-cost').value) || 0, cat = document.getElementById('m-cat').value;
+            if(!name || isNaN(price)) return alert("Name/Price missing");
+            const id = "P_" + Date.now();
+            let rec = {};
+            const names = document.querySelectorAll('.i-name'), qtys = document.querySelectorAll('.i-qty'), costs = document.querySelectorAll('.i-cost');
+            names.forEach((n, i) => {
+                const iname = n.value.toUpperCase(), iqty = parseFloat(qtys[i].value), icost = parseFloat(costs[i].value) || 0;
+                if(iname && iqty) {
+                    rec[iname] = iqty;
+                    if(!inventory[iname]) inventory[iname] = {name: iname, stock: 0, cost: icost, category: 'ingredient', price: 0};
+                }
+            });
+            inventory[id] = {name, price, cost, category: cat, stock: 0};
+            if(Object.keys(rec).length > 0) recipes[id] = rec;
+            save(); location.reload();
+        }
+
+        function executeDistro() {
+            const dest = document.getElementById('distro-name').value.toUpperCase(), qty = parseFloat(document.getElementById('distro-qty').value), picked = document.querySelectorAll('.stock-check:checked');
+            if(!dest || isNaN(qty) || picked.length === 0) return alert("Missing info");
+            let out = `STOCK TRANSFER: ${dest}\n--------------------------\n`;
+            picked.forEach(cb => { const itm = inventory[cb.value]; if(itm.stock >= qty) { itm.stock -= qty; out += `${qty} x ${itm.name}\n`; } });
+            printOutput(out); save(); renderStock();
+        }
+
+        function toggleAllChecks(v) { document.querySelectorAll('.stock-check').forEach(c => c.checked = v); }
+        function openStkModal(k) { selectedKey = k; document.getElementById('stk-name').textContent = inventory[k].name; document.getElementById('stock-modal').style.display = 'block'; }
+        function confirmStk() { const v = parseFloat(document.getElementById('stk-add').value); if(v) { inventory[selectedKey].stock += v; save(); renderStock(); closeModals(); } }
+        function openTender() { const t = transactions[currentIdx].items.reduce((s,i)=>s+i.price,0); if(t===0) return; document.getElementById('tender-total').textContent = `R${t.toFixed(2)}`; document.getElementById('tender-modal').style.display='block'; }
+        function calcChange() { const t = transactions[currentIdx].items.reduce((s,i)=>s+i.price,0), c = parseFloat(document.getElementById('tender-input').value)||0; document.getElementById('tender-change').textContent = `Change: R${(c-t).toFixed(2)}`; }
+        function closeModals() { document.querySelectorAll('.modal').forEach(m => m.style.display='none'); }
+        function deleteProduct(e, k) { e.stopPropagation(); if(confirm("Delete product?")) { delete inventory[k]; save(); renderPOS(); } }
+        function deleteStkItem(k) { if(confirm("Delete stock item?")) { delete inventory[k]; save(); renderStock(); } }
+        function voidTable() { if(confirm("Void table?")) { transactions.splice(currentIdx, 1); if(transactions.filter(t=>t.status==='active').length===0) createNewTransaction(); else currentIdx = 0; save(); renderPOS(); } }
+    </script>
+</body>
+</html>
