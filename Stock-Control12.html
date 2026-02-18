@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PAPA RON'S PREMIUM POS - FULL VERSION</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --gold-grad: linear-gradient(145deg, #d4a373, #b38b59);
+            --bg: #000000;
+            --surface: #121212;
+            --surface-light: #1e1e1e;
+            --accent: #44ff44;
+            --danger: #ff4444;
+            --warning: #ff9800;
+            --text-muted: #888;
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg); 
+            color: #fff; 
+            margin: 0; 
+            padding: 10px; 
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- TYPOGRAPHY & HEADERS --- */
+        h1 { text-align: center; color: var(--primary); font-size: 1.6rem; letter-spacing: 3px; text-transform: uppercase; margin: 15px 0; font-weight: 900; }
+        h3 { color: var(--primary); margin: 0 0 10px 0; font-weight: 800; text-transform: uppercase; font-size: 1rem; border-bottom: 1px solid #333; padding-bottom: 5px; }
+
+        /* --- INPUTS & BUTTONS --- */
+        input, select { 
+            background: #1a1a1a;
+            color: white;
+            font-size: 0.95rem; 
+            padding: 14px; 
+            margin: 6px 0; 
+            width: 100%; 
+            border-radius: 8px; 
+            box-sizing: border-box; 
+            border: 1px solid #333; 
+            font-weight: 600;
+        }
+
+        button { 
+            background: var(--gold-grad) !important; 
+            color: #000 !important; 
+            border: none; 
+            padding: 14px;
+            border-radius: 8px;
+            cursor: pointer; 
+            text-transform: uppercase; 
+            font-weight: 900; 
+            font-size: 0.9rem;
+            transition: transform 0.1s ease, filter 0.2s ease;
+        }
+
+        button:active { transform: scale(0.97); filter: brightness(1.2); }
+        
+        /* --- LAYOUT --- */
+        .grid-main { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 10px; }
+        .tab-content { display: none; margin-top: 15px; }
+        .active-tab { display: block; animation: slideUp 0.3s ease-out; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* --- POS GRID --- */
+        .category-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); 
+            gap: 8px; 
+            background: var(--surface); 
+            padding: 10px; 
+            border-radius: 12px; 
+            border: 1px solid #222;
+        }
+
+        .product-btn { 
+            position: relative; 
+            min-height: 75px; 
+            font-size: 0.8rem; 
+            background: var(--gold-grad);
+            color: #000;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            border-radius: 8px; 
+            font-weight: 900;
+            padding: 6px;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+            line-height: 1.2;
+        }
+
+        .btn-del-x { 
+            position: absolute; top: -8px; right: -8px; 
+            background: var(--danger) !important; color: white !important; border-radius: 50%; 
+            width: 24px; height: 24px; font-size: 12px; line-height: 24px; 
+            text-align: center; z-index: 10; border: 2px solid #000; 
+        }
+
+        /* --- TRANSACTION TABS --- */
+        #trans-tabs { display: flex; gap: 6px; overflow-x: auto; padding: 5px 0; margin-bottom: 10px; }
+        .tab-btn { 
+            width: auto; padding: 10px 20px; 
+            background: #1a1a1a !important; color: #666 !important; 
+            white-space: nowrap; border: 1px solid #333; font-size: 0.85rem; 
+        }
+        .tab-btn.active { 
+            background: var(--gold-grad) !important; 
+            color: #000 !important; 
+            border-color: #fff; 
+            font-weight: 900;
+        }
+
+        /* --- CART --- */
+        #cart-list { 
+            background: var(--surface); 
+            border-radius: 10px; 
+            padding: 10px; 
+            margin: 10px 0; 
+            max-height: 200px; 
+            overflow-y: auto; 
+            border: 1px solid #222; 
+        }
+        .cart-row { 
+            display: flex; 
+            justify-content: space-between; 
+            border-bottom: 1px solid #222; 
+            padding: 10px 0; 
+            align-items: center; 
+            font-size: 0.9rem; 
+            font-weight: 700; 
+        }
+        #total-view { 
+            font-size: 3rem; 
+            color: var(--accent); 
+            text-align: center; 
+            margin: 10px 0; 
+            font-family: 'Courier New', monospace; 
+            font-weight: 900; 
+            text-shadow: 0 0 10px rgba(68, 255, 68, 0.2);
+        }
+
+        /* --- STOCK TABLE --- */
+        .stock-row { 
+            display: grid; 
+            grid-template-columns: 40px 2fr 1fr 1fr 100px; 
+            align-items: center; 
+            background: var(--surface); 
+            margin-bottom: 6px; 
+            padding: 10px; 
+            border-radius: 8px; 
+            gap: 8px; 
+            border: 1px solid #222; 
+            font-size: 0.85rem; 
+            font-weight: 700;
+            text-align: center;
+        }
+        .stock-header {
+            font-size: 0.7rem; color: var(--primary); font-weight: 900; text-transform: uppercase; padding: 5px 10px;
+        }
+
+        /* --- SECURITY & MODALS --- */
+        #login-screen {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: #000; z-index: 10000; display: flex; flex-direction: column;
+            align-items: center; justify-content: center; padding: 20px;
+        }
+        
+        .manager-only { display: none; } /* Strictly hidden by default */
+
+        .modal { 
+            position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); 
+            background: #111; padding: 25px; border-radius: 15px; width: 90%; 
+            max-width: 400px; z-index: 2000; border: 2px solid var(--primary); 
+            display: none; box-shadow: 0 0 50px rgba(0,0,0,0.8);
+        }
+
+        /* --- UTILS --- */
+        .btn-small { padding: 8px; font-size: 0.75rem; border-radius: 6px; width: auto; }
+        .ing-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr; gap: 8px; margin-bottom: 8px; }
+        .distro-box { background: var(--surface-light); border: 1px solid var(--warning); padding: 15px; border-radius: 10px; margin-top: 20px; }
+
+    </style>
+</head>
+<body>
+
+    <div id="login-screen">
+        <h1 style="font-size: 3rem; margin-bottom: 0;">PAPA RON'S</h1>
+        <p style="color: var(--primary); letter-spacing: 5px; font-weight: 900; margin-bottom: 30px;">PREMIUM POS SYSTEM</p>
+        <input type="password" id="access-pin" inputmode="numeric" placeholder="••••" style="text-align: center; font-size: 2.5rem; letter-spacing: 15px; width: 250px; background: transparent; border: none; border-bottom: 3px solid var(--primary); border-radius: 0;">
+        <button onclick="attemptLogin()" style="width: 250px; height: 60px; margin-top: 30px; font-size: 1.2rem;">SIGN IN</button>
+    </div>
+
+    <h1>Papa Ron's</h1>
+
+    <div class="grid-main">
+        <button onclick="switchTab('pos-tab')">Sales Terminal</button>
+        <button class="manager-only" id="nav-builder" onclick="switchTab('menu-tab')">Product Builder</button>
+        <button onclick="switchTab('stock-tab')">Live Stock</button>
+        <button onclick="switchTab('report-tab')" style="background:#222 !important; color:#fff !important;">Financial Reports</button>
+    </div>
+
+    <div id="pos-tab" class="tab-content active-tab">
+        <div id="trans-tabs"></div>
+        <button onclick="createNewTransaction()" style="background:var(--accent) !important; color:#000 !important; margin-bottom: 10px; width: 100%;">+ OPEN NEW TABLE</button>
+        
+        <div class="grid-main">
+            <div>
+                <h3>Food Menu</h3>
+                <div class="category-grid" id="foodGrid"></div>
+            </div>
+            <div>
+                <h3>Beverages</h3>
+                <div class="category-grid" id="drinkGrid"></div>
+            </div>
+        </div>
+
+        <div id="cart-list"></div>
+        <div id="total-view">R 0.00</div>
+
+        <div class="grid-main">
+            <button onclick="openTender()" style="background:#2e7d32 !important; color:#fff !important; height:70px; font-size: 1.5rem;">CASH</button>
+            <button onclick="finalizeSale('Card')" style="background:#1565c0 !important; color:#fff !important; height:70px; font-size: 1.5rem;">BANK CARD</button>
+            <button onclick="printKitchenSlip()" style="background:#444 !important; color:#fff !important;">Send to Kitchen</button>
+            <button class="manager-only" id="void-btn" onclick="deleteCurrentTransaction()" style="background:transparent !important; border:2px solid var(--danger); color:var(--danger) !important;">Void Entire Table</button>
+            <button onclick="userLogout()" style="background:#333 !important; color:#fff !important;">Logout</button>
+        </div>
+    </div>
+
+    <div id="menu-tab" class="tab-content manager-only">
+        <div style="background:var(--surface); padding:20px; border-radius:15px; border: 1px solid #333;">
+            <h3>Create New Product</h3>
+            <input type="text" id="m-name" placeholder="PRODUCT NAME">
+            <div class="grid-main">
+                <input type="number" id="m-price" placeholder="Retail Price (R)">
+                <input type="number" id="m-cost" placeholder="Manual Direct Cost (R)">
+            </div>
+            <select id="m-cat">
+                <option value="food">Category: Food</option>
+                <option value="drink">Category: Drink</option>
+            </select>
+            
+            <p style="font-size: 0.8rem; color: var(--primary); margin: 15px 0 10px 0; font-weight: 900;">RECIPE & INGREDIENT LINKING</p>
+            <div id="ing-rows">
+                <div class="ing-grid">
+                    <input type="text" class="i-name" placeholder="Ingredient">
+                    <input type="number" class="i-qty" placeholder="Qty Used">
+                    <input type="number" class="i-cost" placeholder="Cost/Unit">
+                </div>
+            </div>
+            
+            <button onclick="addNewIngredientRow()" class="btn-small" style="background:#333 !important; color:#fff !important; margin: 10px 0;">+ Add Another Ingredient</button>
+            <button onclick="executeProductSave()" style="background:var(--accent) !important; color:#000 !important; margin-top:15px; font-size: 1.1rem; width: 100%;">SAVE TO CLOUD DATABASE</button>
+        </div>
+    </div>
+
+    <div id="stock-tab" class="tab-content">
+        <div style="background:var(--surface); padding:12px; border-radius:12px; margin-bottom:15px; border: 1px solid #333;">
+            <div style="display:flex; gap:10px;">
+                <button onclick="printOrderSheet()" style="background:#fff !important; color:#000 !important; flex: 1;">Print Order List</button>
+                <button onclick="bulkSelect(true)" class="btn-small" style="background:#444 !important; color:#fff !important;">Select All</button>
+                <button onclick="bulkSelect(false)" class="btn-small" style="background:#444 !important; color:#fff !important;">Deselect</button>
+            </div>
+            <button class="manager-only" id="val-btn" onclick="printValuationPDF()" style="margin-top:10px; width: 100%;">Export Valuation Report</button>
+        </div>
+
+        <div class="stock-row stock-header">
+            <span>Pick</span><span>Item Description</span><span>Level</span><span>Profit</span><span>Action</span>
+        </div>
+        <div id="inventory-display"></div>
+        
+        <div class="stock-footer manager-only" id="stock-summary-box"></div>
+
+        <div class="distro-box manager-only" id="distro-ui">
+            <h3>Branch Distribution</h3>
+            <input type="text" id="distro-dest" placeholder="RECIPIENT BRANCH NAME">
+            <input type="number" id="distro-quantity" placeholder="QUANTITY PER ITEM">
+            <button onclick="submitStockTransfer()" style="background:var(--warning) !important; color:#000 !important; margin-top:10px; width: 100%;">EXECUTE TRANSFER</button>
+        </div>
+    </div>
+
+    <div id="report-tab" class="tab-content">
+        <div style="background:var(--surface); padding:20px; border-radius:15px;">
+            <h3>Waitress Personal Reports</h3>
+            <p id="waiter-name-tag" style="color:var(--accent); font-weight: 900;"></p>
+            <div style="display:grid; gap:10px;">
+                <button onclick="triggerFinancialReport('daily', false)">My Daily Cash Up</button>
+                <button onclick="triggerFinancialReport('weekly', false)">My Weekly Sales</button>
+            </div>
+
+            <div class="manager-only" id="manager-report-section" style="margin-top: 30px; padding-top: 20px; border-top: 2px dashed #444;">
+                <h3 style="color:var(--accent);">Master Store Reports</h3>
+                <div style="display:grid; gap:10px;">
+                    <button onclick="triggerFinancialReport('daily', true)" style="background:var(--gold-grad) !important;">Consolidated Daily (All Staff)</button>
+                    <button onclick="triggerFinancialReport('weekly', true)">Consolidated Weekly (All Staff)</button>
+                    <button onclick="triggerFinancialReport('monthly', true)">Consolidated Monthly (All Staff)</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="stock-modal" class="modal">
+        <h2 id="modal-item-title" style="color:var(--primary); text-align:center;"></h2>
+        <p style="text-align:center; color:#888;">Enter quantity received from supplier:</p>
+        <input type="number" id="stock-input-amt" placeholder="0.00">
+        <button onclick="confirmStockUpdate()" style="width: 100%; height: 50px;">ADD TO INVENTORY</button>
+        <button onclick="hideModals()" style="background:#333 !important; color:#fff !important; margin-top:10px; width: 100%;">CANCEL</button>
+    </div>
+
+    <div id="tender-modal" class="modal">
+        <h1 id="tender-total-display" style="text-align:center; color:var(--accent);"></h1>
+        <input type="number" id="tender-cash-input" placeholder="Amount Received" oninput="liveChangeCalc()" style="font-size: 2rem; height: 70px;">
+        <h2 id="tender-change-display" style="text-align:center; font-size: 1.8rem; margin: 20px 0;">Change: R0.00</h2>
+        <button onclick="finalizeSale('Cash')" style="width: 100%; height: 60px; font-size: 1.2rem;">CONFIRM & PRINT</button>
+        <button onclick="hideModals()" style="background:#333 !important; color:#fff !important; margin-top:10px; width: 100%;">GO BACK</button>
+    </div>
+
+    <script>
+        // ---------------------------------------------------------
+        // 1. GLOBAL STATE & SECURITY
+        // ---------------------------------------------------------
+        const PIN_MANAGER = "1234";
+        const PIN_STAFF = ["1111", "2222", "3333", "4444", "5555"];
+        
+        let activeUser = null;
+        let isManagerSession = false;
+
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [];
+        
+        // Ensure at least one active transaction exists
+        if (transactions.filter(t => t.status === 'active').length === 0) {
+            transactions.push({id: 1, items: [], status: 'active', waiter: "Initial", date: new Date().getTime()});
+        }
+        
+        let currentIdx = transactions.findIndex(t => t.status === 'active');
+        let currentStockKey = "";
+
+        // ---------------------------------------------------------
+        // 2. AUTHENTICATION FUNCTIONS
+        // ---------------------------------------------------------
+        function attemptLogin() {
+            const pin = document.getElementById('access-pin').value;
+            if (pin === PIN_MANAGER) {
+                activeUser = "MANAGER";
+                isManagerSession = true;
+                grantAccess();
+            } else if (PIN_STAFF.includes(pin)) {
+                activeUser = "Staff_" + pin;
+                isManagerSession = false;
+                grantAccess();
+            } else {
+                alert("ACCESS DENIED: Invalid Security PIN");
+                document.getElementById('access-pin').value = "";
+            }
+        }
+
+        function grantAccess() {
+            document.getElementById('login-screen').style.display = 'none';
+            document.getElementById('waiter-name-tag').textContent = "Logged in as: " + activeUser;
+            
+            // Hard Toggle Manager-Only UI Elements
+            const managerEls = document.querySelectorAll('.manager-only');
+            managerEls.forEach(el => {
+                el.style.display = isManagerSession ? 'block' : 'none';
+            });
+
+            refreshPOSDisplay();
+            refreshStockDisplay();
+        }
+
+        function userLogout() {
+            if(confirm("Are you sure you want to logout?")) {
+                location.reload();
+            }
+        }
+
+        // ---------------------------------------------------------
+        // 3. CORE DATA STORAGE
+        // ---------------------------------------------------------
+        function persistData() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+            calculateBusinessValuation();
+        }
+
+        // ---------------------------------------------------------
+        // 4. SALES & CART FUNCTIONS
+        // ---------------------------------------------------------
+        function refreshPOSDisplay() {
+            const fGrid = document.getElementById('foodGrid');
+            const dGrid = document.getElementById('drinkGrid');
+            fGrid.innerHTML = ''; dGrid.innerHTML = '';
+
+            Object.keys(inventory).forEach(key => {
+                if(inventory[key].category === 'ingredient') return;
+
+                const btn = document.createElement('div');
+                btn.className = 'product-btn';
+                
+                // Only show delete option to manager
+                let deleteHtml = isManagerSession ? `<div class="btn-del-x" onclick="removeProductFromSystem(event, '${key}')">X</div>` : '';
+                
+                btn.innerHTML = `
+                    ${deleteHtml}
+                    <div style="width:100%" onclick="addItemToActiveCart('${key}')">
+                        <b>${inventory[key].name}</b><br>
+                        <span style="font-size: 0.9rem; opacity: 0.8;">R${inventory[key].price.toFixed(2)}</span>
+                    </div>
+                `;
+
+                if(inventory[key].category === 'food') fGrid.appendChild(btn);
+                else dGrid.appendChild(btn);
+            });
+
+            refreshTransactionTabs();
+            updateCartUI();
+        }
+
+        function refreshTransactionTabs() {
+            const container = document.getElementById('trans-tabs');
+            container.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const b = document.createElement('button');
+                b.className = `tab-btn ${i === currentIdx ? 'active' : ''}`;
+                b.textContent = `Table ${t.id}`;
+                b.onclick = () => { currentIdx = i; refreshPOSDisplay(); };
+                container.appendChild(b);
+            });
+        }
+
+        function addItemToActiveCart(key) {
+            if (currentIdx === -1) createNewTransaction();
+            transactions[currentIdx].items.push({...inventory[key], code: key});
+            transactions[currentIdx].waiter = activeUser;
+            persistData(); 
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-list');
+            list.innerHTML = '';
+            let total = 0;
+
+            if(transactions[currentIdx]) {
+                transactions[currentIdx].items.forEach((item, i) => {
+                    total += item.price;
+                    const row = document.createElement('div');
+                    row.className = 'cart-row';
+                    // Staff cannot delete items from cart
+                    let delBtn = isManagerSession ? `<button onclick="removeItemFromCart(${i})" style="background:var(--danger) !important; width:30px; padding:5px;">×</button>` : '';
+                    
+                    row.innerHTML = `<span>${item.name}</span><span>R${item.price.toFixed(2)} ${delBtn}</span>`;
+                    list.appendChild(row);
+                });
+            }
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function removeItemFromCart(index) {
+            transactions[currentIdx].items.splice(index, 1);
+            persistData();
+            updateCartUI();
+        }
+
+        function createNewTransaction() {
+            const newId = transactions.length + 1;
+            transactions.push({
+                id: newId, 
+                items: [], 
+                status: 'active', 
+                waiter: activeUser, 
+                date: new Date().getTime()
+            });
+            currentIdx = transactions.length - 1;
+            refreshPOSDisplay();
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentIdx];
+            if (!t || t.items.length === 0) return;
+
+            t.total = t.items.reduce((sum, item) => sum + item.price, 0);
+            t.method = method;
+            t.status = 'paid';
+            t.date = new Date().getTime();
+            t.waiter = activeUser;
+
+            // DEDUCT STOCK & INGREDIENTS
+            t.items.forEach(it => {
+                if(inventory[it.code]) inventory[it.code].stock--;
+                
+                // Ingredient tracking
+                if(recipes[it.code]) {
+                    for(let ingName in recipes[it.code]) {
+                        if(inventory[ingName]) {
+                            inventory[ingName].stock -= recipes[it.code][ingName];
+                        }
+                    }
+                }
+            });
+
+            generateThermalReceipt(t);
+            persistData();
+            createNewTransaction();
+            hideModals();
+        }
+
+        // ---------------------------------------------------------
+        // 5. STOCK & INVENTORY FUNCTIONS
+        // ---------------------------------------------------------
+        function refreshStockDisplay() {
+            const container = document.getElementById('inventory-display');
+            container.innerHTML = '';
+
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key];
+                const profit = (itm.price || 0) - (itm.cost || 0);
+                const isLow = itm.stock <= 5;
+
+                const row = document.createElement('div');
+                row.className = 'stock-row';
+                row.innerHTML = `
+                    <input type="checkbox" class="stock-check" value="${key}">
+                    <div style="text-align:left;">
+                        <b>${itm.name}</b><br>
+                        <small style="color:var(--text-muted)">ID: ${key.slice(-4)}</small>
+                    </div>
+                    <div style="color:${isLow ? 'var(--danger)' : 'var(--accent)'}; font-size: 1.1rem;">
+                        ${itm.stock.toFixed(1)}
+                    </div>
+                    <div style="color:var(--text-muted)">R${profit.toFixed(2)}</div>
+                    <div>
+                        <button onclick="openStockEntry('${key}')" class="btn-small">+In</button>
+                        ${isManagerSession ? `<button onclick="purgeStockItem('${key}')" class="btn-small" style="background:var(--danger) !important; margin-left:5px;">×</button>` : ''}
+                    </div>
+                `;
+                container.appendChild(row);
+            });
+            calculateBusinessValuation();
+        }
+
+        function calculateBusinessValuation() {
+            if(!isManagerSession) return;
+            let costVal = 0;
+            let sellVal = 0;
+            Object.values(inventory).forEach(itm => {
+                if(itm.stock > 0) {
+                    costVal += (itm.stock * (itm.cost || 0));
+                    sellVal += (itm.stock * (itm.price || 0));
+                }
+            });
+
+            const box = document.getElementById('stock-summary-box');
+            if(box) {
+                box.innerHTML = `
+                    <div style="padding: 10px; border-bottom: 1px solid #444;">
+                        <small>TOTAL INVENTORY COST VALUE</small><br>
+                        <b style="font-size: 1.5rem; color: var(--primary);">R${costVal.toFixed(2)}</b>
+                    </div>
+                    <div style="padding: 10px;">
+                        <small>ESTIMATED RETAIL PROFIT</small><br>
+                        <b style="font-size: 1.5rem; color: var(--accent);">R${(sellVal - costVal).toFixed(2)}</b>
+                    </div>
+                `;
+            }
+        }
+
+        function openStockEntry(key) {
+            currentStockKey = key;
+            document.getElementById('modal-item-title').textContent = inventory[key].name;
+            document.getElementById('stock-modal').style.display = 'block';
+            document.getElementById('stock-input-amt').focus();
+        }
+
+        function confirmStockUpdate() {
+            const val = parseFloat(document.getElementById('stock-input-amt').value);
+            if(!isNaN(val)) {
+                inventory[currentStockKey].stock += val;
+                persistData();
+                refreshStockDisplay();
+                hideModals();
+                document.getElementById('stock-input-amt').value = '';
+            }
+        }
+
+        function purgeStockItem(key) {
+            if(confirm("Permanently delete this item from the database?")) {
+                delete inventory[key];
+                persistData();
+                refreshStockDisplay();
+            }
+        }
+
+        // ---------------------------------------------------------
+        // 6. BUILDER FUNCTIONS
+        // ---------------------------------------------------------
+        function addNewIngredientRow() {
+            const container = document.getElementById('ing-rows');
+            const div = document.createElement('div');
+            div.className = 'ing-grid';
+            div.innerHTML = `
+                <input type="text" class="i-name" placeholder="Ingredient">
+                <input type="number" class="i-qty" placeholder="Qty">
+                <input type="number" class="i-cost" placeholder="Cost">
+            `;
+            container.appendChild(div);
+        }
+
+        function executeProductSave() {
+            const name = document.getElementById('m-name').value.toUpperCase();
+            const price = parseFloat(document.getElementById('m-price').value);
+            const baseCost = parseFloat(document.getElementById('m-cost').value) || 0;
+            const category = document.getElementById('m-cat').value;
+
+            if(!name || isNaN(price)) return alert("Error: Product Name and Selling Price are mandatory.");
+
+            const productId = "ITEM_" + Date.now();
+            let recipeMap = {};
+
+            const names = document.querySelectorAll('.i-name');
+            const qtys = document.querySelectorAll('.i-qty');
+            const costs = document.querySelectorAll('.i-cost');
+
+            names.forEach((el, i) => {
+                const ingName = el.value.toUpperCase();
+                const ingQty = parseFloat(qtys[i].value);
+                const ingCost = parseFloat(costs[i].value) || 0;
+
+                if(ingName && !isNaN(ingQty)) {
+                    recipeMap[ingName] = ingQty;
+                    // If ingredient doesn't exist in stock, create it
+                    if(!inventory[ingName]) {
+                        inventory[ingName] = { name: ingName, stock: 0, cost: ingCost, category: 'ingredient', price: 0 };
+                    }
+                }
+            });
+
+            inventory[productId] = {
+                name: name,
+                price: price,
+                cost: baseCost,
+                category: category,
+                stock: 0
+            };
+
+            if(Object.keys(recipeMap).length > 0) recipes[productId] = recipeMap;
+
+            persistData();
+            alert("SUCCESS: Item added to database.");
+            location.reload();
+        }
+
+        // ---------------------------------------------------------
+        // 7. ADVANCED PRINTING & REPORTS
+        // ---------------------------------------------------------
+        function printToThermal(content) {
+            const printWin = window.open('', '_blank', 'width=300,height=600');
+            printWin.document.write(`
+                <html>
+                <head><style>
+                    body { font-family: 'Courier New', monospace; padding: 20px; font-size: 12pt; line-height: 1.2; }
+                    pre { white-space: pre-wrap; word-wrap: break-word; }
+                </style></head>
+                <body><pre>${content}</pre></body>
+                </html>
+            `);
+            printWin.document.close();
+            printWin.focus();
+            // Timeout ensures content is rendered before print dialog hits
+            setTimeout(() => {
+                printWin.print();
+                printWin.close();
+            }, 600);
+        }
+
+        function generateThermalReceipt(t) {
+            let header = `      PAPA RON'S PREMIUM\n`;
+            header += `      Official Receipt\n`;
+            header += `------------------------------\n`;
+            header += `Waiter: ${t.waiter}\n`;
+            header += `Table: ${t.id} | No: ${Date.now().toString().slice(-6)}\n`;
+            header += `Date: ${new Date(t.date).toLocaleString()}\n`;
+            header += `------------------------------\n`;
+            
+            let body = t.items.map(i => `${i.name.padEnd(20).slice(0,20)} R${i.price.toFixed(2)}`).join('\n');
+            
+            let footer = `\n------------------------------\n`;
+            footer += `TOTAL AMOUNT:    R${t.total.toFixed(2)}\n`;
+            footer += `PAYMENT METHOD:  ${t.method.toUpperCase()}\n`;
+            footer += `------------------------------\n`;
+            footer += `    THANK YOU FOR VISITING\n`;
+            
+            printToThermal(header + body + footer);
+        }
+
+        function printKitchenSlip() {
+            const t = transactions[currentIdx];
+            if(!t || t.items.length === 0) return;
+            
+            let slip = `*** KITCHEN ORDER ***\n`;
+            slip += `TABLE: ${t.id}\n`;
+            slip += `WAITER: ${activeUser}\n`;
+            slip += `TIME: ${new Date().toLocaleTimeString()}\n`;
+            slip += `----------------------\n`;
+            t.items.forEach(it => {
+                slip += `[ ] ${it.name}\n`;
+            });
+            slip += `----------------------\n`;
+            printToThermal(slip);
+        }
+
+        function triggerFinancialReport(range, isConsolidated) {
+            const now = new Date();
+            let startLimit = 0;
+            
+            if(range === 'daily') startLimit = new Date(now.setHours(0,0,0,0)).getTime();
+            else if(range === 'weekly') startLimit = now.getTime() - (7 * 24 * 60 * 60 * 1000);
+            else if(range === 'monthly') startLimit = now.getTime() - (30 * 24 * 60 * 60 * 1000);
+
+            let sales = transactions.filter(t => t.status === 'paid' && t.date >= startLimit);
+            
+            // If not consolidated, filter for only the active staff member
+            if(!isConsolidated) {
+                sales = sales.filter(t => t.waiter === activeUser);
+            }
+
+            let totalIn = 0;
+            let totalCost = 0;
+            let reportText = `   FINANCIAL ${range.toUpperCase()} REPORT\n`;
+            reportText += `   ${isConsolidated ? 'FULL STORE' : 'STAFF: ' + activeUser}\n`;
+            reportText += `--------------------------------\n`;
+
+            sales.forEach(s => {
+                reportText += `${new Date(s.date).toLocaleDateString()} | T${s.id} | R${s.total.toFixed(2)}\n`;
+                totalIn += s.total;
+                s.items.forEach(it => totalCost += (it.cost || 0));
+            });
+
+            reportText += `--------------------------------\n`;
+            reportText += `GROSS SALES:     R${totalIn.toFixed(2)}\n`;
+            
+            if(isManagerSession && isConsolidated) {
+                reportText += `DIRECT COST:     R${totalCost.toFixed(2)}\n`;
+                reportText += `NET PROFIT:      R${(totalIn - totalCost).toFixed(2)}\n`;
+            }
+
+            reportText += `--------------------------------\n`;
+            reportText += `Printed: ${new Date().toLocaleString()}`;
+            
+            printToThermal(reportText);
+        }
+
+        // ---------------------------------------------------------
+        // 8. INTERFACE UTILS
+        // ---------------------------------------------------------
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') refreshPOSDisplay();
+            if(id === 'stock-tab') refreshStockDisplay();
+        }
+
+        function openTender() {
+            const total = transactions[currentIdx].items.reduce((s, i) => s + i.price, 0);
+            if(total === 0) return;
+            document.getElementById('tender-total-display').textContent = `R${total.toFixed(2)}`;
+            document.getElementById('tender-modal').style.display = 'block';
+            document.getElementById('tender-cash-input').value = '';
+            document.getElementById('tender-cash-input').focus();
+        }
+
+        function liveChangeCalc() {
+            const total = transactions[currentIdx].items.reduce((s, i) => s + i.price, 0);
+            const received = parseFloat(document.getElementById('tender-cash-input').value) || 0;
+            const change = received - total;
+            const display = document.getElementById('tender-change-display');
+            display.textContent = `Change: R${change.toFixed(2)}`;
+            display.style.color = change >= 0 ? 'var(--accent)' : 'var(--danger)';
+        }
+
+        function hideModals() {
+            document.querySelectorAll('.modal').forEach(m => m.style.display = 'none');
+        }
+
+        function bulkSelect(state) {
+            document.querySelectorAll('.stock-check').forEach(cb => cb.checked = state);
+        }
+
+        function deleteCurrentTransaction() {
+            if(!isManagerSession) return;
+            if(confirm("DANGER: This will delete the entire open table. Continue?")) {
+                transactions.splice(currentIdx, 1);
+                if(transactions.filter(t => t.status === 'active').length === 0) createNewTransaction();
+                else currentIdx = 0;
+                persistData();
+                refreshPOSDisplay();
+            }
+        }
+
+        function removeProductFromSystem(e, key) {
+            e.stopPropagation();
+            if(!isManagerSession) return;
+            if(confirm("Delete this menu item forever?")) {
+                delete inventory[key];
+                delete recipes[key];
+                persistData();
+                refreshPOSDisplay();
+            }
+        }
+
+        function submitStockTransfer() {
+            const dest = document.getElementById('distro-dest').value.toUpperCase();
+            const qty = parseFloat(document.getElementById('distro-quantity').value);
+            const selected = document.querySelectorAll('.stock-check:checked');
+
+            if(!dest || isNaN(qty) || selected.length === 0) return alert("Select items and fill transfer details.");
+
+            let slip = `   STOCK TRANSFER VOUCHER\n`;
+            slip += `DESTINATION: ${dest}\n`;
+            slip += `DATE: ${new Date().toLocaleDateString()}\n`;
+            slip += `----------------------------\n`;
+
+            selected.forEach(cb => {
+                const item = inventory[cb.value];
+                if(item.stock >= qty) {
+                    item.stock -= qty;
+                    slip += `${qty} x ${item.name}\n`;
+                } else {
+                    alert(`Shortfall: Not enough ${item.name} in stock.`);
+                }
+            });
+
+            slip += `----------------------------\nAuthorized: ${activeUser}\nReceived: ________________`;
+            persistData();
+            refreshStockDisplay();
+            printToThermal(slip);
+        }
+
+    </script>
+</body>
+</html>
