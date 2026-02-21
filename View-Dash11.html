@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAPA RON'S | LIVE DASHBOARD</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --bg: #000;
+            --surface: #121212;
+            --accent: #44ff44;
+            --warning: #ff9800;
+        }
+        body { font-family: sans-serif; background: var(--bg); color: #fff; margin: 0; padding: 15px; }
+        .header { text-align: center; border-bottom: 2px solid var(--primary); padding-bottom: 10px; margin-bottom: 20px; }
+        .sync-tag { font-size: 0.7rem; color: var(--accent); text-transform: uppercase; letter-spacing: 1px; }
+        
+        .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+        .stat-card { background: var(--surface); padding: 15px; border-radius: 10px; text-align: center; border: 1px solid #333; }
+        .stat-card h2 { margin: 0; font-size: 0.8rem; color: var(--primary); text-transform: uppercase; }
+        .stat-card p { margin: 5px 0 0; font-size: 1.4rem; font-weight: 900; }
+
+        .stock-section { background: var(--surface); border-radius: 10px; padding: 15px; border: 1px solid #333; margin-bottom: 20px; }
+        .stock-row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #222; font-size: 0.9rem; }
+        .low-stock { color: #ff4444; font-weight: bold; }
+        
+        .btn-group { display: flex; gap: 10px; }
+        .refresh-btn { flex: 1; padding: 12px; background: var(--primary); border: none; border-radius: 5px; font-weight: 900; cursor: pointer; }
+        .wa-btn { flex: 1; padding: 12px; background: #25d366; border: none; border-radius: 5px; color: white; font-weight: 900; cursor: pointer; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 style="margin:0; color:var(--primary);">PAPA RON'S LIVE</h1>
+        <div id="last-sync" class="sync-tag">CHECKING LIVE DATA...</div>
+    </div>
+
+    <div class="stats-grid">
+        <div class="stat-card">
+            <h2>Today's Sales</h2>
+            <p id="total-sales" style="color:var(--accent);">R 0.00</p>
+        </div>
+        <div class="stat-card">
+            <h2>Total Profit</h2>
+            <p id="total-profit" style="color:var(--warning);">R 0.00</p>
+        </div>
+    </div>
+
+    <div class="stock-section">
+        <h3 style="margin-top:0; color:var(--primary); font-size:0.9rem;">LOW STOCK ALERTS</h3>
+        <div id="stock-alerts"></div>
+    </div>
+
+    <div class="btn-group">
+        <button class="refresh-btn" onclick="fetchData()">REFRESH</button>
+        <button class="wa-btn" onclick="sendWhatsAppOrder()">SHARE LOW STOCK TO WA</button>
+    </div>
+
+    <script>
+        const RENDER_URL = 'https://your-papa-rons-app.onrender.com/api/view';
+        let currentLowStock = [];
+
+        async function fetchData() {
+            try {
+                const response = await fetch(RENDER_URL);
+                const data = await response.json();
+                renderDashboard(data);
+                document.getElementById('last-sync').textContent = "LIVE: SYNCED JUST NOW";
+            } catch (err) {
+                document.getElementById('last-sync').textContent = "OFFLINE: SHOWING CACHED";
+                const localData = {
+                    transactions: JSON.parse(localStorage.getItem('pos_trans')) || [],
+                    inventory: JSON.parse(localStorage.getItem('pos_inv')) || {}
+                };
+                renderDashboard(localData);
+            }
+        }
+
+        function renderDashboard(data) {
+            const today = new Date().setHours(0,0,0,0);
+            const sales = (data.transactions || []).filter(t => t.status === 'paid' && t.date >= today);
+            
+            let totalRev = 0; let totalCost = 0;
+            sales.forEach(s => {
+                totalRev += s.total;
+                (s.items || []).forEach(it => totalCost += (it.cost || 0));
+            });
+
+            document.getElementById('total-sales').textContent = `R ${totalRev.toFixed(2)}`;
+            document.getElementById('total-profit').textContent = `R ${(totalRev - totalCost).toFixed(2)}`;
+
+            const alertBox = document.getElementById('stock-alerts');
+            alertBox.innerHTML = '';
+            currentLowStock = [];
+            
+            Object.values(data.inventory || {}).forEach(itm => {
+                if (itm.stock <= 5) {
+                    currentLowStock.push(itm);
+                    alertBox.innerHTML += `<div class="stock-row"><span>${itm.name}</span><span class="low-stock">${itm.stock.toFixed(1)} left</span></div>`;
+                }
+            });
+            
+            if (alertBox.innerHTML === '') {
+                alertBox.innerHTML = '<p style="color:#777; font-size:0.8rem;">All stock levels healthy.</p>';
+            }
+        }
+
+        function sendWhatsAppOrder() {
+            let message = "📦 *LOW STOCK ALERT - PAPA RON'S*\n\n";
+            if (currentLowStock.length > 0) {
+                currentLowStock.forEach(item => {
+                    message += `• *${item.name}*: ${item.stock.toFixed(1)} left\n`;
+                });
+            } else {
+                message += "All stock levels are currently healthy.";
+            }
+            
+            // This triggers the native Web Share API if available (mobile/modern browsers), 
+            // otherwise it uses the standard wa.me link.
+            const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+
+        setInterval(fetchData, 60000);
+        fetchData();
+    </script>
+</body>
+</html>
