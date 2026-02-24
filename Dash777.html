@@ -27,8 +27,9 @@
         .low-stock { color: var(--danger); font-weight: bold; }
         .wastage-item { color: var(--warning); font-size: 0.85rem; }
         
-        .btn-group { display: flex; gap: 10px; }
+        .btn-group { display: flex; gap: 10px; margin-top: 10px; }
         .refresh-btn { flex: 1; padding: 12px; background: var(--primary); border: none; border-radius: 5px; font-weight: 900; cursor: pointer; }
+        .wa-btn { flex: 1; padding: 12px; background: #25d366; border: none; border-radius: 5px; color: white; font-weight: 900; cursor: pointer; }
     </style>
 </head>
 <body>
@@ -52,6 +53,7 @@
     <div class="section">
         <h3 style="margin-top:0; color:var(--primary); font-size:0.9rem;">LOW STOCK ALERTS</h3>
         <div id="stock-alerts"></div>
+        <button class="wa-btn" style="margin-top: 15px; width: 100%;" onclick="sendWhatsAppOrder()">SHARE LOW STOCK TO WA</button>
     </div>
 
     <div class="section">
@@ -64,6 +66,8 @@
     </div>
 
     <script>
+        let currentLowStock = [];
+
         function fetchData() {
             const localData = {
                 transactions: JSON.parse(localStorage.getItem('pos_trans')) || [],
@@ -90,8 +94,10 @@
             // 2. Low Stock
             const alertBox = document.getElementById('stock-alerts');
             alertBox.innerHTML = '';
+            currentLowStock = [];
             Object.values(data.inventory || {}).forEach(itm => {
                 if (itm.stock <= 5) {
+                    currentLowStock.push(itm);
                     alertBox.innerHTML += `<div class="row"><span>${itm.name}</span><span class="low-stock">${itm.stock.toFixed(1)} left</span></div>`;
                 }
             });
@@ -101,17 +107,28 @@
             const wasteBox = document.getElementById('wastage-list');
             wasteBox.innerHTML = '';
             const wastage = allTrans.filter(t => t.method === 'Wastage' && t.date >= today);
-            
             wastage.forEach(w => {
                 const itemNames = w.items.map(i => i.name).join(', ');
                 wasteBox.innerHTML += `
                     <div class="row wastage-item">
-                        <span><strong>${w.staff.toUpperCase()}</strong>: ${itemNames}</span>
+                        <span><strong>${(w.staff || 'N/A').toUpperCase()}</strong>: ${itemNames}</span>
                         <span>${w.notes}</span>
                     </div>`;
             });
-            
             if (wasteBox.innerHTML === '') wasteBox.innerHTML = '<p style="color:#777; font-size:0.8rem;">No wastage recorded today.</p>';
+        }
+
+        function sendWhatsAppOrder() {
+            let message = "📦 *LOW STOCK ALERT - PAPA RON'S*\n\n";
+            if (currentLowStock.length > 0) {
+                currentLowStock.forEach(item => {
+                    message += `• *${item.name}*: ${item.stock.toFixed(1)} left\n`;
+                });
+            } else {
+                message += "All stock levels are currently healthy.";
+            }
+            const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
         }
 
         setInterval(fetchData, 5000);
