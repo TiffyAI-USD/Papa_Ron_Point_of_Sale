@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PAPA RON'S PREMIUM POS</title>
+    <style>
+        :root {
+            --primary: #d4a373;
+            --bg: #000000;
+            --surface: #121212;
+            --surface-light: #1e1e1e;
+            --accent: #44ff44;
+            --danger: #ff4444;
+            --warning: #ff9800;
+            --gold-grad: linear-gradient(145deg, #d4a373, #b38b59, #8a6d4b);
+        }
+
+        body { 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background: var(--bg); 
+            color: #fff; 
+            margin: 0; 
+            padding: 20px; 
+            overflow-x: hidden;
+            display: flex;
+            justify-content: center;
+        }
+
+        #app-body { width: 100%; max-width: 1400px; }
+
+        .app-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 10px;
+        }
+
+        /* LOGIN GATEWAY */
+        #login-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: var(--bg); z-index: 9999; display: flex;
+            flex-direction: column; align-items: center; justify-content: center;
+        }
+        .login-box { background: var(--surface); padding: 30px; border-radius: 15px; border: 2px solid var(--primary); width: 85%; max-width: 320px; text-align: center; }
+        .pin-display { font-size: 2.5rem; letter-spacing: 12px; margin-bottom: 25px; color: var(--primary); font-weight: 900; background: #000; padding: 10px; border-radius: 8px; min-height: 50px; }
+
+        h1 { text-align: center; color: var(--primary); font-size: 1.8rem; letter-spacing: 2px; text-transform: uppercase; margin: 10px 0; font-weight: 900; }
+        h3 { color: var(--primary); margin: 0; font-weight: 800; text-transform: uppercase; font-size: 1rem; }
+
+        input, button, select { 
+            font-size: 0.95rem; 
+            padding: 12px; 
+            margin: 4px 0; 
+            width: 100%; 
+            border-radius: 6px; 
+            box-sizing: border-box; 
+            border: 1px solid #333; 
+            font-weight: 800;
+        }
+
+        button { 
+            background: var(--gold-grad) !important; 
+            color: #000 !important; 
+            border: none !important; 
+            cursor: pointer; 
+            text-transform: uppercase; 
+            font-weight: 900; 
+        }
+        
+        button:active { transform: scale(0.96); opacity: 0.8; }
+        
+        .grid-main { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-bottom: 15px; }
+        .tab-content { display: none; margin-top: 10px; animation: fadeIn 0.3s ease; }
+        .active-tab { display: block; }
+        
+        /* POS LAYOUT */
+        .pos-layout { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 20px; }
+        
+        .category-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); 
+            gap: 10px; 
+            background: var(--surface); 
+            padding: 15px; 
+            border-radius: 10px; 
+            border: 1px solid #222;
+            max-height: 450px;
+            overflow-y: auto; 
+        }
+
+        .product-btn { 
+            position: relative; 
+            min-height: 70px; 
+            font-size: 0.8rem; 
+            color: #000 !important; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            border-radius: 6px; 
+            font-weight: 900;
+            padding: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            background: var(--gold-grad);
+            border-bottom: 3px solid #8a6d4b;
+        }
+
+        #cart-list { background: var(--surface); border-radius: 8px; padding: 15px; margin: 10px 0; height: 300px; overflow-y: auto; border: 1px solid #222; }
+        .cart-row { display: flex; justify-content: space-between; border-bottom: 1px solid #222; padding: 10px 0; align-items: center; font-size: 0.9rem; font-weight: 700; }
+        #total-view { font-size: 3rem; color: var(--accent); text-align: center; margin: 10px 0; font-family: monospace; font-weight: 900; background: #000; padding: 10px; border-radius: 8px; }
+
+        .stock-row { display: grid; grid-template-columns: 40px 1.5fr 0.8fr 0.8fr 120px; align-items: center; background: var(--surface); margin-bottom: 6px; padding: 10px; border-radius: 6px; gap: 10px; border: 1px solid #222; font-size: 0.85rem; text-align: center; font-weight: 700; }
+        .stock-status-low { color: var(--danger); font-weight: 900; animation: pulse 1.2s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.6; } 100% { opacity: 1; } }
+
+        .modal { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: #111; padding: 25px; border-radius: 12px; width: 90%; max-width: 450px; z-index: 1000; border: 2px solid var(--primary); display: none; }
+        
+        /* STAFF SCROLLING FIX */
+        .staff-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 10px; 
+            margin-top: 15px; 
+            max-height: 400px; 
+            overflow-y: auto; 
+            padding-right: 10px;
+        }
+
+        .distro-box { background: var(--surface-light); border: 2px solid var(--warning); padding: 20px; border-radius: 10px; margin-top: 15px; }
+        .ing-grid { display: grid; grid-template-columns: 1.5fr 0.8fr 0.8fr; gap: 8px; margin-bottom: 8px; }
+        
+        .search-container { margin: 15px 0; position: relative; }
+        #stock-search { background: #000; color: var(--primary); border: 1px solid var(--primary); padding-left: 45px; text-transform: uppercase; }
+        .search-icon { position: absolute; left: 15px; top: 50%; transform: translateY(-50%); color: var(--primary); }
+    </style>
+</head>
+<body>
+
+    <div id="login-overlay">
+        <div class="login-box">
+            <h1>STAFF LOGIN</h1>
+            <div id="pin-screen" class="pin-display">****</div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;">
+                <button onclick="pP(1)">1</button><button onclick="pP(2)">2</button><button onclick="pP(3)">3</button>
+                <button onclick="pP(4)">4</button><button onclick="pP(5)">5</button><button onclick="pP(6)">6</button>
+                <button onclick="pP(7)">7</button><button onclick="pP(8)">8</button><button onclick="pP(9)">9</button>
+                <button onclick="cP()" style="background:var(--danger)!important; color:#fff!important;">C</button>
+                <button onclick="pP(0)">0</button>
+                <button onclick="login()" style="background:var(--accent)!important;">OK</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="app-body" style="display:none;">
+        <div class="app-header">
+            <h1 style="margin: 0;">Papa Ron's</h1>
+            <div style="display: flex; gap: 10px;">
+                <button onclick="printUserSales()" style="width: auto; padding: 5px 15px;">CASH UP</button>
+                <button onclick="logout()" style="width: auto; padding: 5px 15px; background: #333!important; color: #fff!important;">LOCK</button>
+            </div>
+        </div>
+        <p id="staff-tag" style="text-align:center; color: var(--primary); font-weight: 900; margin-bottom: 20px;"></p>
+
+        <div class="grid-main">
+            <button onclick="switchTab('pos-tab')">Sales</button>
+            <button onclick="secureSwitch('menu-tab')">Builder</button>
+            <button onclick="secureSwitch('stock-tab')">Stock</button>
+            <button onclick="secureSwitch('report-tab')">Reports</button>
+        </div>
+
+        <div id="pos-tab" class="tab-content active-tab">
+            <div id="trans-tabs" style="display:flex; gap:5px; margin-bottom:10px;"></div>
+            <button onclick="createNewTransaction()" style="padding: 15px; margin-bottom: 15px; font-size: 1.1rem; width: 300px;">+ NEW TABLE</button>
+            
+            <div class="pos-layout">
+                <div>
+                    <h3>Food Menu</h3>
+                    <div class="category-grid" id="foodGrid" style="margin-bottom: 20px;"></div>
+                    <h3>Drinks Menu</h3>
+                    <div class="category-grid" id="drinkGrid"></div>
+                </div>
+                
+                <div style="background: var(--surface-light); padding: 20px; border-radius: 10px;">
+                    <div id="cart-list"></div>
+                    <div id="total-view">R 0.00</div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                        <button onclick="openTender()" style="height:70px; font-size: 1.5rem; grid-column: span 2;">TENDER</button>
+                        <button onclick="printKitchenSlip()">Kitchen Slip</button>
+                        <button onclick="markAsWastage()" style="background:transparent !important; border:1px solid var(--warning) !important; color:var(--warning) !important;">Wastage</button>
+                        <button onclick="adminVoid()" style="background:transparent !important; border:1px solid var(--danger) !important; color:var(--danger) !important;">Void Table</button>
+                        <button onclick="openStaffSaleModal()" style="background: #555 !important; color: #fff !important; border: 2px solid var(--primary) !important;">STAFF SALE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-tab" class="tab-content">
+            <div style="background:var(--surface); padding:25px; border-radius:10px; max-width: 700px; margin: 0 auto;">
+                <h3>Product Builder</h3>
+                <input type="text" id="m-name" placeholder="ITEM NAME">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                    <input type="number" id="m-price" placeholder="Sell Price (R)">
+                    <input type="number" id="m-cost" placeholder="Item Direct Cost (R)">
+                </div>
+                <select id="m-cat"><option value="food">Food Item</option><option value="drink">Drink Item</option></select>
+                <p style="font-size: 0.8rem; color: var(--primary); margin: 20px 0 5px 0;">INGREDIENTS (NAME | QTY | UNIT COST)</p>
+                <div id="ing-rows"><div class="ing-grid"><input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty"><input type="number" class="i-cost" placeholder="Cost"></div></div>
+                <button onclick="addIngRow()" style="width: auto; padding: 10px; margin: 10px 0;">+ Add Ingredient</button>
+                <button onclick="saveNewProduct()" style="margin-top:20px; font-size: 1.2rem;">SAVE PRODUCT</button>
+            </div>
+        </div>
+
+        <div id="stock-tab" class="tab-content">
+            <div class="grid-main" style="grid-template-columns: 1fr 1fr;">
+                <div class="distro-box" style="margin: 0;">
+                    <h3>ADDITIONAL PURCHASES</h3>
+                    <input type="text" id="pur-name" placeholder="ITEM NAME">
+                    <input type="number" id="pur-qty" placeholder="QUANTITY">
+                    <input type="number" id="pur-cost" placeholder="TOTAL COST (R)">
+                    <input type="text" id="pur-cat" placeholder="CATEGORY (e.g. Seafood, Bread)">
+                    <button onclick="logPurchase()" style="background:var(--accent)!important;">RECORD & ADD</button>
+                </div>
+                <div style="background:var(--surface); padding:20px; border-radius:10px;">
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+                        <button onclick="printSelectedStock()">Print Order List</button>
+                        <button onclick="printPurchaseReport()" style="background:var(--warning)!important;">Purchase Report</button>
+                        <button onclick="selectAll(true)">Select All</button>
+                        <button onclick="selectAll(false)">None</button>
+                    </div>
+                    <div class="search-container">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="stock-search" placeholder="SEARCH STOCK ITEMS..." oninput="renderStock()">
+                    </div>
+                    <button onclick="printFullValuationReport()">Print Valuation PDF</button>
+                </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 40px 1.5fr 0.8fr 0.8fr 120px; padding: 15px; font-weight: 900; color: var(--primary); text-align: center; border-bottom: 1px solid #333;"><span>PICK</span><span>ITEM</span><span>STOCK</span><span>PROFIT</span><span>ACTION</span></div>
+            <div id="inventory-display" style="max-height: 500px; overflow-y: auto;"></div>
+            <div class="stock-footer" id="stock-summary" style="background: var(--surface-light); padding: 20px; margin-top: 15px; border-radius: 10px; text-align: center;"></div>
+            <div class="distro-box"><h3>Stock Distribution</h3><div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:10px;"><input type="text" id="distro-to" placeholder="DESTINATION BRANCH"><input type="number" id="distro-amt" placeholder="QTY TO SEND"><button onclick="processDistro()">Process Transfer</button></div></div>
+        </div>
+
+        <div id="report-tab" class="tab-content">
+            <div style="background:var(--surface); padding:30px; border-radius:10px; max-width: 900px; margin: 0 auto;">
+                <h3>Financial & Staff Reports</h3>
+                <div style="display:grid; grid-template-columns: 1fr 1fr 1fr; gap:15px;">
+                    <button onclick="generateReport('daily')">Daily Report</button>
+                    <button onclick="generateReport('weekly')">Weekly Report</button>
+                    <button onclick="generateReport('monthly')">Monthly Report</button>
+                </div>
+                <hr style="margin:30px 0; border:1px solid #333;">
+                <div style="display:grid; grid-template-columns: 1fr 1fr; gap:15px;">
+                    <button onclick="printStaffReport('all')" style="background:var(--warning) !important;">PRINT MASTER STAFF REPORT</button>
+                    <button onclick="clearStaffSales()" style="background:var(--danger) !important; color:#fff !important;">RESET STAFF MONTHLY TABS</button>
+                    <select id="individual-staff-select"></select>
+                    <button onclick="printStaffReport(document.getElementById('individual-staff-select').value)">PRINT INDIVIDUAL REPORT</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="stock-modal" class="modal"><h2 id="stock-item-name" style="color:var(--primary); text-align:center;"></h2><input type="number" id="stock-add-amt" placeholder="Amount to Add"><button onclick="confirmStockAdd()">Add to Stock</button><button onclick="closeModal()" style="margin-top:8px;">Cancel</button></div>
+    
+    <div id="tender-modal" class="modal">
+        <h1 id="cash-total-needed" style="text-align:center; color:var(--accent); font-size: 2.5rem;"></h1>
+        <input type="number" id="tender-amt" placeholder="Amount Received" oninput="calculateDifference()" style="height: 60px; font-size: 2rem; text-align: center;">
+        <h2 id="diff-display" style="text-align:center; font-weight: 900; margin: 15px 0;">Change: R0.00</h2>
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:10px;">
+            <button onclick="finalizeSale('Cash')" style="height: 60px;">CASH</button>
+            <button onclick="finalizeSale('Card')" style="height: 60px;">CARD</button>
+        </div>
+        <button onclick="closeModal()" style="margin-top:10px;">Back</button>
+    </div>
+
+    <div id="staff-sale-modal" class="modal">
+        <h2 style="color:var(--primary); text-align:center;">SELECT STAFF NAME</h2>
+        <div id="staff-name-grid" class="staff-grid"></div>
+        <button onclick="closeModal()" style="margin-top:20px; background:#333 !important; color:#fff !important;">CANCEL</button>
+    </div>
+
+    <script>
+        let pinStr = "";
+        let currentUser = "";
+        const ADMIN_PIN = "1010";
+        const STAFF_PINS = {"1010": "Sean", "7711": "Cats", "7777": "King Ron", "2266": "Local", "2255": "Jay", "2244": "Ben", "2233": "Lim", "2211": "Andisiwe", "1199": "Lungile", "1188": "Jon", "1177": "Megan", "1166": "Sweswe", "1155": "Siyamcela", "1144": "Luciano", "1133": "Tyran", "1122": "Sive", "2020": "Zuko", "1999": "Lee", "1992": "Jonice", "1234": "Beranise", "1111": "Momo", "2222": "Zet", "3333": "Marshall", "4444": "Hans", "2015": "Regan", "5555": "Don"};
+
+        function pP(n) { if(pinStr.length < 4) { pinStr += n; document.getElementById('pin-screen').textContent = "*".repeat(pinStr.length); } }
+        function cP() { pinStr = ""; document.getElementById('pin-screen').textContent = "****"; }
+        function logout() { location.reload(); }
+        function login() {
+            if(STAFF_PINS[pinStr]) {
+                currentUser = STAFF_PINS[pinStr];
+                document.getElementById('login-overlay').style.display = 'none';
+                document.getElementById('app-body').style.display = 'block';
+                document.getElementById('staff-tag').textContent = "LOGGED IN: " + currentUser.toUpperCase();
+                startApp();
+            } else { alert("WRONG PIN"); cP(); }
+        }
+
+        let inventory = JSON.parse(localStorage.getItem('pos_inv')) || {};
+        let recipes = JSON.parse(localStorage.getItem('pos_rec')) || {};
+        let transactions = JSON.parse(localStorage.getItem('pos_trans')) || [];
+        let purchaseLog = JSON.parse(localStorage.getItem('pos_purchases')) || []; 
+        let staffSales = JSON.parse(localStorage.getItem('pos_staff_sales')) || {};
+        let currentTransIdx = -1;
+        let selectedStockKey = "";
+
+        function startApp() {
+            if (transactions.filter(t => t.status === 'active').length === 0) {
+                transactions.push({id: transactions.length + 1, items: [], status: 'active', date: new Date().getTime()});
+            }
+            currentTransIdx = transactions.findIndex(t => t.status === 'active');
+            populateStaffUI();
+            renderPOS(); renderStock(); updateValuation();
+        }
+
+        function save() {
+            localStorage.setItem('pos_inv', JSON.stringify(inventory));
+            localStorage.setItem('pos_rec', JSON.stringify(recipes));
+            localStorage.setItem('pos_trans', JSON.stringify(transactions));
+            localStorage.setItem('pos_purchases', JSON.stringify(purchaseLog));
+            localStorage.setItem('pos_staff_sales', JSON.stringify(staffSales));
+            updateValuation();
+        }
+
+        function populateStaffUI() {
+            const grid = document.getElementById('staff-name-grid');
+            const select = document.getElementById('individual-staff-select');
+            grid.innerHTML = ''; select.innerHTML = '';
+            Object.values(STAFF_PINS).sort().forEach(name => {
+                grid.innerHTML += `<button onclick="finalizeStaffSale('${name}')">${name}</button>`;
+                select.innerHTML += `<option value="${name}">${name}</option>`;
+            });
+        }
+
+        function openStaffSaleModal() {
+            const t = transactions[currentTransIdx];
+            if (!t || t.items.length === 0) return alert("Add items to the cart first.");
+            document.getElementById('staff-sale-modal').style.display = 'block';
+        }
+
+        function finalizeStaffSale(staffName) {
+            const t = transactions[currentTransIdx];
+            if (!staffSales[staffName]) staffSales[staffName] = [];
+            t.items.forEach(it => {
+                staffSales[staffName].push({ name: it.name, price: it.price, date: new Date().getTime() });
+                if(inventory[it.code]) inventory[it.code].stock--; 
+                if(recipes[it.code]) { for(let ing in recipes[it.code]) if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing]; }
+            });
+            alert(`Recorded to ${staffName}'s account.`);
+            save(); createNewTransaction(); closeModal();
+        }
+
+        function printStaffReport(filter) {
+            let win = window.open('', '', 'width=400,height=600');
+            let content = `<h2>STAFF SALES REPORT</h2><p>Date: ${new Date().toLocaleDateString()}</p><hr>`;
+            if (filter === 'all') {
+                let grandTotal = 0;
+                for (let staff in staffSales) {
+                    let total = staffSales[staff].reduce((sum, item) => sum + item.price, 0);
+                    content += `<p><b>${staff}:</b> R${total.toFixed(2)}</p>`;
+                    grandTotal += total;
+                }
+                content += `<hr><h3>GRAND TOTAL: R${grandTotal.toFixed(2)}</h3>`;
+            } else {
+                if (!staffSales[filter] || staffSales[filter].length === 0) {
+                    content += `<p>No sales recorded for ${filter}.</p>`;
+                } else {
+                    content += `<h3>Staff: ${filter}</h3><ul>`;
+                    let total = 0;
+                    staffSales[filter].forEach(s => {
+                        content += `<li>${s.name} - R${s.price.toFixed(2)} <small>(${new Date(s.date).toLocaleDateString()})</small></li>`;
+                        total += s.price;
+                    });
+                    content += `</ul><hr><h4>TOTAL DUE: R${total.toFixed(2)}</h4>`;
+                }
+            }
+            win.document.write(`<html><body style="font-family:sans-serif; padding:20px;">${content}</body></html>`);
+            win.document.close(); win.print();
+        }
+
+        function clearStaffSales() {
+            const pin = prompt("ADMIN PIN TO CLEAR ALL STAFF TABS:");
+            if (pin === ADMIN_PIN) {
+                if(confirm("This will permanently delete all recorded staff sales. Continue?")) {
+                    staffSales = {}; save(); alert("Staff sales reset.");
+                }
+            } else { alert("UNAUTHORIZED"); }
+        }
+
+        function switchTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active-tab'));
+            document.getElementById(id).classList.add('active-tab');
+            if(id === 'pos-tab') renderPOS();
+            if(id === 'stock-tab') renderStock();
+        }
+
+        function secureSwitch(id) {
+            const pin = prompt("ADMIN PIN REQUIRED:");
+            if (pin === ADMIN_PIN) switchTab(id); else alert("UNAUTHORIZED");
+        }
+
+        function logPurchase() {
+            const name = document.getElementById('pur-name').value.toUpperCase();
+            const qty = parseFloat(document.getElementById('pur-qty').value);
+            const cost = parseFloat(document.getElementById('pur-cost').value);
+            const cat = document.getElementById('pur-cat').value || "General";
+            if (!name || isNaN(qty) || isNaN(cost)) return alert("Required fields missing.");
+            purchaseLog.push({ date: new Date().getTime(), name, qty, cost, cat });
+            const key = name.replace(/\s+/g, '_').toUpperCase();
+            if (!inventory[key]) {
+                inventory[key] = { name, stock: qty, cost: cost/qty, price: 0, category: 'ingredient' };
+            } else {
+                inventory[key].stock += qty; inventory[key].cost = cost/qty;
+            }
+            save(); renderStock(); alert("Purchase recorded.");
+            document.getElementById('pur-name').value = ''; document.getElementById('pur-qty').value = ''; document.getElementById('pur-cost').value = '';
+        }
+
+        function printPurchaseReport() {
+            let win = window.open('', '', 'width=400,height=600');
+            let rows = purchaseLog.map(p => `<tr><td>${new Date(p.date).toLocaleDateString()}</td><td>${p.name}</td><td>${p.qty}</td><td>R${p.cost.toFixed(2)}</td></tr>`).join('');
+            win.document.write(`<html><head><style>body{font-family:sans-serif; padding:20px;} table{width:100%; border-collapse:collapse;} th,td{border:1px solid #333; padding:8px;}</style></head><body><h3>ADDITIONAL PURCHASE REPORT</h3><table><tr><th>Date</th><th>Item</th><th>Qty</th><th>Cost</th></tr>${rows}</table></body></html>`);
+            win.document.close(); win.print();
+        }
+
+        function updateValuation() {
+            let totalCostVal = 0; let totalRetailVal = 0;
+            Object.values(inventory).forEach(itm => {
+                if(itm.stock > 0) { 
+                    totalCostVal += (itm.stock * (itm.cost || 0)); 
+                    totalRetailVal += (itm.stock * (itm.price || 0)); 
+                }
+            });
+            const grossProfit = totalRetailVal - totalCostVal;
+            const summary = document.getElementById('stock-summary');
+            if(summary) { 
+                summary.innerHTML = `<div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px;"><div><small>STOCK COST</small><br><b>R${totalCostVal.toFixed(2)}</b></div><div><small>POTENTIAL SALES</small><br><b>R${totalRetailVal.toFixed(2)}</b></div><div><small>PROFIT</small><br><b>R${grossProfit.toFixed(2)}</b></div></div>`; 
+            }
+            return { totalCostVal, totalRetailVal, grossProfit };
+        }
+
+        function printFullValuationReport() {
+            const pin = prompt("ADMIN PIN REQUIRED:");
+            if(pin !== ADMIN_PIN) return alert("UNAUTHORIZED");
+            const data = updateValuation(); 
+            let win = window.open('', '', 'width=800,height=900'); let rows = '';
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key]; 
+                if(itm.stock > 0) {
+                    const rowCost = (itm.stock * (itm.cost || 0)).toFixed(2); 
+                    const rowRetail = (itm.stock * (itm.price || 0)).toFixed(2);
+                    rows += `<tr><td>${itm.name}</td><td>${itm.stock.toFixed(1)}</td><td>R${(itm.cost || 0).toFixed(2)}</td><td>R${rowCost}</td><td>R${rowRetail}</td></tr>`;
+                }
+            });
+            win.document.write(`<html><head><style>body{font-family:sans-serif;padding:20px;}table{width:100%;border-collapse:collapse;}th,td{border:1px solid #ddd;padding:8px;}</style></head><body><h1>STOCK VALUATION</h1><p>Total Cost: R${data.totalCostVal.toFixed(2)}</p><table><thead><tr><th>Item</th><th>Qty</th><th>Unit Cost</th><th>Total Cost</th><th>Total Retail</th></tr></thead><tbody>${rows}</tbody></table></body></html>`);
+            win.document.close(); win.print();
+        }
+
+        function processDistro() {
+            const pin = prompt("ADMIN PIN REQUIRED:");
+            if(pin !== ADMIN_PIN) return alert("UNAUTHORIZED");
+            const dest = document.getElementById('distro-to').value.toUpperCase(); 
+            const qty = parseFloat(document.getElementById('distro-amt').value); 
+            const checked = document.querySelectorAll('.stock-check:checked'); 
+            if(!dest || isNaN(qty) || qty <= 0 || checked.length === 0) return alert("Missing info.");
+            let slip = `TRANSFER TO: ${dest}\nDATE: ${new Date().toLocaleString()}\nSTAFF: ${currentUser}\n----------------------------\n`;
+            checked.forEach(cb => { 
+                const itm = inventory[cb.value]; 
+                if(itm.stock >= qty) { itm.stock -= qty; slip += `${qty.toFixed(1)} x ${itm.name}\n`; }
+            });
+            save(); renderStock(); const win = window.open('', '', 'width=350,height=500'); win.document.write(`<pre>${slip}</pre>`); win.document.close(); win.print();
+        }
+
+        function renderPOS() {
+            const f = document.getElementById('foodGrid'); const d = document.getElementById('drinkGrid');
+            f.innerHTML = ''; d.innerHTML = '';
+            Object.keys(inventory).forEach(key => {
+                if(inventory[key].category === 'ingredient') return;
+                const btn = document.createElement('div'); btn.className = `product-btn`;
+                btn.innerHTML = `<div style="width:100%" onclick="addToCart('${key}')"><b>${inventory[key].name}</b><br>R${inventory[key].price.toFixed(2)}</div>`;
+                inventory[key].category === 'food' ? f.appendChild(btn) : d.appendChild(btn);
+            });
+            const tTabs = document.getElementById('trans-tabs'); tTabs.innerHTML = '';
+            transactions.forEach((t, i) => {
+                if(t.status !== 'active') return;
+                const btn = document.createElement('button'); btn.style.width="auto"; btn.style.padding="10px"; btn.textContent = `Table ${t.id}`; 
+                btn.style.background = (i === currentTransIdx) ? "var(--gold-grad)" : "#222";
+                btn.onclick = () => { currentTransIdx = i; renderPOS(); }; tTabs.appendChild(btn);
+            });
+            updateCartUI();
+        }
+
+        function addToCart(key) { if (currentTransIdx === -1) createNewTransaction(); transactions[currentTransIdx].items.push({...inventory[key], code: key}); save(); updateCartUI(); }
+
+        function updateCartUI() {
+            const list = document.getElementById('cart-list'); list.innerHTML = ''; let total = 0;
+            if(transactions[currentTransIdx]) {
+                transactions[currentTransIdx].items.forEach((it, i) => {
+                    total += it.price;
+                    list.innerHTML += `<div class="cart-row"><span>${it.name}</span><span>R${it.price.toFixed(2)} <button onclick="removeFromCart(${i})" style="background:var(--danger) !important; width: 30px; padding: 2px;">×</button></span></div>`;
+                });
+            }
+            document.getElementById('total-view').textContent = `R ${total.toFixed(2)}`;
+        }
+
+        function removeFromCart(i) { transactions[currentTransIdx].items.splice(i, 1); save(); updateCartUI(); }
+
+        function renderStock() {
+            const cont = document.getElementById('inventory-display'); 
+            const query = document.getElementById('stock-search').value.toUpperCase();
+            cont.innerHTML = '';
+            Object.keys(inventory).sort().forEach(key => {
+                const itm = inventory[key]; 
+                if (query && !itm.name.toUpperCase().includes(query)) return;
+                const profit = (itm.price || 0) - (itm.cost || 0);
+                const stockClass = itm.stock <= 5 ? 'stock-status-low' : '';
+                cont.innerHTML += `<div class="stock-row"><input type="checkbox" class="stock-check" value="${key}"><div><b>${itm.name}</b></div><div class="${stockClass}">${itm.stock.toFixed(1)}</div><div>R${profit.toFixed(2)}</div><button onclick="openStockIn('${key}')" style="width:auto; padding:5px;">+In</button></div>`;
+            });
+            updateValuation();
+        }
+
+        function finalizeSale(method) {
+            const t = transactions[currentTransIdx]; if (!t || t.items.length === 0) return;
+            const total = t.items.reduce((s, i) => s + i.price, 0);
+            const received = parseFloat(document.getElementById('tender-amt').value) || total;
+            t.total = total; t.tip = (method === 'Card') ? Math.max(0, received - total) : 0;
+            t.method = method; t.status = 'paid'; t.date = new Date().getTime(); t.staff = currentUser;
+            t.items.forEach(it => {
+                if(inventory[it.code]) inventory[it.code].stock--; 
+                if(recipes[it.code]) { for(let ing in recipes[it.code]) if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing]; }
+            });
+            printReceipt(t); save(); createNewTransaction(); closeModal();
+        }
+
+        function markAsWastage() {
+            const t = transactions[currentTransIdx]; if (!t || t.items.length === 0) return alert("Empty table.");
+            const reason = prompt("Reason:"); if (reason === null) return;
+            t.total = 0; t.method = 'Wastage'; t.status = 'paid'; t.date = new Date().getTime(); t.staff = currentUser; t.notes = reason;
+            t.items.forEach(it => {
+                if(inventory[it.code]) inventory[it.code].stock--; 
+                if(recipes[it.code]) { for(let ing in recipes[it.code]) if(inventory[ing]) inventory[ing].stock -= recipes[it.code][ing]; }
+            });
+            printReceipt(t); save(); createNewTransaction(); 
+        }
+
+        function generateReport(range) {
+            const pin = prompt("ADMIN PIN REQUIRED:");
+            if(pin !== ADMIN_PIN) return alert("UNAUTHORIZED");
+            const now = new Date(); let startTime = 0;
+            if(range === 'daily') startTime = new Date(now.setHours(0,0,0,0)).getTime();
+            if(range === 'weekly') startTime = now.getTime() - (7 * 24 * 60 * 60 * 1000);
+            if(range === 'monthly') startTime = now.getTime() - (30 * 24 * 60 * 60 * 1000);
+            const sales = transactions.filter(t => t.status === 'paid' && t.date >= startTime);
+            let totalSales = 0, totalTips = 0, totalCost = 0; 
+            let report = `${range.toUpperCase()} REPORT\n--------------------------\n`;
+            sales.forEach(s => { 
+                if(s.method !== 'Wastage') { report += `Table ${s.id}: R${s.total.toFixed(2)} [${s.staff}]\n`; totalSales += s.total; totalTips += (s.tip||0); }
+                s.items.forEach(item => totalCost += (item.cost || 0)); 
+            });
+            report += `--------------------------\nTOTAL SALES: R${totalSales.toFixed(2)}\nPROFIT: R${(totalSales - totalCost).toFixed(2)}`;
+            const win = window.open('', '', 'width=350,height=600'); win.document.write(`<pre>${report}</pre>`); win.document.close(); win.print();
+        }
+
+        function printReceipt(t) {
+            let win = window.open('', '', 'width=300,height=600');
+            let content = (t.method === 'Wastage') ? `WASTAGE LOG\nReason: ${t.notes}\n` : `PAPA RON'S RECEIPT\nStaff: ${t.staff}\nTotal: R${t.total.toFixed(2)}\n`;
+            win.document.write(`<pre>${content}----------------\n${t.items.map(i => i.name).join('\n')}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function printKitchenSlip() {
+            const t = transactions[currentTransIdx]; if(!t || t.items.length === 0) return;
+            let win = window.open('', '', 'width=300,height=400');
+            win.document.write(`<pre style="font-size:16pt;">KITCHEN ORDER\nTable: ${t.id}\n----------------\n${t.items.map(i => i.name).join('\n')}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function printUserSales() {
+            const userSales = transactions.filter(t => t.status === 'paid' && t.staff === currentUser);
+            let total = userSales.reduce((s, t) => s + t.total, 0);
+            let win = window.open('', '', 'width=300,height=400');
+            win.document.write(`<pre>SHIFT CASH UP\nStaff: ${currentUser}\nTotal: R${total.toFixed(2)}</pre>`);
+            win.document.close(); win.print();
+        }
+
+        function printSelectedStock() {
+            const supplier = prompt("Supplier Name:"); if (!supplier) return;
+            let list = `STOCK ORDER: ${supplier}\n----------------------------\n`;
+            document.querySelectorAll('.stock-check:checked').forEach(cb => { list += `[ ] ${inventory[cb.value].name}\n`; });
+            const win = window.open('', '', 'width=400,height=600'); win.document.write(`<pre>${list}</pre>`); win.document.close(); win.print();
+        }
+
+        function createNewTransaction() { transactions.push({id: transactions.length + 1, items: [], status:'active', date: new Date().getTime()}); currentTransIdx = transactions.length - 1; renderPOS(); }
+        function openTender() { const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0); if(total === 0) return; document.getElementById('cash-total-needed').textContent = `TOTAL: R${total.toFixed(2)}`; document.getElementById('tender-modal').style.display = 'block'; }
+        function calculateDifference() { const total = transactions[currentTransIdx].items.reduce((s, i) => s + i.price, 0); const received = parseFloat(document.getElementById('tender-amt').value) || 0; document.getElementById('diff-display').textContent = `Change: R${(received - total).toFixed(2)}`; }
+        function addIngRow() { const div = document.createElement('div'); div.className = "ing-grid"; div.innerHTML = `<input type="text" class="i-name" placeholder="Ingredient"><input type="number" class="i-qty" placeholder="Qty"><input type="number" class="i-cost" placeholder="Cost">`; document.getElementById('ing-rows').appendChild(div); }
+        function saveNewProduct() {
+            const name = document.getElementById('m-name').value.toUpperCase(); const price = parseFloat(document.getElementById('m-price').value); const id = "P_" + Date.now();
+            let recipe = {}; document.querySelectorAll('.i-name').forEach((n, i) => { if(n.value) recipe[n.value.toUpperCase()] = parseFloat(document.querySelectorAll('.i-qty')[i].value); });
+            inventory[id] = { name, price, cost: parseFloat(document.getElementById('m-cost').value)||0, category: document.getElementById('m-cat').value, stock: 0 };
+            if(Object.keys(recipe).length > 0) recipes[id] = recipe; save(); location.reload();
+        }
+        function adminVoid() { if(prompt("ADMIN PIN:") === ADMIN_PIN) { transactions.splice(currentTransIdx, 1); startApp(); } }
+        function openStockIn(k) { selectedStockKey = k; document.getElementById('stock-item-name').textContent = inventory[k].name; document.getElementById('stock-modal').style.display = 'block'; }
+        function confirmStockAdd() { const a = parseFloat(document.getElementById('stock-add-amt').value); if(a) { inventory[selectedStockKey].stock += a; save(); renderStock(); closeModal(); } }
+        function selectAll(v) { document.querySelectorAll('.stock-check').forEach(c => c.checked = v); }
+        function closeModal() { document.querySelectorAll('.modal').forEach(m => m.style.display='none'); }
+    </script>
+</body>
+</html>
