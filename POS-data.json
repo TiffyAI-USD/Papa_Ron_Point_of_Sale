@@ -3520,16 +3520,7 @@
     },
     {
       "id": 79,
-      "items": [
-        {
-          "name": "LOOSE RIZZLA",
-          "price": 1,
-          "cost": 0,
-          "category": "food",
-          "stock": -8,
-          "code": "P_1772112351662"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1772708955986
     },
@@ -3585,5 +3576,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-06T09:35:30.119Z"
+  "lastSync": "2026-03-06T09:46:23.599Z"
 }
