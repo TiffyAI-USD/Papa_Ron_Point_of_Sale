@@ -3520,7 +3520,16 @@
     },
     {
       "id": 79,
-      "items": [],
+      "items": [
+        {
+          "name": "SHROOMS RW",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 1.57,
+          "code": "P_1772191087155"
+        }
+      ],
       "status": "active",
       "date": 1772708955986
     },
@@ -3576,5 +3585,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-06T10:15:08.579Z"
+  "lastSync": "2026-03-06T10:50:43.262Z"
 }
