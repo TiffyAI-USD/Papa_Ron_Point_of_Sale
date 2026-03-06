@@ -495,7 +495,7 @@
       "price": 1,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "POTATOES_POCKETS_10KG": {
       "name": "POTATOES POCKETS 10KG",
@@ -3520,9 +3520,33 @@
     },
     {
       "id": 79,
-      "items": [],
+      "items": [
+        {
+          "name": "LOOSE RIZZLA",
+          "price": 1,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1772112351662"
+        }
+      ],
       "status": "active",
       "date": 1772708955986
+    },
+    {
+      "id": 80,
+      "items": [
+        {
+          "name": "LOOSE RIZZLA",
+          "price": 1,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1772112351662"
+        }
+      ],
+      "status": "active",
+      "date": 1772789648379
     }
   ],
   "purchaseLog": [
@@ -3541,6 +3565,14 @@
       "cat": "TOILET"
     }
   ],
-  "staffSales": {},
-  "lastSync": "2026-03-06T09:18:50.452Z"
+  "staffSales": {
+    "Zet": [
+      {
+        "name": "LOOSE RIZZLA",
+        "price": 1,
+        "date": 1772789645301
+      }
+    ]
+  },
+  "lastSync": "2026-03-06T09:35:16.424Z"
 }
