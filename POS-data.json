@@ -1020,11 +1020,34 @@
       "cost": 0,
       "category": "drink",
       "stock": 0
+    },
+    "ROSEMARY ": {
+      "name": "ROSEMARY ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "GARLIC ": {
+      "name": "GARLIC ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1772883490652": {
+      "name": "FOCACCIA ONE",
+      "price": 70,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
     "P_1772310687689": {
       "POTATOES ": 3
+    },
+    "P_1772883490652": {
+      "ROSEMARY ": 0.2,
+      "GARLIC ": 0.2
     }
   },
   "transactions": [
@@ -3520,7 +3543,16 @@
     },
     {
       "id": 79,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1772650913150"
+        }
+      ],
       "status": "active",
       "date": 1772708955986
     },
@@ -3594,5 +3626,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-07T13:40:44.210Z"
+  "lastSync": "2026-03-07T14:08:02.008Z"
 }
