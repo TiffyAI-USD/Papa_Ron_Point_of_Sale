@@ -1029,7 +1029,7 @@
     },
     "GARLIC ": {
       "name": "GARLIC ",
-      "stock": 10,
+      "stock": 5,
       "cost": 0,
       "category": "ingredient"
     },
@@ -3714,5 +3714,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-07T14:49:43.596Z"
+  "lastSync": "2026-03-07T14:49:58.967Z"
 }
