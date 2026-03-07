@@ -271,7 +271,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1771756651292": {
       "name": "WINGLETS -5 ",
@@ -3662,6 +3662,12 @@
       "items": [],
       "status": "active",
       "date": 1772894791449
+    },
+    {
+      "id": 86,
+      "items": [],
+      "status": "active",
+      "date": 1772895153593
     }
   ],
   "purchaseLog": [
@@ -3704,7 +3710,14 @@
         "price": 30,
         "date": 1772812152386
       }
+    ],
+    "King Ron": [
+      {
+        "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+        "price": 50,
+        "date": 1772895151102
+      }
     ]
   },
-  "lastSync": "2026-03-07T14:52:12.233Z"
+  "lastSync": "2026-03-07T14:52:33.592Z"
 }
