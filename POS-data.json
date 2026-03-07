@@ -285,7 +285,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -7
+      "stock": -8
     },
     "P_1771756895248": {
       "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
@@ -3553,8 +3553,12 @@
           "code": "P_1771756709069"
         }
       ],
-      "status": "active",
-      "date": 1772708955986
+      "status": "paid",
+      "date": 1772894548601,
+      "total": 0,
+      "method": "Wastage",
+      "staff": "Zuko",
+      "notes": "gone off"
     },
     {
       "id": 80,
@@ -3605,6 +3609,12 @@
       ],
       "status": "active",
       "date": 1772892491911
+    },
+    {
+      "id": 84,
+      "items": [],
+      "status": "active",
+      "date": 1772894548805
     }
   ],
   "purchaseLog": [
@@ -3649,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-07T14:42:14.589Z"
+  "lastSync": "2026-03-07T14:42:28.804Z"
 }
