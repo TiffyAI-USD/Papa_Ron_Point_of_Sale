@@ -1039,6 +1039,37 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "CHICKEN ": {
+      "name": "CHICKEN ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "ROLL": {
+      "name": "ROLL",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "LETTUCE ": {
+      "name": "LETTUCE ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "CHEESE": {
+      "name": "CHEESE",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1772894767966": {
+      "name": "SPECIAL BURGER",
+      "price": 50,
+      "cost": 25,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -1048,6 +1079,12 @@
     "P_1772883490652": {
       "ROSEMARY ": 0.2,
       "GARLIC ": 0.2
+    },
+    "P_1772894767966": {
+      "CHICKEN ": 200,
+      "ROLL": 1,
+      "LETTUCE ": 1,
+      "CHEESE": 1
     }
   },
   "transactions": [
@@ -3570,6 +3607,14 @@
           "category": "food",
           "stock": -9,
           "code": "P_1772112351662"
+        },
+        {
+          "name": "SPECIAL BURGER",
+          "price": 50,
+          "cost": 25,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1772894767966"
         }
       ],
       "status": "active",
@@ -3659,5 +3704,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-07T14:42:28.804Z"
+  "lastSync": "2026-03-07T14:46:23.061Z"
 }
