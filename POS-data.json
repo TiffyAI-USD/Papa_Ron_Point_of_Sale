@@ -1063,13 +1063,6 @@
       "stock": -1,
       "cost": 0,
       "category": "ingredient"
-    },
-    "P_1772894767966": {
-      "name": "SPECIAL BURGER",
-      "price": 50,
-      "cost": 25,
-      "category": "food",
-      "stock": -1
     }
   },
   "recipes": {
@@ -1079,12 +1072,6 @@
     "P_1772883490652": {
       "ROSEMARY ": 0.2,
       "GARLIC ": 0.2
-    },
-    "P_1772894767966": {
-      "CHICKEN ": 200,
-      "ROLL": 1,
-      "LETTUCE ": 1,
-      "CHEESE": 1
     }
   },
   "transactions": [
@@ -3779,5 +3766,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-08T08:32:54.895Z"
+  "lastSync": "2026-03-08T08:35:52.731Z"
 }
