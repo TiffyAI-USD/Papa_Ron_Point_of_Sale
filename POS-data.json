@@ -1023,13 +1023,13 @@
     },
     "ROSEMARY ": {
       "name": "ROSEMARY ",
-      "stock": 0,
+      "stock": -0.2,
       "cost": 0,
       "category": "ingredient"
     },
     "GARLIC ": {
       "name": "GARLIC ",
-      "stock": 5,
+      "stock": 4.8,
       "cost": 0,
       "category": "ingredient"
     },
@@ -1038,7 +1038,7 @@
       "price": 70,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "CHICKEN ": {
       "name": "CHICKEN ",
@@ -3623,8 +3623,12 @@
           "code": "P_1772883490652"
         }
       ],
-      "status": "active",
-      "date": 1772789730119
+      "status": "paid",
+      "date": 1772967985394,
+      "total": 70,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 82,
@@ -3724,6 +3728,12 @@
       ],
       "status": "active",
       "date": 1772957958374
+    },
+    {
+      "id": 90,
+      "items": [],
+      "status": "active",
+      "date": 1772967985576
     }
   ],
   "purchaseLog": [
@@ -3775,5 +3785,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-08T11:06:15.848Z"
+  "lastSync": "2026-03-08T11:06:25.575Z"
 }
