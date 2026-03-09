@@ -817,28 +817,28 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 8
     },
     "P_1773058465455": {
       "name": "GORDON'S BLUE",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 16
     },
     "P_1773058505803": {
       "name": "HUNTERS DRY CAN",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 5
     },
     "P_1773058544030": {
       "name": "STELLA ARTOIS",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 21
     },
     "P_1773058630405": {
       "name": "BREEZER WATERMELON 440ML",
@@ -3666,5 +3666,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T12:29:45.457Z"
+  "lastSync": "2026-03-09T12:30:10.534Z"
 }
