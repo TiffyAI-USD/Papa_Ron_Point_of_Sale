@@ -866,21 +866,21 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 19
     },
     "P_1773058740268": {
       "name": "HUNTERS GOLD CAN 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 48
     },
     "P_1773058759518": {
       "name": "WATER 500MLS",
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 115
     },
     "P_1773058775199": {
       "name": "POWERADE",
@@ -3666,5 +3666,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T12:28:34.689Z"
+  "lastSync": "2026-03-09T12:29:15.803Z"
 }
