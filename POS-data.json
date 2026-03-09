@@ -754,21 +754,21 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 18
     },
     "P_1773058183088": {
       "name": "BERNINI BLUSH ALCOHOLIC 275ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 24
     },
     "P_1773058213658": {
       "name": "SAVANNA CANS 500ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 17
     },
     "P_1773058245205": {
       "name": "SAVANNA ANGRY LEMON 500ML ",
@@ -3666,5 +3666,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T12:31:43.647Z"
+  "lastSync": "2026-03-09T12:32:10.159Z"
 }
