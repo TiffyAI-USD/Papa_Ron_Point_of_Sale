@@ -747,7 +747,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 22
     },
     "P_1773058153844": {
       "name": "BERNINI BLUSH SPARKLING 275ML ",
@@ -3666,5 +3666,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T12:32:10.159Z"
+  "lastSync": "2026-03-09T12:32:48.153Z"
 }
