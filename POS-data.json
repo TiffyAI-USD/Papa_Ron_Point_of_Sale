@@ -678,6 +678,27 @@
       "cost": 0,
       "category": "drink",
       "stock": 2
+    },
+    "P_1773057523340": {
+      "name": "WINDHOEK 500ML ",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 22
+    },
+    "P_1773057568463": {
+      "name": "HUNTERS DRY 330ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 16
+    },
+    "P_1773057571182": {
+      "name": "HUNTERS DRY 330ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 16
     }
   },
   "recipes": {
@@ -3400,5 +3421,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T11:58:14.673Z"
+  "lastSync": "2026-03-09T11:59:57.984Z"
 }
