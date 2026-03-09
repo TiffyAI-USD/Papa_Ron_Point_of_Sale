@@ -887,14 +887,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 8
     },
     "P_1773058800907": {
       "name": "FANTA",
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 23
     },
     "P_1773058818005": {
       "name": "SPRITE 500ML ",
@@ -3666,5 +3666,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T12:28:09.383Z"
+  "lastSync": "2026-03-09T12:28:34.689Z"
 }
