@@ -999,7 +999,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 22
     },
     "P_1773127666096": {
       "name": "STELLA CAN 410ML",
@@ -1020,7 +1020,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     }
   },
   "recipes": {
@@ -3625,10 +3625,22 @@
           "category": "drink",
           "stock": 24,
           "code": "P_1773127628890"
+        },
+        {
+          "name": "BERNINI CLASSIC CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773127628890"
         }
       ],
-      "status": "active",
-      "date": 1772892491911
+      "status": "paid",
+      "date": 1773131319481,
+      "total": 90,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 84,
@@ -3745,6 +3757,12 @@
       ],
       "status": "active",
       "date": 1773130554549
+    },
+    {
+      "id": 92,
+      "items": [],
+      "status": "active",
+      "date": 1773131319676
     }
   ],
   "purchaseLog": [
@@ -3796,5 +3814,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T08:28:08.607Z"
+  "lastSync": "2026-03-10T08:28:39.676Z"
 }
