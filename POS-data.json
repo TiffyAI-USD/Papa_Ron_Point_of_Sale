@@ -3604,24 +3604,7 @@
     },
     {
       "id": 82,
-      "items": [
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773127628890"
-        },
-        {
-          "name": "COKE",
-          "price": 15,
-          "cost": 0,
-          "category": "drink",
-          "stock": 21,
-          "code": "P_1772451423710"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1772812153797
     },
@@ -3774,5 +3757,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:38:44.780Z"
+  "lastSync": "2026-03-10T08:12:48.348Z"
 }
