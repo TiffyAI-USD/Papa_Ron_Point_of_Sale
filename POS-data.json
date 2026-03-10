@@ -796,7 +796,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 31
     },
     "P_1773126264148": {
       "name": "CASTLE.DOUBLE MALT",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:19:18.155Z"
+  "lastSync": "2026-03-10T07:19:27.298Z"
 }
