@@ -775,7 +775,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 41
     },
     "P_1773126186455": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:19:49.241Z"
+  "lastSync": "2026-03-10T07:20:21.015Z"
 }
