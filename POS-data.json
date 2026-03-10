@@ -1021,6 +1021,34 @@
       "cost": 0,
       "category": "drink",
       "stock": 18
+    },
+    "P_1773142511797": {
+      "name": "SODAZE CHERRY POP",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773142536314": {
+      "name": "SODAZE ORANGE CREAM ",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773142581697": {
+      "name": "SODAZE BOBS COLA",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773142620359": {
+      "name": "SODAZE BERRY HAZE",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": 4
     }
   },
   "recipes": {
@@ -3862,5 +3890,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T11:33:57.679Z"
+  "lastSync": "2026-03-10T11:37:40.288Z"
 }
