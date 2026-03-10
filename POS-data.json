@@ -3122,6 +3122,14 @@
           "category": "drink",
           "stock": 68,
           "code": "P_1772200964831"
+        },
+        {
+          "name": "TEQUILA GOLD",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 25,
+          "code": "P_1772182664501"
         }
       ],
       "status": "active",
@@ -3471,5 +3479,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T17:03:30.246Z"
+  "lastSync": "2026-03-10T17:03:58.695Z"
 }
