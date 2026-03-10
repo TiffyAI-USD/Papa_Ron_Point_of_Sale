@@ -397,7 +397,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 1
+      "stock": 4
     },
     "P_1772188537573": {
       "name": "SODAZE LEMONADA",
@@ -474,7 +474,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": 14.01
+      "stock": 13.01
     },
     "P_1772271647612": {
       "name": "WOOD",
@@ -747,7 +747,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 14
     },
     "P_1773126157552": {
       "name": "SAVANNA 330ML ",
@@ -3779,9 +3779,38 @@
     },
     {
       "id": 93,
-      "items": [],
-      "status": "active",
-      "date": 1773132714578
+      "items": [
+        {
+          "name": "INDOOR GRAM",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 14.01,
+          "code": "P_1772192598587"
+        },
+        {
+          "name": "SAVANNA ANGRY LEMON 500ML",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773126129555"
+        },
+        {
+          "name": "SAVANNA ANGRY LEMON 500ML",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773126129555"
+        }
+      ],
+      "status": "paid",
+      "date": 1773138601488,
+      "total": 210,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     }
   ],
   "purchaseLog": [
@@ -3833,5 +3862,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T08:51:54.577Z"
+  "lastSync": "2026-03-10T11:32:20.874Z"
 }
