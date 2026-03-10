@@ -768,7 +768,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 16
     },
     "P_1773126157552": {
       "name": "SAVANNA 330ML ",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:20:21.015Z"
+  "lastSync": "2026-03-10T07:20:35.741Z"
 }
