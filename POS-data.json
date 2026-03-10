@@ -852,7 +852,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 65
     },
     "P_1773126599110": {
       "name": "STRONG BOW 440ML",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:17:39.049Z"
+  "lastSync": "2026-03-10T07:17:52.416Z"
 }
