@@ -370,6 +370,307 @@
       "cost": 7.1,
       "category": "drink",
       "stock": 25
+    },
+    "P_1773164106075": {
+      "name": "SOMETHING MEATY",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164161637": {
+      "name": "CREAMY CHICKEN",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164182588": {
+      "name": "PEPPERONI",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164206481": {
+      "name": "VEGETARIAN ",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164233545": {
+      "name": "HAWAIIAN",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164258496": {
+      "name": "MILLIONAIRE ",
+      "price": 200,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164280042": {
+      "name": "CHICKEN PERI NACHO",
+      "price": 160,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164302104": {
+      "name": "PAPA RONY ",
+      "price": 150,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164319905": {
+      "name": "AFRICAN MEATY",
+      "price": 150,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164337130": {
+      "name": "MARGHERITA ",
+      "price": 100,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164356988": {
+      "name": "FLAMING SPARE RIB",
+      "price": 150,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164388317": {
+      "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164408136": {
+      "name": "BOERIE ROLL",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164438212": {
+      "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
+      "price": 160,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164466157": {
+      "name": "CHEESY POPS -15(SERVED WITH DIP)",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164486777": {
+      "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164516255": {
+      "name": "WINGLETS -5 ",
+      "price": 60,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164531918": {
+      "name": "WINGLETS -10",
+      "price": 100,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164553768": {
+      "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164572549": {
+      "name": "PREGO ROLL",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164589379": {
+      "name": "MUNCHIE PLATTER",
+      "price": 350,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164614491": {
+      "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+      "price": 80,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164635488": {
+      "name": "RIB RACK",
+      "price": 200,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164663453": {
+      "name": "RUSSIAN ROLL AND CHIPS",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164686695": {
+      "name": "BOERIE AND CHIPS",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164727803": {
+      "name": "SS JOINT",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164747894": {
+      "name": "SD JOINT ",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164768558": {
+      "name": "CHOCOLOKO JOINT ",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164795064": {
+      "name": "WW JOINT",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164818430": {
+      "name": "VM JOINT",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164868475": {
+      "name": "HASH JOINT",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164886248": {
+      "name": "HASH 1-GRAM",
+      "price": 60,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164912626": {
+      "name": "GANJA 1-GRAM",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164964543": {
+      "name": "NIK NAKS",
+      "price": 2,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773164980203": {
+      "name": "LUNCH BAR",
+      "price": 10,
+      "cost": 0,
+      "category": "food",
+      "stock": 24
+    },
+    "P_1773165022276": {
+      "name": "RIZZLA RAW",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165040542": {
+      "name": "RIZZLA PURE HEMP",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165057205": {
+      "name": "LOOSE RIZZLA",
+      "price": 1,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165157281": {
+      "name": "CREAMSODA GUMMIE ",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165190985": {
+      "name": "BUBBLE GUM GUMMIE ",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165214687": {
+      "name": "TROPICAL GUMMIE ",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165237846": {
+      "name": "GRAPE GUMMIE ",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773165261852": {
+      "name": "WATERMELON GUMMIE ",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {},
@@ -3462,5 +3763,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T17:06:19.717Z"
+  "lastSync": "2026-03-10T17:55:08.751Z"
 }
