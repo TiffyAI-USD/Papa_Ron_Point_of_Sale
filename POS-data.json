@@ -1027,7 +1027,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 24
     },
     "P_1773127705814": {
       "name": "SAVANNA 500ML DRY",
@@ -3757,5 +3757,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:29:36.181Z"
+  "lastSync": "2026-03-10T07:29:53.494Z"
 }
