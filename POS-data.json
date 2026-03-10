@@ -19,7 +19,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 42
+      "stock": 36
     },
     "P_1771756211629": {
       "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
@@ -3804,5 +3804,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T14:16:29.132Z"
+  "lastSync": "2026-03-10T14:17:17.717Z"
 }
