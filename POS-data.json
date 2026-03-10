@@ -3612,6 +3612,14 @@
           "category": "drink",
           "stock": 24,
           "code": "P_1773127628890"
+        },
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1772451423710"
         }
       ],
       "status": "active",
@@ -3766,5 +3774,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:38:35.874Z"
+  "lastSync": "2026-03-10T07:38:44.780Z"
 }
