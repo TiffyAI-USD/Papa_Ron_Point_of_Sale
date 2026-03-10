@@ -1020,7 +1020,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 24
     },
     "P_1773127666096": {
       "name": "STELLA CAN 410ML",
@@ -3757,5 +3757,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:29:53.494Z"
+  "lastSync": "2026-03-10T07:30:06.437Z"
 }
