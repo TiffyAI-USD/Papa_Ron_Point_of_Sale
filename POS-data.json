@@ -747,7 +747,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 18
     },
     "P_1773126066612": {
       "name": "BERNINI BLUSH ALCOHOLIC 275ML",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:21:00.582Z"
+  "lastSync": "2026-03-10T07:21:09.907Z"
 }
