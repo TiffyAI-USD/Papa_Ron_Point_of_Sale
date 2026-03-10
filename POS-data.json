@@ -894,7 +894,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 14
     },
     "P_1773126779650": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:15:53.070Z"
+  "lastSync": "2026-03-10T07:16:20.107Z"
 }
