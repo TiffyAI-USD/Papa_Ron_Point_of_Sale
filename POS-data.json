@@ -226,7 +226,7 @@
     },
     "POTATOES_POCKETS_10KG": {
       "name": "POTATOES POCKETS 10KG",
-      "stock": 4,
+      "stock": 3,
       "cost": 6.666666666666667,
       "price": 0,
       "category": "ingredient"
@@ -3804,5 +3804,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T14:17:17.717Z"
+  "lastSync": "2026-03-10T14:23:20.153Z"
 }
