@@ -19,7 +19,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 48
+      "stock": 0
     },
     "P_1771756211629": {
       "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
@@ -98,34 +98,6 @@
       "category": "food",
       "stock": 0
     },
-    "P_1771757322066": {
-      "name": "BOERIE AND CHIPS",
-      "price": 50,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1771757411189": {
-      "name": "SOMETHING MEATY",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": -7
-    },
-    "P_1771757453158": {
-      "name": "CREAMY CHICKEN",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": -7
-    },
-    "P_1771757654550": {
-      "name": "PEPPERONI",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1771757675550": {
       "name": "VEGETARIAN ",
       "price": 135,
@@ -187,14 +159,14 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -7
     },
     "P_1771759370339": {
       "name": "HASH JOINT",
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 70
+      "stock": 69
     },
     "P_1771759402142": {
       "name": "HASH 1-GRAM",
@@ -236,7 +208,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 15
+      "stock": 14
     },
     "P_1772112075419": {
       "name": "J & B",
@@ -383,7 +355,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 3
     },
     "P_1772188460835": {
       "name": "SODAZE TROPICAL PUNCH",
@@ -397,7 +369,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 1
     },
     "P_1772188537573": {
       "name": "SODAZE LEMONADA",
@@ -474,7 +446,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": 13.01
+      "stock": 14.01
     },
     "P_1772271647612": {
       "name": "WOOD",
@@ -529,14 +501,14 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1772478637938": {
       "name": "PREGO & CHIPS",
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -9
+      "stock": -11
     },
     "P_1772478984765": {
       "name": "TONIC ",
@@ -558,27 +530,6 @@
       "cost": 0,
       "category": "drink",
       "stock": -2
-    },
-    "P_1772650909815": {
-      "name": "BOERIE AND CHIPS",
-      "price": 50,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1772650913150": {
-      "name": "BOERIE AND CHIPS",
-      "price": 50,
-      "cost": 0,
-      "category": "food",
-      "stock": -1
-    },
-    "P_1772651655461": {
-      "name": "PAPA RONY",
-      "price": 150,
-      "cost": 0,
-      "category": "food",
-      "stock": -1
     },
     "P_1772709165416": {
       "name": "ROBERTSON 5L",
@@ -642,7 +593,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 34
     },
     "P_1773057419109": {
       "name": "CASTLE LITE 330ML ",
@@ -747,7 +698,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 16
     },
     "P_1773126157552": {
       "name": "SAVANNA 330ML ",
@@ -978,7 +929,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 49
     },
     "P_1773127581553": {
       "name": "BRUTAL FRUIT CAN 500ML ",
@@ -999,7 +950,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 24
     },
     "P_1773127666096": {
       "name": "STELLA CAN 410ML",
@@ -1015,40 +966,47 @@
       "category": "drink",
       "stock": 23
     },
-    "P_1773131218290": {
-      "name": "COKE 500ML ",
-      "price": 20,
+    "P_1773146173981": {
+      "name": "PEPPERONI",
+      "price": 135,
       "cost": 0,
-      "category": "drink",
-      "stock": 18
+      "category": "food",
+      "stock": 0
     },
-    "P_1773142511797": {
-      "name": "SODAZE CHERRY POP",
-      "price": 60,
+    "P_1773148254881": {
+      "name": "VEGETARIAN ",
+      "price": 135,
       "cost": 0,
-      "category": "drink",
-      "stock": 4
+      "category": "food",
+      "stock": 0
     },
-    "P_1773142536314": {
-      "name": "SODAZE ORANGE CREAM ",
-      "price": 60,
-      "cost": 0,
-      "category": "drink",
-      "stock": 4
-    },
-    "P_1773142581697": {
-      "name": "SODAZE BOBS COLA",
-      "price": 60,
-      "cost": 0,
-      "category": "drink",
-      "stock": 4
-    },
-    "P_1773142620359": {
+    "P_1773148861033": {
       "name": "SODAZE BERRY HAZE",
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 0
+    },
+    "P_1773148888610": {
+      "name": "SODAZE BOBS COLA",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": -1
+    },
+    "P_1773149074299": {
+      "name": "SODAZE ORANGE CREAM ",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773149101066": {
+      "name": "SODAZE CHERRY POP",
+      "price": 60,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -3620,74 +3578,88 @@
       "id": 82,
       "items": [
         {
-          "name": "GANJA 1-GRAM",
+          "name": "SODAZE BOBS COLA",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773148888610"
+        },
+        {
+          "name": "HASH JOINT",
           "price": 30,
           "cost": 0,
           "category": "food",
-          "stock": -7,
-          "code": "P_1771759125390"
+          "stock": 70,
+          "code": "P_1771759370339"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773057334068"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773057334068"
+        },
+        {
+          "name": "X-TRA CHEESE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1772478208209"
+        },
+        {
+          "name": "GAS LIGHTER ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 15,
+          "code": "P_1771759640812"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1772478637938"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1772478637938"
         }
       ],
       "status": "paid",
-      "date": 1773130554323,
-      "total": 30,
+      "date": 1773149000547,
+      "total": 295,
       "tip": 0,
       "method": "Cash",
       "staff": "Zuko"
     },
     {
       "id": 83,
-      "items": [
-        {
-          "name": "COKE 500ML ",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 19,
-          "code": "P_1773131218290"
-        },
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773127628890"
-        },
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773127628890"
-        }
-      ],
-      "status": "paid",
-      "date": 1773131319481,
-      "total": 90,
-      "tip": 0,
-      "method": "Cash",
-      "staff": "Zuko"
+      "items": [],
+      "status": "active",
+      "date": 1772892491911
     },
     {
       "id": 84,
-      "items": [
-        {
-          "name": "EXTREME CAN 440ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 49,
-          "code": "P_1773127559594"
-        }
-      ],
-      "status": "paid",
-      "date": 1773132714293,
-      "total": 35,
-      "tip": 0,
-      "method": "Cash",
-      "staff": "Zuko"
+      "items": [],
+      "status": "active",
+      "date": 1772894548805
     },
     {
       "id": 85,
@@ -3778,67 +3750,9 @@
     },
     {
       "id": 91,
-      "items": [
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773127628890"
-        },
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773127628890"
-        }
-      ],
-      "status": "active",
-      "date": 1773130554549
-    },
-    {
-      "id": 92,
       "items": [],
       "status": "active",
-      "date": 1773131319676
-    },
-    {
-      "id": 93,
-      "items": [
-        {
-          "name": "INDOOR GRAM",
-          "price": 120,
-          "cost": 0,
-          "category": "food",
-          "stock": 14.01,
-          "code": "P_1772192598587"
-        },
-        {
-          "name": "SAVANNA ANGRY LEMON 500ML",
-          "price": 45,
-          "cost": 0,
-          "category": "drink",
-          "stock": 16,
-          "code": "P_1773126129555"
-        },
-        {
-          "name": "SAVANNA ANGRY LEMON 500ML",
-          "price": 45,
-          "cost": 0,
-          "category": "drink",
-          "stock": 16,
-          "code": "P_1773126129555"
-        }
-      ],
-      "status": "paid",
-      "date": 1773138601488,
-      "total": 210,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
+      "date": 1773149000774
     }
   ],
   "purchaseLog": [
@@ -3890,5 +3804,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T11:49:31.949Z"
+  "lastSync": "2026-03-10T13:31:52.297Z"
 }
