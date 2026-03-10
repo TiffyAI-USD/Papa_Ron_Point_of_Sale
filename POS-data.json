@@ -734,6 +734,209 @@
       "cost": 0,
       "category": "drink",
       "stock": 40
+    },
+    "P_1773125997843": {
+      "name": "BERNINI BLUSH CAN 500ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126038021": {
+      "name": "BERNINI BLUSH SPARKLING 275ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126066612": {
+      "name": "BERNINI BLUSH ALCOHOLIC 275ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126100409": {
+      "name": "SAVANNA CANS 500ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126129555": {
+      "name": "SAVANNA ANGRY LEMON 500ML",
+      "price": 45,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126157552": {
+      "name": "SAVANNA 330ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126186455": {
+      "name": "EXTREME BOTTLED 275ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126206477": {
+      "name": "BERNINI MIMOSA 500ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126229634": {
+      "name": "BLACK CROWN 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126264148": {
+      "name": "CASTLE.DOUBLE MALT",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126281557": {
+      "name": "GORDON'S PINK",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126390891": {
+      "name": "GORDON'S BLUE",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126456155": {
+      "name": "HUNTERS DRY 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126492305": {
+      "name": "STELLA 330ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126532707": {
+      "name": " BREEZER WATERMELON 440ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126555003": {
+      "name": "BREEZER BLACKBERRY 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126580546": {
+      "name": "CASTLE MILK STOUT",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126599110": {
+      "name": "STRONG BOW 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126617822": {
+      "name": "HUNTERS GOLD CAN 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126632703": {
+      "name": "WATER 500MLS",
+      "price": 10,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126654354": {
+      "name": "POWERADE",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126745734": {
+      "name": "FANTA ORANGE 500ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126763114": {
+      "name": "SPRITE 500ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126779650": {
+      "name": "LIQUI FRUIT ORANGE 330ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126796456": {
+      "name": "TONIC WATER 200ML",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126816370": {
+      "name": "SPARKLING WATER ",
+      "price": 10,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126830014": {
+      "name": "RED BULL 250ML",
+      "price": 25,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126846965": {
+      "name": "LUCKY CLUB 250ML",
+      "price": 70,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773126864479": {
+      "name": "MR ORANGE",
+      "price": 15,
+      "cost": 0,
+      "category": "drink",
+      "stock": 17
     }
   },
   "recipes": {
@@ -3456,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-09T21:15:29.330Z"
+  "lastSync": "2026-03-10T07:15:01.062Z"
 }
