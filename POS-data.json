@@ -3785,6 +3785,14 @@
           "category": "food",
           "stock": 37,
           "code": "P_1772191946938"
+        },
+        {
+          "name": "CHOCOLOKO",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 28,
+          "code": "P_1772191815029"
         }
       ],
       "status": "active",
@@ -3840,5 +3848,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T14:27:45.644Z"
+  "lastSync": "2026-03-10T14:28:05.197Z"
 }
