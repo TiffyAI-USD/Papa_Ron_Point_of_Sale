@@ -1007,6 +1007,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 0
+    },
+    "P_1773152982704": {
+      "name": "NIK NAKS",
+      "price": 2,
+      "cost": 0,
+      "category": "food",
+      "stock": 7
     }
   },
   "recipes": {
@@ -3858,5 +3865,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T14:28:19.334Z"
+  "lastSync": "2026-03-10T14:30:20.844Z"
 }
