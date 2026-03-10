@@ -607,7 +607,7 @@
       "price": 2,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": 7
     },
     "P_1773164980203": {
       "name": "LUNCH BAR",
@@ -3763,5 +3763,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T17:55:08.751Z"
+  "lastSync": "2026-03-10T17:55:24.227Z"
 }
