@@ -985,7 +985,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 59
     },
     "P_1773127534480": {
       "name": "CAPPY BREAKFAST ",
@@ -3757,5 +3757,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:31:20.689Z"
+  "lastSync": "2026-03-10T07:31:50.485Z"
 }
