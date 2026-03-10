@@ -404,7 +404,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 28
+      "stock": 27
     },
     "P_1772191903139": {
       "name": "CANDY CHEESE",
@@ -418,7 +418,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 37
+      "stock": 36
     },
     "P_1772192126615": {
       "name": "BIG BUDDHA ",
@@ -3795,8 +3795,18 @@
           "code": "P_1772191815029"
         }
       ],
+      "status": "paid",
+      "date": 1773152899240,
+      "total": 50,
+      "tip": 5,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 93,
+      "items": [],
       "status": "active",
-      "date": 1773152691181
+      "date": 1773152899335
     }
   ],
   "purchaseLog": [
@@ -3848,5 +3858,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T14:28:05.197Z"
+  "lastSync": "2026-03-10T14:28:19.334Z"
 }
