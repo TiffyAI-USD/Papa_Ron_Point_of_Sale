@@ -803,7 +803,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 4
     },
     "P_1773126281557": {
       "name": "GORDON'S PINK",
@@ -3659,5 +3659,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T07:19:09.555Z"
+  "lastSync": "2026-03-10T07:19:18.155Z"
 }
