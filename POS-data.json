@@ -821,7 +821,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 3
     }
   },
   "recipes": {
@@ -3886,9 +3886,22 @@
     },
     {
       "id": 93,
-      "items": [],
-      "status": "active",
-      "date": 1773126048504
+      "items": [
+        {
+          "name": "SODAZE CHERRY POP",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 4,
+          "code": "P_1773248356824"
+        }
+      ],
+      "status": "paid",
+      "date": 1773248402313,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 94,
@@ -4226,6 +4239,12 @@
       "items": [],
       "status": "active",
       "date": 1773248304159
+    },
+    {
+      "id": 108,
+      "items": [],
+      "status": "active",
+      "date": 1773248402413
     }
   ],
   "purchaseLog": [
@@ -4291,5 +4310,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:59:45.199Z"
+  "lastSync": "2026-03-11T16:59:56.012Z"
 }
