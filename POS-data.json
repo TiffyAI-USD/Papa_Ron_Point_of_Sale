@@ -709,7 +709,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 13
     },
     "P_1773246474696": {
       "name": "SPARLETTA SPARBERRY",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:37:41.471Z"
+  "lastSync": "2026-03-11T16:37:48.910Z"
 }
