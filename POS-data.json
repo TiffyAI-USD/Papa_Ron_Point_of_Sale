@@ -371,13 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164553768": {
-      "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
-      "price": 120,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164572549": {
       "name": "PREGO ROLL",
       "price": 50,
@@ -718,6 +711,19 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "CHICKEN SCHNITZEL ": {
+      "name": "CHICKEN SCHNITZEL ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1773235225003": {
+      "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -772,6 +778,9 @@
     },
     "P_1773235049759": {
       "BUFFALO WINGS": 10
+    },
+    "P_1773235225003": {
+      "CHICKEN SCHNITZEL ": 2
     }
   },
   "transactions": [
@@ -3863,5 +3872,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T13:17:38.145Z"
+  "lastSync": "2026-03-11T13:20:48.176Z"
 }
