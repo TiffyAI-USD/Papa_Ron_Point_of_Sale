@@ -674,7 +674,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 36
     },
     "P_1773246386405": {
       "name": "LUCKY CLUB 250ML",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:38:36.505Z"
+  "lastSync": "2026-03-11T16:38:51.912Z"
 }
