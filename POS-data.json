@@ -371,20 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164614491": {
-      "name": "BREAKFAST (SERVED FROM 8-11 AM)",
-      "price": 80,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164635488": {
-      "name": "RIB RACK",
-      "price": 200,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164663453": {
       "name": "RUSSIAN ROLL AND CHIPS",
       "price": 50,
@@ -3912,5 +3898,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T13:29:37.794Z"
+  "lastSync": "2026-03-11T13:36:08.899Z"
 }
