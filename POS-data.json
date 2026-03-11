@@ -365,13 +365,13 @@
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
-      "stock": 0,
+      "stock": -1,
       "cost": 0,
       "category": "ingredient"
     },
     "RUSSIAN ": {
       "name": "RUSSIAN ",
-      "stock": 0,
+      "stock": -1,
       "cost": 0,
       "category": "ingredient"
     },
@@ -380,7 +380,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773244841294": {
       "name": "BLACK LABEL 300MLS",
@@ -562,7 +562,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 25
+      "stock": 23
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -625,7 +625,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773246256661": {
       "name": "FANTA ORANGE 500ML ",
@@ -639,7 +639,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773246295916": {
       "name": "SPRITE 500ML ",
@@ -800,7 +800,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -3727,8 +3727,12 @@
           "code": "P_1773245979898"
         }
       ],
-      "status": "active",
-      "date": 1772957958374
+      "status": "paid",
+      "date": 1773248005060,
+      "total": 205,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 90,
@@ -4014,6 +4018,12 @@
       ],
       "status": "active",
       "date": 1773247641110
+    },
+    {
+      "id": 101,
+      "items": [],
+      "status": "active",
+      "date": 1773248005300
     }
   ],
   "purchaseLog": [
@@ -4079,5 +4089,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:53:16.782Z"
+  "lastSync": "2026-03-11T16:53:25.300Z"
 }
