@@ -699,6 +699,19 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "CHEESY STRIPS": {
+      "name": "CHEESY STRIPS",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1773234447154": {
+      "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -744,6 +757,9 @@
     "P_1773233966390": {
       "BOERIE ROLL": 1,
       "BOERIE SAUSAGE ": 1
+    },
+    "P_1773234447154": {
+      "CHEESY STRIPS": 5
     }
   },
   "transactions": [
@@ -3835,5 +3851,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T13:06:20.104Z"
+  "lastSync": "2026-03-11T13:07:37.953Z"
 }
