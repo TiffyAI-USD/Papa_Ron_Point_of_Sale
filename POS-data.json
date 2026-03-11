@@ -765,14 +765,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 12
     },
     "P_1773246863900": {
       "name": "BERNINI CLASSIC CAN 500ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 22
     },
     "P_1773246883692": {
       "name": "STELLA CAN 410ML",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:36:08.683Z"
+  "lastSync": "2026-03-11T16:36:26.023Z"
 }
