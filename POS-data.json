@@ -649,6 +649,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773232788775": {
+      "name": "CHICKEN PERI NACHO",
+      "price": 160,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -671,6 +678,9 @@
       "PIZZA BASE ": 1
     },
     "P_1773232612440": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773232788775": {
       "PIZZA BASE ": 1
     }
   },
@@ -3763,5 +3773,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T12:37:09.556Z"
+  "lastSync": "2026-03-11T12:39:59.285Z"
 }
