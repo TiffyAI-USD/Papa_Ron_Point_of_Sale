@@ -681,7 +681,7 @@
       "price": 70,
       "cost": 0,
       "category": "drink",
-      "stock": 27
+      "stock": 24
     },
     "P_1773246401993": {
       "name": "MR ORANGE",
@@ -4081,9 +4081,44 @@
     },
     {
       "id": 103,
+      "items": [
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773246386405"
+        },
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773246386405"
+        },
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773246386405"
+        }
+      ],
+      "status": "paid",
+      "date": 1773248180107,
+      "total": 210,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 104,
       "items": [],
       "status": "active",
-      "date": 1773248151440
+      "date": 1773248180303
     }
   ],
   "purchaseLog": [
@@ -4149,5 +4184,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:55:51.440Z"
+  "lastSync": "2026-03-11T16:56:10.339Z"
 }
