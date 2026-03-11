@@ -5,28 +5,28 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": 0
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773164795064": {
       "name": "WW JOINT",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -61,7 +61,7 @@
       "price": 2,
       "cost": 0,
       "category": "food",
-      "stock": 6
+      "stock": 7
     },
     "P_1773164980203": {
       "name": "LUNCH BAR",
@@ -69,13 +69,6 @@
       "cost": 0,
       "category": "food",
       "stock": 24
-    },
-    "P_1773165022276": {
-      "name": "RIZZLA RAW",
-      "price": 30,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -128,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -2,
+      "stock": 0,
       "cost": 0,
       "category": "ingredient"
     },
@@ -151,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -193,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -365,13 +358,13 @@
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
-      "stock": -1,
+      "stock": 0,
       "cost": 0,
       "category": "ingredient"
     },
     "RUSSIAN ": {
       "name": "RUSSIAN ",
-      "stock": -1,
+      "stock": 0,
       "cost": 0,
       "category": "ingredient"
     },
@@ -380,49 +373,49 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773244841294": {
       "name": "BLACK LABEL 300MLS",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 0
     },
     "P_1773244875193": {
       "name": "BLACK LABEL 500ML ",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 32
+      "stock": 0
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 0
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 28
+      "stock": 0
     },
     "P_1773244946839": {
       "name": "WINDHOEK 500ML ",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 0
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 0
     },
     "P_1773244984891": {
       "name": "SMIRNOFF ICE STORM",
@@ -436,399 +429,224 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 0
     },
     "P_1773245099182": {
       "name": "SMIRNOFF ICE BERRY ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 0
     },
     "P_1773245128672": {
       "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 2
+      "stock": 0
     },
     "P_1773245151941": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 0
     },
     "P_1773245680224": {
       "name": "FLYING FISH 500ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 28
+      "stock": 0
     },
     "P_1773245728762": {
       "name": "CORONA 355ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 0
     },
     "P_1773245784383": {
       "name": "BERNINI BLUSH CAN 500ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 0
     },
     "P_1773245808729": {
       "name": "BERNINI BLUSH SPARKLING 275ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 0
     },
     "P_1773245823301": {
       "name": "BERNINI BLUSH ALCOHOLIC 275ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 0
     },
     "P_1773245837993": {
       "name": "SAVANNA CANS 500ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 0
     },
     "P_1773245853117": {
       "name": "SAVANNA ANGRY LEMON 500ML",
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 10
+      "stock": 0
     },
     "P_1773245877991": {
       "name": "SAVANNA 330ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 0
     },
     "P_1773245898356": {
       "name": "EXTREME BOTTLED 275ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 45
+      "stock": 0
     },
     "P_1773245915568": {
       "name": "BERNINI MIMOSA 500ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 0
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 31
+      "stock": 0
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 0
     },
     "P_1773245952737": {
       "name": "GORDON'S PINK",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 8
+      "stock": 0
     },
     "P_1773245961439": {
       "name": "GORDON'S BLUE",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 0
     },
     "P_1773245979898": {
       "name": "HUNTERS DRY 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 0
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 0
     },
     "P_1773246015390": {
       "name": "BREEZER WATERMELON 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 0
     },
     "P_1773246030939": {
       "name": "BREEZER BLACKBERRY 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 0
     },
     "P_1773246049692": {
       "name": "CASTLE MILK STOUT",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 64
+      "stock": 0
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 0
     },
     "P_1773246082545": {
       "name": "HUNTERS GOLD CAN 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 0
     },
-    "P_1773246164751": {
-      "name": "WATER 500ML",
-      "price": 10,
+    "P_1773249187048": {
+      "name": "SODAZE ORANGE CREAM ",
+      "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 114
+      "stock": 0
     },
-    "P_1773246185884": {
-      "name": "POWERADE",
-      "price": 20,
+    "P_1773249209951": {
+      "name": "SODAZE BOBS COLA",
+      "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 3
+      "stock": 0
     },
-    "P_1773246213092": {
-      "name": "COKE 500ML ",
-      "price": 20,
+    "P_1773249237337": {
+      "name": "SODAZE BERRY HAZE",
+      "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 0
     },
-    "P_1773246256661": {
-      "name": "FANTA ORANGE 500ML ",
-      "price": 20,
+    "P_1773249279662": {
+      "name": "SODAZE BLUEBERRY ",
+      "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 0
     },
-    "P_1773246272573": {
-      "name": "COKE",
-      "price": 15,
+    "P_1773249301400": {
+      "name": "SODAZE TROPICAL PUNCH",
+      "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 0
     },
-    "P_1773246295916": {
-      "name": "SPRITE 500ML ",
-      "price": 20,
+    "P_1773249334985": {
+      "name": "SODAZE LIMONADA ",
+      "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 0
     },
-    "P_1773246316223": {
-      "name": "LIQUI FRUIT ORANGE 330ML ",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 17
-    },
-    "P_1773246334350": {
-      "name": "TONIC WATER 200ML",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 17
-    },
-    "P_1773246351277": {
-      "name": "SPARKLING WATER ",
-      "price": 10,
-      "cost": 0,
-      "category": "drink",
-      "stock": 17
-    },
-    "P_1773246367176": {
-      "name": "RED BULL 250ML",
-      "price": 25,
-      "cost": 0,
-      "category": "drink",
-      "stock": 36
-    },
-    "P_1773246386405": {
-      "name": "LUCKY CLUB 250ML",
-      "price": 70,
-      "cost": 0,
-      "category": "drink",
-      "stock": 24
-    },
-    "P_1773246401993": {
-      "name": "MR ORANGE",
-      "price": 15,
-      "cost": 0,
-      "category": "drink",
-      "stock": 17
-    },
-    "P_1773246431688": {
-      "name": "SPARLETTA CREAMSODA",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 6
-    },
-    "P_1773246447437": {
-      "name": "APPLETIZER 275ML ",
-      "price": 20,
+    "P_1773249364603": {
+      "name": "SODAZE LEMON MERINGUE ",
+      "price": 60,
       "cost": 0,
       "category": "drink",
       "stock": 7
-    },
-    "P_1773246460745": {
-      "name": "GRAPETISER ",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 13
-    },
-    "P_1773246474696": {
-      "name": "SPARLETTA SPARBERRY",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 21
-    },
-    "P_1773246538866": {
-      "name": "STONEY CAN 500ML ",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 24
-    },
-    "P_1773246741568": {
-      "name": "CAPPY MANGO ORANGE",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 18
-    },
-    "P_1773246758827": {
-      "name": "CASTLE LITE CAN 500ML",
-      "price": 30,
-      "cost": 0,
-      "category": "drink",
-      "stock": 59
-    },
-    "P_1773246779278": {
-      "name": "CAPPY BREAKFAST ",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 24
-    },
-    "P_1773246798089": {
-      "name": "EXTREME CAN 440ML ",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 48
-    },
-    "P_1773246827533": {
-      "name": "BRUTAL FRUIT CAN 500ML ",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 21
-    },
-    "P_1773246843399": {
-      "name": "DRY LEMON ",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 12
-    },
-    "P_1773246863900": {
-      "name": "BERNINI CLASSIC CAN 500ML ",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 22
-    },
-    "P_1773246883692": {
-      "name": "STELLA CAN 410ML",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 24
-    },
-    "P_1773246918435": {
-      "name": "SAVANNA DRY 500ML ",
-      "price": 45,
-      "cost": 0,
-      "category": "drink",
-      "stock": 22
-    },
-    "P_1773247606356": {
-      "name": "GAS LIGHTER ",
-      "price": 10,
-      "cost": 0,
-      "category": "food",
-      "stock": 8
-    },
-    "P_1773247919935": {
-      "name": "BORIE & CHIPS ",
-      "price": 50,
-      "cost": 0,
-      "category": "food",
-      "stock": -1
-    },
-    "P_1773248109873": {
-      "name": "PREGO & CHIPS",
-      "price": 60,
-      "cost": 0,
-      "category": "food",
-      "stock": -2
-    },
-    "P_1773248216821": {
-      "name": "EXTRA AVOCADO ",
-      "price": 15,
-      "cost": 0,
-      "category": "food",
-      "stock": -1
-    },
-    "P_1773248356824": {
-      "name": "SODAZE CHERRY POP",
-      "price": 60,
-      "cost": 0,
-      "category": "drink",
-      "stock": 3
-    },
-    "P_1773248848734": {
-      "name": "RAW RIZZLA ",
-      "price": 35,
-      "cost": 0,
-      "category": "food",
-      "stock": -1
     }
   },
   "recipes": {
@@ -3645,36 +3463,16 @@
       "id": 87,
       "items": [
         {
-          "name": "SAVANNA ANGRY LEMON 500ML",
-          "price": 45,
-          "cost": 0,
+          "name": "GRAPETISER 275ML",
+          "price": 30,
+          "cost": 15.85,
           "category": "drink",
-          "stock": 12,
-          "code": "P_1773245853117"
-        },
-        {
-          "name": "SAVANNA ANGRY LEMON 500ML",
-          "price": 45,
-          "cost": 0,
-          "category": "drink",
-          "stock": 12,
-          "code": "P_1773245853117"
-        },
-        {
-          "name": "GAS LIGHTER ",
-          "price": 10,
-          "cost": 0,
-          "category": "food",
-          "stock": 9,
-          "code": "P_1773247606356"
+          "stock": 0,
+          "code": "P_1773150301089"
         }
       ],
-      "status": "paid",
-      "date": 1773247640818,
-      "total": 100,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
+      "status": "active",
+      "date": 1772895233994
     },
     {
       "id": 88,
@@ -3707,60 +3505,24 @@
       "id": 89,
       "items": [
         {
-          "name": "BORIE & CHIPS ",
-          "price": 50,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773247919935"
-        },
-        {
-          "name": "RUSSIAN ROLL AND CHIPS",
-          "price": 50,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773236344587"
-        },
-        {
-          "name": "HUNTERS DRY 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 25,
-          "code": "P_1773245979898"
-        },
-        {
-          "name": "COKE 500ML ",
+          "name": "FANTA",
           "price": 20,
           "cost": 0,
           "category": "drink",
-          "stock": 17,
-          "code": "P_1773246213092"
+          "stock": 24,
+          "code": "P_1771338445412"
         },
         {
-          "name": "COKE",
-          "price": 15,
+          "name": "SPRITE",
+          "price": 20,
           "cost": 0,
           "category": "drink",
-          "stock": 17,
-          "code": "P_1773246272573"
-        },
-        {
-          "name": "HUNTERS DRY 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 25,
-          "code": "P_1773245979898"
+          "stock": 18,
+          "code": "P_1771338477277"
         }
       ],
-      "status": "paid",
-      "date": 1773248005060,
-      "total": 205,
-      "tip": 0,
-      "method": "Cash",
-      "staff": "Zuko"
+      "status": "active",
+      "date": 1772957958374
     },
     {
       "id": 90,
@@ -3825,90 +3587,28 @@
       "id": 91,
       "items": [
         {
-          "name": "PREGO & CHIPS",
-          "price": 60,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773248109873"
-        },
-        {
-          "name": "PREGO & CHIPS",
-          "price": 60,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773248109873"
-        },
-        {
-          "name": "POWERADE",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 5,
-          "code": "P_1773246185884"
-        },
-        {
-          "name": "POWERADE",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 5,
-          "code": "P_1773246185884"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248151326,
-      "total": 160,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
-    },
-    {
-      "id": 92,
-      "items": [
-        {
-          "name": "EXTRA AVOCADO ",
-          "price": 15,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773248216821"
-        },
-        {
-          "name": "PAPA RONY",
-          "price": 150,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773232963360"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248272476,
-      "total": 165,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
-    },
-    {
-      "id": 93,
-      "items": [
-        {
-          "name": "SODAZE CHERRY POP",
-          "price": 60,
+          "name": "BLACK LABLE 300MLS",
+          "price": 30,
           "cost": 0,
           "category": "drink",
           "stock": 4,
-          "code": "P_1773248356824"
+          "code": "P_1771339483003"
         }
       ],
-      "status": "paid",
-      "date": 1773248402313,
-      "total": 60,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
+      "status": "active",
+      "date": 1772970769415
+    },
+    {
+      "id": 92,
+      "items": [],
+      "status": "active",
+      "date": 1773125933134
+    },
+    {
+      "id": 93,
+      "items": [],
+      "status": "active",
+      "date": 1773126048504
     },
     {
       "id": 94,
@@ -4053,284 +3753,6 @@
       "items": [],
       "status": "active",
       "date": 1773126631627
-    },
-    {
-      "id": 100,
-      "items": [
-        {
-          "name": "HUNTERS DRY 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 25,
-          "code": "P_1773245979898"
-        },
-        {
-          "name": "HUNTERS DRY 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 25,
-          "code": "P_1773245979898"
-        },
-        {
-          "name": "COKE 500ML ",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 17,
-          "code": "P_1773246213092"
-        },
-        {
-          "name": "COKE",
-          "price": 15,
-          "cost": 0,
-          "category": "drink",
-          "stock": 17,
-          "code": "P_1773246272573"
-        },
-        {
-          "name": "RUSSIAN ROLL AND CHIPS",
-          "price": 50,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773236344587"
-        },
-        {
-          "name": "BOERIE ROLL",
-          "price": 40,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773233966390"
-        }
-      ],
-      "status": "active",
-      "date": 1773247641110
-    },
-    {
-      "id": 101,
-      "items": [
-        {
-          "name": "NIK NAKS",
-          "price": 2,
-          "cost": 0,
-          "category": "food",
-          "stock": 7,
-          "code": "P_1773164964543"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248047645,
-      "total": 2,
-      "tip": 0,
-      "method": "Cash",
-      "staff": "Zuko"
-    },
-    {
-      "id": 102,
-      "items": [],
-      "status": "active",
-      "date": 1773248047845
-    },
-    {
-      "id": 103,
-      "items": [
-        {
-          "name": "LUCKY CLUB 250ML",
-          "price": 70,
-          "cost": 0,
-          "category": "drink",
-          "stock": 27,
-          "code": "P_1773246386405"
-        },
-        {
-          "name": "LUCKY CLUB 250ML",
-          "price": 70,
-          "cost": 0,
-          "category": "drink",
-          "stock": 27,
-          "code": "P_1773246386405"
-        },
-        {
-          "name": "LUCKY CLUB 250ML",
-          "price": 70,
-          "cost": 0,
-          "category": "drink",
-          "stock": 27,
-          "code": "P_1773246386405"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248180107,
-      "total": 210,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
-    },
-    {
-      "id": 104,
-      "items": [],
-      "status": "active",
-      "date": 1773248180303
-    },
-    {
-      "id": 105,
-      "items": [
-        {
-          "name": "EXTRA AVOCADO ",
-          "price": 15,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773248216821"
-        },
-        {
-          "name": "PAPA RONY",
-          "price": 150,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773232963360"
-        }
-      ],
-      "status": "active",
-      "date": 1773248223430
-    },
-    {
-      "id": 106,
-      "items": [
-        {
-          "name": "SS JOINT",
-          "price": 25,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773164727803"
-        },
-        {
-          "name": "SD JOINT ",
-          "price": 25,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773164747894"
-        },
-        {
-          "name": "CHOCOLOKO JOINT ",
-          "price": 25,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773164768558"
-        },
-        {
-          "name": "WW JOINT",
-          "price": 25,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773164795064"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248303975,
-      "total": 100,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
-    },
-    {
-      "id": 107,
-      "items": [],
-      "status": "active",
-      "date": 1773248304159
-    },
-    {
-      "id": 108,
-      "items": [
-        {
-          "name": "BLACK LABEL 300MLS",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773244841294"
-        },
-        {
-          "name": "BLACK LABEL 300MLS",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 24,
-          "code": "P_1773244841294"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248558307,
-      "total": 60,
-      "tip": 0,
-      "method": "Cash",
-      "staff": "Zuko"
-    },
-    {
-      "id": 109,
-      "items": [
-        {
-          "name": "CREAMY CHICKEN",
-          "price": 135,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773232120019"
-        },
-        {
-          "name": "SS JOINT",
-          "price": 25,
-          "cost": 0,
-          "category": "food",
-          "stock": -1,
-          "code": "P_1773164727803"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248789833,
-      "total": 160,
-      "tip": 0,
-      "method": "Cash",
-      "staff": "Zuko"
-    },
-    {
-      "id": 110,
-      "items": [],
-      "status": "active",
-      "date": 1773248789968
-    },
-    {
-      "id": 111,
-      "items": [
-        {
-          "name": "RAW RIZZLA ",
-          "price": 35,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773248848734"
-        }
-      ],
-      "status": "paid",
-      "date": 1773248859479,
-      "total": 35,
-      "tip": 0,
-      "method": "Card",
-      "staff": "Zuko"
-    },
-    {
-      "id": 112,
-      "items": [],
-      "status": "active",
-      "date": 1773248859665
     }
   ],
   "purchaseLog": [
@@ -4396,5 +3818,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:07:34.538Z"
+  "lastSync": "2026-03-11T17:16:43.340Z"
 }
