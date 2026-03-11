@@ -436,14 +436,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 26
     },
     "P_1773245099182": {
       "name": "SMIRNOFF ICE BERRY ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 23
     },
     "P_1773245128672": {
       "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:42:32.091Z"
+  "lastSync": "2026-03-11T16:42:49.738Z"
 }
