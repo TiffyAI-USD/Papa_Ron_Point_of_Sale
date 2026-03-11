@@ -471,14 +471,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 40
     },
     "P_1773245784383": {
       "name": "BERNINI BLUSH CAN 500ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 22
     },
     "P_1773245808729": {
       "name": "BERNINI BLUSH SPARKLING 275ML",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:42:02.953Z"
+  "lastSync": "2026-03-11T16:42:16.078Z"
 }
