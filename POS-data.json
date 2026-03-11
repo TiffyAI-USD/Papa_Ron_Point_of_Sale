@@ -520,28 +520,28 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 45
     },
     "P_1773245915568": {
       "name": "BERNINI MIMOSA 500ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 20
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 31
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 4
     },
     "P_1773245952737": {
       "name": "GORDON'S PINK",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:41:13.790Z"
+  "lastSync": "2026-03-11T16:41:23.564Z"
 }
