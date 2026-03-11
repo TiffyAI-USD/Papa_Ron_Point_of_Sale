@@ -506,7 +506,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 10
     },
     "P_1773245877991": {
       "name": "SAVANNA 330ML ",
@@ -787,6 +787,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 22
+    },
+    "P_1773247606356": {
+      "name": "GAS LIGHTER ",
+      "price": 10,
+      "cost": 0,
+      "category": "food",
+      "stock": 8
     }
   },
   "recipes": {
@@ -3617,10 +3624,22 @@
           "category": "drink",
           "stock": 12,
           "code": "P_1773245853117"
+        },
+        {
+          "name": "GAS LIGHTER ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 9,
+          "code": "P_1773247606356"
         }
       ],
-      "status": "active",
-      "date": 1772895233994
+      "status": "paid",
+      "date": 1773247640818,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 88,
@@ -3901,6 +3920,12 @@
       "items": [],
       "status": "active",
       "date": 1773126631627
+    },
+    {
+      "id": 100,
+      "items": [],
+      "status": "active",
+      "date": 1773247641110
     }
   ],
   "purchaseLog": [
@@ -3966,5 +3991,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:45:55.740Z"
+  "lastSync": "2026-03-11T16:47:08.695Z"
 }
