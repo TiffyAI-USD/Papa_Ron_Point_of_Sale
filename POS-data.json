@@ -371,13 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164106075": {
-      "name": "SOMETHING MEATY",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164161637": {
       "name": "CREAMY CHICKEN",
       "price": 135,
@@ -3763,5 +3756,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-10T17:55:24.227Z"
+  "lastSync": "2026-03-11T11:21:51.626Z"
 }
