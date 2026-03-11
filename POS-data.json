@@ -371,76 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164161637": {
-      "name": "CREAMY CHICKEN",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164182588": {
-      "name": "PEPPERONI",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164206481": {
-      "name": "VEGETARIAN ",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164233545": {
-      "name": "HAWAIIAN",
-      "price": 135,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164258496": {
-      "name": "MILLIONAIRE ",
-      "price": 200,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164280042": {
-      "name": "CHICKEN PERI NACHO",
-      "price": 160,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164302104": {
-      "name": "PAPA RONY ",
-      "price": 150,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164319905": {
-      "name": "AFRICAN MEATY",
-      "price": 150,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164337130": {
-      "name": "MARGHERITA ",
-      "price": 100,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
-    "P_1773164356988": {
-      "name": "FLAMING SPARE RIB",
-      "price": 150,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164388317": {
       "name": "CHEESE BURGER (WITH SIDE CHIPS)",
       "price": 120,
@@ -664,9 +594,26 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "PIZZA BASE ": {
+      "name": "PIZZA BASE ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1773230368674": {
+      "name": "FLAMING SPARE RIB",
+      "price": 150,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
-  "recipes": {},
+  "recipes": {
+    "P_1773230368674": {
+      "PIZZA BASE ": 1
+    }
+  },
   "transactions": [
     {
       "id": 1,
@@ -3756,5 +3703,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T11:21:51.626Z"
+  "lastSync": "2026-03-11T12:01:07.222Z"
 }
