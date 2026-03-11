@@ -654,6 +654,20 @@
       "cost": 0,
       "category": "drink",
       "stock": 3
+    },
+    "P_1773251893658": {
+      "name": "GORDON'S SHORT",
+      "price": 25,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773251914300": {
+      "name": "SPARKLING WATER ",
+      "price": 15,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -3468,7 +3482,24 @@
     },
     {
       "id": 87,
-      "items": [],
+      "items": [
+        {
+          "name": "GORDON'S SHORT",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773251893658"
+        },
+        {
+          "name": "GORDON'S SHORT",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773251893658"
+        }
+      ],
       "status": "active",
       "date": 1772895233994
     },
@@ -3816,5 +3847,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:19:27.368Z"
+  "lastSync": "2026-03-11T17:58:42.638Z"
 }
