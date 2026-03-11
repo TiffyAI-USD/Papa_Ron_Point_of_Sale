@@ -1,376 +1,5 @@
 {
   "inventory": {
-    "P_1771339932815": {
-      "name": "BLACK CROWN",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 33
-    },
-    "P_1772182443370": {
-      "name": "HENNESSY ",
-      "price": 30,
-      "cost": 0,
-      "category": "drink",
-      "stock": 50
-    },
-    "P_1772182664501": {
-      "name": "TEQUILA GOLD",
-      "price": 30,
-      "cost": 0,
-      "category": "drink",
-      "stock": 25
-    },
-    "P_1772182685136": {
-      "name": "TEQUILA SILVER",
-      "price": 30,
-      "cost": 0,
-      "category": "drink",
-      "stock": 26
-    },
-    "P_1772185176729": {
-      "name": "JAGERMEISTER",
-      "price": 30,
-      "cost": 0,
-      "category": "drink",
-      "stock": 9
-    },
-    "P_1772185638955": {
-      "name": "SCHWEPPES 1L",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 4
-    },
-    "P_1772200964831": {
-      "name": "CASTLE LITE CAN 500ML",
-      "price": 30,
-      "cost": 0,
-      "category": "drink",
-      "stock": 68
-    },
-    "P_1772479539637": {
-      "name": "GORDON'S ",
-      "price": 25,
-      "cost": 0,
-      "category": "drink",
-      "stock": -3
-    },
-    "P_1773139959465": {
-      "name": "CASTLE LAGER 500ML",
-      "price": 30,
-      "cost": 11.9,
-      "category": "drink",
-      "stock": 7
-    },
-    "P_1773144259954": {
-      "name": "CASTLE DOUBLE MALT",
-      "price": 30,
-      "cost": 13.81,
-      "category": "drink",
-      "stock": 3
-    },
-    "P_1773144628700": {
-      "name": "CASTLE MILK STOUT",
-      "price": 35,
-      "cost": 11.9,
-      "category": "drink",
-      "stock": 6
-    },
-    "P_1773144846841": {
-      "name": "WINDHOEK DRAUGHT",
-      "price": 30,
-      "cost": 16.91,
-      "category": "drink",
-      "stock": 96
-    },
-    "P_1773145425644": {
-      "name": "BLACK LABEL 500ML",
-      "price": 30,
-      "cost": 12.79,
-      "category": "drink",
-      "stock": 18
-    },
-    "P_1773145614589": {
-      "name": "HEINEKEN",
-      "price": 30,
-      "cost": 14.96,
-      "category": "drink",
-      "stock": 15
-    },
-    "P_1773145804561": {
-      "name": "BELLGRAVIA GIN AND DRY LEMON",
-      "price": 35,
-      "cost": 15.98,
-      "category": "drink",
-      "stock": 20
-    },
-    "P_1773145877947": {
-      "name": "BELLGRAVIA GIN AND TONIC",
-      "price": 35,
-      "cost": 15.98,
-      "category": "drink",
-      "stock": 6
-    },
-    "P_1773146067088": {
-      "name": "CARONA",
-      "price": 30,
-      "cost": 16.02,
-      "category": "drink",
-      "stock": 8
-    },
-    "P_1773147503327": {
-      "name": "SMIRNOFF ICE BERRY TWIST",
-      "price": 35,
-      "cost": 13,
-      "category": "drink",
-      "stock": 22
-    },
-    "P_1773147927738": {
-      "name": "HUNTERS DRY 440ML",
-      "price": 35,
-      "cost": 16.48,
-      "category": "drink",
-      "stock": 18
-    },
-    "P_1773148398541": {
-      "name": "HUNTERS GOLD 440ML",
-      "price": 35,
-      "cost": 15.42,
-      "category": "drink",
-      "stock": 8
-    },
-    "P_1773148706987": {
-      "name": "SAVANNA NEAT",
-      "price": 35,
-      "cost": 19.25,
-      "category": "drink",
-      "stock": 4
-    },
-    "P_1773149638554": {
-      "name": "SAVANNA ANGRY LEMON",
-      "price": 45,
-      "cost": 19.5,
-      "category": "drink",
-      "stock": 24
-    },
-    "P_1773149785260": {
-      "name": "SAVANNA DRY",
-      "price": 35,
-      "cost": 16.5,
-      "category": "drink",
-      "stock": 46
-    },
-    "P_1773149869795": {
-      "name": "BRUTAL FRUIT STRAWBERRY ",
-      "price": 35,
-      "cost": 14.6,
-      "category": "drink",
-      "stock": 24
-    },
-    "P_1773149925884": {
-      "name": "BURNING BLUSH",
-      "price": 35,
-      "cost": 12.67,
-      "category": "drink",
-      "stock": 70
-    },
-    "P_1773149976429": {
-      "name": "BERNINI CLASSIC",
-      "price": 35,
-      "cost": 15.67,
-      "category": "drink",
-      "stock": 7
-    },
-    "P_1773150214676": {
-      "name": "APPLETIZERS ",
-      "price": 30,
-      "cost": 15.49,
-      "category": "drink",
-      "stock": 4
-    },
-    "P_1773150301089": {
-      "name": "GRAPETISER 275ML",
-      "price": 30,
-      "cost": 15.85,
-      "category": "drink",
-      "stock": 0
-    },
-    "P_1773150462720": {
-      "name": "BRUTAL FRUIT RUBY APPLE",
-      "price": 35,
-      "cost": 14.6,
-      "category": "drink",
-      "stock": 18
-    },
-    "P_1773150598235": {
-      "name": "RED BULL",
-      "price": 30,
-      "cost": 15.35,
-      "category": "drink",
-      "stock": 13
-    },
-    "P_1773150663163": {
-      "name": "SCHWEPPES TONIC WATER",
-      "price": 20,
-      "cost": 8.34,
-      "category": "drink",
-      "stock": 6
-    },
-    "P_1773150716589": {
-      "name": "SCHWEPPES SODA WATER",
-      "price": 20,
-      "cost": 8.34,
-      "category": "drink",
-      "stock": 7
-    },
-    "P_1773150754259": {
-      "name": "SCHWEPPES LEMONADE 200ML",
-      "price": 20,
-      "cost": 8.34,
-      "category": "drink",
-      "stock": 6
-    },
-    "P_1773150882146": {
-      "name": "SCHWEPPES GIN & TONIC",
-      "price": 20,
-      "cost": 8.34,
-      "category": "drink",
-      "stock": 3
-    },
-    "P_1773150930960": {
-      "name": "SCHWEPPES GINGERALE 200ML",
-      "price": 20,
-      "cost": 8.34,
-      "category": "drink",
-      "stock": 10
-    },
-    "P_1773151783920": {
-      "name": "CASTLE LITE 330ML",
-      "price": 30,
-      "cost": 12.46,
-      "category": "drink",
-      "stock": 9
-    },
-    "P_1773151833033": {
-      "name": "CASTLE LITE 500ML",
-      "price": 30,
-      "cost": 12.46,
-      "category": "drink",
-      "stock": 8
-    },
-    "P_1773152130426": {
-      "name": "TSITSIKAMA SPRING STILL 500ML",
-      "price": 15,
-      "cost": 4.45,
-      "category": "drink",
-      "stock": 48
-    },
-    "P_1773152229222": {
-      "name": "TSITSIKAMA SPARCLING 500ML",
-      "price": 15,
-      "cost": 4.45,
-      "category": "drink",
-      "stock": 20
-    },
-    "P_1773152909317": {
-      "name": "FANTA ORANGE 300ML",
-      "price": 20,
-      "cost": 10.4,
-      "category": "drink",
-      "stock": 3
-    },
-    "P_1773154991980": {
-      "name": "SOUTHERN COMFORT",
-      "price": 25,
-      "cost": 6.16,
-      "category": "drink",
-      "stock": 14
-    },
-    "P_1773155056799": {
-      "name": "SMIRNOFF 1818 VODCA",
-      "price": 25,
-      "cost": 10.6,
-      "category": "drink",
-      "stock": 14
-    },
-    "P_1773155151874": {
-      "name": "GORDENS DRY GIN",
-      "price": 25,
-      "cost": 6.06,
-      "category": "drink",
-      "stock": 21
-    },
-    "P_1773155215043": {
-      "name": "ABSOLUTE VODCA",
-      "price": 25,
-      "cost": 10.6,
-      "category": "drink",
-      "stock": 14
-    },
-    "P_1773155309888": {
-      "name": "JACK DANIELS",
-      "price": 35,
-      "cost": 10.67,
-      "category": "drink",
-      "stock": 21
-    },
-    "P_1773156851227": {
-      "name": "J & B WHISKY ",
-      "price": 25,
-      "cost": 7.1,
-      "category": "drink",
-      "stock": 14
-    },
-    "P_1773157354874": {
-      "name": "CAPTAIN MORGAN SPICED GOLD",
-      "price": 25,
-      "cost": 6.25,
-      "category": "drink",
-      "stock": 21
-    },
-    "P_1773157429682": {
-      "name": "CAPTAIN MORGAN DARK RUM",
-      "price": 25,
-      "cost": 7.3,
-      "category": "drink",
-      "stock": 28
-    },
-    "P_1773157574033": {
-      "name": "AMARULA",
-      "price": 25,
-      "cost": 5.86,
-      "category": "drink",
-      "stock": 7.5
-    },
-    "P_1773157682336": {
-      "name": "RED HEART RUM",
-      "price": 25,
-      "cost": 7.82,
-      "category": "drink",
-      "stock": 21
-    },
-    "P_1773157871849": {
-      "name": "OUDE MEESTER PERPERMINT",
-      "price": 30,
-      "cost": 7.72,
-      "category": "drink",
-      "stock": 12
-    },
-    "P_1773158228951": {
-      "name": "4TH STREET WHITE SWEET 5L",
-      "price": 40,
-      "cost": 7,
-      "category": "drink",
-      "stock": 33
-    },
-    "P_1773158634215": {
-      "name": "DROSTY HOF SWEET DRY RED 5L",
-      "price": 40,
-      "cost": 7.1,
-      "category": "drink",
-      "stock": 25
-    },
     "P_1773164727803": {
       "name": "SS JOINT",
       "price": 25,
@@ -753,11 +382,228 @@
       "category": "food",
       "stock": 0
     },
-    "P_1773236515883": {
-      "name": "BOERIE AND CHIPS",
-      "price": 50,
+    "P_1773244841294": {
+      "name": "BLACK LABEL 300MLS",
+      "price": 30,
       "cost": 0,
-      "category": "food",
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773244875193": {
+      "name": "BLACK LABEL 500ML ",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773244911060": {
+      "name": "CASTLE LITE 330ML ",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773244925945": {
+      "name": "CASTLE LAGER 330ML",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773244946839": {
+      "name": "WINDHOEK 500ML ",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773244970029": {
+      "name": "HUNTERS DRY BOTTLE ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773244984891": {
+      "name": "SMIRNOFF ICE STORM",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245016871": {
+      "name": "SMIRNOF ICE PINE TWIST",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245099182": {
+      "name": "SMIRNOFF ICE BERRY ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245128672": {
+      "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245151941": {
+      "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245680224": {
+      "name": "FLYING FISH 500ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245728762": {
+      "name": "CORONA 355ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245784383": {
+      "name": "BERNINI BLUSH CAN 500ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245808729": {
+      "name": "BERNINI BLUSH SPARKLING 275ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245823301": {
+      "name": "BERNINI BLUSH ALCOHOLIC 275ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245837993": {
+      "name": "SAVANNA CANS 500ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245853117": {
+      "name": "SAVANNA ANGRY LEMON 500ML",
+      "price": 45,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245877991": {
+      "name": "SAVANNA 330ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245898356": {
+      "name": "EXTREME BOTTLED 275ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245915568": {
+      "name": "BERNINI MIMOSA 500ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245925943": {
+      "name": "BLACK CROWN 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245939192": {
+      "name": "CASTLE.DOUBLE MALT",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245952737": {
+      "name": "GORDON'S PINK",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245961439": {
+      "name": "GORDON'S BLUE",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245979898": {
+      "name": "HUNTERS DRY 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773245998876": {
+      "name": "STELLA 330ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773246015390": {
+      "name": "BREEZER WATERMELON 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773246030939": {
+      "name": "BREEZER BLACKBERRY 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773246049692": {
+      "name": "CASTLE MILK STOUT",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773246064834": {
+      "name": "STRONG BOW 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773246082545": {
+      "name": "HUNTERS GOLD CAN 440ML",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
       "stock": 0
     }
   },
@@ -830,9 +676,6 @@
     "P_1773236344587": {
       "RUSSIAN ROLL": 1,
       "RUSSIAN ": 1
-    },
-    "P_1773236515883": {
-      "BOERIE ROLL": 1
     }
   },
   "transactions": [
@@ -3924,5 +3767,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T13:48:59.303Z"
+  "lastSync": "2026-03-11T16:22:23.847Z"
 }
