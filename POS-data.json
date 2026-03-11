@@ -618,7 +618,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 3
     },
     "P_1773246213092": {
       "name": "COKE 500ML ",
@@ -807,7 +807,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -3836,8 +3836,12 @@
           "code": "P_1773246185884"
         }
       ],
-      "status": "active",
-      "date": 1772970769415
+      "status": "paid",
+      "date": 1773248151326,
+      "total": 160,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 92,
@@ -4074,6 +4078,12 @@
       "items": [],
       "status": "active",
       "date": 1773248047845
+    },
+    {
+      "id": 103,
+      "items": [],
+      "status": "active",
+      "date": 1773248151440
     }
   ],
   "purchaseLog": [
@@ -4139,5 +4149,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:55:33.398Z"
+  "lastSync": "2026-03-11T16:55:51.440Z"
 }
