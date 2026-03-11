@@ -371,13 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164388317": {
-      "name": "CHEESE BURGER (WITH SIDE CHIPS)",
-      "price": 120,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164408136": {
       "name": "BOERIE ROLL",
       "price": 40,
@@ -677,6 +670,37 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "BURGER ROLL": {
+      "name": "BURGER ROLL",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "PATTY ": {
+      "name": "PATTY ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "SLICED CHEESE ": {
+      "name": "SLICED CHEESE ",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "SLICED BACON": {
+      "name": "SLICED BACON",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1773233691679": {
+      "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -712,6 +736,12 @@
     },
     "P_1773233252969": {
       "PIZZA BASE ": 1
+    },
+    "P_1773233691679": {
+      "BURGER ROLL": 1,
+      "PATTY ": 1,
+      "SLICED CHEESE ": 2,
+      "SLICED BACON": 2
     }
   },
   "transactions": [
@@ -3803,5 +3833,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T12:48:03.485Z"
+  "lastSync": "2026-03-11T12:55:01.874Z"
 }
