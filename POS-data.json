@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -128,7 +128,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -1,
+      "stock": -2,
       "cost": 0,
       "category": "ingredient"
     },
@@ -151,7 +151,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -4287,8 +4287,18 @@
           "code": "P_1773164727803"
         }
       ],
+      "status": "paid",
+      "date": 1773248789833,
+      "total": 160,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 110,
+      "items": [],
       "status": "active",
-      "date": 1773248558548
+      "date": 1773248789968
     }
   ],
   "purchaseLog": [
@@ -4354,5 +4364,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:06:05.534Z"
+  "lastSync": "2026-03-11T17:06:29.967Z"
 }
