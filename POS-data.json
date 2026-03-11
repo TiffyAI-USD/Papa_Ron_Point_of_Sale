@@ -604,7 +604,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 4
     },
     "P_1773249209951": {
       "name": "SODAZE BOBS COLA",
@@ -3818,5 +3818,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:17:33.052Z"
+  "lastSync": "2026-03-11T17:17:44.032Z"
 }
