@@ -499,21 +499,21 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 17
     },
     "P_1773245853117": {
       "name": "SAVANNA ANGRY LEMON 500ML",
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 12
     },
     "P_1773245877991": {
       "name": "SAVANNA 330ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 41
     },
     "P_1773245898356": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:41:23.564Z"
+  "lastSync": "2026-03-11T16:41:45.755Z"
 }
