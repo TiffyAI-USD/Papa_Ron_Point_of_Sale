@@ -371,13 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164516255": {
-      "name": "WINGLETS -5 ",
-      "price": 60,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164531918": {
       "name": "WINGLETS -10",
       "price": 100,
@@ -712,6 +705,19 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "BUFFALO WINGS": {
+      "name": "BUFFALO WINGS",
+      "stock": 0,
+      "cost": 0,
+      "category": "ingredient"
+    },
+    "P_1773234587229": {
+      "name": "WINGLETS -5 ",
+      "price": 60,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -760,6 +766,9 @@
     },
     "P_1773234447154": {
       "CHEESY STRIPS": 5
+    },
+    "P_1773234587229": {
+      "BUFFALO WINGS": 5
     }
   },
   "transactions": [
@@ -3851,5 +3860,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T13:07:37.953Z"
+  "lastSync": "2026-03-11T13:09:57.324Z"
 }
