@@ -667,7 +667,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 17
     },
     "P_1773246367176": {
       "name": "RED BULL 250ML",
@@ -3949,5 +3949,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:38:51.912Z"
+  "lastSync": "2026-03-11T16:38:58.780Z"
 }
