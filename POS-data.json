@@ -632,7 +632,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 1
     },
     "P_1773249334985": {
       "name": "SODAZE LIMONADA ",
@@ -3818,5 +3818,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:16:52.721Z"
+  "lastSync": "2026-03-11T17:17:00.661Z"
 }
