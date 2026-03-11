@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -2
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -660,14 +660,14 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -2
     },
     "P_1773251914300": {
       "name": "SPARKLING WATER ",
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -3524,8 +3524,12 @@
           "code": "P_1773244946839"
         }
       ],
-      "status": "active",
-      "date": 1772895233994
+      "status": "paid",
+      "date": 1773251952155,
+      "total": 125,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 88,
@@ -3806,6 +3810,12 @@
       "items": [],
       "status": "active",
       "date": 1773126631627
+    },
+    {
+      "id": 100,
+      "items": [],
+      "status": "active",
+      "date": 1773251952401
     }
   ],
   "purchaseLog": [
@@ -3871,5 +3881,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:58:54.613Z"
+  "lastSync": "2026-03-11T17:59:12.400Z"
 }
