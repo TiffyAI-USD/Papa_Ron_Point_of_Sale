@@ -822,6 +822,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 3
+    },
+    "P_1773248848734": {
+      "name": "RAW RIZZLA ",
+      "price": 35,
+      "cost": 0,
+      "category": "food",
+      "stock": -1
     }
   },
   "recipes": {
@@ -4299,6 +4306,31 @@
       "items": [],
       "status": "active",
       "date": 1773248789968
+    },
+    {
+      "id": 111,
+      "items": [
+        {
+          "name": "RAW RIZZLA ",
+          "price": 35,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773248848734"
+        }
+      ],
+      "status": "paid",
+      "date": 1773248859479,
+      "total": 35,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 112,
+      "items": [],
+      "status": "active",
+      "date": 1773248859665
     }
   ],
   "purchaseLog": [
@@ -4364,5 +4396,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T17:06:57.333Z"
+  "lastSync": "2026-03-11T17:07:34.538Z"
 }
