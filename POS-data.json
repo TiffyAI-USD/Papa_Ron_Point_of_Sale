@@ -635,6 +635,20 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773232503460": {
+      "name": "HAWAIIAN",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773232612440": {
+      "name": "MILLIONAIRE ",
+      "price": 200,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -651,6 +665,12 @@
       "PIZZA BASE ": 1
     },
     "P_1773232359739": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773232503460": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773232612440": {
       "PIZZA BASE ": 1
     }
   },
@@ -3743,5 +3763,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T12:32:46.427Z"
+  "lastSync": "2026-03-11T12:37:09.556Z"
 }
