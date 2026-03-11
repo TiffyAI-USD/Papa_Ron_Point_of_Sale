@@ -607,10 +607,40 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773231967771": {
+      "name": "SOMETHING MEATY",
+      "price": 150,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773232120019": {
+      "name": "CREAMY CHICKEN",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773232222514": {
+      "name": "PEPPERONI",
+      "price": 135,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
     "P_1773230368674": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773231967771": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773232120019": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773232222514": {
       "PIZZA BASE ": 1
     }
   },
@@ -3703,5 +3733,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T12:24:07.663Z"
+  "lastSync": "2026-03-11T12:30:40.084Z"
 }
