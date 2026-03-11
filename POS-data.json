@@ -61,7 +61,7 @@
       "price": 2,
       "cost": 0,
       "category": "food",
-      "stock": 7
+      "stock": 6
     },
     "P_1773164980203": {
       "name": "LUNCH BAR",
@@ -4021,9 +4021,28 @@
     },
     {
       "id": 101,
+      "items": [
+        {
+          "name": "NIK NAKS",
+          "price": 2,
+          "cost": 0,
+          "category": "food",
+          "stock": 7,
+          "code": "P_1773164964543"
+        }
+      ],
+      "status": "paid",
+      "date": 1773248047645,
+      "total": 2,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 102,
       "items": [],
       "status": "active",
-      "date": 1773248005300
+      "date": 1773248047845
     }
   ],
   "purchaseLog": [
@@ -4089,5 +4108,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T16:53:25.300Z"
+  "lastSync": "2026-03-11T16:54:02.690Z"
 }
