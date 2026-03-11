@@ -670,6 +670,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773233252969": {
+      "name": "MARGHERITA ",
+      "price": 100,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -701,6 +708,9 @@
       "PIZZA BASE ": 1
     },
     "P_1773233142239": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773233252969": {
       "PIZZA BASE ": 1
     }
   },
@@ -3793,5 +3803,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T12:46:04.688Z"
+  "lastSync": "2026-03-11T12:48:03.485Z"
 }
