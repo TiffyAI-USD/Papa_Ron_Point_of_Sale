@@ -371,13 +371,6 @@
       "category": "drink",
       "stock": 25
     },
-    "P_1773164686695": {
-      "name": "BOERIE AND CHIPS",
-      "price": 50,
-      "cost": 0,
-      "category": "food",
-      "stock": 0
-    },
     "P_1773164727803": {
       "name": "SS JOINT",
       "price": 25,
@@ -3921,5 +3914,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T13:39:08.846Z"
+  "lastSync": "2026-03-11T13:39:55.253Z"
 }
