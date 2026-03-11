@@ -663,6 +663,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773233142239": {
+      "name": "AFRICAN MEATY",
+      "price": 150,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -691,6 +698,9 @@
       "PIZZA BASE ": 1
     },
     "P_1773232963360": {
+      "PIZZA BASE ": 1
+    },
+    "P_1773233142239": {
       "PIZZA BASE ": 1
     }
   },
@@ -3783,5 +3793,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-11T12:42:48.386Z"
+  "lastSync": "2026-03-11T12:46:04.688Z"
 }
