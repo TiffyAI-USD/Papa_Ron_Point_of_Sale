@@ -307,7 +307,7 @@
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
-      "stock": 0,
+      "stock": -1,
       "cost": 0,
       "category": "ingredient"
     },
@@ -316,7 +316,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
@@ -835,7 +835,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -4127,8 +4127,12 @@
           "code": "P_1773235513634"
         }
       ],
-      "status": "active",
-      "date": 1773126631627
+      "status": "paid",
+      "date": 1773340663708,
+      "total": 110,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 100,
@@ -4353,6 +4357,12 @@
       "items": [],
       "status": "active",
       "date": 1773335456008
+    },
+    {
+      "id": 116,
+      "items": [],
+      "status": "active",
+      "date": 1773340663903
     }
   ],
   "purchaseLog": [
@@ -4428,5 +4438,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T18:37:34.170Z"
+  "lastSync": "2026-03-12T18:37:43.903Z"
 }
