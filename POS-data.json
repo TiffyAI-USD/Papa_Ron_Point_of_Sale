@@ -667,7 +667,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": -1
+      "stock": 15
     }
   },
   "recipes": {
@@ -3891,5 +3891,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T13:25:34.001Z"
+  "lastSync": "2026-03-12T13:25:53.727Z"
 }
