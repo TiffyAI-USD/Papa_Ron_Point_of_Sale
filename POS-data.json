@@ -843,6 +843,20 @@
       "cost": 0,
       "category": "food",
       "stock": -1
+    },
+    "P_1773340774940": {
+      "name": "FAN",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
+    },
+    "P_1773340830986": {
+      "name": "BOERIE AND CHIPS",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -4163,7 +4177,16 @@
     },
     {
       "id": 101,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773340830986"
+        }
+      ],
       "status": "active",
       "date": 1773252004762
     },
@@ -4438,5 +4461,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T18:39:16.270Z"
+  "lastSync": "2026-03-12T18:40:37.320Z"
 }
