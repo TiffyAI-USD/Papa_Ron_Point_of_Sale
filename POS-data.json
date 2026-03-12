@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -4259,8 +4259,18 @@
           "code": "P_1773244946839"
         }
       ],
+      "status": "paid",
+      "date": 1773333731528,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 112,
+      "items": [],
       "status": "active",
-      "date": 1773333692476
+      "date": 1773333731662
     }
   ],
   "purchaseLog": [
@@ -4336,5 +4346,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T16:42:06.356Z"
+  "lastSync": "2026-03-12T16:42:11.661Z"
 }
