@@ -457,35 +457,35 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 28
     },
     "P_1773245728762": {
       "name": "CORONA 355ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 34
     },
     "P_1773245784383": {
       "name": "BERNINI BLUSH CAN 500ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 20
     },
     "P_1773245808729": {
       "name": "BERNINI BLUSH SPARKLING 275ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 18
     },
     "P_1773245823301": {
       "name": "BERNINI BLUSH ALCOHOLIC 275ML",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 24
     },
     "P_1773245837993": {
       "name": "SAVANNA CANS 500ML ",
@@ -3891,5 +3891,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T13:23:39.215Z"
+  "lastSync": "2026-03-12T13:23:48.315Z"
 }
