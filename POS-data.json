@@ -4185,6 +4185,14 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773340830986"
+        },
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773340774940"
         }
       ],
       "status": "active",
@@ -4461,5 +4469,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T18:40:37.320Z"
+  "lastSync": "2026-03-12T18:40:49.223Z"
 }
