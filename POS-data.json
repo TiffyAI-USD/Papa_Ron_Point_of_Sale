@@ -492,14 +492,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 17
     },
     "P_1773245853117": {
       "name": "SAVANNA ANGRY LEMON 500ML",
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 7
     },
     "P_1773245877991": {
       "name": "SAVANNA 330ML ",
@@ -3891,5 +3891,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T13:23:48.315Z"
+  "lastSync": "2026-03-12T13:24:11.913Z"
 }
