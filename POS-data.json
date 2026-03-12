@@ -807,7 +807,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -3981,6 +3981,12 @@
       "items": [],
       "status": "active",
       "date": 1773327471597
+    },
+    {
+      "id": 103,
+      "items": [],
+      "status": "active",
+      "date": 1773327680855
     }
   ],
   "purchaseLog": [
@@ -4041,6 +4047,11 @@
         "name": "COKE ",
         "price": 20,
         "date": 1772970767804
+      },
+      {
+        "name": "COKE 500ML ",
+        "price": 20,
+        "date": 1773327679629
       }
     ],
     "Hans": [
@@ -4051,5 +4062,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T15:00:54.146Z"
+  "lastSync": "2026-03-12T15:01:20.852Z"
 }
