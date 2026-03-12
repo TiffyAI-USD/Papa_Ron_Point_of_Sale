@@ -4314,7 +4314,16 @@
     },
     {
       "id": 114,
-      "items": [],
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773233691679"
+        }
+      ],
       "status": "active",
       "date": 1773335351109
     }
@@ -4392,5 +4401,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T17:09:11.108Z"
+  "lastSync": "2026-03-12T17:10:49.767Z"
 }
