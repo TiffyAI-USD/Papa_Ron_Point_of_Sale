@@ -801,6 +801,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773327642102": {
+      "name": "COKE 500ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -3693,7 +3700,16 @@
     },
     {
       "id": 89,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773327642102"
+        }
+      ],
       "status": "active",
       "date": 1772957958374
     },
@@ -4035,5 +4051,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T14:59:48.830Z"
+  "lastSync": "2026-03-12T15:00:54.146Z"
 }
