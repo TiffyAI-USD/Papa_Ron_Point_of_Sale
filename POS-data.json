@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 19
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -3891,5 +3891,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T13:24:23.041Z"
+  "lastSync": "2026-03-12T13:24:27.532Z"
 }
