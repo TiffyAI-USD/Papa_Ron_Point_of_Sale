@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 24
+      "stock": 23
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -555,7 +555,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -807,7 +807,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": -1
+      "stock": -2
     }
   },
   "recipes": {
@@ -3726,8 +3726,12 @@
           "code": "P_1773245979898"
         }
       ],
-      "status": "active",
-      "date": 1772957958374
+      "status": "paid",
+      "date": 1773332854998,
+      "total": 65,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 90,
@@ -4003,6 +4007,12 @@
       "items": [],
       "status": "active",
       "date": 1773327680855
+    },
+    {
+      "id": 104,
+      "items": [],
+      "status": "active",
+      "date": 1773332855218
     }
   ],
   "purchaseLog": [
@@ -4078,5 +4088,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T16:27:06.374Z"
+  "lastSync": "2026-03-12T16:27:35.216Z"
 }
