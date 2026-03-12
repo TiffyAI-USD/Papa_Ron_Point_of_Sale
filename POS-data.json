@@ -506,14 +506,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 41
     },
     "P_1773245898356": {
       "name": "EXTREME BOTTLED 275ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 45
     },
     "P_1773245915568": {
       "name": "BERNINI MIMOSA 500ML",
@@ -3891,5 +3891,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T13:24:11.913Z"
+  "lastSync": "2026-03-12T13:24:23.041Z"
 }
