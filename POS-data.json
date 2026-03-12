@@ -787,6 +787,20 @@
       "cost": 0,
       "category": "drink",
       "stock": 19
+    },
+    "P_1773327171734": {
+      "name": "EXTRA CHEESE",
+      "price": 15,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773327197041": {
+      "name": "EXTRA AVO",
+      "price": 15,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -4010,5 +4024,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T14:44:57.526Z"
+  "lastSync": "2026-03-12T14:54:34.704Z"
 }
