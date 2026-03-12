@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -3968,6 +3968,12 @@
       "items": [],
       "status": "active",
       "date": 1773252004762
+    },
+    {
+      "id": 102,
+      "items": [],
+      "status": "active",
+      "date": 1773327471597
     }
   ],
   "purchaseLog": [
@@ -4016,6 +4022,11 @@
         "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
         "price": 50,
         "date": 1772895151102
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1773327469422
       }
     ],
     "Cats": [
@@ -4033,5 +4044,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T14:57:43.186Z"
+  "lastSync": "2026-03-12T14:57:51.597Z"
 }
