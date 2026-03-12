@@ -597,7 +597,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 20
     },
     "P_1773249187048": {
       "name": "SODAZE ORANGE CREAM ",
@@ -3891,5 +3891,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-12T13:25:30.582Z"
+  "lastSync": "2026-03-12T13:25:34.001Z"
 }
