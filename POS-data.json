@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 22
+      "stock": 21
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -2,
+      "stock": -3,
       "cost": 0,
       "category": "ingredient"
     },
@@ -158,7 +158,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773232503460": {
       "name": "HAWAIIAN",
@@ -4582,8 +4582,18 @@
           "code": "P_1773164980203"
         }
       ],
+      "status": "paid",
+      "date": 1773437376849,
+      "total": 145,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 120,
+      "items": [],
       "status": "active",
-      "date": 1773437317458
+      "date": 1773437376959
     }
   ],
   "purchaseLog": [
@@ -4659,5 +4669,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:29:27.290Z"
+  "lastSync": "2026-03-13T21:29:36.959Z"
 }
