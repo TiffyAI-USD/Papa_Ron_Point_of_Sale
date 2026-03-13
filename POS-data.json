@@ -4462,6 +4462,22 @@
           "category": "drink",
           "stock": 34,
           "code": "P_1773245728762"
+        },
+        {
+          "name": "GANJA 1-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164912626"
+        },
+        {
+          "name": "GANJA 1-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164912626"
         }
       ],
       "status": "active",
@@ -4541,5 +4557,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:26:02.926Z"
+  "lastSync": "2026-03-13T21:26:20.461Z"
 }
