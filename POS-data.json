@@ -19,7 +19,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -2
     },
     "P_1773164795064": {
       "name": "WW JOINT",
@@ -4609,8 +4609,18 @@
           "code": "P_1773164768558"
         }
       ],
+      "status": "paid",
+      "date": 1773437399261,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 121,
+      "items": [],
       "status": "active",
-      "date": 1773437376959
+      "date": 1773437399369
     }
   ],
   "purchaseLog": [
@@ -4686,5 +4696,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:29:53.574Z"
+  "lastSync": "2026-03-13T21:29:59.368Z"
 }
