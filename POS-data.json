@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -54,7 +54,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -3
     },
     "P_1773164964543": {
       "name": "NIK NAKS",
@@ -464,7 +464,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 34
+      "stock": 32
     },
     "P_1773245784383": {
       "name": "BERNINI BLUSH CAN 500ML",
@@ -4478,10 +4478,28 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773164912626"
+        },
+        {
+          "name": "GANJA 1-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164912626"
         }
       ],
+      "status": "paid",
+      "date": 1773437200056,
+      "total": 185,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 118,
+      "items": [],
       "status": "active",
-      "date": 1773437096287
+      "date": 1773437200191
     }
   ],
   "purchaseLog": [
@@ -4557,5 +4575,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:26:20.461Z"
+  "lastSync": "2026-03-13T21:26:40.190Z"
 }
