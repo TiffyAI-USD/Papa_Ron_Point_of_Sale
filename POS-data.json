@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 21
+      "stock": 20
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -625,7 +625,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 4
     },
     "P_1773249301400": {
       "name": "SODAZE TROPICAL PUNCH",
@@ -800,7 +800,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773327642102": {
       "name": "COKE 500ML ",
@@ -835,7 +835,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -863,7 +863,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -4296,8 +4296,12 @@
           "code": "P_1773249279662"
         }
       ],
-      "status": "active",
-      "date": 1773327680855
+      "status": "paid",
+      "date": 1773437935152,
+      "total": 195,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 104,
@@ -4815,6 +4819,12 @@
       "items": [],
       "status": "active",
       "date": 1773437749358
+    },
+    {
+      "id": 128,
+      "items": [],
+      "status": "active",
+      "date": 1773437935313
     }
   ],
   "purchaseLog": [
@@ -4890,5 +4900,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:38:38.831Z"
+  "lastSync": "2026-03-13T21:38:55.313Z"
 }
