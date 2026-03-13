@@ -4822,7 +4822,16 @@
     },
     {
       "id": 128,
-      "items": [],
+      "items": [
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773236344587"
+        }
+      ],
       "status": "active",
       "date": 1773437935313
     }
@@ -4900,5 +4909,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:38:55.313Z"
+  "lastSync": "2026-03-13T21:39:16.819Z"
 }
