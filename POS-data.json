@@ -4446,6 +4446,22 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773164727803"
+        },
+        {
+          "name": "CORONA 355ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 34,
+          "code": "P_1773245728762"
+        },
+        {
+          "name": "CORONA 355ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 34,
+          "code": "P_1773245728762"
         }
       ],
       "status": "active",
@@ -4525,5 +4541,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:25:34.974Z"
+  "lastSync": "2026-03-13T21:26:02.926Z"
 }
