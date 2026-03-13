@@ -4537,6 +4537,22 @@
           "category": "drink",
           "stock": 7,
           "code": "P_1773324775883"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244946839"
         }
       ],
       "status": "active",
@@ -4616,5 +4632,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-13T21:28:02.472Z"
+  "lastSync": "2026-03-13T21:28:24.670Z"
 }
