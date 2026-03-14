@@ -807,7 +807,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 24
     },
     "P_1773332932221": {
       "name": "POWERADE",
@@ -4938,5 +4938,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:00:57.596Z"
+  "lastSync": "2026-03-14T10:01:03.563Z"
 }
