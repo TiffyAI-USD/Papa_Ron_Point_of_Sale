@@ -864,6 +864,13 @@
       "cost": 0,
       "category": "food",
       "stock": -1
+    },
+    "P_1773482741909": {
+      "name": "SPRITE 500ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 32
     }
   },
   "recipes": {
@@ -4938,5 +4945,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:04:51.356Z"
+  "lastSync": "2026-03-14T10:10:20.800Z"
 }
