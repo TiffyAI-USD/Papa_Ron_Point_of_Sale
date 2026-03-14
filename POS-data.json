@@ -4554,6 +4554,30 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773505029268"
         }
       ],
       "status": "active",
@@ -5311,5 +5335,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T16:17:21.950Z"
+  "lastSync": "2026-03-14T16:17:25.371Z"
 }
