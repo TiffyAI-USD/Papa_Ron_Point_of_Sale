@@ -4402,6 +4402,22 @@
           "category": "drink",
           "stock": 32,
           "code": "P_1773482741909"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773483607087"
         }
       ],
       "status": "active",
@@ -5040,5 +5056,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:20:21.220Z"
+  "lastSync": "2026-03-14T10:20:29.806Z"
 }
