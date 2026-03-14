@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 13
+      "stock": 12
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -5382,6 +5382,12 @@
       "items": [],
       "status": "active",
       "date": 1773506646417
+    },
+    {
+      "id": 144,
+      "items": [],
+      "status": "active",
+      "date": 1773513272866
     }
   ],
   "purchaseLog": [
@@ -5470,6 +5476,11 @@
         "name": "WINDHOEK 500ML ",
         "price": 30,
         "date": 1773506645007
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1773513271547
       }
     ],
     "Cats": [
@@ -5492,5 +5503,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T18:34:27.109Z"
+  "lastSync": "2026-03-14T18:34:32.866Z"
 }
