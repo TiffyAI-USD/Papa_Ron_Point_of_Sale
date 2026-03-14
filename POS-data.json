@@ -899,6 +899,13 @@
       "cost": 0,
       "category": "food",
       "stock": -2
+    },
+    "P_1773505029268": {
+      "name": "1 GRAM SS",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -4491,7 +4498,32 @@
     },
     {
       "id": 109,
-      "items": [],
+      "items": [
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773505029268"
+        }
+      ],
       "status": "active",
       "date": 1773333346845
     },
@@ -5247,5 +5279,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T16:15:37.671Z"
+  "lastSync": "2026-03-14T16:17:17.624Z"
 }
