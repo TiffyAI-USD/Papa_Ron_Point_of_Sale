@@ -4418,6 +4418,14 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773483607087"
+        },
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773324836625"
         }
       ],
       "status": "active",
@@ -5056,5 +5064,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:20:29.806Z"
+  "lastSync": "2026-03-14T10:20:58.146Z"
 }
