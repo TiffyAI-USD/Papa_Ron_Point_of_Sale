@@ -892,6 +892,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 43
+    },
+    "P_1773483607087": {
+      "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+      "price": 80,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -4918,6 +4925,29 @@
       "items": [],
       "status": "active",
       "date": 1773483538483
+    },
+    {
+      "id": 132,
+      "items": [
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773483607087"
+        }
+      ],
+      "status": "active",
+      "date": 1773483613631
     }
   ],
   "purchaseLog": [
@@ -4993,5 +5023,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:18:58.476Z"
+  "lastSync": "2026-03-14T10:20:13.641Z"
 }
