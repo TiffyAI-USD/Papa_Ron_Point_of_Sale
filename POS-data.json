@@ -4789,7 +4789,40 @@
     },
     {
       "id": 116,
-      "items": [],
+      "items": [
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1773506473127"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1773506473127"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1773506473127"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1773506473127"
+        }
+      ],
       "status": "active",
       "date": 1773340663903
     },
@@ -5442,5 +5475,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T16:42:53.440Z"
+  "lastSync": "2026-03-14T16:43:04.737Z"
 }
