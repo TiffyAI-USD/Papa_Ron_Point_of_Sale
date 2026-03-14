@@ -912,7 +912,7 @@
       "price": 50,
       "cost": 0,
       "category": "drink",
-      "stock": -4
+      "stock": 18
     },
     "P_1773506473127": {
       "name": "COUVOISIER TOT",
@@ -5442,5 +5442,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T16:41:17.796Z"
+  "lastSync": "2026-03-14T16:41:52.741Z"
 }
