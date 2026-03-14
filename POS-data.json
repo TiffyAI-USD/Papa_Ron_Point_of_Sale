@@ -885,6 +885,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 28
+    },
+    "P_1773483267712": {
+      "name": "SMIRNOFF 1818 750ML ",
+      "price": 25,
+      "cost": 0,
+      "category": "drink",
+      "stock": 28
     }
   },
   "recipes": {
@@ -4959,5 +4966,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:13:56.145Z"
+  "lastSync": "2026-03-14T10:14:57.832Z"
 }
