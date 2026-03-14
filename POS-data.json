@@ -878,6 +878,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 24
+    },
+    "P_1773483222791": {
+      "name": "SMIRNOFF 1818 1L",
+      "price": 25,
+      "cost": 0,
+      "category": "drink",
+      "stock": 28
     }
   },
   "recipes": {
@@ -4952,5 +4959,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-14T10:11:18.932Z"
+  "lastSync": "2026-03-14T10:13:56.145Z"
 }
