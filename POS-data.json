@@ -1011,6 +1011,13 @@
       "cost": 0,
       "category": "food",
       "stock": 2
+    },
+    "P_1773657699461": {
+      "name": "PARMALAT CHEESE",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 214
     }
   },
   "recipes": {
@@ -5623,5 +5630,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:41:11.423Z"
+  "lastSync": "2026-03-16T10:42:19.710Z"
 }
