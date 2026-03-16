@@ -1095,6 +1095,13 @@
       "cost": 0,
       "category": "food",
       "stock": 48
+    },
+    "P_1773658930074": {
+      "name": "SOUTHERN STYLE BUFFALO WINGS ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 64
     }
   },
   "recipes": {
@@ -5707,5 +5714,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:01:16.912Z"
+  "lastSync": "2026-03-16T11:03:15.841Z"
 }
