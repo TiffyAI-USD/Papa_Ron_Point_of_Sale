@@ -1081,6 +1081,13 @@
       "cost": 0,
       "category": "food",
       "stock": 80
+    },
+    "P_1773658683532": {
+      "name": "CRUMBD CHICKEN BITES ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 48
     }
   },
   "recipes": {
@@ -5693,5 +5700,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:57:41.743Z"
+  "lastSync": "2026-03-16T10:59:57.079Z"
 }
