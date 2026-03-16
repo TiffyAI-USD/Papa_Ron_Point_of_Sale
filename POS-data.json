@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -5,
+      "stock": 27,
       "cost": 0,
       "category": "ingredient"
     },
@@ -5679,5 +5679,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:52:22.367Z"
+  "lastSync": "2026-03-16T10:54:56.146Z"
 }
