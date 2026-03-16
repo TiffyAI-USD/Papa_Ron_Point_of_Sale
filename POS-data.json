@@ -1067,6 +1067,13 @@
       "cost": 0,
       "category": "food",
       "stock": 10
+    },
+    "P_1773658541107": {
+      "name": "CRUMB CHICKEN POPS ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 110
     }
   },
   "recipes": {
@@ -5679,5 +5686,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:54:56.146Z"
+  "lastSync": "2026-03-16T10:56:14.606Z"
 }
