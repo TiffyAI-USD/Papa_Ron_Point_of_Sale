@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -4
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": 10,
+      "stock": 8,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -4,
+      "stock": -6,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -8,
+      "stock": -12,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -8,
+      "stock": -12,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -6
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -814,7 +814,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 14
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -5098,8 +5098,12 @@
           "code": "P_1773332932221"
         }
       ],
-      "status": "active",
-      "date": 1773340663903
+      "status": "paid",
+      "date": 1773688728062,
+      "total": 330,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 117,
@@ -5725,6 +5729,12 @@
       "items": [],
       "status": "active",
       "date": 1773513418677
+    },
+    {
+      "id": 147,
+      "items": [],
+      "status": "active",
+      "date": 1773688728275
     }
   ],
   "purchaseLog": [
@@ -5840,5 +5850,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T19:18:39.858Z"
+  "lastSync": "2026-03-16T19:18:48.274Z"
 }
