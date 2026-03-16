@@ -1144,6 +1144,13 @@
       "cost": 0,
       "category": "food",
       "stock": 4
+    },
+    "P_1773659508619": {
+      "name": "BREAST FILLED ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 9
     }
   },
   "recipes": {
@@ -5756,5 +5763,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:11:26.984Z"
+  "lastSync": "2026-03-16T11:12:19.633Z"
 }
