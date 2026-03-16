@@ -204,7 +204,7 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -4,
+      "stock": 10,
       "cost": 0,
       "category": "ingredient"
     },
@@ -941,6 +941,13 @@
       "cost": 0,
       "category": "food",
       "stock": 8
+    },
+    "P_1773656788540": {
+      "name": "BURGER ROLLS",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5553,5 +5560,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:25:47.946Z"
+  "lastSync": "2026-03-16T10:27:05.449Z"
 }
