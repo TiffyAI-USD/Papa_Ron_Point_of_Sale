@@ -961,7 +961,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": 5
     },
     "P_1773656989288": {
       "name": "BRAAI WORS ",
@@ -1123,6 +1123,13 @@
       "cost": 0,
       "category": "food",
       "stock": 5
+    },
+    "P_1773659293498": {
+      "name": "CHEESYCONTANENTAL RUSSIAN LONG",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5735,5 +5742,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:07:25.228Z"
+  "lastSync": "2026-03-16T11:09:00.690Z"
 }
