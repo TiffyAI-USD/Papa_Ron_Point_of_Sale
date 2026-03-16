@@ -990,6 +990,27 @@
       "cost": 0,
       "category": "food",
       "stock": 14
+    },
+    "P_1773657427420": {
+      "name": "POTATOES ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773657478497": {
+      "name": "POTATO ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773657620889": {
+      "name": "SUNDAE CHEESE",
+      "price": 10,
+      "cost": 0,
+      "category": "food",
+      "stock": 2
     }
   },
   "recipes": {
@@ -5602,5 +5623,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:36:20.658Z"
+  "lastSync": "2026-03-16T10:41:11.423Z"
 }
