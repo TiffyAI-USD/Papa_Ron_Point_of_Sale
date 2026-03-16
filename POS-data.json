@@ -1158,6 +1158,13 @@
       "cost": 0,
       "category": "food",
       "stock": 2
+    },
+    "P_1773659617923": {
+      "name": "RIB PIZZA TOPPING",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 3
     }
   },
   "recipes": {
@@ -5770,5 +5777,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:13:08.468Z"
+  "lastSync": "2026-03-16T11:14:10.403Z"
 }
