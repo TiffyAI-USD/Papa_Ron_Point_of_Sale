@@ -948,6 +948,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773656868698": {
+      "name": "BURGER BUNNY ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 16
     }
   },
   "recipes": {
@@ -5560,5 +5567,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:27:05.449Z"
+  "lastSync": "2026-03-16T10:28:06.122Z"
 }
