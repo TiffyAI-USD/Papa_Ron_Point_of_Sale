@@ -1038,7 +1038,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 2
+      "stock": 10
     },
     "P_1773658004070": {
       "name": "ICE BERG LETTERS ",
@@ -1053,6 +1053,13 @@
       "cost": 0,
       "category": "food",
       "stock": 10
+    },
+    "P_1773658179593": {
+      "name": "GREEN PEPPER",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5665,5 +5672,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:49:13.572Z"
+  "lastSync": "2026-03-16T10:50:03.816Z"
 }
