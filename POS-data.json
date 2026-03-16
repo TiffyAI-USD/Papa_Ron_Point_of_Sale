@@ -1032,6 +1032,13 @@
       "cost": 0,
       "category": "food",
       "stock": 2
+    },
+    "P_1773657919261": {
+      "name": "GREEN LETTERS ",
+      "price": 10,
+      "cost": 0,
+      "category": "food",
+      "stock": 2
     }
   },
   "recipes": {
@@ -5644,5 +5651,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:44:40.259Z"
+  "lastSync": "2026-03-16T10:45:57.094Z"
 }
