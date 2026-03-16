@@ -934,6 +934,13 @@
       "cost": 0,
       "category": "food",
       "stock": 12
+    },
+    "P_1773656712216": {
+      "name": "PORTUGUESE ROLLS ",
+      "price": 15,
+      "cost": 0,
+      "category": "food",
+      "stock": 8
     }
   },
   "recipes": {
@@ -5546,5 +5553,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:23:13.413Z"
+  "lastSync": "2026-03-16T10:25:47.946Z"
 }
