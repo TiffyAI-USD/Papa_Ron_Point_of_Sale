@@ -1109,6 +1109,20 @@
       "cost": 0,
       "category": "food",
       "stock": 3
+    },
+    "P_1773659136293": {
+      "name": "BRAAI WORS ",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773659210556": {
+      "name": "COCTAILE CHEESE GRILLERS",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 5
     }
   },
   "recipes": {
@@ -5721,5 +5735,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:04:41.246Z"
+  "lastSync": "2026-03-16T11:07:25.228Z"
 }
