@@ -1179,6 +1179,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773689328747": {
+      "name": "COKE",
+      "price": 15,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5433,7 +5440,16 @@
     },
     {
       "id": 127,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773689328747"
+        }
+      ],
       "status": "active",
       "date": 1773437749358
     },
@@ -6146,5 +6162,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T19:28:22.112Z"
+  "lastSync": "2026-03-16T19:29:18.539Z"
 }
