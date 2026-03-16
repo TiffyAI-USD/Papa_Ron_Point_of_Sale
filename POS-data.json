@@ -1151,6 +1151,13 @@
       "cost": 0,
       "category": "food",
       "stock": 9
+    },
+    "P_1773659560649": {
+      "name": "PIZZA SALAMI",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 2
     }
   },
   "recipes": {
@@ -5763,5 +5770,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:12:19.633Z"
+  "lastSync": "2026-03-16T11:13:08.468Z"
 }
