@@ -5826,6 +5826,22 @@
           "category": "drink",
           "stock": 56,
           "code": "P_1773244841294"
+        },
+        {
+          "name": "SAVANNA CANS 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773245837993"
+        },
+        {
+          "name": "SAVANNA CANS 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773245837993"
         }
       ],
       "status": "active",
@@ -5945,5 +5961,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T19:20:55.860Z"
+  "lastSync": "2026-03-16T19:21:27.532Z"
 }
