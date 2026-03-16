@@ -926,7 +926,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 15
+      "stock": 26
     },
     "P_1773656563213": {
       "name": "YELLOW  PEPER",
@@ -5595,5 +5595,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:32:51.488Z"
+  "lastSync": "2026-03-16T10:34:56.742Z"
 }
