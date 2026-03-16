@@ -1137,6 +1137,13 @@
       "cost": 0,
       "category": "food",
       "stock": 2
+    },
+    "P_1773659420552": {
+      "name": "BEEF BURGER",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 4
     }
   },
   "recipes": {
@@ -5749,5 +5756,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:10:00.689Z"
+  "lastSync": "2026-03-16T11:11:26.984Z"
 }
