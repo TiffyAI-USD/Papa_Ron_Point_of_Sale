@@ -969,6 +969,13 @@
       "cost": 0,
       "category": "food",
       "stock": 7
+    },
+    "P_1773657074018": {
+      "name": "SWEET PALERMO",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 8
     }
   },
   "recipes": {
@@ -5581,5 +5588,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:30:34.970Z"
+  "lastSync": "2026-03-16T10:31:41.056Z"
 }
