@@ -338,7 +338,7 @@
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": 0,
+      "stock": 5,
       "cost": 0,
       "category": "ingredient"
     },
@@ -955,6 +955,13 @@
       "cost": 0,
       "category": "food",
       "stock": 16
+    },
+    "P_1773656928391": {
+      "name": "CHEESY CONTINENTAL RUSSIAN",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5567,5 +5574,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:28:06.122Z"
+  "lastSync": "2026-03-16T10:29:14.253Z"
 }
