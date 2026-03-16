@@ -1102,6 +1102,13 @@
       "cost": 0,
       "category": "food",
       "stock": 64
+    },
+    "P_1773659054019": {
+      "name": "CHEDDAR CHEESE",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 3
     }
   },
   "recipes": {
@@ -5714,5 +5721,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T11:03:15.841Z"
+  "lastSync": "2026-03-16T11:04:41.246Z"
 }
