@@ -1074,6 +1074,13 @@
       "cost": 0,
       "category": "food",
       "stock": 110
+    },
+    "P_1773658609753": {
+      "name": " CRUMBD CHICKEN STRIPS",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 80
     }
   },
   "recipes": {
@@ -5686,5 +5693,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T10:56:14.606Z"
+  "lastSync": "2026-03-16T10:57:41.743Z"
 }
