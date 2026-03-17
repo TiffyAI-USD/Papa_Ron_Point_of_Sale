@@ -1221,6 +1221,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1773769599079": {
+      "name": "OTHER",
+      "price": 20,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5585,6 +5592,38 @@
       "id": 131,
       "items": [
         {
+          "name": "OTHER",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769599079"
+        },
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769535752"
+        },
+        {
+          "name": "THE MOON 1-GRAM ",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769468938"
+        },
+        {
+          "name": "VELVET CAKE 1 GRAM",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769440910"
+        },
+        {
           "name": "VELVET CAKE 1 GRAM",
           "price": 120,
           "cost": 0,
@@ -6329,5 +6368,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:46:20.102Z"
+  "lastSync": "2026-03-17T17:46:45.770Z"
 }
