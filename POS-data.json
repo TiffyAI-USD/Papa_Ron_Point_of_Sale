@@ -5650,6 +5650,22 @@
       "id": 132,
       "items": [
         {
+          "name": "CRUSHER",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769714204"
+        },
+        {
+          "name": "VELVET CAKE 1 GRAM",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773769440910"
+        },
+        {
           "name": "THE MOON 1-GRAM ",
           "price": 120,
           "cost": 0,
@@ -6377,5 +6393,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:49:00.844Z"
+  "lastSync": "2026-03-17T17:49:06.346Z"
 }
