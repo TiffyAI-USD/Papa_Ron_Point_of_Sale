@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -6329,8 +6329,18 @@
           "code": "P_1773164747894"
         }
       ],
+      "status": "paid",
+      "date": 1773769939693,
+      "total": 25,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 163,
+      "items": [],
       "status": "active",
-      "date": 1773769918512
+      "date": 1773769939825
     }
   ],
   "purchaseLog": [
@@ -6446,5 +6456,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:52:14.707Z"
+  "lastSync": "2026-03-17T17:52:19.820Z"
 }
