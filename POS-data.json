@@ -5511,7 +5511,16 @@
     },
     {
       "id": 130,
-      "items": [],
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
       "date": 1773437991650
     },
@@ -6186,5 +6195,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:26:23.729Z"
+  "lastSync": "2026-03-17T17:30:17.496Z"
 }
