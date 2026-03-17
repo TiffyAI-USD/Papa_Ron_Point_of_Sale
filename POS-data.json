@@ -1235,6 +1235,13 @@
       "cost": 0,
       "category": "food",
       "stock": -1
+    },
+    "P_1773769886364": {
+      "name": "VELVET CAKE 0,30",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5702,7 +5709,16 @@
     },
     {
       "id": 134,
-      "items": [],
+      "items": [
+        {
+          "name": "VELVET CAKE 0,30",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769886364"
+        }
+      ],
       "status": "active",
       "date": 1773483701009
     },
@@ -6403,5 +6419,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:50:45.355Z"
+  "lastSync": "2026-03-17T17:51:37.434Z"
 }
