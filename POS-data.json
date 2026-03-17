@@ -6338,16 +6338,7 @@
     },
     {
       "id": 163,
-      "items": [
-        {
-          "name": "OTHER",
-          "price": 20,
-          "cost": 0,
-          "category": "food",
-          "stock": -1,
-          "code": "P_1773769599079"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1773769939825
     }
@@ -6465,5 +6456,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:52:59.456Z"
+  "lastSync": "2026-03-17T17:53:51.365Z"
 }
