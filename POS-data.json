@@ -5672,6 +5672,22 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773769714204"
+        },
+        {
+          "name": "VELVET CAKE 1 GRAM",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773769440910"
+        },
+        {
+          "name": "THE MOON 1-GRAM ",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773769468938"
         }
       ],
       "status": "active",
@@ -6393,5 +6409,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:48:42.205Z"
+  "lastSync": "2026-03-17T17:48:52.278Z"
 }
