@@ -1200,6 +1200,20 @@
       "cost": 0,
       "category": "food",
       "stock": 54
+    },
+    "P_1773769440910": {
+      "name": "VELVET CAKE 1 GRAM",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773769468938": {
+      "name": "THE MOON 1-GRAM ",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5562,7 +5576,16 @@
     },
     {
       "id": 131,
-      "items": [],
+      "items": [
+        {
+          "name": "VELVET CAKE 1 GRAM",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773769440910"
+        }
+      ],
       "status": "active",
       "date": 1773483538483
     },
@@ -6299,5 +6322,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:40:17.864Z"
+  "lastSync": "2026-03-17T17:44:40.755Z"
 }
