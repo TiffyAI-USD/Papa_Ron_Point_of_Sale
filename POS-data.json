@@ -6127,6 +6127,14 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773231967771"
+        },
+        {
+          "name": "VM JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164818430"
         }
       ],
       "status": "active",
@@ -6246,5 +6254,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:37:18.101Z"
+  "lastSync": "2026-03-17T17:37:33.505Z"
 }
