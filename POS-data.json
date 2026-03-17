@@ -1206,14 +1206,14 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773769468938": {
       "name": "THE MOON 1-GRAM ",
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773769535752": {
       "name": "RAW RIZZLA ",
@@ -1234,7 +1234,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -5674,8 +5674,12 @@
           "code": "P_1773769468938"
         }
       ],
-      "status": "active",
-      "date": 1773483613631
+      "status": "paid",
+      "date": 1773769845252,
+      "total": 340,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 133,
@@ -6278,6 +6282,12 @@
       "items": [],
       "status": "active",
       "date": 1773769639192
+    },
+    {
+      "id": 161,
+      "items": [],
+      "status": "active",
+      "date": 1773769845356
     }
   ],
   "purchaseLog": [
@@ -6393,5 +6403,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-17T17:49:06.346Z"
+  "lastSync": "2026-03-17T17:50:45.355Z"
 }
