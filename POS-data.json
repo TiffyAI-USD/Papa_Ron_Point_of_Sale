@@ -1186,6 +1186,20 @@
       "cost": 0,
       "category": "food",
       "stock": -1
+    },
+    "P_1773732771235": {
+      "name": "BUTTER",
+      "price": 0,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
+    },
+    "P_1773732813645": {
+      "name": "EGGS ",
+      "price": 0,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6172,5 +6186,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-16T19:29:31.176Z"
+  "lastSync": "2026-03-17T07:33:36.996Z"
 }
