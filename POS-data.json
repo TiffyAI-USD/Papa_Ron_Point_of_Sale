@@ -5937,7 +5937,16 @@
     },
     {
       "id": 142,
-      "items": [],
+      "items": [
+        {
+          "name": "MR ORANGE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773324741065"
+        }
+      ],
       "status": "active",
       "date": 1773506400371
     },
@@ -6703,5 +6712,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T15:35:19.029Z"
+  "lastSync": "2026-03-18T18:40:11.519Z"
 }
