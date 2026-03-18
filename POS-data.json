@@ -1256,6 +1256,13 @@
       "cost": 0,
       "category": "food",
       "stock": -1
+    },
+    "P_1773845617854": {
+      "name": "BUSICOTTY INDOOR ",
+      "price": 120,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6689,5 +6696,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T14:49:45.813Z"
+  "lastSync": "2026-03-18T14:53:41.850Z"
 }
