@@ -5886,6 +5886,14 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773165057205"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773164886248"
         }
       ],
       "status": "active",
@@ -6514,5 +6522,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T13:46:13.726Z"
+  "lastSync": "2026-03-18T14:08:17.848Z"
 }
