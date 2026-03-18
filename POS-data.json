@@ -210,7 +210,7 @@
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": 16,
+      "stock": 12,
       "cost": 0,
       "category": "ingredient"
     },
@@ -6481,5 +6481,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T08:43:53.924Z"
+  "lastSync": "2026-03-18T08:44:22.475Z"
 }
