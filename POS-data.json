@@ -6442,6 +6442,14 @@
           "category": "food",
           "stock": -5,
           "code": "P_1773164795064"
+        },
+        {
+          "name": "GAS LIGHTER ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773333320471"
         }
       ],
       "status": "active",
@@ -6583,5 +6591,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T14:16:10.942Z"
+  "lastSync": "2026-03-18T14:16:29.536Z"
 }
