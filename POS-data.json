@@ -1263,6 +1263,13 @@
       "cost": 0,
       "category": "food",
       "stock": 5
+    },
+    "P_1773848095512": {
+      "name": "WATER 500MLS",
+      "price": 10,
+      "cost": 0,
+      "category": "drink",
+      "stock": 120
     }
   },
   "recipes": {
@@ -6696,5 +6703,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T15:07:15.322Z"
+  "lastSync": "2026-03-18T15:35:14.427Z"
 }
