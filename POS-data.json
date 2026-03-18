@@ -6522,6 +6522,22 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773164747894"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773333545424"
         }
       ],
       "status": "active",
@@ -6663,5 +6679,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T14:26:02.583Z"
+  "lastSync": "2026-03-18T14:26:47.827Z"
 }
