@@ -1249,6 +1249,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -1
+    },
+    "P_1773843254060": {
+      "name": "SD JOINT ",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -5889,7 +5896,16 @@
     },
     {
       "id": 141,
-      "items": [],
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773843254060"
+        }
+      ],
       "status": "active",
       "date": 1773505065703
     },
@@ -6376,88 +6392,7 @@
     },
     {
       "id": 166,
-      "items": [
-        {
-          "name": "WW JOINT",
-          "price": 25,
-          "cost": 0,
-          "category": "food",
-          "stock": -5,
-          "code": "P_1773164795064"
-        },
-        {
-          "name": "GAS LIGHTER ",
-          "price": 10,
-          "cost": 0,
-          "category": "food",
-          "stock": -1,
-          "code": "P_1773333320471"
-        },
-        {
-          "name": "POWERADE",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 11,
-          "code": "P_1773332932221"
-        },
-        {
-          "name": "POWERADE",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 11,
-          "code": "P_1773332932221"
-        },
-        {
-          "name": "POWERADE",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 11,
-          "code": "P_1773332932221"
-        },
-        {
-          "name": "BREEZER WATERMELON 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 15,
-          "code": "P_1773246015390"
-        },
-        {
-          "name": "BREEZER WATERMELON 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 15,
-          "code": "P_1773246015390"
-        },
-        {
-          "name": "BREEZER WATERMELON 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 15,
-          "code": "P_1773246015390"
-        },
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        },
-        {
-          "name": "SAVANNA 500ML DRY",
-          "price": 45,
-          "cost": 0,
-          "category": "drink",
-          "stock": 67,
-          "code": "P_1773324976622"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1773842913091
     }
@@ -6597,5 +6532,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-18T14:13:00.689Z"
+  "lastSync": "2026-03-18T14:14:22.444Z"
 }
