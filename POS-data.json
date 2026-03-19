@@ -257,7 +257,7 @@
       "price": 160,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -2
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -478,7 +478,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 55
+      "stock": 54
     },
     "P_1773245915568": {
       "name": "BERNINI MIMOSA 500ML",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 21
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 48
+      "stock": 47
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -1332,7 +1332,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 19
     }
   },
   "recipes": {
@@ -7184,8 +7184,18 @@
           "code": "P_1773245853117"
         }
       ],
+      "status": "paid",
+      "date": 1773947597103,
+      "total": 490,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 183,
+      "items": [],
       "status": "active",
-      "date": 1773947441304
+      "date": 1773947597221
     }
   ],
   "purchaseLog": [
@@ -7328,5 +7338,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T19:13:05.025Z"
+  "lastSync": "2026-03-19T19:13:17.220Z"
 }
