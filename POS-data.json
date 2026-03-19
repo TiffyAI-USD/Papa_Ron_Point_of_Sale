@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 33
+      "stock": 31
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -14,
+      "stock": -16,
       "cost": 0,
       "category": "ingredient"
     },
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -4
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 50
+      "stock": 49
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 59
+      "stock": 57
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -4
     }
   },
   "recipes": {
@@ -6110,8 +6110,12 @@
           "code": "P_1773164980203"
         }
       ],
-      "status": "active",
-      "date": 1773506646417
+      "status": "paid",
+      "date": 1773944592806,
+      "total": 530,
+      "tip": 30,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 144,
@@ -6953,6 +6957,12 @@
       "items": [],
       "status": "active",
       "date": 1773944447960
+    },
+    {
+      "id": 177,
+      "items": [],
+      "status": "active",
+      "date": 1773944592956
     }
   ],
   "purchaseLog": [
@@ -7095,5 +7105,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T18:22:59.729Z"
+  "lastSync": "2026-03-19T18:23:12.954Z"
 }
