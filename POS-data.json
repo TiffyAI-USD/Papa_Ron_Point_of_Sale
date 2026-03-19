@@ -480,13 +480,6 @@
       "category": "drink",
       "stock": 55
     },
-    "P_1773245877991": {
-      "name": "SAVANNA 330ML ",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 41
-    },
     "P_1773245898356": {
       "name": "EXTREME BOTTLED 275ML ",
       "price": 35,
@@ -6741,5 +6734,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:01:30.065Z"
+  "lastSync": "2026-03-19T13:04:12.653Z"
 }
