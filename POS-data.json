@@ -7150,6 +7150,22 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773234210075"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773944852469"
         }
       ],
       "status": "active",
@@ -7296,5 +7312,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T19:11:34.065Z"
+  "lastSync": "2026-03-19T19:11:39.374Z"
 }
