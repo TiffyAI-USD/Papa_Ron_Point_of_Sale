@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -13,
+      "stock": -14,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -492,7 +492,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 31
+      "stock": 30
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
@@ -6845,8 +6845,18 @@
           "code": "P_1773245925943"
         }
       ],
+      "status": "paid",
+      "date": 1773944447798,
+      "total": 170,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 176,
+      "items": [],
       "status": "active",
-      "date": 1773944106674
+      "date": 1773944447960
     }
   ],
   "purchaseLog": [
@@ -6989,5 +6999,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T18:20:37.395Z"
+  "lastSync": "2026-03-19T18:20:47.960Z"
 }
