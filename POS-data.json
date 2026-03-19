@@ -648,13 +648,6 @@
       "category": "drink",
       "stock": 7
     },
-    "P_1773324792590": {
-      "name": "GRAPETISER ",
-      "price": 20,
-      "cost": 0,
-      "category": "drink",
-      "stock": 13
-    },
     "P_1773324805766": {
       "name": "SPARLETTA SPARBERRY",
       "price": 20,
@@ -6755,5 +6748,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:26:53.071Z"
+  "lastSync": "2026-03-19T13:31:31.016Z"
 }
