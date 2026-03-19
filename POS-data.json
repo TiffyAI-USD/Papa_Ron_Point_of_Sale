@@ -6092,6 +6092,22 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773232963360"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 33,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 33,
+          "code": "P_1773164980203"
         }
       ],
       "status": "active",
@@ -7079,5 +7095,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T18:22:38.554Z"
+  "lastSync": "2026-03-19T18:22:59.729Z"
 }
