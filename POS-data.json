@@ -6995,7 +6995,32 @@
     },
     {
       "id": 178,
-      "items": [],
+      "items": [
+        {
+          "name": "GANJA 1-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 16,
+          "code": "P_1773164912626"
+        },
+        {
+          "name": "GANJA 1-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 16,
+          "code": "P_1773164912626"
+        },
+        {
+          "name": "GANJA 1-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 16,
+          "code": "P_1773164912626"
+        }
+      ],
       "status": "active",
       "date": 1773944675042
     }
@@ -7140,5 +7165,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T18:24:35.038Z"
+  "lastSync": "2026-03-19T18:25:55.480Z"
 }
