@@ -793,7 +793,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 19
     },
     "P_1773340830986": {
       "name": "BOERIE AND CHIPS",
@@ -6741,5 +6741,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:17:52.852Z"
+  "lastSync": "2026-03-19T13:17:58.677Z"
 }
