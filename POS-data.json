@@ -417,13 +417,6 @@
       "category": "drink",
       "stock": 16
     },
-    "P_1773244984891": {
-      "name": "SMIRNOFF ICE STORM",
-      "price": 35,
-      "cost": 0,
-      "category": "drink",
-      "stock": 72
-    },
     "P_1773245016871": {
       "name": "SMIRNOF ICE PINE TWIST",
       "price": 35,
@@ -6750,5 +6743,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T12:51:52.543Z"
+  "lastSync": "2026-03-19T12:53:56.569Z"
 }
