@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 16
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -6755,5 +6755,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:35:23.540Z"
+  "lastSync": "2026-03-19T13:35:43.900Z"
 }
