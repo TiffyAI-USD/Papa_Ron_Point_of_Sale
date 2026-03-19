@@ -6698,6 +6698,22 @@
           "category": "drink",
           "stock": 28,
           "code": "P_1773926133077"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 200,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773340774940"
         }
       ],
       "status": "active",
@@ -6844,5 +6860,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T17:37:14.033Z"
+  "lastSync": "2026-03-19T18:04:53.528Z"
 }
