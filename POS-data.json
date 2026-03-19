@@ -814,7 +814,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 22
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1270,6 +1270,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 4
+    },
+    "P_1773926359252": {
+      "name": "LIQUI FRUIT ORANGE 330ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6741,5 +6748,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:18:28.617Z"
+  "lastSync": "2026-03-19T13:19:23.769Z"
 }
