@@ -1312,6 +1312,13 @@
       "cost": 0,
       "category": "food",
       "stock": 200
+    },
+    "P_1773939600142": {
+      "name": "DUNHIL STUFF",
+      "price": 60,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6641,6 +6648,27 @@
       "items": [],
       "status": "active",
       "date": 1773919614637
+    },
+    {
+      "id": 171,
+      "items": [
+        {
+          "name": "DUNHIL STUFF",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773939600142"
+        }
+      ],
+      "status": "active",
+      "date": 1773939612596
+    },
+    {
+      "id": 172,
+      "items": [],
+      "status": "active",
+      "date": 1773941768124
     }
   ],
   "purchaseLog": [
@@ -6783,5 +6811,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T16:59:25.882Z"
+  "lastSync": "2026-03-19T17:36:08.124Z"
 }
