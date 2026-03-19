@@ -5964,7 +5964,16 @@
     },
     {
       "id": 143,
-      "items": [],
+      "items": [
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773244946839"
+        }
+      ],
       "status": "active",
       "date": 1773506646417
     },
@@ -6730,5 +6739,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T11:20:13.853Z"
+  "lastSync": "2026-03-19T11:26:42.965Z"
 }
