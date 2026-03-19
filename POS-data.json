@@ -1277,6 +1277,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 12
+    },
+    "P_1773927304684": {
+      "name": "STONEY CAN 500ML ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 19
     }
   },
   "recipes": {
@@ -6748,5 +6755,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:34:45.215Z"
+  "lastSync": "2026-03-19T13:35:23.540Z"
 }
