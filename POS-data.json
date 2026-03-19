@@ -1284,6 +1284,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 15
+    },
+    "P_1773929556018": {
+      "name": "DRY LEMON ",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6755,5 +6762,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T14:11:32.174Z"
+  "lastSync": "2026-03-19T14:12:39.602Z"
 }
