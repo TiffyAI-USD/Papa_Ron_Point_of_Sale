@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 49
+      "stock": 48
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -7099,9 +7099,28 @@
     },
     {
       "id": 181,
+      "items": [
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 49,
+          "code": "P_1773689328747"
+        }
+      ],
+      "status": "paid",
+      "date": 1773947441099,
+      "total": 15,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 182,
       "items": [],
       "status": "active",
-      "date": 1773945016571
+      "date": 1773947441304
     }
   ],
   "purchaseLog": [
@@ -7244,5 +7263,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T19:10:17.586Z"
+  "lastSync": "2026-03-19T19:10:36.782Z"
 }
