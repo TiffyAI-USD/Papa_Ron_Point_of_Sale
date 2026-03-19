@@ -6666,7 +6666,32 @@
     },
     {
       "id": 172,
-      "items": [],
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773333545424"
+        }
+      ],
       "status": "active",
       "date": 1773941768124
     }
@@ -6811,5 +6836,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T17:36:08.124Z"
+  "lastSync": "2026-03-19T17:36:44.924Z"
 }
