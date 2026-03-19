@@ -1277,6 +1277,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 17
+    },
+    "P_1773926453500": {
+      "name": "TONIC WATER 200ML",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 17
     }
   },
   "recipes": {
@@ -6748,5 +6755,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T13:20:07.808Z"
+  "lastSync": "2026-03-19T13:21:12.004Z"
 }
