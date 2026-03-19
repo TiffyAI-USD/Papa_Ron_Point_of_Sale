@@ -6164,7 +6164,32 @@
     },
     {
       "id": 146,
-      "items": [],
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773944852469"
+        }
+      ],
       "status": "active",
       "date": 1773513418677
     },
@@ -7182,5 +7207,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T18:28:53.354Z"
+  "lastSync": "2026-03-19T18:29:06.253Z"
 }
