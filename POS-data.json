@@ -6714,6 +6714,14 @@
           "category": "drink",
           "stock": 19,
           "code": "P_1773340774940"
+        },
+        {
+          "name": "BREEZER WATERMELON 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773925849392"
         }
       ],
       "status": "active",
@@ -6860,5 +6868,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-19T18:04:53.528Z"
+  "lastSync": "2026-03-19T18:06:22.646Z"
 }
