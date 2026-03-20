@@ -751,7 +751,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1773340830986": {
       "name": "BOERIE AND CHIPS",
@@ -7205,6 +7205,12 @@
       "items": [],
       "status": "active",
       "date": 1773947597221
+    },
+    {
+      "id": 184,
+      "items": [],
+      "status": "active",
+      "date": 1774007480198
     }
   ],
   "purchaseLog": [
@@ -7344,8 +7350,13 @@
         "name": "OTHER",
         "price": 20,
         "date": 1773770067984
+      },
+      {
+        "name": "FAN",
+        "price": 20,
+        "date": 1774007479279
       }
     ]
   },
-  "lastSync": "2026-03-20T11:50:48.265Z"
+  "lastSync": "2026-03-20T11:51:20.198Z"
 }
