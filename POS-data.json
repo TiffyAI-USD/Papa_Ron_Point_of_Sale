@@ -6546,6 +6546,14 @@
           "category": "food",
           "stock": -4,
           "code": "P_1773232963360"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164795064"
         }
       ],
       "status": "active",
@@ -7452,5 +7460,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T19:18:32.172Z"
+  "lastSync": "2026-03-20T19:18:37.104Z"
 }
