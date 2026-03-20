@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -12
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": 22,
+      "stock": 17,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": 0,
+      "stock": -5,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": 0,
+      "stock": -15,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": 0,
+      "stock": -1,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": 5,
+      "stock": -1,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 43
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -478,7 +478,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 54
+      "stock": 52
     },
     "P_1773245915568": {
       "name": "BERNINI MIMOSA 500ML",
@@ -1192,7 +1192,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 32
+      "stock": 30
     },
     "P_1773925481823": {
       "name": "SAVANNA 330ML ",
@@ -7484,8 +7484,18 @@
           "code": "P_1773244875193"
         }
       ],
+      "status": "paid",
+      "date": 1774034620069,
+      "total": 680,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 191,
+      "items": [],
       "status": "active",
-      "date": 1774034473807
+      "date": 1774034620226
     }
   ],
   "purchaseLog": [
@@ -7645,5 +7655,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T19:23:23.422Z"
+  "lastSync": "2026-03-20T19:23:40.218Z"
 }
