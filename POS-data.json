@@ -7274,6 +7274,22 @@
           "category": "food",
           "stock": -4,
           "code": "P_1773232963360"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "PEANUTS",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 36,
+          "code": "P_1773930106975"
         }
       ],
       "status": "active",
@@ -7437,5 +7453,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T18:23:33.366Z"
+  "lastSync": "2026-03-20T18:23:50.015Z"
 }
