@@ -7340,6 +7340,30 @@
           "category": "food",
           "stock": -9,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "LIQUI FRUIT ORANGE 330ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773926359252"
+        },
+        {
+          "name": "LIQUI FRUIT ORANGE 330ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773926359252"
+        },
+        {
+          "name": "LIQUI FRUIT ORANGE 330ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773926359252"
         }
       ],
       "status": "active",
@@ -7503,5 +7527,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T19:20:07.607Z"
+  "lastSync": "2026-03-20T19:20:40.092Z"
 }
