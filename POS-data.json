@@ -6538,6 +6538,14 @@
           "category": "drink",
           "stock": 19,
           "code": "P_1773927304684"
+        },
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773232963360"
         }
       ],
       "status": "active",
@@ -7444,5 +7452,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T19:17:01.401Z"
+  "lastSync": "2026-03-20T19:18:32.172Z"
 }
