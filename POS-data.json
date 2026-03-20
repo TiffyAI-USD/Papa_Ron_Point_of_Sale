@@ -7208,9 +7208,18 @@
     },
     {
       "id": 184,
-      "items": [],
+      "items": [
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773340774940"
+        }
+      ],
       "status": "active",
-      "date": 1774007480198
+      "date": 1774020624371
     }
   ],
   "purchaseLog": [
@@ -7358,5 +7367,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T11:51:20.198Z"
+  "lastSync": "2026-03-20T15:30:24.395Z"
 }
