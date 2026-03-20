@@ -7375,7 +7375,16 @@
     },
     {
       "id": 189,
-      "items": [],
+      "items": [
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1773164795064"
+        }
+      ],
       "status": "active",
       "date": 1774034453193
     }
@@ -7537,5 +7546,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T19:20:53.187Z"
+  "lastSync": "2026-03-20T19:21:08.910Z"
 }
