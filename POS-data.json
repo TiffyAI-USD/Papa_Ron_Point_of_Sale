@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -730,7 +730,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773333432507": {
       "name": "PREGO & CHIPS",
@@ -6513,8 +6513,12 @@
           "code": "P_1773333320471"
         }
       ],
-      "status": "active",
-      "date": 1773689302113
+      "status": "paid",
+      "date": 1774029910878,
+      "total": 40,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 156,
@@ -7243,6 +7247,12 @@
       ],
       "status": "active",
       "date": 1774023752156
+    },
+    {
+      "id": 186,
+      "items": [],
+      "status": "active",
+      "date": 1774029911151
     }
   ],
   "purchaseLog": [
@@ -7402,5 +7412,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T18:05:01.632Z"
+  "lastSync": "2026-03-20T18:05:11.151Z"
 }
