@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 228
+      "stock": 227
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -6495,16 +6495,7 @@
     },
     {
       "id": 155,
-      "items": [
-        {
-          "name": "FAN",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 18,
-          "code": "P_1773340774940"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1773689302113
     },
@@ -7386,8 +7377,13 @@
         "name": "FAN",
         "price": 20,
         "date": 1774023750574
+      },
+      {
+        "name": "WATER 500MLS",
+        "price": 10,
+        "date": 1774024063996
       }
     ]
   },
-  "lastSync": "2026-03-20T16:27:39.453Z"
+  "lastSync": "2026-03-20T18:03:45.079Z"
 }
