@@ -7223,7 +7223,16 @@
     },
     {
       "id": 185,
-      "items": [],
+      "items": [
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 228,
+          "code": "P_1773848095512"
+        }
+      ],
       "status": "active",
       "date": 1774023752156
     }
@@ -7380,5 +7389,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-20T16:22:32.156Z"
+  "lastSync": "2026-03-20T16:27:39.453Z"
 }
