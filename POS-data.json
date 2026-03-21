@@ -82,7 +82,7 @@
       "price": 1,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 0
     },
     "P_1773165157281": {
       "name": "CREAMSODA GUMMIE ",
@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 47
+      "stock": 46
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 224
+      "stock": 223
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -1304,7 +1304,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 36
+      "stock": 0
     },
     "P_1773939546490": {
       "name": "DUNHIL LOOSE",
@@ -6773,7 +6773,16 @@
     },
     {
       "id": 163,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 47,
+          "code": "P_1773689328747"
+        }
+      ],
       "status": "active",
       "date": 1773769939825
     },
@@ -8083,10 +8092,21 @@
       "date": 1774091297467
     },
     {
-      "id": 203,
-      "items": [],
-      "status": "active",
-      "date": 1774091306415
+      "id": "BAL_1774092832742",
+      "items": [
+        {
+          "name": "LOOSE RIZZLA",
+          "price": 0,
+          "cost": 0,
+          "code": "P_1773165057205"
+        }
+      ],
+      "total": 0,
+      "method": "Balance_Over",
+      "status": "paid",
+      "date": 1774092832744,
+      "staff": "Zuko",
+      "notes": "Stock Balance. Diff: 1.0"
     }
   ],
   "purchaseLog": [
@@ -8185,6 +8205,11 @@
         "name": "WINDHOEK 500ML ",
         "price": 30,
         "date": 1773919607631
+      },
+      {
+        "name": "WATER 500MLS",
+        "price": 10,
+        "date": 1774104949202
       }
     ],
     "Cats": [
@@ -8231,6 +8256,11 @@
         "name": "FAN",
         "price": 20,
         "date": 1774007479279
+      },
+      {
+        "name": "COKE",
+        "price": 15,
+        "date": 1774106674172
       }
     ],
     "Charlie": [
@@ -8246,5 +8276,6 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T11:08:37.140Z"
+  "staffTips": {},
+  "lastSync": "2026-03-21T17:16:16.067Z"
 }
