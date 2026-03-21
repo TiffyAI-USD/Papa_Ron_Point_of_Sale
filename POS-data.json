@@ -7922,6 +7922,22 @@
           "category": "drink",
           "stock": 225,
           "code": "P_1773848095512"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "GAS LIGHTER ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773333320471"
         }
       ],
       "status": "active",
@@ -8085,5 +8101,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:51:42.893Z"
+  "lastSync": "2026-03-21T10:52:07.003Z"
 }
