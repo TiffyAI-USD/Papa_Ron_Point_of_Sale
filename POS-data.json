@@ -1347,6 +1347,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -3
+    },
+    "P_1774119200192": {
+      "name": "ICE BAG",
+      "price": 35,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6808,7 +6815,32 @@
     },
     {
       "id": 164,
-      "items": [],
+      "items": [
+        {
+          "name": "CHOCOLOKO JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1773164768558"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -15,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
       "date": 1773770071060
     },
@@ -8436,5 +8468,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:52:55.666Z"
+  "lastSync": "2026-03-21T18:53:29.550Z"
 }
