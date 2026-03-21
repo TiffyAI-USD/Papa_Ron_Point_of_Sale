@@ -19,14 +19,14 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773164795064": {
       "name": "WW JOINT",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -14
+      "stock": -15
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -730,7 +730,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773333432507": {
       "name": "PREGO & CHIPS",
@@ -6789,10 +6789,22 @@
           "category": "food",
           "stock": -14,
           "code": "P_1773164795064"
+        },
+        {
+          "name": "GAS LIGHTER ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773333320471"
         }
       ],
-      "status": "active",
-      "date": 1773769939825
+      "status": "paid",
+      "date": 1774118902742,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 164,
@@ -8115,6 +8127,12 @@
       "date": 1774092832744,
       "staff": "Zuko",
       "notes": "Stock Balance. Diff: 1.0"
+    },
+    {
+      "id": 204,
+      "items": [],
+      "status": "active",
+      "date": 1774118902959
     }
   ],
   "purchaseLog": [
@@ -8285,5 +8303,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:47:33.623Z"
+  "lastSync": "2026-03-21T18:48:14.778Z"
 }
