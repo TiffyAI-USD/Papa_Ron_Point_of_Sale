@@ -96,7 +96,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773165214687": {
       "name": "TROPICAL GUMMIE ",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -1192,7 +1192,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 30
+      "stock": 29
     },
     "P_1773925481823": {
       "name": "SAVANNA 330ML ",
@@ -6653,8 +6653,12 @@
           "code": "P_1773333545424"
         }
       ],
-      "status": "active",
-      "date": 1773769217865
+      "status": "paid",
+      "date": 1774089559979,
+      "total": 210,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 160,
@@ -7538,6 +7542,29 @@
       ],
       "status": "active",
       "date": 1774034620226
+    },
+    {
+      "id": 192,
+      "items": [
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 227,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 227,
+          "code": "P_1773848095512"
+        }
+      ],
+      "status": "active",
+      "date": 1774089560172
     }
   ],
   "purchaseLog": [
@@ -7697,5 +7724,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:39:10.014Z"
+  "lastSync": "2026-03-21T10:39:43.689Z"
 }
