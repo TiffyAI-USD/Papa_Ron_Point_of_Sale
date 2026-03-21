@@ -6839,6 +6839,38 @@
           "category": "food",
           "stock": -11,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "ICE BAG",
+          "price": 35,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1774119200192"
+        },
+        {
+          "name": "ICE BAG",
+          "price": 35,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1774119200192"
+        },
+        {
+          "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 2,
+          "code": "P_1773245128672"
+        },
+        {
+          "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 2,
+          "code": "P_1773245128672"
         }
       ],
       "status": "active",
@@ -8468,5 +8500,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:53:29.550Z"
+  "lastSync": "2026-03-21T18:53:51.341Z"
 }
