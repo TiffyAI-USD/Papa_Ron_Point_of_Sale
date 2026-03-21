@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 31
+      "stock": 29
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -8018,8 +8018,18 @@
           "code": "P_1773164980203"
         }
       ],
+      "status": "paid",
+      "date": 1774091259604,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 201,
+      "items": [],
       "status": "active",
-      "date": 1774091213448
+      "date": 1774091259737
     }
   ],
   "purchaseLog": [
@@ -8179,5 +8189,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T11:07:28.032Z"
+  "lastSync": "2026-03-21T11:07:39.734Z"
 }
