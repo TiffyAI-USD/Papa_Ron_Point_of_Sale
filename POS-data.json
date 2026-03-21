@@ -96,7 +96,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773165214687": {
       "name": "TROPICAL GUMMIE ",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -18,
+      "stock": -19,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 227
+      "stock": 225
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -1192,14 +1192,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 29
+      "stock": 26
     },
     "P_1773925481823": {
       "name": "SAVANNA 330ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 38
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -7619,8 +7619,18 @@
           "code": "P_1773165190985"
         }
       ],
+      "status": "paid",
+      "date": 1774089722809,
+      "total": 370,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 193,
+      "items": [],
       "status": "active",
-      "date": 1774089560172
+      "date": 1774089722938
     }
   ],
   "purchaseLog": [
@@ -7780,5 +7790,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:41:51.732Z"
+  "lastSync": "2026-03-21T10:42:02.937Z"
 }
