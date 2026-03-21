@@ -6773,7 +6773,16 @@
     },
     {
       "id": 163,
-      "items": [],
+      "items": [
+        {
+          "name": "CHOCOLOKO JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164768558"
+        }
+      ],
       "status": "active",
       "date": 1773769939825
     },
@@ -8268,5 +8277,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T17:17:18.842Z"
+  "lastSync": "2026-03-21T18:47:24.906Z"
 }
