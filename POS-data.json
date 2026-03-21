@@ -19,14 +19,14 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -9
+      "stock": -10
     },
     "P_1773164795064": {
       "name": "WW JOINT",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -16
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -19,
+      "stock": -20,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -18,
+      "stock": -33,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,14 +283,14 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 42
+      "stock": 41
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -436,7 +436,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 2
+      "stock": 0
     },
     "P_1773245680224": {
       "name": "FLYING FISH 500ML",
@@ -1297,7 +1297,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 61
+      "stock": 60
     },
     "P_1773930106975": {
       "name": "PEANUTS",
@@ -1353,7 +1353,7 @@
       "price": 35,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -6905,8 +6905,12 @@
           "code": "P_1773244875193"
         }
       ],
-      "status": "active",
-      "date": 1773770071060
+      "status": "paid",
+      "date": 1774119274038,
+      "total": 525,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 165,
@@ -8362,6 +8366,12 @@
       ],
       "status": "active",
       "date": 1774119152083
+    },
+    {
+      "id": 209,
+      "items": [],
+      "status": "active",
+      "date": 1774119274167
     }
   ],
   "purchaseLog": [
@@ -8532,5 +8542,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:54:22.618Z"
+  "lastSync": "2026-03-21T18:54:34.166Z"
 }
