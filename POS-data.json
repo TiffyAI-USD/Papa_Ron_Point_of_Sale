@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": 2,
+      "stock": -8,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -8186,8 +8186,35 @@
           "code": "P_1773235049759"
         }
       ],
+      "status": "paid",
+      "date": 1774119000812,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 207,
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773333089927"
+        }
+      ],
       "status": "active",
-      "date": 1774118976196
+      "date": 1774119000941
     }
   ],
   "purchaseLog": [
@@ -8358,5 +8385,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:49:50.960Z"
+  "lastSync": "2026-03-21T18:50:23.466Z"
 }
