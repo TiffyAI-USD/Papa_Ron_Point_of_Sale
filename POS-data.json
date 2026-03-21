@@ -7938,6 +7938,22 @@
           "category": "food",
           "stock": -3,
           "code": "P_1773333320471"
+        },
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 56,
+          "code": "P_1773244841294"
+        },
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 56,
+          "code": "P_1773244841294"
         }
       ],
       "status": "active",
@@ -8101,5 +8117,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:52:07.003Z"
+  "lastSync": "2026-03-21T10:52:13.586Z"
 }
