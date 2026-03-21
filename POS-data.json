@@ -7906,6 +7906,14 @@
           "category": "drink",
           "stock": 56,
           "code": "P_1773244841294"
+        },
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 56,
+          "code": "P_1773244841294"
         }
       ],
       "status": "active",
@@ -8069,5 +8077,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:58:01.894Z"
+  "lastSync": "2026-03-21T10:58:14.435Z"
 }
