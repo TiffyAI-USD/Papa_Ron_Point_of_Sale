@@ -6887,6 +6887,22 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773234587229"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 61,
+          "code": "P_1773929983658"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 42,
+          "code": "P_1773244875193"
         }
       ],
       "status": "active",
@@ -8516,5 +8532,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:54:01.493Z"
+  "lastSync": "2026-03-21T18:54:22.618Z"
 }
