@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": -14
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": 6,
+      "stock": 2,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": 12,
+      "stock": 8,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -16,
+      "stock": -24,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -16,
+      "stock": -24,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -12
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -10,
+      "stock": -15,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -380,7 +380,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 50
     },
     "P_1773244875193": {
       "name": "BLACK LABEL 500ML ",
@@ -401,7 +401,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 19
     },
     "P_1773244946839": {
       "name": "WINDHOEK 500ML ",
@@ -625,7 +625,7 @@
       "price": 70,
       "cost": 0,
       "category": "drink",
-      "stock": 27
+      "stock": 26
     },
     "P_1773324741065": {
       "name": "MR ORANGE ",
@@ -730,7 +730,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773333432507": {
       "name": "PREGO & CHIPS",
@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 225
+      "stock": 224
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 44
+      "stock": 43
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -7964,8 +7964,18 @@
           "code": "P_1773926623691"
         }
       ],
+      "status": "paid",
+      "date": 1774090942457,
+      "total": 1020,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 199,
+      "items": [],
       "status": "active",
-      "date": 1774090168599
+      "date": 1774090942726
     }
   ],
   "purchaseLog": [
@@ -8125,5 +8135,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T11:02:14.291Z"
+  "lastSync": "2026-03-21T11:02:22.725Z"
 }
