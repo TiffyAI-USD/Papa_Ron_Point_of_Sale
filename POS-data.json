@@ -8176,7 +8176,16 @@
     },
     {
       "id": 206,
-      "items": [],
+      "items": [
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773235049759"
+        }
+      ],
       "status": "active",
       "date": 1774118976196
     }
@@ -8349,5 +8358,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:49:36.195Z"
+  "lastSync": "2026-03-21T18:49:50.960Z"
 }
