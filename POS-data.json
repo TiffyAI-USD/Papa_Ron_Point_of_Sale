@@ -1340,6 +1340,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 54
+    },
+    "P_1774091290480": {
+      "name": "FEG",
+      "price": 3,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -6712,7 +6719,32 @@
     },
     {
       "id": 161,
-      "items": [],
+      "items": [
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774091290480"
+        }
+      ],
       "status": "active",
       "date": 1773769845356
     },
@@ -8030,6 +8062,21 @@
       "items": [],
       "status": "active",
       "date": 1774091259737
+    },
+    {
+      "id": 202,
+      "items": [
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774091290480"
+        }
+      ],
+      "status": "active",
+      "date": 1774091297467
     }
   ],
   "purchaseLog": [
@@ -8189,5 +8236,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T11:07:39.734Z"
+  "lastSync": "2026-03-21T11:08:17.503Z"
 }
