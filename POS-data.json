@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": 7,
+      "stock": 2,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": -5,
+      "stock": -10,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": -15,
+      "stock": -30,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": -1,
+      "stock": -2,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": -1,
+      "stock": -7,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -8157,9 +8157,28 @@
     },
     {
       "id": 205,
+      "items": [
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773235768064"
+        }
+      ],
+      "status": "paid",
+      "date": 1774118976044,
+      "total": 350,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 206,
       "items": [],
       "status": "active",
-      "date": 1774118957676
+      "date": 1774118976196
     }
   ],
   "purchaseLog": [
@@ -8330,5 +8349,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:49:17.675Z"
+  "lastSync": "2026-03-21T18:49:36.195Z"
 }
