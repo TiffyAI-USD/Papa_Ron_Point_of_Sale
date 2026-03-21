@@ -8369,7 +8369,40 @@
     },
     {
       "id": 209,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BLACK CROWN 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 30,
+          "code": "P_1773245925943"
+        }
+      ],
       "status": "active",
       "date": 1774119274167
     }
@@ -8542,5 +8575,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:54:34.166Z"
+  "lastSync": "2026-03-21T18:54:55.737Z"
 }
