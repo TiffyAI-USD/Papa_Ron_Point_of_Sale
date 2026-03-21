@@ -492,7 +492,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 30
+      "stock": 29
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -8
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -8403,8 +8403,27 @@
           "code": "P_1773245925943"
         }
       ],
+      "status": "paid",
+      "date": 1774119315079,
+      "total": 185,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 210,
+      "items": [
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773235049759"
+        }
+      ],
       "status": "active",
-      "date": 1774119274167
+      "date": 1774119315199
     }
   ],
   "purchaseLog": [
@@ -8575,5 +8594,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:54:55.737Z"
+  "lastSync": "2026-03-21T18:55:15.198Z"
 }
