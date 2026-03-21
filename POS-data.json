@@ -8211,6 +8211,22 @@
           "category": "food",
           "stock": -6,
           "code": "P_1773333089927"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 66,
+          "code": "P_1773324976622"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773235049759"
         }
       ],
       "status": "active",
@@ -8385,5 +8401,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:50:23.466Z"
+  "lastSync": "2026-03-21T18:52:07.731Z"
 }
