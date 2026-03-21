@@ -604,7 +604,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 3
+      "stock": 2
     },
     "P_1773251893658": {
       "name": "GORDON'S SHORT",
@@ -1178,7 +1178,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 69
+      "stock": 68
     },
     "P_1773925053773": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
@@ -8148,8 +8148,18 @@
           "code": "P_1773924866567"
         }
       ],
+      "status": "paid",
+      "date": 1774118957544,
+      "total": 95,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 205,
+      "items": [],
       "status": "active",
-      "date": 1774118902959
+      "date": 1774118957676
     }
   ],
   "purchaseLog": [
@@ -8320,5 +8330,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:49:05.289Z"
+  "lastSync": "2026-03-21T18:49:17.675Z"
 }
