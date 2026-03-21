@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -33,
+      "stock": -43,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -8422,8 +8422,18 @@
           "code": "P_1773235049759"
         }
       ],
+      "status": "paid",
+      "date": 1774119335765,
+      "total": 100,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 211,
+      "items": [],
       "status": "active",
-      "date": 1774119315199
+      "date": 1774119335885
     }
   ],
   "purchaseLog": [
@@ -8594,5 +8604,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:55:15.198Z"
+  "lastSync": "2026-03-21T19:18:45.293Z"
 }
