@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 58
+      "stock": 57
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 46
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -1339,7 +1339,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 54
     }
   },
   "recipes": {
@@ -6703,8 +6703,12 @@
           "code": "P_1773245979898"
         }
       ],
-      "status": "active",
-      "date": 1773769639192
+      "status": "paid",
+      "date": 1774090168413,
+      "total": 115,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 161,
@@ -7787,6 +7791,12 @@
       "items": [],
       "status": "active",
       "date": 1774089991396
+    },
+    {
+      "id": 198,
+      "items": [],
+      "status": "active",
+      "date": 1774090168599
     }
   ],
   "purchaseLog": [
@@ -7946,5 +7956,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:49:22.152Z"
+  "lastSync": "2026-03-21T10:49:28.599Z"
 }
