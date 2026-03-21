@@ -7826,6 +7826,14 @@
           "category": "food",
           "stock": -8,
           "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773234447154"
         }
       ],
       "status": "active",
@@ -7989,5 +7997,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-21T10:49:55.917Z"
+  "lastSync": "2026-03-21T10:50:03.138Z"
 }
