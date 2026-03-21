@@ -8130,7 +8130,16 @@
     },
     {
       "id": 204,
-      "items": [],
+      "items": [
+        {
+          "name": "SODAZE CHERRY POP",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 3,
+          "code": "P_1773249526749"
+        }
+      ],
       "status": "active",
       "date": 1774118902959
     }
@@ -8303,5 +8312,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T18:48:14.778Z"
+  "lastSync": "2026-03-21T18:48:53.675Z"
 }
