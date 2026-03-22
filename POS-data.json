@@ -9160,6 +9160,22 @@
           "category": "food",
           "stock": -12,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "VM JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1773164818430"
+        },
+        {
+          "name": "BUBBLE GUM GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773165190985"
         }
       ],
       "status": "active",
@@ -9354,5 +9370,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:48:45.475Z"
+  "lastSync": "2026-03-22T19:48:56.033Z"
 }
