@@ -1192,7 +1192,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 25
     },
     "P_1773925481823": {
       "name": "SAVANNA 330ML ",
@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 13
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -9419,10 +9419,28 @@
           "category": "drink",
           "stock": 14,
           "code": "P_1773929465649"
+        },
+        {
+          "name": "CORONA 355ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1773925226529"
         }
       ],
+      "status": "paid",
+      "date": 1774209486505,
+      "total": 70,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 237,
+      "items": [],
       "status": "active",
-      "date": 1774209453078
+      "date": 1774209486625
     }
   ],
   "purchaseLog": [
@@ -9613,5 +9631,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:57:50.390Z"
+  "lastSync": "2026-03-22T19:58:06.625Z"
 }
