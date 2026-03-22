@@ -9133,6 +9133,14 @@
           "category": "drink",
           "stock": 40,
           "code": "P_1773244911060"
+        },
+        {
+          "name": "SAVANNA ANGRY LEMON 500ML",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 52,
+          "code": "P_1773245853117"
         }
       ],
       "status": "active",
@@ -9327,5 +9335,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:48:03.905Z"
+  "lastSync": "2026-03-22T19:48:11.643Z"
 }
