@@ -358,13 +358,13 @@
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
-      "stock": -1,
+      "stock": -3,
       "cost": 0,
       "category": "ingredient"
     },
     "RUSSIAN ": {
       "name": "RUSSIAN ",
-      "stock": -1,
+      "stock": -3,
       "cost": 0,
       "category": "ingredient"
     },
@@ -373,7 +373,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -3
     },
     "P_1773244841294": {
       "name": "BLACK LABEL 300MLS",
@@ -8973,8 +8973,18 @@
           "code": "P_1773236344587"
         }
       ],
+      "status": "paid",
+      "date": 1774208483962,
+      "total": 100,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 224,
+      "items": [],
       "status": "active",
-      "date": 1774208457564
+      "date": 1774208484095
     }
   ],
   "purchaseLog": [
@@ -9165,5 +9175,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:41:15.682Z"
+  "lastSync": "2026-03-22T19:41:24.094Z"
 }
