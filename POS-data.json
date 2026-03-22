@@ -33,7 +33,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -7
+      "stock": -8
     },
     "P_1773164868475": {
       "name": "HASH JOINT",
@@ -96,7 +96,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773165214687": {
       "name": "TROPICAL GUMMIE ",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -23,
+      "stock": -24,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -9178,8 +9178,18 @@
           "code": "P_1773165190985"
         }
       ],
+      "status": "paid",
+      "date": 1774208940905,
+      "total": 200,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 231,
+      "items": [],
       "status": "active",
-      "date": 1774208905108
+      "date": 1774208941018
     }
   ],
   "purchaseLog": [
@@ -9370,5 +9380,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:48:56.033Z"
+  "lastSync": "2026-03-22T19:49:01.017Z"
 }
