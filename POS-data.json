@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 43
+      "stock": 42
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -1367,7 +1367,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 16
     }
   },
   "recipes": {
@@ -7043,10 +7043,22 @@
           "category": "drink",
           "stock": 26,
           "code": "P_1774208105032"
+        },
+        {
+          "name": "RED BULL 250ML",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773926623691"
         }
       ],
-      "status": "active",
-      "date": 1773842913091
+      "status": "paid",
+      "date": 1774208175554,
+      "total": 325,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 167,
@@ -8720,6 +8732,29 @@
       "items": [],
       "status": "active",
       "date": 1774208074340
+    },
+    {
+      "id": 219,
+      "items": [
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1773324726340"
+        },
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1773324726340"
+        }
+      ],
+      "status": "active",
+      "date": 1774208175683
     }
   ],
   "purchaseLog": [
@@ -8910,5 +8945,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:35:55.889Z"
+  "lastSync": "2026-03-22T19:36:07.459Z"
 }
