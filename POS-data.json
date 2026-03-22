@@ -9357,6 +9357,30 @@
           "category": "drink",
           "stock": 83,
           "code": "P_1773244875193"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1773340830986"
         }
       ],
       "status": "active",
@@ -9551,5 +9575,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:56:25.784Z"
+  "lastSync": "2026-03-22T19:56:34.161Z"
 }
