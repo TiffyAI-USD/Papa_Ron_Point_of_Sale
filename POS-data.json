@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 100
+      "stock": 98
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 65
+      "stock": 64
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -9290,10 +9290,28 @@
           "category": "drink",
           "stock": 100,
           "code": "P_1773324850731"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 65,
+          "code": "P_1773324976622"
         }
       ],
+      "status": "paid",
+      "date": 1774209321561,
+      "total": 105,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 234,
+      "items": [],
       "status": "active",
-      "date": 1774209288479
+      "date": 1774209321673
     }
   ],
   "purchaseLog": [
@@ -9484,5 +9502,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:55:08.836Z"
+  "lastSync": "2026-03-22T19:55:21.672Z"
 }
