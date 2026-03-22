@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -22,
+      "stock": -23,
       "cost": 0,
       "category": "ingredient"
     },
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -1297,7 +1297,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 60
+      "stock": 59
     },
     "P_1773930106975": {
       "name": "PEANUTS",
@@ -8619,10 +8619,28 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773233142239"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 60,
+          "code": "P_1773929983658"
         }
       ],
+      "status": "paid",
+      "date": 1774208074218,
+      "total": 210,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 218,
+      "items": [],
       "status": "active",
-      "date": 1774208029222
+      "date": 1774208074340
     }
   ],
   "purchaseLog": [
@@ -8813,5 +8831,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:34:05.167Z"
+  "lastSync": "2026-03-22T19:34:34.340Z"
 }
