@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 38
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -478,7 +478,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 52
+      "stock": 51
     },
     "P_1773245915568": {
       "name": "BERNINI MIMOSA 500ML",
@@ -9143,8 +9143,18 @@
           "code": "P_1773245853117"
         }
       ],
+      "status": "paid",
+      "date": 1774208904970,
+      "total": 105,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 230,
+      "items": [],
       "status": "active",
-      "date": 1774208824486
+      "date": 1774208905108
     }
   ],
   "purchaseLog": [
@@ -9335,5 +9345,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:48:11.643Z"
+  "lastSync": "2026-03-22T19:48:25.107Z"
 }
