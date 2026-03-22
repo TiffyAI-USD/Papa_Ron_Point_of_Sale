@@ -8595,7 +8595,32 @@
     },
     {
       "id": 217,
-      "items": [],
+      "items": [
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773233142239"
+        }
+      ],
       "status": "active",
       "date": 1774208029222
     }
@@ -8788,5 +8813,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:33:49.221Z"
+  "lastSync": "2026-03-22T19:34:05.167Z"
 }
