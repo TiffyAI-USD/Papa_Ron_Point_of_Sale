@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -16
+      "stock": -17
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -12
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -8586,8 +8586,18 @@
           "code": "P_1773164868475"
         }
       ],
+      "status": "paid",
+      "date": 1774208029072,
+      "total": 255,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 217,
+      "items": [],
       "status": "active",
-      "date": 1774207774120
+      "date": 1774208029222
     }
   ],
   "purchaseLog": [
@@ -8778,5 +8788,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:33:26.079Z"
+  "lastSync": "2026-03-22T19:33:49.221Z"
 }
