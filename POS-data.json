@@ -9187,7 +9187,16 @@
     },
     {
       "id": 231,
-      "items": [],
+      "items": [
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": 1,
+          "code": "P_1773236212998"
+        }
+      ],
       "status": "active",
       "date": 1774208941018
     }
@@ -9380,5 +9389,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:49:01.017Z"
+  "lastSync": "2026-03-22T19:49:30.533Z"
 }
