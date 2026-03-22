@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 38
+      "stock": 37
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -9402,8 +9402,18 @@
           "code": "P_1773244911060"
         }
       ],
+      "status": "paid",
+      "date": 1774209452941,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 236,
+      "items": [],
       "status": "active",
-      "date": 1774209404179
+      "date": 1774209453078
     }
   ],
   "purchaseLog": [
@@ -9594,5 +9604,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:57:18.935Z"
+  "lastSync": "2026-03-22T19:57:33.078Z"
 }
