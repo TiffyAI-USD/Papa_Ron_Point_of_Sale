@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 83
+      "stock": 82
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -492,7 +492,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 29
+      "stock": 28
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -15
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 18
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 25
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -9383,8 +9383,18 @@
           "code": "P_1773340830986"
         }
       ],
+      "status": "paid",
+      "date": 1774209404054,
+      "total": 295,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 235,
+      "items": [],
       "status": "active",
-      "date": 1774209321673
+      "date": 1774209404179
     }
   ],
   "purchaseLog": [
@@ -9575,5 +9585,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:56:34.161Z"
+  "lastSync": "2026-03-22T19:56:44.179Z"
 }
