@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 39
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -6914,7 +6914,24 @@
     },
     {
       "id": 165,
-      "items": [],
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 41,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 41,
+          "code": "P_1773244875193"
+        }
+      ],
       "status": "active",
       "date": 1773841573727
     },
@@ -8434,6 +8451,12 @@
       "items": [],
       "status": "active",
       "date": 1774119335885
+    },
+    {
+      "id": 212,
+      "items": [],
+      "status": "active",
+      "date": 1774189950136
     }
   ],
   "purchaseLog": [
@@ -8600,9 +8623,19 @@
         "name": "WATER 500MLS",
         "price": 10,
         "date": 1774024063996
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1774189947914
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1774189947914
       }
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-21T19:18:45.293Z"
+  "lastSync": "2026-03-22T14:32:23.010Z"
 }
