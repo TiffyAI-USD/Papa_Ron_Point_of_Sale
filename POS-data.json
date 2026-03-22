@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -10
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -8908,8 +8908,37 @@
           "code": "P_1773333432507"
         }
       ],
+      "status": "paid",
+      "date": 1774208405002,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 221,
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1773333432507"
+        }
+      ],
+      "status": "paid",
+      "date": 1774208429735,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 222,
+      "items": [],
       "status": "active",
-      "date": 1774208371127
+      "date": 1774208429851
     }
   ],
   "purchaseLog": [
@@ -9100,5 +9129,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:39:58.927Z"
+  "lastSync": "2026-03-22T19:40:25.313Z"
 }
