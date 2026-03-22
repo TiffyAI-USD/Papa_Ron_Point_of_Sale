@@ -33,14 +33,14 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -7
     },
     "P_1773164868475": {
       "name": "HASH JOINT",
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -15,
+      "stock": -20,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,11 +270,11 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -43,
+      "stock": -48,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -485,7 +485,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 16
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -590,7 +590,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 5
     },
     "P_1773249364603": {
       "name": "SODAZE LEMON MERINGUE ",
@@ -625,7 +625,7 @@
       "price": 70,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 24
     },
     "P_1773324741065": {
       "name": "MR ORANGE ",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 38
+      "stock": 34
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1353,7 +1353,7 @@
       "price": 35,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1774193275942": {
       "name": "BREEZER WATERMELON 330ML ",
@@ -8879,10 +8879,28 @@
           "category": "food",
           "stock": -5,
           "code": "P_1773164868475"
+        },
+        {
+          "name": "VM JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773164818430"
         }
       ],
+      "status": "paid",
+      "date": 1774208371004,
+      "total": 890,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 220,
+      "items": [],
       "status": "active",
-      "date": 1774208175683
+      "date": 1774208371127
     }
   ],
   "purchaseLog": [
@@ -9073,5 +9091,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:39:13.642Z"
+  "lastSync": "2026-03-22T19:39:31.126Z"
 }
