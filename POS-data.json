@@ -9317,6 +9317,38 @@
           "category": "drink",
           "stock": 29,
           "code": "P_1773245925943"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773482741909"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773482741909"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773482741909"
         }
       ],
       "status": "active",
@@ -9511,5 +9543,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:55:39.960Z"
+  "lastSync": "2026-03-22T19:55:55.544Z"
 }
