@@ -294,7 +294,7 @@
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
-      "stock": 0,
+      "stock": -2,
       "cost": 0,
       "category": "ingredient"
     },
@@ -303,7 +303,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
@@ -9108,8 +9108,18 @@
           "code": "P_1773235225003"
         }
       ],
+      "status": "paid",
+      "date": 1774208824350,
+      "total": 120,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 229,
+      "items": [],
       "status": "active",
-      "date": 1774208793247
+      "date": 1774208824486
     }
   ],
   "purchaseLog": [
@@ -9300,5 +9310,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:46:52.732Z"
+  "lastSync": "2026-03-22T19:47:04.485Z"
 }
