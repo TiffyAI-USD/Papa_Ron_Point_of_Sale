@@ -1361,6 +1361,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 24
+    },
+    "P_1774208105032": {
+      "name": "TEQUILA SILVER",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 26
     }
   },
   "recipes": {
@@ -8831,5 +8838,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:34:34.340Z"
+  "lastSync": "2026-03-22T19:35:32.101Z"
 }
