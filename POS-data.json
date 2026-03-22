@@ -7201,40 +7201,7 @@
     },
     {
       "id": 168,
-      "items": [
-        {
-          "name": "BRUTAL FRUIT CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 14,
-          "code": "P_1773929465649"
-        },
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        },
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        },
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1773844017952
     },
@@ -9481,5 +9448,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:51:22.322Z"
+  "lastSync": "2026-03-22T19:51:37.856Z"
 }
