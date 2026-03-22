@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -20,
+      "stock": -22,
       "cost": 0,
       "category": "ingredient"
     },
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -7
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -8521,8 +8521,65 @@
           "code": "P_1773232963360"
         }
       ],
+      "status": "paid",
+      "date": 1774207757213,
+      "total": 300,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 215,
+      "items": [],
       "status": "active",
-      "date": 1774207750362
+      "date": 1774207757426
+    },
+    {
+      "id": 216,
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773164795064"
+        }
+      ],
+      "status": "active",
+      "date": 1774207774120
     }
   ],
   "purchaseLog": [
@@ -8713,5 +8770,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:29:10.369Z"
+  "lastSync": "2026-03-22T19:29:38.718Z"
 }
