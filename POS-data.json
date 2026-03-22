@@ -8823,6 +8823,22 @@
           "category": "drink",
           "stock": 20,
           "code": "P_1773245915568"
+        },
+        {
+          "name": "ICE BAG",
+          "price": 35,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1774119200192"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773333545424"
         }
       ],
       "status": "active",
@@ -9017,5 +9033,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:38:10.803Z"
+  "lastSync": "2026-03-22T19:38:28.003Z"
 }
