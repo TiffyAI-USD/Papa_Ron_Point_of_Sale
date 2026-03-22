@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 40
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -471,7 +471,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 38
+      "stock": 50
     },
     "P_1773245853117": {
       "name": "SAVANNA ANGRY LEMON 500ML",
@@ -8669,5 +8669,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T15:22:10.799Z"
+  "lastSync": "2026-03-22T15:26:59.239Z"
 }
