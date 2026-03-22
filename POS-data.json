@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 83
+      "stock": 84
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -1354,6 +1354,13 @@
       "cost": 0,
       "category": "food",
       "stock": -2
+    },
+    "P_1774193275942": {
+      "name": "BREEZER WATERMELON 330ML ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 24
     }
   },
   "recipes": {
@@ -6949,7 +6956,16 @@
     },
     {
       "id": 166,
-      "items": [],
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 85,
+          "code": "P_1773244875193"
+        }
+      ],
       "status": "active",
       "date": 1773842913091
     },
@@ -8484,6 +8500,29 @@
       "items": [],
       "status": "active",
       "date": 1774192907914
+    },
+    {
+      "id": 214,
+      "items": [
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773232963360"
+        },
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773232963360"
+        }
+      ],
+      "status": "active",
+      "date": 1774207750362
     }
   ],
   "purchaseLog": [
@@ -8665,9 +8704,14 @@
         "name": "BLACK LABEL 500ML ",
         "price": 30,
         "date": 1774192906951
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1774201158549
       }
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T15:26:59.239Z"
+  "lastSync": "2026-03-22T19:29:10.369Z"
 }
