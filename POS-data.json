@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 103
+      "stock": 100
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 14
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -9089,8 +9089,18 @@
           "code": "P_1773929465649"
         }
       ],
+      "status": "paid",
+      "date": 1774208793077,
+      "total": 125,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 228,
+      "items": [],
       "status": "active",
-      "date": 1774208645711
+      "date": 1774208793247
     }
   ],
   "purchaseLog": [
@@ -9281,5 +9291,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:46:23.515Z"
+  "lastSync": "2026-03-22T19:46:33.246Z"
 }
