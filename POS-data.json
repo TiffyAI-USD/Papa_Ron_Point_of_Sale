@@ -8576,6 +8576,14 @@
           "category": "food",
           "stock": -16,
           "code": "P_1773164795064"
+        },
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773164868475"
         }
       ],
       "status": "active",
@@ -8770,5 +8778,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:29:38.718Z"
+  "lastSync": "2026-03-22T19:33:26.079Z"
 }
