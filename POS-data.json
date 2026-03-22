@@ -6965,12 +6965,28 @@
       "id": 166,
       "items": [
         {
-          "name": "BLACK LABEL 500ML ",
+          "name": "TEQUILA SILVER",
           "price": 30,
           "cost": 0,
           "category": "drink",
-          "stock": 85,
-          "code": "P_1773244875193"
+          "stock": 26,
+          "code": "P_1774208105032"
+        },
+        {
+          "name": "TEQUILA SILVER",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1774208105032"
+        },
+        {
+          "name": "TEQUILA SILVER",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1774208105032"
         }
       ],
       "status": "active",
@@ -8838,5 +8854,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:35:32.101Z"
+  "lastSync": "2026-03-22T19:35:41.692Z"
 }
