@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -53,
+      "stock": -63,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": 1
+      "stock": 0
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -9
+      "stock": -10
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -9221,8 +9221,18 @@
           "code": "P_1773235049759"
         }
       ],
+      "status": "paid",
+      "date": 1774209002824,
+      "total": 340,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 232,
+      "items": [],
       "status": "active",
-      "date": 1774208941018
+      "date": 1774209002940
     }
   ],
   "purchaseLog": [
@@ -9413,5 +9423,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:49:50.763Z"
+  "lastSync": "2026-03-22T19:50:02.938Z"
 }
