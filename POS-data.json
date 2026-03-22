@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 104
+      "stock": 103
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": -4
+      "stock": -5
     },
     "P_1773944852469": {
       "name": "TEQUILAR GOLD PER-TOT",
@@ -9046,8 +9046,18 @@
           "code": "P_1773944517157"
         }
       ],
+      "status": "paid",
+      "date": 1774208645596,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 227,
+      "items": [],
       "status": "active",
-      "date": 1774208581052
+      "date": 1774208645711
     }
   ],
   "purchaseLog": [
@@ -9238,5 +9248,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:43:51.780Z"
+  "lastSync": "2026-03-22T19:44:05.710Z"
 }
