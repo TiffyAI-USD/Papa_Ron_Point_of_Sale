@@ -1213,7 +1213,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 46
     },
     "P_1773925955021": {
       "name": "BREEZER BLACKBERRY 440ML",
@@ -8451,12 +8451,6 @@
       "items": [],
       "status": "active",
       "date": 1774119335885
-    },
-    {
-      "id": 212,
-      "items": [],
-      "status": "active",
-      "date": 1774189950136
     }
   ],
   "purchaseLog": [
@@ -8637,5 +8631,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T14:32:23.010Z"
+  "lastSync": "2026-03-22T14:55:34.658Z"
 }
