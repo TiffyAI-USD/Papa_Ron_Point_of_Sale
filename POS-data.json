@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -29,
+      "stock": -30,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -18
+      "stock": -19
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 93
+      "stock": 92
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 61
+      "stock": 60
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -9893,8 +9893,18 @@
           "code": "P_1773232120019"
         }
       ],
+      "status": "paid",
+      "date": 1774293612336,
+      "total": 210,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 252,
+      "items": [],
       "status": "active",
-      "date": 1774293553192
+      "date": 1774293612466
     }
   ],
   "purchaseLog": [
@@ -10085,5 +10095,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:20:01.891Z"
+  "lastSync": "2026-03-23T19:20:12.466Z"
 }
