@@ -9592,7 +9592,32 @@
     },
     {
       "id": 243,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "BERNINI BLUSH CAN 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1773245784383"
+        }
+      ],
       "status": "active",
       "date": 1774292581554
     }
@@ -9785,5 +9810,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:02:45.894Z"
+  "lastSync": "2026-03-23T19:03:23.850Z"
 }
