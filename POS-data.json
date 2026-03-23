@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -25,
+      "stock": -30,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -513,7 +513,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773245979898": {
       "name": "HUNTERS DRY 440ML",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -9793,8 +9793,35 @@
           "code": "P_1773245961439"
         }
       ],
+      "status": "paid",
+      "date": 1774292868132,
+      "total": 165,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 248,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1774292805598
+      "date": 1774292868240
     }
   ],
   "purchaseLog": [
@@ -9985,5 +10012,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:07:17.572Z"
+  "lastSync": "2026-03-23T19:16:56.308Z"
 }
