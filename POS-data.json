@@ -7313,16 +7313,7 @@
     },
     {
       "id": 171,
-      "items": [
-        {
-          "name": "DUNHIL STUFF",
-          "price": 60,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773939600142"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1773939612596
     },
@@ -9899,6 +9890,12 @@
       "tip": 0,
       "method": "Card",
       "staff": "Zuko"
+    },
+    {
+      "id": 252,
+      "items": [],
+      "status": "active",
+      "date": 1774293612466
     }
   ],
   "purchaseLog": [
@@ -10089,5 +10086,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:51:41.691Z"
+  "lastSync": "2026-03-23T19:52:07.599Z"
 }
