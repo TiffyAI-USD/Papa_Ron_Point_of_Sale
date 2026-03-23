@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -20,
+      "stock": -25,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -450,7 +450,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 21
     },
     "P_1773245808729": {
       "name": "BERNINI BLUSH SPARKLING 275ML",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -16
+      "stock": -17
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -9618,8 +9618,18 @@
           "code": "P_1773245784383"
         }
       ],
+      "status": "paid",
+      "date": 1774292634434,
+      "total": 135,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 244,
+      "items": [],
       "status": "active",
-      "date": 1774292581554
+      "date": 1774292634543
     }
   ],
   "purchaseLog": [
@@ -9810,5 +9820,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:03:23.850Z"
+  "lastSync": "2026-03-23T19:03:54.541Z"
 }
