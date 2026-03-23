@@ -7313,7 +7313,16 @@
     },
     {
       "id": 171,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 46,
+          "code": "P_1773689328747"
+        }
+      ],
       "status": "active",
       "date": 1773939612596
     },
@@ -10086,5 +10095,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:52:07.599Z"
+  "lastSync": "2026-03-23T19:52:14.087Z"
 }
