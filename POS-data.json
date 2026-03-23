@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -26,
+      "stock": -27,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -16
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -68,
+      "stock": -73,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -9565,9 +9565,36 @@
     },
     {
       "id": 242,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -15,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773234587229"
+        }
+      ],
+      "status": "paid",
+      "date": 1774292581426,
+      "total": 195,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 243,
       "items": [],
       "status": "active",
-      "date": 1774292547953
+      "date": 1774292581554
     }
   ],
   "purchaseLog": [
@@ -9758,5 +9785,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:01:55.259Z"
+  "lastSync": "2026-03-23T19:02:45.894Z"
 }
