@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -27,
+      "stock": -29,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -16
+      "stock": -18
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -9820,8 +9820,18 @@
           "code": "P_1773232120019"
         }
       ],
+      "status": "paid",
+      "date": 1774293426895,
+      "total": 270,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 249,
+      "items": [],
       "status": "active",
-      "date": 1774292868240
+      "date": 1774293427116
     }
   ],
   "purchaseLog": [
@@ -10012,5 +10022,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:16:56.308Z"
+  "lastSync": "2026-03-23T19:17:07.115Z"
 }
