@@ -7220,7 +7220,24 @@
     },
     {
       "id": 169,
-      "items": [],
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
       "date": 1773859227472
     },
@@ -9693,5 +9710,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-22T19:59:07.502Z"
+  "lastSync": "2026-03-23T19:00:57.972Z"
 }
