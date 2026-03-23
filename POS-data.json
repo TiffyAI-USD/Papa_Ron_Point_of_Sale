@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 96
+      "stock": 93
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 63
+      "stock": 61
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -1374,7 +1374,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -7304,8 +7304,12 @@
           "code": "P_1774292726893"
         }
       ],
-      "status": "active",
-      "date": 1773919614637
+      "status": "paid",
+      "date": 1774292805473,
+      "total": 200,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 171,
@@ -9752,6 +9756,21 @@
       ],
       "status": "active",
       "date": 1774292745143
+    },
+    {
+      "id": 247,
+      "items": [
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773234447154"
+        }
+      ],
+      "status": "active",
+      "date": 1774292805598
     }
   ],
   "purchaseLog": [
@@ -9942,5 +9961,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:06:19.441Z"
+  "lastSync": "2026-03-23T19:06:45.597Z"
 }
