@@ -9767,6 +9767,30 @@
           "category": "food",
           "stock": -5,
           "code": "P_1773234447154"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "GORDON'S BLUE",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773245961439"
         }
       ],
       "status": "active",
@@ -9961,5 +9985,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:06:45.597Z"
+  "lastSync": "2026-03-23T19:07:17.572Z"
 }
