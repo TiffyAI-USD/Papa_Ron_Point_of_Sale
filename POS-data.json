@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -10075,9 +10075,28 @@
     },
     {
       "id": 259,
+      "items": [
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773236212998"
+        }
+      ],
+      "status": "paid",
+      "date": 1774369504361,
+      "total": 200,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 260,
       "items": [],
       "status": "active",
-      "date": 1774369470197
+      "date": 1774369504480
     }
   ],
   "purchaseLog": [
@@ -10273,5 +10292,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:24:30.197Z"
+  "lastSync": "2026-03-24T16:24:52.499Z"
 }
