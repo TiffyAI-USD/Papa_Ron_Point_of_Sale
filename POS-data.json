@@ -10188,7 +10188,16 @@
     },
     {
       "id": 262,
-      "items": [],
+      "items": [
+        {
+          "name": "HUNTERS DRY BOTTLE ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244970029"
+        }
+      ],
       "status": "active",
       "date": 1774369624067
     }
@@ -10386,5 +10395,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:27:49.708Z"
+  "lastSync": "2026-03-24T18:12:53.611Z"
 }
