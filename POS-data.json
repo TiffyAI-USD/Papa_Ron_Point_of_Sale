@@ -380,7 +380,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773244875193": {
       "name": "BLACK LABEL 500ML ",
@@ -415,7 +415,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773245016871": {
       "name": "SMIRNOF ICE PINE TWIST",
@@ -10198,8 +10198,37 @@
           "code": "P_1773244970029"
         }
       ],
+      "status": "paid",
+      "date": 1774375984453,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 263,
+      "items": [
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773244841294"
+        }
+      ],
+      "status": "paid",
+      "date": 1774376007652,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 264,
+      "items": [],
       "status": "active",
-      "date": 1774369624067
+      "date": 1774376007769
     }
   ],
   "purchaseLog": [
@@ -10395,5 +10424,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T18:12:53.611Z"
+  "lastSync": "2026-03-24T18:13:22.934Z"
 }
