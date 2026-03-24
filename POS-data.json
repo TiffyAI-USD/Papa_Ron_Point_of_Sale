@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 37
+      "stock": 36
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 92
+      "stock": 91
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 60
+      "stock": 59
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -7339,8 +7339,12 @@
           "code": "P_1773244911060"
         }
       ],
-      "status": "active",
-      "date": 1773939612596
+      "status": "paid",
+      "date": 1774369216347,
+      "total": 105,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 172,
@@ -9952,6 +9956,12 @@
       ],
       "status": "active",
       "date": 1774369177387
+    },
+    {
+      "id": 254,
+      "items": [],
+      "status": "active",
+      "date": 1774369216634
     }
   ],
   "purchaseLog": [
@@ -10147,5 +10157,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:19:54.904Z"
+  "lastSync": "2026-03-24T16:20:16.633Z"
 }
