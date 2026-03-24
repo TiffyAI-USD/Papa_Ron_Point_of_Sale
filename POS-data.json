@@ -10134,6 +10134,22 @@
           "category": "drink",
           "stock": 50,
           "code": "P_1773244841294"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773234447154"
         }
       ],
       "status": "active",
@@ -10333,5 +10349,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:25:31.173Z"
+  "lastSync": "2026-03-24T16:26:12.628Z"
 }
