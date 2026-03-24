@@ -10048,7 +10048,24 @@
     },
     {
       "id": 258,
-      "items": [],
+      "items": [
+        {
+          "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
+          "price": 160,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773234210075"
+        },
+        {
+          "name": "EXTRA SALAD",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1774292726893"
+        }
+      ],
       "status": "active",
       "date": 1774369427138
     }
@@ -10246,5 +10263,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:23:47.138Z"
+  "lastSync": "2026-03-24T16:24:09.992Z"
 }
