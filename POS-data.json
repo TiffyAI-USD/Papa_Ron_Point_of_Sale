@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -10226,9 +10226,28 @@
     },
     {
       "id": 264,
+      "items": [
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1774369328057"
+        }
+      ],
+      "status": "paid",
+      "date": 1774376029625,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 265,
       "items": [],
       "status": "active",
-      "date": 1774376007769
+      "date": 1774376029748
     }
   ],
   "purchaseLog": [
@@ -10424,5 +10443,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T18:13:22.934Z"
+  "lastSync": "2026-03-24T18:13:39.554Z"
 }
