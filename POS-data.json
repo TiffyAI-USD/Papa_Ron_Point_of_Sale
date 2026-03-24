@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -30,
+      "stock": -40,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -8
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -380,7 +380,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 50
+      "stock": 48
     },
     "P_1773244875193": {
       "name": "BLACK LABEL 500ML ",
@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": -5
+      "stock": -7
     },
     "P_1773944852469": {
       "name": "TEQUILAR GOLD PER-TOT",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -10152,8 +10152,18 @@
           "code": "P_1773234447154"
         }
       ],
+      "status": "paid",
+      "date": 1774369590125,
+      "total": 250,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 261,
+      "items": [],
       "status": "active",
-      "date": 1774369504480
+      "date": 1774369590270
     }
   ],
   "purchaseLog": [
@@ -10349,5 +10359,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:26:12.628Z"
+  "lastSync": "2026-03-24T16:26:30.269Z"
 }
