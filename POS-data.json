@@ -9908,9 +9908,34 @@
     },
     {
       "id": 253,
-      "items": [],
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 92,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 92,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 60,
+          "code": "P_1773324976622"
+        }
+      ],
       "status": "active",
-      "date": 1774295562312
+      "date": 1774369177387
     }
   ],
   "purchaseLog": [
@@ -10106,5 +10131,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-23T19:52:42.311Z"
+  "lastSync": "2026-03-24T16:19:37.400Z"
 }
