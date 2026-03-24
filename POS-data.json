@@ -75,7 +75,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773165057205": {
       "name": "LOOSE RIZZLA",
@@ -1381,14 +1381,14 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -7576,8 +7576,12 @@
           "code": "P_1774369365041"
         }
       ],
-      "status": "active",
-      "date": 1773944447960
+      "status": "paid",
+      "date": 1774369427007,
+      "total": 85,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 177,
@@ -10041,6 +10045,12 @@
       ],
       "status": "active",
       "date": 1774369378616
+    },
+    {
+      "id": 258,
+      "items": [],
+      "status": "active",
+      "date": 1774369427138
     }
   ],
   "purchaseLog": [
@@ -10236,5 +10246,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:22:58.623Z"
+  "lastSync": "2026-03-24T16:23:47.138Z"
 }
