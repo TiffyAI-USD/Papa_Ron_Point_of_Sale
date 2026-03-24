@@ -9978,7 +9978,16 @@
     },
     {
       "id": 255,
-      "items": [],
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773164747894"
+        }
+      ],
       "status": "active",
       "date": 1774369245289
     }
@@ -10176,5 +10185,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:20:40.426Z"
+  "lastSync": "2026-03-24T16:21:03.896Z"
 }
