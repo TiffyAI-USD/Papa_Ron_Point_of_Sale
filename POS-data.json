@@ -1382,6 +1382,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1774369365041": {
+      "name": "SD-GRAM",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -7543,7 +7550,32 @@
     },
     {
       "id": 176,
-      "items": [],
+      "items": [
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1774369328057"
+        },
+        {
+          "name": "RIZZLA PURE HEMP",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773165040542"
+        },
+        {
+          "name": "SD-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1774369365041"
+        }
+      ],
       "status": "active",
       "date": 1773944447960
     },
@@ -9994,6 +10026,21 @@
       "items": [],
       "status": "active",
       "date": 1774369336386
+    },
+    {
+      "id": 257,
+      "items": [
+        {
+          "name": "SD-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1774369365041"
+        }
+      ],
+      "status": "active",
+      "date": 1774369378616
     }
   ],
   "purchaseLog": [
@@ -10189,5 +10236,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:22:16.391Z"
+  "lastSync": "2026-03-24T16:22:58.623Z"
 }
