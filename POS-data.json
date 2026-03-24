@@ -10094,7 +10094,48 @@
     },
     {
       "id": 260,
-      "items": [],
+      "items": [
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": -5,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": -5,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1774369328057"
+        },
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 50,
+          "code": "P_1773244841294"
+        },
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 50,
+          "code": "P_1773244841294"
+        }
+      ],
       "status": "active",
       "date": 1774369504480
     }
@@ -10292,5 +10333,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-24T16:24:52.499Z"
+  "lastSync": "2026-03-24T16:25:31.173Z"
 }
