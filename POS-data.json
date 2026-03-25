@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -32,
+      "stock": -33,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -21
+      "stock": -22
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -10358,8 +10358,27 @@
           "code": "P_1773232120019"
         }
       ],
+      "status": "paid",
+      "date": 1774464583857,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 267,
+      "items": [
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773244911060"
+        }
+      ],
       "status": "active",
-      "date": 1774464563131
+      "date": 1774464584004
     }
   ],
   "purchaseLog": [
@@ -10567,5 +10586,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:49:38.975Z"
+  "lastSync": "2026-03-25T18:50:06.768Z"
 }
