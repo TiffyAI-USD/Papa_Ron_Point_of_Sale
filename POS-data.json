@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -10396,8 +10396,27 @@
           "code": "P_1773437849538"
         }
       ],
+      "status": "paid",
+      "date": 1774464651551,
+      "total": 50,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 269,
+      "items": [
+        {
+          "name": "SD-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1774369365041"
+        }
+      ],
       "status": "active",
-      "date": 1774464630135
+      "date": 1774464651678
     }
   ],
   "purchaseLog": [
@@ -10605,5 +10624,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:50:45.819Z"
+  "lastSync": "2026-03-25T18:51:04.364Z"
 }
