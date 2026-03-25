@@ -294,7 +294,7 @@
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
-      "stock": -2,
+      "stock": -4,
       "cost": 0,
       "category": "ingredient"
     },
@@ -303,7 +303,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 57
+      "stock": 56
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -632,7 +632,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 14
     },
     "P_1773324759000": {
       "name": "SPARLETTA CREAMSODA",
@@ -10531,8 +10531,27 @@
           "code": "P_1773324741065"
         }
       ],
+      "status": "paid",
+      "date": 1774464812590,
+      "total": 170,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 274,
+      "items": [
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773235768064"
+        }
+      ],
       "status": "active",
-      "date": 1774464770612
+      "date": 1774464812718
     }
   ],
   "purchaseLog": [
@@ -10740,5 +10759,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:53:25.189Z"
+  "lastSync": "2026-03-25T18:53:45.345Z"
 }
