@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -8
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -10496,8 +10496,27 @@
           "code": "P_1773164727803"
         }
       ],
+      "status": "paid",
+      "date": 1774464770494,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 273,
+      "items": [
+        {
+          "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773235225003"
+        }
+      ],
       "status": "active",
-      "date": 1774464750770
+      "date": 1774464770612
     }
   ],
   "purchaseLog": [
@@ -10705,5 +10724,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:52:45.125Z"
+  "lastSync": "2026-03-25T18:53:11.264Z"
 }
