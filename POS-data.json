@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 45
+      "stock": 44
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -10424,6 +10424,11 @@
         "name": "COKE",
         "price": 15,
         "date": 1774295560921
+      },
+      {
+        "name": "COKE",
+        "price": 15,
+        "date": 1774462156084
       }
     ],
     "Charlie": [
@@ -10460,5 +10465,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:09:10.247Z"
+  "lastSync": "2026-03-25T18:09:29.092Z"
 }
