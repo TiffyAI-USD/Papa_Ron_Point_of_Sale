@@ -96,7 +96,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773165214687": {
       "name": "TROPICAL GUMMIE ",
@@ -555,7 +555,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 3
     },
     "P_1773249209951": {
       "name": "SODAZE BOBS COLA",
@@ -10469,8 +10469,35 @@
           "code": "P_1773165190985"
         }
       ],
+      "status": "paid",
+      "date": 1774464750652,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 272,
+      "items": [
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164727803"
+        }
+      ],
       "status": "active",
-      "date": 1774464701899
+      "date": 1774464750770
     }
   ],
   "purchaseLog": [
@@ -10678,5 +10705,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:52:23.683Z"
+  "lastSync": "2026-03-25T18:52:45.125Z"
 }
