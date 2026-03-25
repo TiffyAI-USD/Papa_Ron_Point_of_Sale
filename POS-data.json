@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -10442,8 +10442,27 @@
           "code": "P_1773333432507"
         }
       ],
+      "status": "paid",
+      "date": 1774464701779,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 271,
+      "items": [
+        {
+          "name": "SODAZE ORANGE CREAM ",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 4,
+          "code": "P_1773249187048"
+        }
+      ],
       "status": "active",
-      "date": 1774464681634
+      "date": 1774464701899
     }
   ],
   "purchaseLog": [
@@ -10651,5 +10670,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:51:36.584Z"
+  "lastSync": "2026-03-25T18:52:05.248Z"
 }
