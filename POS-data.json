@@ -222,7 +222,7 @@
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 17,
+      "stock": 45,
       "cost": 0,
       "category": "ingredient"
     },
@@ -10451,5 +10451,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T15:03:22.655Z"
+  "lastSync": "2026-03-25T15:03:36.646Z"
 }
