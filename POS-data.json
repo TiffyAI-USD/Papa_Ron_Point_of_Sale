@@ -7664,12 +7664,12 @@
       "id": 179,
       "items": [
         {
-          "name": "COKE",
-          "price": 15,
+          "name": "DUNHIL LOOSE",
+          "price": 5,
           "cost": 0,
           "category": "food",
-          "stock": 45,
-          "code": "P_1773689328747"
+          "stock": 197,
+          "code": "P_1773939546490"
         }
       ],
       "status": "active",
@@ -10465,5 +10465,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:09:29.092Z"
+  "lastSync": "2026-03-25T18:47:44.424Z"
 }
