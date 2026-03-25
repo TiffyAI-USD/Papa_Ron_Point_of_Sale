@@ -10281,6 +10281,22 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "LIQUI FRUIT ORANGE 330ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 14,
+          "code": "P_1773926359252"
         }
       ],
       "status": "active",
@@ -10492,5 +10508,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:48:17.425Z"
+  "lastSync": "2026-03-25T18:48:31.557Z"
 }
