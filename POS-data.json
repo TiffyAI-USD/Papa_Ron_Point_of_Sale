@@ -10265,7 +10265,24 @@
     },
     {
       "id": 265,
-      "items": [],
+      "items": [
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 15,
+          "code": "P_1773324836625"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773483607087"
+        }
+      ],
       "status": "active",
       "date": 1774464478664
     }
@@ -10475,5 +10492,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:47:58.663Z"
+  "lastSync": "2026-03-25T18:48:17.425Z"
 }
