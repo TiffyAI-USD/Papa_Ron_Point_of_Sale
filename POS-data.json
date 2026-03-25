@@ -10297,6 +10297,46 @@
           "category": "drink",
           "stock": 14,
           "code": "P_1773926359252"
+        },
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1774369328057"
+        },
+        {
+          "name": "LIQUI FRUIT ORANGE 330ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 14,
+          "code": "P_1773926359252"
+        },
+        {
+          "name": "LIQUI FRUIT ORANGE 330ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 14,
+          "code": "P_1773926359252"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 59,
+          "code": "P_1773929983658"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 59,
+          "code": "P_1773929983658"
         }
       ],
       "status": "active",
@@ -10508,5 +10548,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:48:31.557Z"
+  "lastSync": "2026-03-25T18:48:49.366Z"
 }
