@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -10620,8 +10620,27 @@
           "code": "P_1773333432507"
         }
       ],
+      "status": "paid",
+      "date": 1774464886997,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 277,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1774464865723
+      "date": 1774464887120
     }
   ],
   "purchaseLog": [
@@ -10829,5 +10848,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:54:39.624Z"
+  "lastSync": "2026-03-25T18:54:58.086Z"
 }
