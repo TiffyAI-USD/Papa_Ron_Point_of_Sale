@@ -1392,7 +1392,7 @@
     },
     "LETTUCE": {
       "name": "LETTUCE",
-      "stock": 4,
+      "stock": 2,
       "cost": 6.25,
       "price": 0,
       "category": "ingredient"
@@ -10451,5 +10451,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T14:57:23.371Z"
+  "lastSync": "2026-03-25T14:57:44.484Z"
 }
