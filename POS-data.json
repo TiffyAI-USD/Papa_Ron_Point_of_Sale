@@ -10459,6 +10459,14 @@
           "category": "drink",
           "stock": 4,
           "code": "P_1773249187048"
+        },
+        {
+          "name": "BUBBLE GUM GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773165190985"
         }
       ],
       "status": "active",
@@ -10670,5 +10678,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:52:05.248Z"
+  "lastSync": "2026-03-25T18:52:23.683Z"
 }
