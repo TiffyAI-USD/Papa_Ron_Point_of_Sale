@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -73,
+      "stock": -78,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": -10,
+      "stock": -15,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": -30,
+      "stock": -45,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": -2,
+      "stock": -3,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": -7,
+      "stock": -13,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -10550,8 +10550,51 @@
           "code": "P_1773235768064"
         }
       ],
+      "status": "paid",
+      "date": 1774464830447,
+      "total": 350,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 275,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -22,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1774464812718
+      "date": 1774464830578
     }
   ],
   "purchaseLog": [
@@ -10759,5 +10802,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:53:45.345Z"
+  "lastSync": "2026-03-25T18:54:07.474Z"
 }
