@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 14
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -800,7 +800,7 @@
       "price": 80,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -4
     },
     "P_1773505029268": {
       "name": "1 GRAM SS",
@@ -1234,7 +1234,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 11
     },
     "P_1773926453500": {
       "name": "TONIC WATER 200ML",
@@ -1297,7 +1297,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 59
+      "stock": 57
     },
     "P_1773930106975": {
       "name": "PEANUTS",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -10339,8 +10339,18 @@
           "code": "P_1773929983658"
         }
       ],
+      "status": "paid",
+      "date": 1774464562994,
+      "total": 290,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 266,
+      "items": [],
       "status": "active",
-      "date": 1774464478664
+      "date": 1774464563131
     }
   ],
   "purchaseLog": [
@@ -10548,5 +10558,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-25T18:48:49.366Z"
+  "lastSync": "2026-03-25T18:49:23.130Z"
 }
