@@ -11152,48 +11152,7 @@
     },
     {
       "id": 294,
-      "items": [
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 18,
-          "code": "P_1773929676732"
-        },
-        {
-          "name": "BERNINI CLASSIC CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 18,
-          "code": "P_1773929676732"
-        },
-        {
-          "name": "HUNTERS DRY 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 54,
-          "code": "P_1773245979898"
-        },
-        {
-          "name": "EXTREME CAN 440ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 40,
-          "code": "P_1773929316515"
-        },
-        {
-          "name": "HUNTERS DRY 440ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 54,
-          "code": "P_1773245979898"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1774553184725
     }
@@ -11415,5 +11374,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:33:39.314Z"
+  "lastSync": "2026-03-26T19:33:46.593Z"
 }
