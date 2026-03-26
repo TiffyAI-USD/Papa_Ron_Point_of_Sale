@@ -7802,7 +7802,16 @@
     },
     {
       "id": 183,
-      "items": [],
+      "items": [
+        {
+          "name": "PREGO ROLL",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773235513634"
+        }
+      ],
       "status": "active",
       "date": 1773947597221
     },
@@ -10870,5 +10879,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T12:01:51.678Z"
+  "lastSync": "2026-03-26T12:05:36.501Z"
 }
