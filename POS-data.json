@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -16
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -10995,10 +10995,28 @@
           "category": "food",
           "stock": -1,
           "code": "P_1773236212998"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -15,
+          "code": "P_1773333545424"
         }
       ],
+      "status": "paid",
+      "date": 1774552996884,
+      "total": 335,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 288,
+      "items": [],
       "status": "active",
-      "date": 1774552940190
+      "date": 1774552997021
     }
   ],
   "purchaseLog": [
@@ -11218,5 +11236,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:23:07.368Z"
+  "lastSync": "2026-03-26T19:23:17.021Z"
 }
