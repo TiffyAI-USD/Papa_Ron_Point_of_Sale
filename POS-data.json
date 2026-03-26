@@ -11259,6 +11259,14 @@
           "category": "drink",
           "stock": 20,
           "code": "P_1773245998876"
+        },
+        {
+          "name": "BERNINI CLASSIC CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773929676732"
         }
       ],
       "status": "active",
@@ -11482,5 +11490,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:36:02.202Z"
+  "lastSync": "2026-03-26T19:36:07.917Z"
 }
