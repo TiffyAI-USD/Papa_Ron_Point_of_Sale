@@ -11310,6 +11310,22 @@
           "category": "drink",
           "stock": 26,
           "code": "P_1773245016871"
+        },
+        {
+          "name": "SMIRNOFF ICE BERRY ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773245099182"
+        },
+        {
+          "name": "SMIRNOFF ICE BERRY ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773245099182"
         }
       ],
       "status": "active",
@@ -11533,5 +11549,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:39:00.923Z"
+  "lastSync": "2026-03-26T19:39:15.659Z"
 }
