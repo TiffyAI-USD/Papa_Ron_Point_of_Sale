@@ -10906,6 +10906,14 @@
           "category": "drink",
           "stock": 6,
           "code": "P_1773249209951"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773165237846"
         }
       ],
       "status": "active",
@@ -11129,5 +11137,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:16:10.144Z"
+  "lastSync": "2026-03-26T19:16:26.967Z"
 }
