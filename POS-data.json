@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -103,
+      "stock": -108,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -401,7 +401,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1773244946839": {
       "name": "WINDHOEK 500ML ",
@@ -527,7 +527,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 19
     },
     "P_1773246049692": {
       "name": "CASTLE MILK STOUT",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 44
+      "stock": 43
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -1269,14 +1269,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 39
+      "stock": 38
     },
     "P_1773929465649": {
       "name": "BRUTAL FRUIT CAN 500ML ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 13
+      "stock": 12
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -1290,7 +1290,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773929983658": {
       "name": "PEANUTS & RAISINS ",
@@ -11269,8 +11269,18 @@
           "code": "P_1773929676732"
         }
       ],
+      "status": "paid",
+      "date": 1774553772600,
+      "total": 250,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 296,
+      "items": [],
       "status": "active",
-      "date": 1774553697433
+      "date": 1774553772738
     }
   ],
   "purchaseLog": [
@@ -11490,5 +11500,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:36:07.917Z"
+  "lastSync": "2026-03-26T19:36:20.249Z"
 }
