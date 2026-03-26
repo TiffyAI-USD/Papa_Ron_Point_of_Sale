@@ -7804,12 +7804,44 @@
       "id": 183,
       "items": [
         {
-          "name": "PREGO ROLL",
-          "price": 50,
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
           "cost": 0,
           "category": "food",
-          "stock": -1,
-          "code": "P_1773235513634"
+          "stock": -4,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "STELLA 330ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773245998876"
+        },
+        {
+          "name": "STELLA 330ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773245998876"
+        },
+        {
+          "name": "STELLA 330ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773245998876"
         }
       ],
       "status": "active",
@@ -10879,5 +10911,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T12:05:36.501Z"
+  "lastSync": "2026-03-26T19:03:40.775Z"
 }
