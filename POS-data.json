@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -36,
+      "stock": -37,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -25
+      "stock": -26
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 44
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -10960,10 +10960,36 @@
           "category": "food",
           "stock": -25,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773327642102"
         }
       ],
+      "status": "paid",
+      "date": 1774552940075,
+      "total": 175,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 287,
+      "items": [],
       "status": "active",
-      "date": 1774552896638
+      "date": 1774552940190
     }
   ],
   "purchaseLog": [
@@ -11183,5 +11209,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:22:06.792Z"
+  "lastSync": "2026-03-26T19:22:20.190Z"
 }
