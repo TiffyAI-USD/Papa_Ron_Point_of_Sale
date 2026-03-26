@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 91
+      "stock": 89
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -10943,8 +10943,18 @@
           "code": "P_1773324850731"
         }
       ],
+      "status": "paid",
+      "date": 1774552896445,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 286,
+      "items": [],
       "status": "active",
-      "date": 1774552591934
+      "date": 1774552896638
     }
   ],
   "purchaseLog": [
@@ -11164,5 +11174,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:21:31.442Z"
+  "lastSync": "2026-03-26T19:21:45.541Z"
 }
