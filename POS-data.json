@@ -11235,6 +11235,14 @@
           "category": "food",
           "stock": -8,
           "code": "P_1773234587229"
+        },
+        {
+          "name": "CASTLE LAGER 330ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773244925945"
         }
       ],
       "status": "active",
@@ -11458,5 +11466,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:35:25.606Z"
+  "lastSync": "2026-03-26T19:35:34.584Z"
 }
