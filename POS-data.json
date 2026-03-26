@@ -527,7 +527,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 20
     },
     "P_1773246049692": {
       "name": "CASTLE MILK STOUT",
@@ -800,7 +800,7 @@
       "price": 80,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -6
     },
     "P_1773505029268": {
       "name": "1 GRAM SS",
@@ -1269,7 +1269,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 40
     },
     "P_1773929465649": {
       "name": "BRUTAL FRUIT CAN 500ML ",
@@ -7852,8 +7852,12 @@
           "code": "P_1773929316515"
         }
       ],
-      "status": "active",
-      "date": 1773947597221
+      "status": "paid",
+      "date": 1774552330588,
+      "total": 300,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 184,
@@ -10700,6 +10704,12 @@
       "items": [],
       "status": "active",
       "date": 1774464906586
+    },
+    {
+      "id": 279,
+      "items": [],
+      "status": "active",
+      "date": 1774552330889
     }
   ],
   "purchaseLog": [
@@ -10919,5 +10929,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:12:00.355Z"
+  "lastSync": "2026-03-26T19:12:10.888Z"
 }
