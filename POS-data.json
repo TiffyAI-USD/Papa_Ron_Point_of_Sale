@@ -11200,6 +11200,22 @@
           "category": "food",
           "stock": 28,
           "code": "P_1773164980203"
+        },
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773236344587"
+        },
+        {
+          "name": "STELLA 330ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 20,
+          "code": "P_1773245998876"
         }
       ],
       "status": "active",
@@ -11423,5 +11439,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:27:26.587Z"
+  "lastSync": "2026-03-26T19:27:41.796Z"
 }
