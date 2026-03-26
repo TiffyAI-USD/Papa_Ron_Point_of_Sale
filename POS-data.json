@@ -10774,6 +10774,22 @@
           "category": "food",
           "stock": -8,
           "code": "P_1773164818430"
+        },
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773324726340"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -18,
+          "code": "P_1773164795064"
         }
       ],
       "status": "active",
@@ -10997,5 +11013,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:13:09.015Z"
+  "lastSync": "2026-03-26T19:13:18.374Z"
 }
