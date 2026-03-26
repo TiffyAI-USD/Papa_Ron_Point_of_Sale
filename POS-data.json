@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 34
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 55
+      "stock": 54
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -11032,8 +11032,18 @@
           "code": "P_1773244911060"
         }
       ],
+      "status": "paid",
+      "date": 1774553029715,
+      "total": 65,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 289,
+      "items": [],
       "status": "active",
-      "date": 1774552997021
+      "date": 1774553029883
     }
   ],
   "purchaseLog": [
@@ -11253,5 +11263,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:23:42.682Z"
+  "lastSync": "2026-03-26T19:23:49.883Z"
 }
