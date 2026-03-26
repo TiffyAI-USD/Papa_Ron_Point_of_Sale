@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": -14
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -11143,8 +11143,27 @@
           "code": "P_1773333432507"
         }
       ],
+      "status": "paid",
+      "date": 1774553184605,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 294,
+      "items": [
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773327642102"
+        }
+      ],
       "status": "active",
-      "date": 1774553166508
+      "date": 1774553184725
     }
   ],
   "purchaseLog": [
@@ -11364,5 +11383,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:26:19.943Z"
+  "lastSync": "2026-03-26T19:26:39.539Z"
 }
