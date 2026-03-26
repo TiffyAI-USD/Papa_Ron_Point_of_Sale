@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -40,
+      "stock": -45,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 55
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -18
+      "stock": -19
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -10852,10 +10852,28 @@
           "category": "drink",
           "stock": 56,
           "code": "P_1773245979898"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 18,
+          "code": "P_1773482741909"
         }
       ],
+      "status": "paid",
+      "date": 1774552476143,
+      "total": 175,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 283,
+      "items": [],
       "status": "active",
-      "date": 1774552422267
+      "date": 1774552476278
     }
   ],
   "purchaseLog": [
@@ -11075,5 +11093,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:14:21.931Z"
+  "lastSync": "2026-03-26T19:14:36.274Z"
 }
