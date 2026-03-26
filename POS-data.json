@@ -11076,6 +11076,14 @@
           "category": "food",
           "stock": -26,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773333545424"
         }
       ],
       "status": "active",
@@ -11299,5 +11307,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:24:51.557Z"
+  "lastSync": "2026-03-26T19:25:06.404Z"
 }
