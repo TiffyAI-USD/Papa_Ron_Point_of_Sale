@@ -807,7 +807,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773506334925": {
       "name": "JAMESON SELECT  RESERVE TOT",
@@ -11124,8 +11124,27 @@
           "code": "P_1773505029268"
         }
       ],
+      "status": "paid",
+      "date": 1774553166391,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 293,
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773333432507"
+        }
+      ],
       "status": "active",
-      "date": 1774553143837
+      "date": 1774553166508
     }
   ],
   "purchaseLog": [
@@ -11345,5 +11364,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:26:02.958Z"
+  "lastSync": "2026-03-26T19:26:19.943Z"
 }
