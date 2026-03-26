@@ -7802,24 +7802,7 @@
     },
     {
       "id": 183,
-      "items": [
-        {
-          "name": "RAW RIZZLA ",
-          "price": 30,
-          "cost": 0,
-          "category": "food",
-          "stock": -1,
-          "code": "P_1773769535752"
-        },
-        {
-          "name": "HASH 1-GRAM",
-          "price": 60,
-          "cost": 0,
-          "category": "food",
-          "stock": -2,
-          "code": "P_1773164886248"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1773947597221
     },
@@ -10887,5 +10870,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T12:01:37.677Z"
+  "lastSync": "2026-03-26T12:01:51.678Z"
 }
