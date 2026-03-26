@@ -11160,6 +11160,22 @@
           "category": "drink",
           "stock": 44,
           "code": "P_1773327642102"
+        },
+        {
+          "name": "BRUTAL FRUIT CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 13,
+          "code": "P_1773929465649"
+        },
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773234587229"
         }
       ],
       "status": "active",
@@ -11383,5 +11399,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:26:39.539Z"
+  "lastSync": "2026-03-26T19:26:54.592Z"
 }
