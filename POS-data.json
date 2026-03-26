@@ -11154,70 +11154,6 @@
       "id": 294,
       "items": [
         {
-          "name": "COKE 500ML ",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 44,
-          "code": "P_1773327642102"
-        },
-        {
-          "name": "BRUTAL FRUIT CAN 500ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 13,
-          "code": "P_1773929465649"
-        },
-        {
-          "name": "WINGLETS -5 ",
-          "price": 60,
-          "cost": 0,
-          "category": "food",
-          "stock": -8,
-          "code": "P_1773234587229"
-        },
-        {
-          "name": "CASTLE LAGER 330ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 19,
-          "code": "P_1773244925945"
-        },
-        {
-          "name": "EXTREME CAN 440ML ",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 40,
-          "code": "P_1773929316515"
-        },
-        {
-          "name": "LUNCH BAR",
-          "price": 10,
-          "cost": 0,
-          "category": "food",
-          "stock": 28,
-          "code": "P_1773164980203"
-        },
-        {
-          "name": "RUSSIAN ROLL AND CHIPS",
-          "price": 50,
-          "cost": 0,
-          "category": "food",
-          "stock": -5,
-          "code": "P_1773236344587"
-        },
-        {
-          "name": "STELLA 330ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 20,
-          "code": "P_1773245998876"
-        },
-        {
           "name": "BERNINI CLASSIC CAN 500ML ",
           "price": 35,
           "cost": 0,
@@ -11248,6 +11184,14 @@
           "category": "drink",
           "stock": 40,
           "code": "P_1773929316515"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 54,
+          "code": "P_1773245979898"
         }
       ],
       "status": "active",
@@ -11471,5 +11415,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:28:22.592Z"
+  "lastSync": "2026-03-26T19:33:39.314Z"
 }
