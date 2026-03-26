@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -39,
+      "stock": -40,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -28
+      "stock": -29
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -108,
+      "stock": -128,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -10
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -422,14 +422,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 24
     },
     "P_1773245099182": {
       "name": "SMIRNOFF ICE BERRY ",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 44
     },
     "P_1773245128672": {
       "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
@@ -1220,7 +1220,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 20
     },
     "P_1773926133077": {
       "name": "POWERADE",
@@ -11326,10 +11326,36 @@
           "category": "drink",
           "stock": 46,
           "code": "P_1773245099182"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773235049759"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773235049759"
         }
       ],
+      "status": "paid",
+      "date": 1774554040215,
+      "total": 510,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 297,
+      "items": [],
       "status": "active",
-      "date": 1774553772738
+      "date": 1774554040329
     }
   ],
   "purchaseLog": [
@@ -11549,5 +11575,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:39:15.659Z"
+  "lastSync": "2026-03-26T19:40:40.328Z"
 }
