@@ -110,7 +110,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773165261852": {
       "name": "WATERMELON GUMMIE ",
@@ -562,7 +562,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 5
     },
     "P_1773249237337": {
       "name": "SODAZE BERRY HAZE",
@@ -10916,8 +10916,35 @@
           "code": "P_1773165237846"
         }
       ],
+      "status": "paid",
+      "date": 1774552591808,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 285,
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 91,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 91,
+          "code": "P_1773324850731"
+        }
+      ],
       "status": "active",
-      "date": 1774552512608
+      "date": 1774552591934
     }
   ],
   "purchaseLog": [
@@ -11137,5 +11164,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:16:26.967Z"
+  "lastSync": "2026-03-26T19:21:31.442Z"
 }
