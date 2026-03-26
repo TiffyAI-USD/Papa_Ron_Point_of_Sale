@@ -10828,6 +10828,22 @@
           "category": "food",
           "stock": -8,
           "code": "P_1773234447154"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -18,
+          "code": "P_1773340830986"
         }
       ],
       "status": "active",
@@ -11051,5 +11067,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:13:58.653Z"
+  "lastSync": "2026-03-26T19:14:12.798Z"
 }
