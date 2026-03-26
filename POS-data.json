@@ -11219,6 +11219,22 @@
           "category": "drink",
           "stock": 13,
           "code": "P_1773929465649"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773234587229"
         }
       ],
       "status": "active",
@@ -11442,5 +11458,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:35:14.268Z"
+  "lastSync": "2026-03-26T19:35:25.606Z"
 }
