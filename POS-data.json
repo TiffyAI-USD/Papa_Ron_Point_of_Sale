@@ -429,7 +429,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 46
     },
     "P_1773245128672": {
       "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
@@ -11041,9 +11041,28 @@
     },
     {
       "id": 289,
+      "items": [
+        {
+          "name": "SMIRNOFF ICE BERRY ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 47,
+          "code": "P_1773245099182"
+        }
+      ],
+      "status": "paid",
+      "date": 1774553059383,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 290,
       "items": [],
       "status": "active",
-      "date": 1774553029883
+      "date": 1774553059500
     }
   ],
   "purchaseLog": [
@@ -11263,5 +11282,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:23:49.883Z"
+  "lastSync": "2026-03-26T19:24:15.607Z"
 }
