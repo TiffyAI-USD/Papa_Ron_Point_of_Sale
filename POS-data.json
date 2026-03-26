@@ -11176,6 +11176,22 @@
           "category": "drink",
           "stock": 18,
           "code": "P_1773929676732"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 54,
+          "code": "P_1773245979898"
+        },
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773236344587"
         }
       ],
       "status": "active",
@@ -11399,5 +11415,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:34:34.193Z"
+  "lastSync": "2026-03-26T19:34:46.813Z"
 }
