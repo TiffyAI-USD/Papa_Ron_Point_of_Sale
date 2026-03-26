@@ -307,7 +307,7 @@
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
-      "stock": 19,
+      "stock": 32,
       "cost": 0,
       "category": "ingredient"
     },
@@ -10887,5 +10887,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T12:01:23.438Z"
+  "lastSync": "2026-03-26T12:01:37.677Z"
 }
