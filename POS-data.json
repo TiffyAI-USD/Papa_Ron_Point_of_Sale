@@ -47,7 +47,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -307,7 +307,7 @@
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
-      "stock": -1,
+      "stock": 19,
       "cost": 0,
       "category": "ingredient"
     },
@@ -1122,7 +1122,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773769599079": {
       "name": "OTHER",
@@ -7810,6 +7810,14 @@
           "category": "food",
           "stock": -1,
           "code": "P_1773769535752"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773164886248"
         }
       ],
       "status": "active",
@@ -10864,8 +10872,20 @@
         "price": 30,
         "date": 1774201158549
       }
+    ],
+    "Marshall": [
+      {
+        "name": "RAW RIZZLA ",
+        "price": 30,
+        "date": 1774510402516
+      },
+      {
+        "name": "HASH 1-GRAM",
+        "price": 60,
+        "date": 1774510402516
+      }
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T07:33:09.285Z"
+  "lastSync": "2026-03-26T12:01:23.438Z"
 }
