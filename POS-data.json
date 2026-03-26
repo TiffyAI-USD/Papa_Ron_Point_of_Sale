@@ -11251,6 +11251,14 @@
           "category": "drink",
           "stock": 39,
           "code": "P_1773929316515"
+        },
+        {
+          "name": "STELLA 330ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 20,
+          "code": "P_1773245998876"
         }
       ],
       "status": "active",
@@ -11474,5 +11482,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-26T19:35:51.862Z"
+  "lastSync": "2026-03-26T19:36:02.202Z"
 }
