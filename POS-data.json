@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -47,
+      "stock": -48,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -33
+      "stock": -34
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -1220,14 +1220,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 19
     },
     "P_1773926133077": {
       "name": "POWERADE",
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 25
+      "stock": 24
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -12124,8 +12124,18 @@
           "code": "P_1773232120019"
         }
       ],
+      "status": "paid",
+      "date": 1774640809661,
+      "total": 190,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 310,
+      "items": [],
       "status": "active",
-      "date": 1774640756023
+      "date": 1774640809784
     }
   ],
   "purchaseLog": [
@@ -12355,5 +12365,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:46:38.437Z"
+  "lastSync": "2026-03-27T19:46:49.784Z"
 }
