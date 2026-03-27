@@ -7877,156 +7877,20 @@
       "id": 184,
       "items": [
         {
-          "name": "TEQUILAR GOLD PER-TOT",
+          "name": "RICHELIEU PER-TOT",
           "price": 30,
           "cost": 0,
           "category": "drink",
-          "stock": 19,
-          "code": "P_1773944852469"
+          "stock": 54,
+          "code": "P_1774090102240"
         },
         {
-          "name": "TEQUILAR GOLD PER-TOT",
+          "name": "RICHELIEU PER-TOT",
           "price": 30,
           "cost": 0,
           "category": "drink",
-          "stock": 19,
-          "code": "P_1773944852469"
-        },
-        {
-          "name": "TEQUILAR GOLD PER-TOT",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 19,
-          "code": "P_1773944852469"
-        },
-        {
-          "name": "BOBO ROOTS HALF GLASS",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 0,
-          "code": "P_1774639595720"
-        },
-        {
-          "name": "BOBO ROOTS HALF GLASS",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 0,
-          "code": "P_1774639595720"
-        },
-        {
-          "name": "PORTION OF CHIPS",
-          "price": 20,
-          "cost": 0,
-          "category": "food",
-          "stock": -13,
-          "code": "P_1773333089927"
-        },
-        {
-          "name": "PORTION OF CHIPS",
-          "price": 20,
-          "cost": 0,
-          "category": "food",
-          "stock": -13,
-          "code": "P_1773333089927"
-        },
-        {
-          "name": "WINGLETS -10",
-          "price": 100,
-          "cost": 0,
-          "category": "food",
-          "stock": -10,
-          "code": "P_1773235049759"
-        },
-        {
-          "name": "WINGLETS -10",
-          "price": 100,
-          "cost": 0,
-          "category": "food",
-          "stock": -10,
-          "code": "P_1773235049759"
-        },
-        {
-          "name": "TROPICAL GUMMIE ",
-          "price": 40,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773165214687"
-        },
-        {
-          "name": "COKE 500ML ",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 43,
-          "code": "P_1773327642102"
-        },
-        {
-          "name": "SODAZE BOBS COLA",
-          "price": 60,
-          "cost": 0,
-          "category": "drink",
-          "stock": 5,
-          "code": "P_1773249209951"
-        },
-        {
-          "name": "SMIRNOFF ICE STORM",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 68,
-          "code": "P_1773924866567"
-        },
-        {
-          "name": "SMIRNOFF ICE STORM",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 68,
-          "code": "P_1773924866567"
-        },
-        {
-          "name": "HASH JOINT",
-          "price": 30,
-          "cost": 0,
-          "category": "food",
-          "stock": -6,
-          "code": "P_1773164868475"
-        },
-        {
-          "name": "BLACK LABEL 500ML ",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 81,
-          "code": "P_1773244875193"
-        },
-        {
-          "name": "BLACK LABEL 500ML ",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 81,
-          "code": "P_1773244875193"
-        },
-        {
-          "name": "BERNINI BLUSH CAN 500ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 21,
-          "code": "P_1773245784383"
-        },
-        {
-          "name": "BERNINI BLUSH CAN 500ML",
-          "price": 35,
-          "cost": 0,
-          "category": "drink",
-          "stock": 21,
-          "code": "P_1773245784383"
+          "stock": 54,
+          "code": "P_1774090102240"
         },
         {
           "name": "RICHELIEU PER-TOT",
@@ -11751,5 +11615,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:28:30.653Z"
+  "lastSync": "2026-03-27T19:28:55.889Z"
 }
