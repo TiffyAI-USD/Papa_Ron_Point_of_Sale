@@ -8027,6 +8027,22 @@
           "category": "food",
           "stock": -13,
           "code": "P_1773333089927"
+        },
+        {
+          "name": "BOBO ROOTS HALF GLASS",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774639595720"
+        },
+        {
+          "name": "BOBO ROOTS HALF GLASS",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774639595720"
         }
       ],
       "status": "active",
@@ -11743,5 +11759,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:30:41.539Z"
+  "lastSync": "2026-03-27T19:30:51.380Z"
 }
