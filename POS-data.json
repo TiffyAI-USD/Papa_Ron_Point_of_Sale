@@ -11768,7 +11768,16 @@
     },
     {
       "id": 303,
-      "items": [],
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773333545424"
+        }
+      ],
       "status": "active",
       "date": 1774640359471
     }
@@ -12000,5 +12009,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:39:19.467Z"
+  "lastSync": "2026-03-27T19:39:38.674Z"
 }
