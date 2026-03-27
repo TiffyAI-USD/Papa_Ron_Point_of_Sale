@@ -1269,7 +1269,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 38
+      "stock": 37
     },
     "P_1773929465649": {
       "name": "BRUTAL FRUIT CAN 500ML ",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 195
+      "stock": 187
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -6
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -12022,8 +12022,18 @@
           "code": "P_1773939546490"
         }
       ],
+      "status": "paid",
+      "date": 1774640618336,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 308,
+      "items": [],
       "status": "active",
-      "date": 1774640553155
+      "date": 1774640618466
     }
   ],
   "purchaseLog": [
@@ -12253,5 +12263,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:43:27.985Z"
+  "lastSync": "2026-03-27T19:43:38.464Z"
 }
