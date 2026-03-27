@@ -8043,6 +8043,22 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1774639595720"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
         }
       ],
       "status": "active",
@@ -11759,5 +11775,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:30:51.380Z"
+  "lastSync": "2026-03-27T19:31:02.082Z"
 }
