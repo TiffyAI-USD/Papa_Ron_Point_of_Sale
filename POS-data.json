@@ -7863,14 +7863,6 @@
       "id": 184,
       "items": [
         {
-          "name": "FAN",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 17,
-          "code": "P_1773340774940"
-        },
-        {
           "name": "COKE",
           "price": 15,
           "cost": 0,
@@ -11583,5 +11575,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T08:11:22.702Z"
+  "lastSync": "2026-03-27T08:11:27.122Z"
 }
