@@ -7923,6 +7923,30 @@
           "category": "drink",
           "stock": 21,
           "code": "P_1773245784383"
+        },
+        {
+          "name": "BERNINI BLUSH CAN 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773245784383"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 81,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 81,
+          "code": "P_1773244875193"
         }
       ],
       "status": "active",
@@ -11639,5 +11663,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:29:00.036Z"
+  "lastSync": "2026-03-27T19:29:42.264Z"
 }
