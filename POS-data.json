@@ -12079,6 +12079,14 @@
           "category": "food",
           "stock": 5,
           "code": "P_1773845617854"
+        },
+        {
+          "name": "THE MOON 1-GRAM ",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773769468938"
         }
       ],
       "status": "active",
@@ -12312,5 +12320,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:45:26.869Z"
+  "lastSync": "2026-03-27T19:45:35.879Z"
 }
