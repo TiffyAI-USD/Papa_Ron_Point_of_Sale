@@ -12114,6 +12114,14 @@
           "category": "drink",
           "stock": 25,
           "code": "P_1773926133077"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773232120019"
         }
       ],
       "status": "active",
@@ -12347,5 +12355,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:46:32.934Z"
+  "lastSync": "2026-03-27T19:46:38.437Z"
 }
