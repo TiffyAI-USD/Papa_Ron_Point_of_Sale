@@ -47,7 +47,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -1122,7 +1122,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773769599079": {
       "name": "OTHER",
@@ -11870,10 +11870,28 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773769535752"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773164886248"
         }
       ],
+      "status": "paid",
+      "date": 1774640503754,
+      "total": 90,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 306,
+      "items": [],
       "status": "active",
-      "date": 1774640465272
+      "date": 1774640503898
     }
   ],
   "purchaseLog": [
@@ -12103,5 +12121,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:41:33.150Z"
+  "lastSync": "2026-03-27T19:41:43.898Z"
 }
