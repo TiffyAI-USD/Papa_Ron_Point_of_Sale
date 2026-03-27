@@ -11604,7 +11604,16 @@
     },
     {
       "id": 299,
-      "items": [],
+      "items": [
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 26,
+          "code": "P_1773164980203"
+        }
+      ],
       "status": "active",
       "date": 1774640122161
     }
@@ -11836,5 +11845,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:35:22.161Z"
+  "lastSync": "2026-03-27T19:35:35.434Z"
 }
