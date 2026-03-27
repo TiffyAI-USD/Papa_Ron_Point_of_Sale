@@ -11835,6 +11835,22 @@
           "category": "drink",
           "stock": -2,
           "code": "P_1773251893658"
+        },
+        {
+          "name": "TONIC WATER 200ML",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773926453500"
+        },
+        {
+          "name": "TONIC WATER 200ML",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773926453500"
         }
       ],
       "status": "active",
@@ -12068,5 +12084,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:40:36.689Z"
+  "lastSync": "2026-03-27T19:40:48.650Z"
 }
