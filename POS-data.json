@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -8
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 27
+      "stock": 26
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -103,7 +103,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773165237846": {
       "name": "GRAPE GUMMIE ",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -128,
+      "stock": -148,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -12
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 81
+      "stock": 79
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -450,7 +450,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 17
     },
     "P_1773245808729": {
       "name": "BERNINI BLUSH SPARKLING 275ML",
@@ -562,7 +562,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 3
     },
     "P_1773249237337": {
       "name": "SODAZE BERRY HAZE",
@@ -716,14 +716,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 43
+      "stock": 42
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": -15
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1178,7 +1178,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 68
+      "stock": 66
     },
     "P_1773925053773": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
@@ -1332,14 +1332,14 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 16
     },
     "P_1774090102240": {
       "name": "RICHELIEU PER-TOT",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 54
+      "stock": 51
     },
     "P_1774091290480": {
       "name": "FEG",
@@ -1409,7 +1409,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -8093,8 +8093,12 @@
           "code": "P_1773164980203"
         }
       ],
-      "status": "active",
-      "date": 1774020624371
+      "status": "paid",
+      "date": 1774640090737,
+      "total": 1010,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 185,
@@ -11578,6 +11582,12 @@
       "items": [],
       "status": "active",
       "date": 1774554040329
+    },
+    {
+      "id": 298,
+      "items": [],
+      "status": "active",
+      "date": 1774640091044
     }
   ],
   "purchaseLog": [
@@ -11807,5 +11817,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:34:41.625Z"
+  "lastSync": "2026-03-27T19:34:51.043Z"
 }
