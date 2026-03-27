@@ -11932,7 +11932,24 @@
     },
     {
       "id": 307,
-      "items": [],
+      "items": [
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1774369328057"
+        },
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1774369328057"
+        }
+      ],
       "status": "active",
       "date": 1774640553155
     }
@@ -12164,5 +12181,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:42:33.153Z"
+  "lastSync": "2026-03-27T19:42:53.746Z"
 }
