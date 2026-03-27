@@ -7995,6 +7995,22 @@
           "category": "food",
           "stock": 0,
           "code": "P_1773165214687"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773235049759"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773235049759"
         }
       ],
       "status": "active",
@@ -11711,5 +11727,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:30:27.218Z"
+  "lastSync": "2026-03-27T19:30:33.701Z"
 }
