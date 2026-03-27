@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -40,
+      "stock": -41,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -29
+      "stock": -30
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -11650,10 +11650,28 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773236212998"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -29,
+          "code": "P_1773232120019"
         }
       ],
+      "status": "paid",
+      "date": 1774640229643,
+      "total": 335,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 302,
+      "items": [],
       "status": "active",
-      "date": 1774640193039
+      "date": 1774640229767
     }
   ],
   "purchaseLog": [
@@ -11883,5 +11901,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:36:59.667Z"
+  "lastSync": "2026-03-27T19:37:09.766Z"
 }
