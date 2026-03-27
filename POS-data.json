@@ -11685,6 +11685,38 @@
           "category": "food",
           "stock": -1,
           "code": "P_1773232359739"
+        },
+        {
+          "name": "CAPPY BREAKFAST ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773324865164"
+        },
+        {
+          "name": "CAPPY BREAKFAST ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773324865164"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 57,
+          "code": "P_1773929983658"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 57,
+          "code": "P_1773929983658"
         }
       ],
       "status": "active",
@@ -11918,5 +11950,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:37:36.885Z"
+  "lastSync": "2026-03-27T19:38:01.074Z"
 }
