@@ -7955,6 +7955,22 @@
           "category": "food",
           "stock": -6,
           "code": "P_1773164868475"
+        },
+        {
+          "name": "SMIRNOFF ICE STORM",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 68,
+          "code": "P_1773924866567"
+        },
+        {
+          "name": "SMIRNOFF ICE STORM",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 68,
+          "code": "P_1773924866567"
         }
       ],
       "status": "active",
@@ -11671,5 +11687,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:29:48.949Z"
+  "lastSync": "2026-03-27T19:29:55.355Z"
 }
