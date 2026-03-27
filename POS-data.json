@@ -11749,6 +11749,14 @@
           "category": "drink",
           "stock": 42,
           "code": "P_1773926623691"
+        },
+        {
+          "name": "GRAPETISER ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773927114267"
         }
       ],
       "status": "active",
@@ -11982,5 +11990,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:38:42.482Z"
+  "lastSync": "2026-03-27T19:39:08.890Z"
 }
