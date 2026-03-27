@@ -12055,6 +12055,14 @@
           "category": "drink",
           "stock": 4,
           "code": "P_1773249237337"
+        },
+        {
+          "name": "SMIRNOF ICE PINE TWIST",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773245016871"
         }
       ],
       "status": "active",
@@ -12288,5 +12296,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:44:41.201Z"
+  "lastSync": "2026-03-27T19:44:50.254Z"
 }
