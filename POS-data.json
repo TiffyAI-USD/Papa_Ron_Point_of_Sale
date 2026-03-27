@@ -12133,7 +12133,16 @@
     },
     {
       "id": 310,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 42,
+          "code": "P_1773327642102"
+        }
+      ],
       "status": "active",
       "date": 1774640809784
     }
@@ -12365,5 +12374,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:46:49.784Z"
+  "lastSync": "2026-03-27T19:47:03.465Z"
 }
