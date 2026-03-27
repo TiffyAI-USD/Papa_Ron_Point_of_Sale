@@ -11803,7 +11803,24 @@
     },
     {
       "id": 304,
-      "items": [],
+      "items": [
+        {
+          "name": "GORDON'S SHORT",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": -2,
+          "code": "P_1773251893658"
+        },
+        {
+          "name": "GORDON'S SHORT",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": -2,
+          "code": "P_1773251893658"
+        }
+      ],
       "status": "active",
       "date": 1774640399943
     }
@@ -12035,5 +12052,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:39:59.942Z"
+  "lastSync": "2026-03-27T19:40:30.498Z"
 }
