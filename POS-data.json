@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 44
+      "stock": 43
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -7863,12 +7863,12 @@
       "id": 184,
       "items": [
         {
-          "name": "COKE",
-          "price": 15,
+          "name": "DUNHIL LOOSE",
+          "price": 5,
           "cost": 0,
           "category": "food",
-          "stock": 44,
-          "code": "P_1773689328747"
+          "stock": 196,
+          "code": "P_1773939546490"
         }
       ],
       "status": "active",
@@ -11527,6 +11527,11 @@
         "name": "COKE",
         "price": 15,
         "date": 1774462156084
+      },
+      {
+        "name": "COKE",
+        "price": 15,
+        "date": 1774599092304
       }
     ],
     "Charlie": [
@@ -11575,5 +11580,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T08:11:27.122Z"
+  "lastSync": "2026-03-27T08:47:02.337Z"
 }
