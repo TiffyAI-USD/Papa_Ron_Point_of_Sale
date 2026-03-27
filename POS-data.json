@@ -7863,12 +7863,12 @@
       "id": 184,
       "items": [
         {
-          "name": "DUNHIL LOOSE",
-          "price": 5,
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
           "cost": 0,
-          "category": "food",
-          "stock": 196,
-          "code": "P_1773939546490"
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
         },
         {
           "name": "TEQUILAR GOLD PER-TOT",
@@ -11601,5 +11601,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:25:16.724Z"
+  "lastSync": "2026-03-27T19:25:23.039Z"
 }
