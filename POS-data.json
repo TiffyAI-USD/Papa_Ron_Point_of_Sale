@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 196
+      "stock": 195
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -7869,6 +7869,22 @@
           "category": "food",
           "stock": 196,
           "code": "P_1773939546490"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
         }
       ],
       "status": "active",
@@ -11532,6 +11548,11 @@
         "name": "COKE",
         "price": 15,
         "date": 1774599092304
+      },
+      {
+        "name": "DUNHIL LOOSE",
+        "price": 5,
+        "date": 1774601227564
       }
     ],
     "Charlie": [
@@ -11580,5 +11601,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T08:47:02.337Z"
+  "lastSync": "2026-03-27T19:25:16.724Z"
 }
