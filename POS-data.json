@@ -11905,6 +11905,14 @@
           "category": "food",
           "stock": -18,
           "code": "P_1773333545424"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773233142239"
         }
       ],
       "status": "active",
@@ -12138,5 +12146,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:42:14.236Z"
+  "lastSync": "2026-03-27T19:42:19.546Z"
 }
