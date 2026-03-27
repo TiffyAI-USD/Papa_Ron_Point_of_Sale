@@ -7987,6 +7987,14 @@
           "category": "drink",
           "stock": 43,
           "code": "P_1773327642102"
+        },
+        {
+          "name": "TROPICAL GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773165214687"
         }
       ],
       "status": "active",
@@ -11703,5 +11711,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:30:17.681Z"
+  "lastSync": "2026-03-27T19:30:27.218Z"
 }
