@@ -11972,6 +11972,30 @@
           "category": "food",
           "stock": 195,
           "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 195,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 195,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "EXTREME CAN 440ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773929316515"
         }
       ],
       "status": "active",
@@ -12205,5 +12229,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:43:02.961Z"
+  "lastSync": "2026-03-27T19:43:17.914Z"
 }
