@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 52
+      "stock": 51
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -11633,8 +11633,27 @@
           "code": "P_1773245979898"
         }
       ],
+      "status": "paid",
+      "date": 1774640192900,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 301,
+      "items": [
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773236212998"
+        }
+      ],
       "status": "active",
-      "date": 1774640140643
+      "date": 1774640193039
     }
   ],
   "purchaseLog": [
@@ -11864,5 +11883,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:36:28.175Z"
+  "lastSync": "2026-03-27T19:36:59.667Z"
 }
