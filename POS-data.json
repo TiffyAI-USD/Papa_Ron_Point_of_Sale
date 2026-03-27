@@ -7987,6 +7987,14 @@
           "category": "drink",
           "stock": 68,
           "code": "P_1773924866567"
+        },
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164868475"
         }
       ],
       "status": "active",
@@ -11703,5 +11711,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:27:49.896Z"
+  "lastSync": "2026-03-27T19:27:57.249Z"
 }
