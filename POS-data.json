@@ -12047,6 +12047,14 @@
           "category": "drink",
           "stock": 2,
           "code": "P_1773249526749"
+        },
+        {
+          "name": "SODAZE BERRY HAZE",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 4,
+          "code": "P_1773249237337"
         }
       ],
       "status": "active",
@@ -12280,5 +12288,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:44:16.393Z"
+  "lastSync": "2026-03-27T19:44:41.201Z"
 }
