@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 51
+      "stock": 50
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 42
+      "stock": 41
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -12141,10 +12141,28 @@
           "category": "drink",
           "stock": 42,
           "code": "P_1773327642102"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 51,
+          "code": "P_1773245979898"
         }
       ],
+      "status": "paid",
+      "date": 1774640844766,
+      "total": 55,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 311,
+      "items": [],
       "status": "active",
-      "date": 1774640809784
+      "date": 1774640844886
     }
   ],
   "purchaseLog": [
@@ -12374,5 +12392,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:47:03.465Z"
+  "lastSync": "2026-03-27T19:47:24.886Z"
 }
