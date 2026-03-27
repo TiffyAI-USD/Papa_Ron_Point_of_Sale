@@ -12106,6 +12106,14 @@
           "category": "drink",
           "stock": 20,
           "code": "P_1773925955021"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 25,
+          "code": "P_1773926133077"
         }
       ],
       "status": "active",
@@ -12339,5 +12347,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:46:17.214Z"
+  "lastSync": "2026-03-27T19:46:32.934Z"
 }
