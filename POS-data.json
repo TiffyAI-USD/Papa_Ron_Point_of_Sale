@@ -11776,6 +11776,22 @@
           "category": "food",
           "stock": -17,
           "code": "P_1773333545424"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -31,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773165237846"
         }
       ],
       "status": "active",
@@ -12009,5 +12025,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:39:38.674Z"
+  "lastSync": "2026-03-27T19:39:51.715Z"
 }
