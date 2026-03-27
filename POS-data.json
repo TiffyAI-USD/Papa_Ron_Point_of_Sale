@@ -7915,6 +7915,22 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1774639595720"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773333089927"
         }
       ],
       "status": "active",
@@ -11631,5 +11647,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:26:55.104Z"
+  "lastSync": "2026-03-27T19:27:04.520Z"
 }
