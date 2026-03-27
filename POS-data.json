@@ -1396,6 +1396,13 @@
       "cost": 6.25,
       "price": 0,
       "category": "ingredient"
+    },
+    "P_1774639559346": {
+      "name": "BOBO ROOTS HALF GLASS",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -7879,12 +7886,12 @@
           "code": "P_1773944852469"
         },
         {
-          "name": "SS JOINT",
-          "price": 25,
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
           "cost": 0,
-          "category": "food",
-          "stock": -8,
-          "code": "P_1773164727803"
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
         }
       ],
       "status": "active",
@@ -11601,5 +11608,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:25:32.841Z"
+  "lastSync": "2026-03-27T19:26:09.699Z"
 }
