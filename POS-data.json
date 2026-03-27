@@ -611,7 +611,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": -2
+      "stock": -6
     },
     "P_1773251914300": {
       "name": "SPARKLING WATER ",
@@ -1241,7 +1241,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 15
     },
     "P_1773926623691": {
       "name": "RED BULL 250ML",
@@ -11853,8 +11853,18 @@
           "code": "P_1773926453500"
         }
       ],
+      "status": "paid",
+      "date": 1774640465152,
+      "total": 140,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 305,
+      "items": [],
       "status": "active",
-      "date": 1774640399943
+      "date": 1774640465272
     }
   ],
   "purchaseLog": [
@@ -12084,5 +12094,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:40:48.650Z"
+  "lastSync": "2026-03-27T19:41:05.272Z"
 }
