@@ -12071,6 +12071,14 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773165237846"
+        },
+        {
+          "name": "BUSICOTTY INDOOR ",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 5,
+          "code": "P_1773845617854"
         }
       ],
       "status": "active",
@@ -12304,5 +12312,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:45:08.660Z"
+  "lastSync": "2026-03-27T19:45:26.869Z"
 }
