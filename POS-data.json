@@ -8083,6 +8083,14 @@
           "category": "drink",
           "stock": 5,
           "code": "P_1773249209951"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 27,
+          "code": "P_1773164980203"
         }
       ],
       "status": "active",
@@ -11799,5 +11807,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:34:36.728Z"
+  "lastSync": "2026-03-27T19:34:41.625Z"
 }
