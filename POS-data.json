@@ -8059,6 +8059,22 @@
           "category": "drink",
           "stock": 19,
           "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164868475"
         }
       ],
       "status": "active",
@@ -11775,5 +11791,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-27T19:31:02.082Z"
+  "lastSync": "2026-03-27T19:34:31.492Z"
 }
