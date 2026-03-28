@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -3,
+      "stock": -5,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": 1,
+      "stock": -1,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -34,
+      "stock": -38,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 34,
+      "stock": 30,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -19
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -158,
+      "stock": -173,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,18 +283,18 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -9
+      "stock": -10
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": -14
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
-      "stock": -4,
+      "stock": -6,
       "cost": 0,
       "category": "ingredient"
     },
@@ -303,7 +303,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
@@ -674,7 +674,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 20
     },
     "P_1773324916665": {
       "name": "DRY",
@@ -716,14 +716,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 37
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -17
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1283,7 +1283,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 11
     },
     "P_1773929676732": {
       "name": "BERNINI CLASSIC CAN 500ML ",
@@ -1374,7 +1374,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1774369328057": {
       "name": "WW-GRAM",
@@ -12453,8 +12453,18 @@
           "code": "P_1774292726893"
         }
       ],
+      "status": "paid",
+      "date": 1774725673418,
+      "total": 700,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 319,
+      "items": [],
       "status": "active",
-      "date": 1774725562739
+      "date": 1774725673566
     }
   ],
   "purchaseLog": [
@@ -12694,5 +12704,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:21:01.292Z"
+  "lastSync": "2026-03-28T19:21:13.566Z"
 }
