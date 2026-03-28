@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -173,
+      "stock": -178,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": -15,
+      "stock": -20,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": -45,
+      "stock": -60,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": -3,
+      "stock": -4,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": -13,
+      "stock": -19,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -492,7 +492,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 28
+      "stock": 27
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -19
+      "stock": -20
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -1255,7 +1255,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 10
+      "stock": 8
     },
     "P_1773927304684": {
       "name": "STONEY CAN 500ML ",
@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 11
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -12577,8 +12577,18 @@
           "code": "P_1773929465649"
         }
       ],
+      "status": "paid",
+      "date": 1774725816101,
+      "total": 595,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 323,
+      "items": [],
       "status": "active",
-      "date": 1774725738056
+      "date": 1774725816226
     }
   ],
   "purchaseLog": [
@@ -12818,5 +12828,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:23:26.856Z"
+  "lastSync": "2026-03-28T19:23:36.225Z"
 }
