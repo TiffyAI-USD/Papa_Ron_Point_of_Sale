@@ -12435,6 +12435,14 @@
           "category": "food",
           "stock": -9,
           "code": "P_1773234587229"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -15,
+          "code": "P_1773333089927"
         }
       ],
       "status": "active",
@@ -12678,5 +12686,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:20:48.576Z"
+  "lastSync": "2026-03-28T19:20:54.280Z"
 }
