@@ -12320,7 +12320,16 @@
     },
     {
       "id": 317,
-      "items": [],
+      "items": [
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1773164868475"
+        }
+      ],
       "status": "active",
       "date": 1774725541907
     }
@@ -12562,5 +12571,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:19:01.907Z"
+  "lastSync": "2026-03-28T19:19:16.996Z"
 }
