@@ -12462,7 +12462,24 @@
     },
     {
       "id": 319,
-      "items": [],
+      "items": [
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 55,
+          "code": "P_1773929983658"
+        },
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 55,
+          "code": "P_1773929983658"
+        }
+      ],
       "status": "active",
       "date": 1774725673566
     }
@@ -12704,5 +12721,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:21:13.566Z"
+  "lastSync": "2026-03-28T19:21:28.658Z"
 }
