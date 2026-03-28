@@ -12371,6 +12371,30 @@
           "category": "drink",
           "stock": 41,
           "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 41,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 41,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773235225003"
         }
       ],
       "status": "active",
@@ -12614,5 +12638,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:20:06.417Z"
+  "lastSync": "2026-03-28T19:20:17.670Z"
 }
