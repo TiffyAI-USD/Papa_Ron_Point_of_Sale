@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -9
+      "stock": -10
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -12330,8 +12330,18 @@
           "code": "P_1773164868475"
         }
       ],
+      "status": "paid",
+      "date": 1774725562616,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 318,
+      "items": [],
       "status": "active",
-      "date": 1774725541907
+      "date": 1774725562739
     }
   ],
   "purchaseLog": [
@@ -12571,5 +12581,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:19:16.996Z"
+  "lastSync": "2026-03-28T19:19:22.739Z"
 }
