@@ -12594,6 +12594,14 @@
           "category": "food",
           "stock": -35,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "BERNINI BLUSH CAN 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773245784383"
         }
       ],
       "status": "active",
@@ -12837,5 +12845,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:23:53.169Z"
+  "lastSync": "2026-03-28T19:24:03.708Z"
 }
