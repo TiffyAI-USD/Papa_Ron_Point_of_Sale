@@ -257,7 +257,7 @@
       "price": 160,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
@@ -12311,8 +12311,18 @@
           "code": "P_1773234210075"
         }
       ],
+      "status": "paid",
+      "date": 1774725541789,
+      "total": 160,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 317,
+      "items": [],
       "status": "active",
-      "date": 1774725514908
+      "date": 1774725541907
     }
   ],
   "purchaseLog": [
@@ -12552,5 +12562,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:18:52.049Z"
+  "lastSync": "2026-03-28T19:19:01.907Z"
 }
