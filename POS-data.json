@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -178,
+      "stock": -183,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 34
+      "stock": 33
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -12639,8 +12639,18 @@
           "code": "P_1773925481823"
         }
       ],
+      "status": "paid",
+      "date": 1774725893410,
+      "total": 95,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 325,
+      "items": [],
       "status": "active",
-      "date": 1774725857385
+      "date": 1774725893528
     }
   ],
   "purchaseLog": [
@@ -12880,5 +12890,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:24:42.042Z"
+  "lastSync": "2026-03-28T19:24:53.527Z"
 }
