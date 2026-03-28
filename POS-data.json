@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -49,
+      "stock": -50,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -35
+      "stock": -36
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -450,7 +450,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773245808729": {
       "name": "BERNINI BLUSH SPARKLING 275ML",
@@ -779,7 +779,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 20
     },
     "P_1773483222791": {
       "name": "SMIRNOFF 1818 1L",
@@ -12612,8 +12612,18 @@
           "code": "P_1773483054408"
         }
       ],
+      "status": "paid",
+      "date": 1774725857268,
+      "total": 205,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 324,
+      "items": [],
       "status": "active",
-      "date": 1774725816226
+      "date": 1774725857385
     }
   ],
   "purchaseLog": [
@@ -12853,5 +12863,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:24:08.847Z"
+  "lastSync": "2026-03-28T19:24:17.380Z"
 }
