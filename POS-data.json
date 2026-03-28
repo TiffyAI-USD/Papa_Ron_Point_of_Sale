@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -12518,8 +12518,27 @@
           "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1774725737944,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 322,
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -19,
+          "code": "P_1773333545424"
+        }
+      ],
       "status": "active",
-      "date": 1774725721400
+      "date": 1774725738056
     }
   ],
   "purchaseLog": [
@@ -12759,5 +12778,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:22:13.960Z"
+  "lastSync": "2026-03-28T19:22:49.595Z"
 }
