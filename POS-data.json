@@ -8102,7 +8102,16 @@
     },
     {
       "id": 185,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773770046991"
+        }
+      ],
       "status": "active",
       "date": 1774023752156
     },
@@ -12437,5 +12446,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T17:46:29.300Z"
+  "lastSync": "2026-03-28T17:46:37.886Z"
 }
