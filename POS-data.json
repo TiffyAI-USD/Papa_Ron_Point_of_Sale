@@ -12282,6 +12282,14 @@
           "category": "food",
           "stock": -8,
           "code": "P_1773164868475"
+        },
+        {
+          "name": "SODAZE BLUEBERRY ",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 4,
+          "code": "P_1773249279662"
         }
       ],
       "status": "active",
@@ -12525,5 +12533,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:18:16.741Z"
+  "lastSync": "2026-03-28T19:18:25.693Z"
 }
