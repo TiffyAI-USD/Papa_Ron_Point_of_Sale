@@ -12629,6 +12629,14 @@
           "category": "food",
           "stock": -10,
           "code": "P_1773234587229"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 34,
+          "code": "P_1773925481823"
         }
       ],
       "status": "active",
@@ -12872,5 +12880,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:24:31.410Z"
+  "lastSync": "2026-03-28T19:24:42.042Z"
 }
