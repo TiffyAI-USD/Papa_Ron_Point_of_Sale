@@ -1150,7 +1150,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 49
+      "stock": 48
     },
     "P_1773843254060": {
       "name": "SD JOINT ",
@@ -12212,6 +12212,12 @@
       "items": [],
       "status": "active",
       "date": 1774710849287
+    },
+    {
+      "id": 314,
+      "items": [],
+      "status": "active",
+      "date": 1774720003697
     }
   ],
   "purchaseLog": [
@@ -12393,6 +12399,11 @@
         "name": "DUNHIL LOOSE",
         "price": 5,
         "date": 1774601227564
+      },
+      {
+        "name": "COKE ",
+        "price": 15,
+        "date": 1774720002753
       }
     ],
     "Charlie": [
@@ -12446,5 +12457,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T17:46:37.886Z"
+  "lastSync": "2026-03-28T19:16:33.037Z"
 }
