@@ -1297,7 +1297,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 55
+      "stock": 53
     },
     "P_1773930106975": {
       "name": "PEANUTS",
@@ -12480,8 +12480,18 @@
           "code": "P_1773929983658"
         }
       ],
+      "status": "paid",
+      "date": 1774725695061,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 320,
+      "items": [],
       "status": "active",
-      "date": 1774725673566
+      "date": 1774725695193
     }
   ],
   "purchaseLog": [
@@ -12721,5 +12731,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:21:28.658Z"
+  "lastSync": "2026-03-28T19:21:35.188Z"
 }
