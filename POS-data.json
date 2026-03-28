@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -576,7 +576,7 @@
       "price": 60,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 3
     },
     "P_1773249301400": {
       "name": "SODAZE TROPICAL PUNCH",
@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -16
+      "stock": -17
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -1178,7 +1178,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 66
+      "stock": 64
     },
     "P_1773925053773": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
@@ -1374,7 +1374,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1774369328057": {
       "name": "WW-GRAM",
@@ -12292,8 +12292,18 @@
           "code": "P_1773249279662"
         }
       ],
+      "status": "paid",
+      "date": 1774725514776,
+      "total": 240,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 316,
+      "items": [],
       "status": "active",
-      "date": 1774725453750
+      "date": 1774725514908
     }
   ],
   "purchaseLog": [
@@ -12533,5 +12543,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:18:25.693Z"
+  "lastSync": "2026-03-28T19:18:34.908Z"
 }
