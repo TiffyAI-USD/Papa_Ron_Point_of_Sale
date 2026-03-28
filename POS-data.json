@@ -12250,6 +12250,14 @@
           "category": "food",
           "stock": -16,
           "code": "P_1773333432507"
+        },
+        {
+          "name": "EXTRA SALAD",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1774292726893"
         }
       ],
       "status": "active",
@@ -12493,5 +12501,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:17:46.243Z"
+  "lastSync": "2026-03-28T19:17:58.152Z"
 }
