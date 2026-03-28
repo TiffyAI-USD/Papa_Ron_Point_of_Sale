@@ -12535,6 +12535,22 @@
           "category": "food",
           "stock": -19,
           "code": "P_1773333545424"
+        },
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773235768064"
+        },
+        {
+          "name": "BLACK CROWN 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 28,
+          "code": "P_1773245925943"
         }
       ],
       "status": "active",
@@ -12778,5 +12794,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:22:49.595Z"
+  "lastSync": "2026-03-28T19:23:05.387Z"
 }
