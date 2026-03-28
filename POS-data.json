@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 77
+      "stock": 75
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -12233,8 +12233,18 @@
           "code": "P_1773244875193"
         }
       ],
+      "status": "paid",
+      "date": 1774725453354,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 315,
+      "items": [],
       "status": "active",
-      "date": 1774720003697
+      "date": 1774725453750
     }
   ],
   "purchaseLog": [
@@ -12474,5 +12484,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-28T19:16:51.829Z"
+  "lastSync": "2026-03-28T19:17:33.749Z"
 }
