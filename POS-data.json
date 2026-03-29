@@ -12729,6 +12729,30 @@
           "category": "food",
           "stock": -6,
           "code": "P_1773483607087"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773235049759"
+        },
+        {
+          "name": "SPARKLING WATER ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773251914300"
+        },
+        {
+          "name": "SPARKLING WATER ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773251914300"
         }
       ],
       "status": "active",
@@ -12982,5 +13006,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-29T18:41:57.672Z"
+  "lastSync": "2026-03-29T18:42:10.943Z"
 }
