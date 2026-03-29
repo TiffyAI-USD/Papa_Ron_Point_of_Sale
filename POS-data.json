@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -50,
+      "stock": -52,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -36
+      "stock": -38
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -12970,9 +12970,36 @@
     },
     {
       "id": 330,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -36,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -36,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1774809899798,
+      "total": 270,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 331,
       "items": [],
       "status": "active",
-      "date": 1774809877257
+      "date": 1774809899912
     }
   ],
   "purchaseLog": [
@@ -13230,5 +13257,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-29T18:44:33.023Z"
+  "lastSync": "2026-03-29T18:44:54.151Z"
 }
