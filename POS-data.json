@@ -47,7 +47,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -12686,6 +12686,53 @@
       "items": [],
       "status": "active",
       "date": 1774726453810
+    },
+    {
+      "id": 327,
+      "items": [
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773483607087"
+        }
+      ],
+      "status": "active",
+      "date": 1774805354512
     }
   ],
   "purchaseLog": [
@@ -12921,9 +12968,19 @@
         "name": "HASH 1-GRAM",
         "price": 60,
         "date": 1774510402516
+      },
+      {
+        "name": "WW-GRAM",
+        "price": 30,
+        "date": 1774805351217
+      },
+      {
+        "name": "HASH 1-GRAM",
+        "price": 60,
+        "date": 1774805351217
       }
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-29T17:28:51.741Z"
+  "lastSync": "2026-03-29T18:41:57.672Z"
 }
