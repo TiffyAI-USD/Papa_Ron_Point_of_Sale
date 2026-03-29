@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -6,
+      "stock": -8,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -2,
+      "stock": -4,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -40,
+      "stock": -44,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 28,
+      "stock": 24,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -22
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -457,7 +457,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1773245823301": {
       "name": "BERNINI BLUSH ALCOHOLIC 275ML",
@@ -492,7 +492,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 27
+      "stock": 25
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
@@ -13047,8 +13047,18 @@
           "code": "P_1773245808729"
         }
       ],
+      "status": "paid",
+      "date": 1774809978454,
+      "total": 370,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 332,
+      "items": [],
       "status": "active",
-      "date": 1774809899912
+      "date": 1774809978578
     }
   ],
   "purchaseLog": [
@@ -13306,5 +13316,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-29T18:45:59.501Z"
+  "lastSync": "2026-03-29T18:46:18.577Z"
 }
