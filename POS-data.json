@@ -8104,20 +8104,20 @@
       "id": 185,
       "items": [
         {
-          "name": "COKE ",
-          "price": 15,
-          "cost": 0,
-          "category": "drink",
-          "stock": 49,
-          "code": "P_1773770046991"
-        },
-        {
           "name": "WW-GRAM",
           "price": 30,
           "cost": 0,
           "category": "food",
           "stock": -6,
           "code": "P_1774369328057"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773164886248"
         }
       ],
       "status": "active",
@@ -12925,5 +12925,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-29T17:28:21.371Z"
+  "lastSync": "2026-03-29T17:28:51.741Z"
 }
