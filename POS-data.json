@@ -117,11 +117,11 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -52,
+      "stock": -53,
       "cost": 0,
       "category": "ingredient"
     },
@@ -165,7 +165,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773232612440": {
       "name": "MILLIONAIRE ",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 69
+      "stock": 67
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 89
+      "stock": 88
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -737,14 +737,14 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -21
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 43
+      "stock": 41
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -1178,7 +1178,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 64
+      "stock": 62
     },
     "P_1773925053773": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
@@ -1416,7 +1416,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -8165,10 +8165,54 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1774810123556"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773482741909"
+        },
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 43,
+          "code": "P_1773689328747"
+        },
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 43,
+          "code": "P_1773689328747"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -20,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "HAWAIIAN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773232503460"
         }
       ],
-      "status": "active",
-      "date": 1774023752156
+      "status": "paid",
+      "date": 1774810323567,
+      "total": 510,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 186,
@@ -13178,6 +13222,39 @@
       ],
       "status": "active",
       "date": 1774810132066
+    },
+    {
+      "id": 334,
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 89,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773333432507"
+        }
+      ],
+      "status": "paid",
+      "date": 1774810356721,
+      "total": 90,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 335,
+      "items": [],
+      "status": "active",
+      "date": 1774810356848
     }
   ],
   "purchaseLog": [
@@ -13435,5 +13512,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-29T18:51:19.945Z"
+  "lastSync": "2026-03-29T18:51:43.734Z"
 }
