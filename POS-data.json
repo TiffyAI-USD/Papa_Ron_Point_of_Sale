@@ -12753,6 +12753,46 @@
           "category": "drink",
           "stock": 16,
           "code": "P_1773251914300"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 223,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 223,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "CAPPY BREAKFAST ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 20,
+          "code": "P_1773324865164"
         }
       ],
       "status": "active",
@@ -13006,5 +13046,5 @@
     ]
   },
   "staffTips": {},
-  "lastSync": "2026-03-29T18:42:10.943Z"
+  "lastSync": "2026-03-29T18:42:33.047Z"
 }
