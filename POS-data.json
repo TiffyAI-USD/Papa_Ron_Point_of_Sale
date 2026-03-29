@@ -13577,7 +13577,40 @@
     },
     {
       "id": 342,
-      "items": [],
+      "items": [
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773164868475"
+        },
+        {
+          "name": "SODAZE LIMONADA ",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 5,
+          "code": "P_1773249334985"
+        },
+        {
+          "name": "SMIRNOFF ICE STORM",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 62,
+          "code": "P_1773924866567"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773926133077"
+        }
+      ],
       "status": "active",
       "date": 1774810916147
     }
@@ -13842,5 +13875,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-29T19:01:56.145Z"
+  "lastSync": "2026-03-29T19:02:20.028Z"
 }
