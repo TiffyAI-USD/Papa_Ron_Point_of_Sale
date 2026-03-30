@@ -13884,7 +13884,16 @@
     },
     {
       "id": 349,
-      "items": [],
+      "items": [
+        {
+          "name": "SPARLETTA CREAMSODA",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 6,
+          "code": "P_1773324759000"
+        }
+      ],
       "status": "active",
       "date": 1774891504547
     }
@@ -14178,5 +14187,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-30T17:25:04.546Z"
+  "lastSync": "2026-03-30T17:51:41.216Z"
 }
