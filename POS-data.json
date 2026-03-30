@@ -8218,20 +8218,20 @@
       "id": 186,
       "items": [
         {
-          "name": "WATER 500MLS",
-          "price": 10,
-          "cost": 0,
-          "category": "drink",
-          "stock": 220,
-          "code": "P_1773848095512"
-        },
-        {
           "name": "HASH 1-GRAM",
           "price": 60,
           "cost": 0,
           "category": "food",
           "stock": -5,
           "code": "P_1773164886248"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 65,
+          "code": "P_1773244875193"
         }
       ],
       "status": "active",
@@ -14162,5 +14162,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-30T15:32:25.814Z"
+  "lastSync": "2026-03-30T15:33:25.761Z"
 }
