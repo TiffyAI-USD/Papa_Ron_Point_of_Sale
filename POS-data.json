@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -8,
+      "stock": -12,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -4,
+      "stock": -8,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -44,
+      "stock": -52,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 24,
+      "stock": 16,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -22
+      "stock": -26
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -674,7 +674,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1773324916665": {
       "name": "DRY",
@@ -13942,18 +13942,47 @@
           "category": "drink",
           "stock": 18,
           "code": "P_1773324865164"
-        },
-        {
-          "name": "CAPPY BREAKFAST ",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 18,
-          "code": "P_1773324865164"
         }
       ],
+      "status": "paid",
+      "date": 1774898526777,
+      "total": 260,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 352,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773233691679"
+        }
+      ],
+      "status": "paid",
+      "date": 1774898547624,
+      "total": 240,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 353,
+      "items": [],
       "status": "active",
-      "date": 1774898389197
+      "date": 1774898547749
     }
   ],
   "purchaseLog": [
@@ -14250,5 +14279,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-30T19:20:31.979Z"
+  "lastSync": "2026-03-30T19:21:55.578Z"
 }
