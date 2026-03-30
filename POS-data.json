@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -22
+      "stock": -23
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -13875,6 +13875,12 @@
       "items": [],
       "status": "active",
       "date": 1774884745814
+    },
+    {
+      "id": 348,
+      "items": [],
+      "status": "active",
+      "date": 1774888779305
     }
   ],
   "purchaseLog": [
@@ -14138,6 +14144,13 @@
         "price": 60,
         "date": 1774884709445
       }
+    ],
+    "Derz": [
+      {
+        "name": "PREGO & CHIPS",
+        "price": 60,
+        "date": 1774888778217
+      }
     ]
   },
   "staffTips": {
@@ -14154,5 +14167,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-30T16:39:30.648Z"
+  "lastSync": "2026-03-30T16:39:39.305Z"
 }
