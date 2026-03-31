@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -25
+      "stock": -27
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -15182,8 +15182,27 @@
           "code": "P_1773333432507"
         }
       ],
+      "status": "paid",
+      "date": 1774984435843,
+      "total": 120,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 388,
+      "items": [
+        {
+          "name": "SODAZE BOBS COLA",
+          "price": 60,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773249209951"
+        }
+      ],
       "status": "active",
-      "date": 1774984411832
+      "date": 1774984435967
     }
   ],
   "purchaseLog": [
@@ -15490,5 +15509,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T19:13:47.542Z"
+  "lastSync": "2026-03-31T19:14:09.191Z"
 }
