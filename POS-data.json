@@ -14071,6 +14071,14 @@
           "category": "food",
           "stock": -26,
           "code": "P_1773233691679"
+        },
+        {
+          "name": "CAPPY BREAKFAST ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773324865164"
         }
       ],
       "status": "active",
@@ -14381,5 +14389,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:04:28.612Z"
+  "lastSync": "2026-03-31T08:04:43.308Z"
 }
