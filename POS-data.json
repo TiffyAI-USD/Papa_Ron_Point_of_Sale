@@ -1290,7 +1290,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 40
     },
     "P_1773929983658": {
       "name": "PEANUTS & RAISINS ",
@@ -15140,5 +15140,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T12:48:03.666Z"
+  "lastSync": "2026-03-31T12:48:16.725Z"
 }
