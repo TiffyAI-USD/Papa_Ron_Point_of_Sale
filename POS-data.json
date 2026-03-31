@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -13
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -14993,8 +14993,27 @@
           "code": "P_1773437849538"
         }
       ],
+      "status": "paid",
+      "date": 1774984228789,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 381,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 55,
+          "code": "P_1773246049692"
+        }
+      ],
       "status": "active",
-      "date": 1774984117494
+      "date": 1774984228960
     }
   ],
   "purchaseLog": [
@@ -15301,5 +15320,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T19:10:21.693Z"
+  "lastSync": "2026-03-31T19:10:46.843Z"
 }
