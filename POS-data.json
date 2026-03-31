@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 70
     },
     "P_1773944852469": {
       "name": "TEQUILAR GOLD PER-TOT",
@@ -15140,5 +15140,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T12:49:16.255Z"
+  "lastSync": "2026-03-31T12:50:09.848Z"
 }
