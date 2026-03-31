@@ -14321,7 +14321,16 @@
     },
     {
       "id": 363,
-      "items": [],
+      "items": [
+        {
+          "name": "GORDON'S BLUE",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 15,
+          "code": "P_1773245961439"
+        }
+      ],
       "status": "active",
       "date": 1774944528366
     }
@@ -14630,5 +14639,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:08:48.366Z"
+  "lastSync": "2026-03-31T08:09:09.253Z"
 }
