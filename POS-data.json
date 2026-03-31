@@ -33,7 +33,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 10
     },
     "P_1773164868475": {
       "name": "HASH JOINT",
@@ -15140,5 +15140,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T12:52:41.681Z"
+  "lastSync": "2026-03-31T12:53:01.337Z"
 }
