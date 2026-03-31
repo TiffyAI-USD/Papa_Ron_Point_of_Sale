@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -11
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -14312,8 +14312,18 @@
           "code": "P_1773164727803"
         }
       ],
+      "status": "paid",
+      "date": 1774944528229,
+      "total": 75,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 363,
+      "items": [],
       "status": "active",
-      "date": 1774944503654
+      "date": 1774944528366
     }
   ],
   "purchaseLog": [
@@ -14620,5 +14630,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:08:39.575Z"
+  "lastSync": "2026-03-31T08:08:48.366Z"
 }
