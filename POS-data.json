@@ -14286,7 +14286,32 @@
     },
     {
       "id": 362,
-      "items": [],
+      "items": [
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164727803"
+        }
+      ],
       "status": "active",
       "date": 1774944503654
     }
@@ -14595,5 +14620,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:08:23.653Z"
+  "lastSync": "2026-03-31T08:08:39.575Z"
 }
