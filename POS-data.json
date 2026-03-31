@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": 0
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -213,
+      "stock": -199,
       "cost": 0,
       "category": "ingredient"
     },
@@ -15140,5 +15140,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T12:50:09.848Z"
+  "lastSync": "2026-03-31T12:51:11.102Z"
 }
