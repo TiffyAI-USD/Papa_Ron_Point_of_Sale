@@ -14329,6 +14329,22 @@
           "category": "drink",
           "stock": 15,
           "code": "P_1773245961439"
+        },
+        {
+          "name": "APPLETIZER 275ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1773324775883"
+        },
+        {
+          "name": "APPLETIZER 275ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1773324775883"
         }
       ],
       "status": "active",
@@ -14639,5 +14655,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:09:09.253Z"
+  "lastSync": "2026-03-31T08:09:20.414Z"
 }
