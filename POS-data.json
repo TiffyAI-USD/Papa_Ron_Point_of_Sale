@@ -14481,7 +14481,16 @@
     },
     {
       "id": 366,
-      "items": [],
+      "items": [
+        {
+          "name": "DRY LEMON ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1773929556018"
+        }
+      ],
       "status": "active",
       "date": 1774944749268
     }
@@ -14790,5 +14799,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:12:29.262Z"
+  "lastSync": "2026-03-31T08:12:47.525Z"
 }
