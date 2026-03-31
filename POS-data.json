@@ -8239,6 +8239,22 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1774944723716"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773506473127"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773506473127"
         }
       ],
       "status": "active",
@@ -14764,5 +14780,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:12:10.867Z"
+  "lastSync": "2026-03-31T08:12:18.822Z"
 }
