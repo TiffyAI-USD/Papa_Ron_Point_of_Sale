@@ -14009,7 +14009,24 @@
     },
     {
       "id": 355,
-      "items": [],
+      "items": [
+        {
+          "name": "SMIRNOFF ICE STORM",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 60,
+          "code": "P_1773924866567"
+        },
+        {
+          "name": "SMIRNOFF ICE STORM",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 60,
+          "code": "P_1773924866567"
+        }
+      ],
       "status": "active",
       "date": 1774942628245
     }
@@ -14318,5 +14335,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T07:37:08.244Z"
+  "lastSync": "2026-03-31T08:03:23.269Z"
 }
