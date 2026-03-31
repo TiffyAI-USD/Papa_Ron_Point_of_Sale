@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -61,
+      "stock": -64,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -41
+      "stock": -43
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -179,7 +179,7 @@
       "price": 160,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773232963360": {
       "name": "PAPA RONY",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -24
+      "stock": -25
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -14151,8 +14151,18 @@
           "code": "P_1773232788775"
         }
       ],
+      "status": "paid",
+      "date": 1774944360858,
+      "total": 565,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 360,
+      "items": [],
       "status": "active",
-      "date": 1774944324008
+      "date": 1774944360987
     }
   ],
   "purchaseLog": [
@@ -14459,5 +14469,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:05:49.944Z"
+  "lastSync": "2026-03-31T08:06:00.987Z"
 }
