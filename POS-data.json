@@ -492,7 +492,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 22
     },
     "P_1773245939192": {
       "name": "CASTLE.DOUBLE MALT",
@@ -15155,8 +15155,35 @@
           "code": "P_1773245925943"
         }
       ],
+      "status": "paid",
+      "date": 1774984411699,
+      "total": 70,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 387,
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -25,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -25,
+          "code": "P_1773333432507"
+        }
+      ],
       "status": "active",
-      "date": 1774984379726
+      "date": 1774984411832
     }
   ],
   "purchaseLog": [
@@ -15463,5 +15490,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T19:13:25.922Z"
+  "lastSync": "2026-03-31T19:13:47.542Z"
 }
