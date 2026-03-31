@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 41
+      "stock": 40
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -14006,6 +14006,12 @@
       ],
       "status": "active",
       "date": 1774898772006
+    },
+    {
+      "id": 355,
+      "items": [],
+      "status": "active",
+      "date": 1774942628245
     }
   ],
   "purchaseLog": [
@@ -14202,6 +14208,11 @@
         "name": "BLACK LABEL 500ML ",
         "price": 30,
         "date": 1774898828733
+      },
+      {
+        "name": "COKE",
+        "price": 15,
+        "date": 1774942627269
       }
     ],
     "Charlie": [
@@ -14307,5 +14318,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T07:37:02.237Z"
+  "lastSync": "2026-03-31T07:37:08.244Z"
 }
