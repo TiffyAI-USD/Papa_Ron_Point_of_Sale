@@ -821,7 +821,7 @@
       "price": 50,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 14
     },
     "P_1773656525333": {
       "name": "RED PEPPDR",
@@ -1423,7 +1423,7 @@
       "price": 50,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -8257,8 +8257,12 @@
           "code": "P_1773506473127"
         }
       ],
-      "status": "active",
-      "date": 1774029911151
+      "status": "paid",
+      "date": 1774944749120,
+      "total": 200,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 187,
@@ -14474,6 +14478,12 @@
       ],
       "status": "active",
       "date": 1774944604995
+    },
+    {
+      "id": 366,
+      "items": [],
+      "status": "active",
+      "date": 1774944749268
     }
   ],
   "purchaseLog": [
@@ -14780,5 +14790,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:12:18.822Z"
+  "lastSync": "2026-03-31T08:12:29.262Z"
 }
