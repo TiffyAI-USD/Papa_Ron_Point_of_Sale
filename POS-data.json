@@ -14610,7 +14610,24 @@
     },
     {
       "id": 369,
-      "items": [],
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 82,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 82,
+          "code": "P_1773324850731"
+        }
+      ],
       "status": "active",
       "date": 1774944911273
     }
@@ -14919,5 +14936,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:15:11.272Z"
+  "lastSync": "2026-03-31T08:15:35.884Z"
 }
