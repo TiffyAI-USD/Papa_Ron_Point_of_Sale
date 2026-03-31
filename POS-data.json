@@ -47,7 +47,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": 5
+      "stock": 9
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -75,7 +75,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": 39
     },
     "P_1773165057205": {
       "name": "LOOSE RIZZLA",
@@ -15140,5 +15140,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T12:54:45.538Z"
+  "lastSync": "2026-03-31T12:56:22.906Z"
 }
