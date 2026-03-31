@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 33
+      "stock": 57
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 11
+      "stock": 35
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -15140,5 +15140,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T12:48:16.725Z"
+  "lastSync": "2026-03-31T12:48:32.397Z"
 }
