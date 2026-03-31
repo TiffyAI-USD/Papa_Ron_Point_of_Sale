@@ -1417,6 +1417,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -2
+    },
+    "P_1774944723716": {
+      "name": "HENNESSY ",
+      "price": 50,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -8218,12 +8225,20 @@
       "id": 186,
       "items": [
         {
-          "name": "COKE",
-          "price": 15,
+          "name": "HENNESSY ",
+          "price": 50,
           "cost": 0,
-          "category": "food",
-          "stock": 41,
-          "code": "P_1773689328747"
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774944723716"
+        },
+        {
+          "name": "HENNESSY ",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1774944723716"
         }
       ],
       "status": "active",
@@ -14431,6 +14446,14 @@
           "category": "drink",
           "stock": 16,
           "code": "P_1773506473127"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773506473127"
         }
       ],
       "status": "active",
@@ -14741,5 +14764,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:11:19.062Z"
+  "lastSync": "2026-03-31T08:12:10.867Z"
 }
