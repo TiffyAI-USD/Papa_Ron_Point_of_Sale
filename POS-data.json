@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -21
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -14747,8 +14747,27 @@
           "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1774945191666,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 373,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 186,
+          "code": "P_1773939546490"
+        }
+      ],
       "status": "active",
-      "date": 1774945169940
+      "date": 1774945191796
     }
   ],
   "purchaseLog": [
@@ -15055,5 +15074,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:19:47.491Z"
+  "lastSync": "2026-03-31T08:20:07.187Z"
 }
