@@ -14545,6 +14545,14 @@
           "category": "drink",
           "stock": 61,
           "code": "P_1773246049692"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 25,
+          "code": "P_1773327642102"
         }
       ],
       "status": "active",
@@ -14855,5 +14863,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:13:53.349Z"
+  "lastSync": "2026-03-31T08:14:02.600Z"
 }
