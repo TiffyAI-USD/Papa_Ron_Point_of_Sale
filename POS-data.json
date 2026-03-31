@@ -14783,6 +14783,14 @@
           "category": "drink",
           "stock": 52,
           "code": "P_1773324976622"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 56,
+          "code": "P_1773246049692"
         }
       ],
       "status": "active",
@@ -15093,5 +15101,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:20:30.723Z"
+  "lastSync": "2026-03-31T08:20:38.190Z"
 }
