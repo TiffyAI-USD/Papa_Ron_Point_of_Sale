@@ -1424,6 +1424,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -2
+    },
+    "P_1774944987291": {
+      "name": "GORDON'S HAPPY HOUR",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -8266,16 +8273,7 @@
     },
     {
       "id": 187,
-      "items": [
-        {
-          "name": "POWERADE",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 27,
-          "code": "P_1773926133077"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1774031864735
     },
@@ -14946,5 +14944,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:15:48.149Z"
+  "lastSync": "2026-03-31T08:17:33.849Z"
 }
