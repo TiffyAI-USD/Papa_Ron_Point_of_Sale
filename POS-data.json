@@ -14423,7 +14423,16 @@
     },
     {
       "id": 365,
-      "items": [],
+      "items": [
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773506473127"
+        }
+      ],
       "status": "active",
       "date": 1774944604995
     }
@@ -14732,5 +14741,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T08:10:04.994Z"
+  "lastSync": "2026-03-31T08:11:19.062Z"
 }
