@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 22
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -8736,12 +8736,12 @@
       "id": 197,
       "items": [
         {
-          "name": "COKE 500ML ",
-          "price": 20,
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
           "cost": 0,
-          "category": "drink",
-          "stock": 23,
-          "code": "P_1773327642102"
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773483607087"
         }
       ],
       "status": "active",
@@ -15564,6 +15564,13 @@
         "price": 60,
         "date": 1774888778217
       }
+    ],
+    "Siya": [
+      {
+        "name": "COKE 500ML ",
+        "price": 20,
+        "date": 1775059878525
+      }
     ]
   },
   "staffTips": {
@@ -15580,5 +15587,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T16:11:08.743Z"
+  "lastSync": "2026-04-01T18:01:56.350Z"
 }
