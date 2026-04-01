@@ -9046,12 +9046,12 @@
       "id": 202,
       "items": [
         {
-          "name": "FEG",
-          "price": 3,
+          "name": "RAW RIZZLA ",
+          "price": 30,
           "cost": 0,
-          "category": "drink",
-          "stock": 0,
-          "code": "P_1774091290480"
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773769535752"
         }
       ],
       "status": "active",
@@ -16084,5 +16084,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:19:12.273Z"
+  "lastSync": "2026-04-01T18:19:31.362Z"
 }
