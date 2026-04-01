@@ -15218,9 +15218,18 @@
     },
     {
       "id": 389,
-      "items": [],
+      "items": [
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 9,
+          "code": "P_1773164886248"
+        }
+      ],
       "status": "active",
-      "date": 1774984461013
+      "date": 1775025986393
     }
   ],
   "purchaseLog": [
@@ -15527,5 +15536,5 @@
       }
     ]
   },
-  "lastSync": "2026-03-31T19:15:17.705Z"
+  "lastSync": "2026-04-01T06:46:26.409Z"
 }
