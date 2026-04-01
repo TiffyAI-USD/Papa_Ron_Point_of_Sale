@@ -15739,9 +15739,18 @@
     },
     {
       "id": 404,
-      "items": [],
+      "items": [
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773769535752"
+        }
+      ],
       "status": "active",
-      "date": 1775067089914
+      "date": 1775067552255
     }
   ],
   "purchaseLog": [
@@ -16075,5 +16084,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:11:26.286Z"
+  "lastSync": "2026-04-01T18:19:12.273Z"
 }
