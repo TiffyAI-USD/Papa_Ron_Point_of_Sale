@@ -15476,6 +15476,14 @@
           "category": "food",
           "stock": -49,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "EXTREME CAN 440ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773929316515"
         }
       ],
       "status": "active",
@@ -15813,5 +15821,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:06:25.492Z"
+  "lastSync": "2026-04-01T18:06:37.403Z"
 }
