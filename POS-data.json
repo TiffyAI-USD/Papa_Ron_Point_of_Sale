@@ -15336,7 +15336,24 @@
     },
     {
       "id": 392,
-      "items": [],
+      "items": [
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773483607087"
+        }
+      ],
       "status": "active",
       "date": 1775066634284
     }
@@ -15672,5 +15689,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:03:54.283Z"
+  "lastSync": "2026-04-01T18:04:10.646Z"
 }
