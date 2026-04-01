@@ -47,7 +47,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": 9
+      "stock": 8
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -15239,6 +15239,21 @@
       ],
       "status": "active",
       "date": 1775025986393
+    },
+    {
+      "id": 390,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 61,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "active",
+      "date": 1775026007004
     }
   ],
   "purchaseLog": [
@@ -15504,6 +15519,11 @@
         "name": "HASH 1-GRAM",
         "price": 60,
         "date": 1774805351217
+      },
+      {
+        "name": "HASH 1-GRAM",
+        "price": 60,
+        "date": 1775026005539
       }
     ],
     "Jay": [
@@ -15545,5 +15565,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T06:46:38.359Z"
+  "lastSync": "2026-04-01T06:46:47.004Z"
 }
