@@ -110,7 +110,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 1
+      "stock": 0
     },
     "P_1773165261852": {
       "name": "WATERMELON GUMMIE ",
@@ -15433,9 +15433,28 @@
     },
     {
       "id": 395,
+      "items": [
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 1,
+          "code": "P_1773165237846"
+        }
+      ],
+      "status": "paid",
+      "date": 1775066754639,
+      "total": 40,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 396,
       "items": [],
       "status": "active",
-      "date": 1775066723758
+      "date": 1775066754766
     }
   ],
   "purchaseLog": [
@@ -15769,5 +15788,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:05:23.758Z"
+  "lastSync": "2026-04-01T18:05:48.887Z"
 }
