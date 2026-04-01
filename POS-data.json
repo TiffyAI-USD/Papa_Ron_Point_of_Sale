@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 57
+      "stock": 56
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1444,7 +1444,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -4
     }
   },
   "recipes": {
@@ -9025,10 +9025,22 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1775066847883"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 57,
+          "code": "P_1773925481823"
         }
       ],
-      "status": "active",
-      "date": 1774091259737
+      "status": "paid",
+      "date": 1775066881587,
+      "total": 155,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 202,
@@ -15538,6 +15550,12 @@
       "items": [],
       "status": "active",
       "date": 1775066823305
+    },
+    {
+      "id": 398,
+      "items": [],
+      "status": "active",
+      "date": 1775066881732
     }
   ],
   "purchaseLog": [
@@ -15871,5 +15889,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:07:39.523Z"
+  "lastSync": "2026-04-01T18:07:54.968Z"
 }
