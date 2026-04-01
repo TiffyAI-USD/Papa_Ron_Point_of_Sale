@@ -1438,6 +1438,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1775066847883": {
+      "name": "SPRING BOK SHORT",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -8986,7 +8993,40 @@
     },
     {
       "id": 201,
-      "items": [],
+      "items": [
+        {
+          "name": "SPRING BOK SHORT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1775066847883"
+        },
+        {
+          "name": "SPRING BOK SHORT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1775066847883"
+        },
+        {
+          "name": "SPRING BOK SHORT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1775066847883"
+        },
+        {
+          "name": "SPRING BOK SHORT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1775066847883"
+        }
+      ],
       "status": "active",
       "date": 1774091259737
     },
@@ -15831,5 +15871,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:07:03.305Z"
+  "lastSync": "2026-04-01T18:07:39.523Z"
 }
