@@ -294,7 +294,7 @@
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
-      "stock": -6,
+      "stock": -8,
       "cost": 0,
       "category": "ingredient"
     },
@@ -303,7 +303,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -22
+      "stock": -23
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 21
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -15587,8 +15587,35 @@
           "code": "P_1773245979898"
         }
       ],
+      "status": "paid",
+      "date": 1775066942713,
+      "total": 195,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 399,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 54,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 54,
+          "code": "P_1773246049692"
+        }
+      ],
       "status": "active",
-      "date": 1775066881732
+      "date": 1775066942853
     }
   ],
   "purchaseLog": [
@@ -15922,5 +15949,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:08:54.512Z"
+  "lastSync": "2026-04-01T18:09:18.048Z"
 }
