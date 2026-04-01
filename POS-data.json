@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -16,
+      "stock": -17,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -12,
+      "stock": -13,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -60,
+      "stock": -62,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 8,
+      "stock": 6,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -30
+      "stock": -31
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 34
+      "stock": 33
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -15693,10 +15693,28 @@
           "category": "drink",
           "stock": 34,
           "code": "P_1773244911060"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -30,
+          "code": "P_1773233691679"
         }
       ],
+      "status": "paid",
+      "date": 1775067072199,
+      "total": 150,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 403,
+      "items": [],
       "status": "active",
-      "date": 1775067037701
+      "date": 1775067072331
     }
   ],
   "purchaseLog": [
@@ -16030,5 +16048,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:11:00.329Z"
+  "lastSync": "2026-04-01T18:11:12.330Z"
 }
