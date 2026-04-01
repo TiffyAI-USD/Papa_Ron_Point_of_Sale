@@ -800,7 +800,7 @@
       "price": 80,
       "cost": 0,
       "category": "food",
-      "stock": -14
+      "stock": -16
     },
     "P_1773505029268": {
       "name": "1 GRAM SS",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 178
+      "stock": 177
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -15354,8 +15354,37 @@
           "code": "P_1773483607087"
         }
       ],
+      "status": "paid",
+      "date": 1775066656075,
+      "total": 160,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 393,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 178,
+          "code": "P_1773939546490"
+        }
+      ],
+      "status": "paid",
+      "date": 1775066680719,
+      "total": 5,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 394,
+      "items": [],
       "status": "active",
-      "date": 1775066634284
+      "date": 1775066680840
     }
   ],
   "purchaseLog": [
@@ -15689,5 +15718,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:04:10.646Z"
+  "lastSync": "2026-04-01T18:04:37.002Z"
 }
