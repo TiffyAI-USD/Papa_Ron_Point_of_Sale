@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 23
+      "stock": 21
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -639,14 +639,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 4
     },
     "P_1773324775883": {
       "name": "APPLETIZER 275ML ",
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 3
     },
     "P_1773324805766": {
       "name": "SPARLETTA SPARBERRY",
@@ -1262,7 +1262,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773929316515": {
       "name": "EXTREME CAN 440ML ",
@@ -15406,10 +15406,36 @@
           "category": "drink",
           "stock": 5,
           "code": "P_1773324759000"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 23,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 23,
+          "code": "P_1773164980203"
         }
       ],
+      "status": "paid",
+      "date": 1775066723636,
+      "total": 80,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 395,
+      "items": [],
       "status": "active",
-      "date": 1775066680840
+      "date": 1775066723758
     }
   ],
   "purchaseLog": [
@@ -15743,5 +15769,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:05:10.225Z"
+  "lastSync": "2026-04-01T18:05:23.758Z"
 }
