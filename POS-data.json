@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 54
+      "stock": 52
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 55
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1269,7 +1269,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 35
     },
     "P_1773929465649": {
       "name": "BRUTAL FRUIT CAN 500ML ",
@@ -15620,10 +15620,28 @@
           "category": "drink",
           "stock": 36,
           "code": "P_1773929316515"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 56,
+          "code": "P_1773925481823"
         }
       ],
+      "status": "paid",
+      "date": 1775066990601,
+      "total": 140,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 400,
+      "items": [],
       "status": "active",
-      "date": 1775066942853
+      "date": 1775066990728
     }
   ],
   "purchaseLog": [
@@ -15957,5 +15975,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:09:30.647Z"
+  "lastSync": "2026-04-01T18:09:50.722Z"
 }
