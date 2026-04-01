@@ -15382,7 +15382,16 @@
     },
     {
       "id": 394,
-      "items": [],
+      "items": [
+        {
+          "name": "STONEY CAN 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773927304684"
+        }
+      ],
       "status": "active",
       "date": 1775066680840
     }
@@ -15718,5 +15727,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:04:37.002Z"
+  "lastSync": "2026-04-01T18:04:54.778Z"
 }
