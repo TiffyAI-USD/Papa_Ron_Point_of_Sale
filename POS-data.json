@@ -9052,6 +9052,14 @@
           "category": "food",
           "stock": -3,
           "code": "P_1773769535752"
+        },
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1774369328057"
         }
       ],
       "status": "active",
@@ -16084,5 +16092,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T18:19:31.362Z"
+  "lastSync": "2026-04-01T18:20:29.901Z"
 }
