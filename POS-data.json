@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -17,
+      "stock": -18,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -13,
+      "stock": -14,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -62,
+      "stock": -64,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 6,
+      "stock": 4,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -31
+      "stock": -32
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -15968,9 +15968,28 @@
     },
     {
       "id": 412,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -31,
+          "code": "P_1773233691679"
+        }
+      ],
+      "status": "paid",
+      "date": 1775157380989,
+      "total": 120,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 413,
       "items": [],
       "status": "active",
-      "date": 1775157350098
+      "date": 1775157381117
     }
   ],
   "purchaseLog": [
@@ -16314,5 +16333,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:15:39.161Z"
+  "lastSync": "2026-04-02T19:16:10.214Z"
 }
