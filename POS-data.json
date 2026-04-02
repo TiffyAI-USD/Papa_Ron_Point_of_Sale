@@ -16197,7 +16197,24 @@
     },
     {
       "id": 419,
-      "items": [],
+      "items": [
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1774369328057"
+        },
+        {
+          "name": "SD-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1774369365041"
+        }
+      ],
       "status": "active",
       "date": 1775157624598
     }
@@ -16543,5 +16560,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:20:24.593Z"
+  "lastSync": "2026-04-02T19:20:37.416Z"
 }
