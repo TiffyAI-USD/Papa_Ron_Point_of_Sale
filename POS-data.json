@@ -16073,6 +16073,14 @@
           "category": "drink",
           "stock": 3,
           "code": "P_1773324775883"
+        },
+        {
+          "name": "SPARLETTA SPARBERRY",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773324805766"
         }
       ],
       "status": "active",
@@ -16420,5 +16428,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:18:03.528Z"
+  "lastSync": "2026-04-02T19:18:22.281Z"
 }
