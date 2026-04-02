@@ -9044,24 +9044,7 @@
     },
     {
       "id": 202,
-      "items": [
-        {
-          "name": "RAW RIZZLA ",
-          "price": 30,
-          "cost": 0,
-          "category": "food",
-          "stock": -3,
-          "code": "P_1773769535752"
-        },
-        {
-          "name": "WW-GRAM",
-          "price": 30,
-          "cost": 0,
-          "category": "food",
-          "stock": -7,
-          "code": "P_1774369328057"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1774091297467
     },
@@ -16156,5 +16139,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-01T19:07:39.589Z"
+  "lastSync": "2026-04-02T07:14:43.196Z"
 }
