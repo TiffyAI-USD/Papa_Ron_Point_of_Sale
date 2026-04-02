@@ -16278,7 +16278,32 @@
     },
     {
       "id": 422,
-      "items": [],
+      "items": [
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 185,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 185,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "SMIRNOFF ICE BERRY ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773245099182"
+        }
+      ],
       "status": "active",
       "date": 1775157722709
     }
@@ -16624,5 +16649,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:22:02.709Z"
+  "lastSync": "2026-04-02T19:22:19.677Z"
 }
