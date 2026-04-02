@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 76
+      "stock": 74
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -1269,7 +1269,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 34
     },
     "P_1773929465649": {
       "name": "BRUTAL FRUIT CAN 500ML ",
@@ -1451,7 +1451,7 @@
       "price": 120,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -4
     }
   },
   "recipes": {
@@ -9251,10 +9251,22 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1775157241956"
+        },
+        {
+          "name": "EXTREME CAN 440ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773929316515"
         }
       ],
-      "status": "active",
-      "date": 1774119152083
+      "status": "paid",
+      "date": 1775157349951,
+      "total": 575,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 209,
@@ -15953,6 +15965,12 @@
       "items": [],
       "status": "active",
       "date": 1775157213135
+    },
+    {
+      "id": 412,
+      "items": [],
+      "status": "active",
+      "date": 1775157350098
     }
   ],
   "purchaseLog": [
@@ -16296,5 +16314,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:14:45.180Z"
+  "lastSync": "2026-04-02T19:15:39.161Z"
 }
