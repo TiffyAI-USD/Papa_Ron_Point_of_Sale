@@ -16092,7 +16092,24 @@
     },
     {
       "id": 416,
-      "items": [],
+      "items": [
+        {
+          "name": "HAWAIIAN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773232503460"
+        },
+        {
+          "name": "CHICKEN PERI NACHO",
+          "price": 160,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773232788775"
+        }
+      ],
       "status": "active",
       "date": 1775157523819
     }
@@ -16438,5 +16455,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:18:43.818Z"
+  "lastSync": "2026-04-02T19:19:08.432Z"
 }
