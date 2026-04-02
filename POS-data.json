@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -45,
+      "stock": -50,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,11 +270,11 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -9
+      "stock": -10
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -209,
+      "stock": -214,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -16024,8 +16024,27 @@
           "code": "P_1773234447154"
         }
       ],
+      "status": "paid",
+      "date": 1775157425725,
+      "total": 110,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 415,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -32,
+          "code": "P_1773233691679"
+        }
+      ],
       "status": "active",
-      "date": 1775157397549
+      "date": 1775157425871
     }
   ],
   "purchaseLog": [
@@ -16369,5 +16388,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:16:53.182Z"
+  "lastSync": "2026-04-02T19:17:32.546Z"
 }
