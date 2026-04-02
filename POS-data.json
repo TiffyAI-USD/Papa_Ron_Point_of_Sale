@@ -429,7 +429,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 44
+      "stock": 43
     },
     "P_1773245128672": {
       "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
@@ -660,14 +660,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 11
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 77
+      "stock": 76
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -15891,8 +15891,18 @@
           "code": "P_1773245099182"
         }
       ],
+      "status": "paid",
+      "date": 1775157188932,
+      "total": 85,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 410,
+      "items": [],
       "status": "active",
-      "date": 1775157107876
+      "date": 1775157189060
     }
   ],
   "purchaseLog": [
@@ -16236,5 +16246,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:12:34.251Z"
+  "lastSync": "2026-04-02T19:13:09.059Z"
 }
