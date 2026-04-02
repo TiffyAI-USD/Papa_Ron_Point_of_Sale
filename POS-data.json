@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 45
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -30
+      "stock": -32
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -16169,8 +16169,27 @@
           "code": "P_1773245979898"
         }
       ],
+      "status": "paid",
+      "date": 1775157602562,
+      "total": 170,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 418,
+      "items": [
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773233142239"
+        }
+      ],
       "status": "active",
-      "date": 1775157570013
+      "date": 1775157602685
     }
   ],
   "purchaseLog": [
@@ -16514,5 +16533,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:19:57.495Z"
+  "lastSync": "2026-04-02T19:20:16.411Z"
 }
