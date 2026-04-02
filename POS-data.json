@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -72,
+      "stock": -73,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -50
+      "stock": -51
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -358,13 +358,13 @@
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
-      "stock": -6,
+      "stock": -7,
       "cost": 0,
       "category": "ingredient"
     },
     "RUSSIAN ": {
       "name": "RUSSIAN ",
-      "stock": -6,
+      "stock": -7,
       "cost": 0,
       "category": "ingredient"
     },
@@ -373,7 +373,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "P_1773244841294": {
       "name": "BLACK LABEL 300MLS",
@@ -9062,8 +9062,12 @@
           "code": "P_1773236344587"
         }
       ],
-      "status": "active",
-      "date": 1774091297467
+      "status": "paid",
+      "date": 1775157107624,
+      "total": 185,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": "BAL_1774092832742",
@@ -15858,6 +15862,12 @@
       "items": [],
       "status": "active",
       "date": 1775124881497
+    },
+    {
+      "id": 409,
+      "items": [],
+      "status": "active",
+      "date": 1775157107876
     }
   ],
   "purchaseLog": [
@@ -16201,5 +16211,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:11:03.260Z"
+  "lastSync": "2026-04-02T19:11:47.872Z"
 }
