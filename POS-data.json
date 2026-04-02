@@ -15873,6 +15873,22 @@
           "category": "drink",
           "stock": 77,
           "code": "P_1773324850731"
+        },
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773324836625"
+        },
+        {
+          "name": "SMIRNOFF ICE BERRY ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773245099182"
         }
       ],
       "status": "active",
@@ -16220,5 +16236,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:12:18.434Z"
+  "lastSync": "2026-04-02T19:12:34.251Z"
 }
