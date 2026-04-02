@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -77,
+      "stock": -78,
       "cost": 0,
       "category": "ingredient"
     },
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -779,7 +779,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1773483222791": {
       "name": "SMIRNOFF 1818 1L",
@@ -16269,8 +16269,18 @@
           "code": "P_1773483054408"
         }
       ],
+      "status": "paid",
+      "date": 1775157722557,
+      "total": 185,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 422,
+      "items": [],
       "status": "active",
-      "date": 1775157690578
+      "date": 1775157722709
     }
   ],
   "purchaseLog": [
@@ -16614,5 +16624,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:21:49.850Z"
+  "lastSync": "2026-04-02T19:22:02.709Z"
 }
