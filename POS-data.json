@@ -16006,7 +16006,24 @@
     },
     {
       "id": 414,
-      "items": [],
+      "items": [
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773234587229"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -9,
+          "code": "P_1773234447154"
+        }
+      ],
       "status": "active",
       "date": 1775157397549
     }
@@ -16352,5 +16369,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:16:33.845Z"
+  "lastSync": "2026-04-02T19:16:53.182Z"
 }
