@@ -17143,6 +17143,86 @@
           "category": "drink",
           "stock": -7,
           "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
+        },
+        {
+          "name": "PSILLOSHOT",
+          "price": 120,
+          "cost": 0,
+          "category": "drink",
+          "stock": -7,
+          "code": "P_1775157241956"
         }
       ],
       "status": "active",
@@ -17490,5 +17570,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:37:24.982Z"
+  "lastSync": "2026-04-03T19:37:32.552Z"
 }
