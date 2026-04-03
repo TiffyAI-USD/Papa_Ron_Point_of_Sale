@@ -16762,7 +16762,24 @@
     },
     {
       "id": 432,
-      "items": [],
+      "items": [
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 20,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 20,
+          "code": "P_1773926133077"
+        }
+      ],
       "status": "active",
       "date": 1775244329101
     }
@@ -17108,5 +17125,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:25:29.100Z"
+  "lastSync": "2026-04-03T19:25:43.917Z"
 }
