@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -78,
+      "stock": -79,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -52
+      "stock": -53
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 39
+      "stock": 38
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 183
+      "stock": 182
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -9362,10 +9362,22 @@
           "category": "drink",
           "stock": 183,
           "code": "P_1773848095512"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -52,
+          "code": "P_1773232120019"
         }
       ],
-      "status": "active",
-      "date": 1774119335885
+      "status": "paid",
+      "date": 1775243560507,
+      "total": 160,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 212,
@@ -16379,6 +16391,12 @@
       "items": [],
       "status": "active",
       "date": 1775157781346
+    },
+    {
+      "id": 424,
+      "items": [],
+      "status": "active",
+      "date": 1775243560754
     }
   ],
   "purchaseLog": [
@@ -16722,5 +16740,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:12:28.905Z"
+  "lastSync": "2026-04-03T19:12:40.753Z"
 }
