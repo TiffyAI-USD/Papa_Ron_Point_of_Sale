@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 11
+      "stock": 10
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -16845,8 +16845,18 @@
           "code": "P_1773324836625"
         }
       ],
+      "status": "paid",
+      "date": 1775244425905,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 436,
+      "items": [],
       "status": "active",
-      "date": 1775244397770
+      "date": 1775244426033
     }
   ],
   "purchaseLog": [
@@ -17190,5 +17200,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:26:56.603Z"
+  "lastSync": "2026-04-03T19:27:06.032Z"
 }
