@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 21
+      "stock": 20
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 175
+      "stock": 173
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -17016,9 +17016,44 @@
     },
     {
       "id": 440,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 175,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 175,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 21,
+          "code": "P_1773164980203"
+        }
+      ],
+      "status": "paid",
+      "date": 1775244924371,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 441,
       "items": [],
       "status": "active",
-      "date": 1775244901876
+      "date": 1775244924483
     }
   ],
   "purchaseLog": [
@@ -17362,5 +17397,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:35:01.876Z"
+  "lastSync": "2026-04-03T19:35:20.050Z"
 }
