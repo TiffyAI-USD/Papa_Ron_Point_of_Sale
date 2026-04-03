@@ -618,7 +618,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 13
     },
     "P_1773324726340": {
       "name": "LUCKY CLUB 250ML",
@@ -16705,9 +16705,28 @@
     },
     {
       "id": 429,
+      "items": [
+        {
+          "name": "SPARKLING WATER ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 14,
+          "code": "P_1773251914300"
+        }
+      ],
+      "status": "paid",
+      "date": 1775244235470,
+      "total": 15,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 430,
       "items": [],
       "status": "active",
-      "date": 1775244215874
+      "date": 1775244235583
     }
   ],
   "purchaseLog": [
@@ -17051,5 +17070,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:23:35.873Z"
+  "lastSync": "2026-04-03T19:23:51.990Z"
 }
