@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 55
+      "stock": 52
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 32
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -16894,10 +16894,28 @@
           "category": "drink",
           "stock": 55,
           "code": "P_1773244946839"
+        },
+        {
+          "name": "BRUTAL FRUIT CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773929465649"
         }
       ],
+      "status": "paid",
+      "date": 1775244481316,
+      "total": 195,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 437,
+      "items": [],
       "status": "active",
-      "date": 1775244426033
+      "date": 1775244481440
     }
   ],
   "purchaseLog": [
@@ -17241,5 +17259,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:27:39.107Z"
+  "lastSync": "2026-04-03T19:27:55.804Z"
 }
