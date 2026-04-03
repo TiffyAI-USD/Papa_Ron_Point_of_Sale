@@ -9389,6 +9389,14 @@
           "category": "drink",
           "stock": 84,
           "code": "P_1773244875193"
+        },
+        {
+          "name": "PEPPERONI",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773232222514"
         }
       ],
       "status": "active",
@@ -16563,6 +16571,14 @@
           "category": "drink",
           "stock": 41,
           "code": "P_1773926623691"
+        },
+        {
+          "name": "PEPPERONI",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773232222514"
         }
       ],
       "status": "active",
@@ -16910,5 +16926,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:17:41.972Z"
+  "lastSync": "2026-04-03T19:18:34.290Z"
 }
