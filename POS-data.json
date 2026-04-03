@@ -9413,6 +9413,22 @@
           "category": "drink",
           "stock": 41,
           "code": "P_1773926623691"
+        },
+        {
+          "name": "APPLETIZER 275ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 2,
+          "code": "P_1773324775883"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 50,
+          "code": "P_1773324976622"
         }
       ],
       "status": "active",
@@ -16942,5 +16958,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:18:48.327Z"
+  "lastSync": "2026-04-03T19:19:00.560Z"
 }
