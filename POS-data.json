@@ -16515,6 +16515,14 @@
           "category": "drink",
           "stock": 16,
           "code": "P_1773927304684"
+        },
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773235768064"
         }
       ],
       "status": "active",
@@ -16862,5 +16870,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:16:42.630Z"
+  "lastSync": "2026-04-03T19:16:48.914Z"
 }
