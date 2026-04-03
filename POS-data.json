@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -19,
+      "stock": -22,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -15,
+      "stock": -18,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -66,
+      "stock": -72,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": 2,
+      "stock": -4,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -33
+      "stock": -36
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 57
+      "stock": 56
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -422,7 +422,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 22
     },
     "P_1773245099182": {
       "name": "SMIRNOFF ICE BERRY ",
@@ -1178,7 +1178,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 57
+      "stock": 56
     },
     "P_1773925053773": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
@@ -16444,8 +16444,18 @@
           "code": "P_1773245016871"
         }
       ],
+      "status": "paid",
+      "date": 1775243657907,
+      "total": 460,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 425,
+      "items": [],
       "status": "active",
-      "date": 1775243560754
+      "date": 1775243658087
     }
   ],
   "purchaseLog": [
@@ -16789,5 +16799,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:14:02.082Z"
+  "lastSync": "2026-04-03T19:14:18.086Z"
 }
