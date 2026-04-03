@@ -16724,7 +16724,16 @@
     },
     {
       "id": 430,
-      "items": [],
+      "items": [
+        {
+          "name": "HEINEKEN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 18,
+          "code": "P_1773483054408"
+        }
+      ],
       "status": "active",
       "date": 1775244235583
     }
@@ -17070,5 +17079,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:23:51.990Z"
+  "lastSync": "2026-04-03T19:24:28.209Z"
 }
