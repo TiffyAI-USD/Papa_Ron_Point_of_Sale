@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 54
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -17298,8 +17298,27 @@
           "code": "P_1773244875193"
         }
       ],
+      "status": "paid",
+      "date": 1775245155418,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 449,
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773333089927"
+        }
+      ],
       "status": "active",
-      "date": 1775245135711
+      "date": 1775245155536
     }
   ],
   "purchaseLog": [
@@ -17643,5 +17662,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:39:10.184Z"
+  "lastSync": "2026-04-03T19:39:28.049Z"
 }
