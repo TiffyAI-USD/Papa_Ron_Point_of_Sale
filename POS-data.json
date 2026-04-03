@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 10
+      "stock": 9
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -1479,7 +1479,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -9518,10 +9518,22 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1775244838209"
+        },
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1773324836625"
         }
       ],
-      "status": "active",
-      "date": 1774192907914
+      "status": "paid",
+      "date": 1775244870852,
+      "total": 80,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 214,
@@ -16974,6 +16986,12 @@
       "items": [],
       "status": "active",
       "date": 1775244795948
+    },
+    {
+      "id": 439,
+      "items": [],
+      "status": "active",
+      "date": 1775244870957
     }
   ],
   "purchaseLog": [
@@ -17317,5 +17335,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:34:11.930Z"
+  "lastSync": "2026-04-03T19:34:20.371Z"
 }
