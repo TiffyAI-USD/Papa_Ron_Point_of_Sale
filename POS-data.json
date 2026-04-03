@@ -16453,7 +16453,16 @@
     },
     {
       "id": 425,
-      "items": [],
+      "items": [
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773233142239"
+        }
+      ],
       "status": "active",
       "date": 1775243658087
     }
@@ -16799,5 +16808,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:14:18.086Z"
+  "lastSync": "2026-04-03T19:14:33.201Z"
 }
