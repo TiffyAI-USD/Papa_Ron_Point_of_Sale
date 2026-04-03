@@ -779,7 +779,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773483222791": {
       "name": "SMIRNOFF 1818 1L",
@@ -16799,8 +16799,18 @@
           "code": "P_1773483054408"
         }
       ],
+      "status": "paid",
+      "date": 1775244370287,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 434,
+      "items": [],
       "status": "active",
-      "date": 1775244352942
+      "date": 1775244370400
     }
   ],
   "purchaseLog": [
@@ -17144,5 +17154,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:26:06.002Z"
+  "lastSync": "2026-04-03T19:26:10.398Z"
 }
