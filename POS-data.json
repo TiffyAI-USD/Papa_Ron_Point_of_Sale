@@ -16745,12 +16745,12 @@
       "id": 431,
       "items": [
         {
-          "name": "BOERIE AND CHIPS",
-          "price": 50,
+          "name": "PREGO & CHIPS",
+          "price": 60,
           "cost": 0,
           "category": "food",
-          "stock": -32,
-          "code": "P_1773340830986"
+          "stock": -27,
+          "code": "P_1773333432507"
         }
       ],
       "status": "active",
@@ -17098,5 +17098,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:24:49.778Z"
+  "lastSync": "2026-04-03T19:25:04.332Z"
 }
