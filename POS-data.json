@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -234,
+      "stock": -244,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -19
+      "stock": -20
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -23
+      "stock": -24
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -17078,10 +17078,28 @@
           "category": "food",
           "stock": -19,
           "code": "P_1773235049759"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -23,
+          "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1775244981999,
+      "total": 120,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 443,
+      "items": [],
       "status": "active",
-      "date": 1775244948691
+      "date": 1775244982097
     }
   ],
   "purchaseLog": [
@@ -17425,5 +17443,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:36:04.991Z"
+  "lastSync": "2026-04-03T19:36:22.097Z"
 }
