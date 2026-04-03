@@ -1452,6 +1452,20 @@
       "cost": 0,
       "category": "drink",
       "stock": -7
+    },
+    "P_1775210238895": {
+      "name": "APPLETIZER CAN",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 24
+    },
+    "P_1775210258847": {
+      "name": "GRAPETISER CAN",
+      "price": 20,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -16691,5 +16705,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-02T19:23:38.975Z"
+  "lastSync": "2026-04-03T09:58:58.515Z"
 }
