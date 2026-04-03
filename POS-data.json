@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -80,
+      "stock": -82,
       "cost": 0,
       "category": "ingredient"
     },
@@ -151,7 +151,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773232359739": {
       "name": "VEGETARIAN ",
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -219,
+      "stock": -224,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": -20,
+      "stock": -25,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": -60,
+      "stock": -75,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": -4,
+      "stock": -5,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": -19,
+      "stock": -25,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -485,7 +485,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 39
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -646,7 +646,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 2
+      "stock": 1
     },
     "P_1773324805766": {
       "name": "SPARLETTA SPARBERRY",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 50
+      "stock": 49
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 13
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 40
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -1262,7 +1262,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773929316515": {
       "name": "EXTREME CAN 440ML ",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 177
+      "stock": 175
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -9479,8 +9479,12 @@
           "code": "P_1773939546490"
         }
       ],
-      "status": "active",
-      "date": 1774191412143
+      "status": "paid",
+      "date": 1775244128374,
+      "total": 830,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 213,
@@ -16663,6 +16667,12 @@
       ],
       "status": "active",
       "date": 1775243717576
+    },
+    {
+      "id": 428,
+      "items": [],
+      "status": "active",
+      "date": 1775244128485
     }
   ],
   "purchaseLog": [
@@ -17006,5 +17016,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:22:01.485Z"
+  "lastSync": "2026-04-03T19:22:08.485Z"
 }
