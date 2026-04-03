@@ -33,7 +33,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 10
+      "stock": 8
     },
     "P_1773164868475": {
       "name": "HASH JOINT",
@@ -17344,8 +17344,18 @@
           "code": "P_1773164818430"
         }
       ],
+      "status": "paid",
+      "date": 1775245189951,
+      "total": 50,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 451,
+      "items": [],
       "status": "active",
-      "date": 1775245171407
+      "date": 1775245190053
     }
   ],
   "purchaseLog": [
@@ -17689,5 +17699,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:39:46.630Z"
+  "lastSync": "2026-04-03T19:39:57.131Z"
 }
