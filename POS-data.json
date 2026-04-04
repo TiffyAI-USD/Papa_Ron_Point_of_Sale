@@ -1192,7 +1192,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 25
+      "stock": 24
     },
     "P_1773925481823": {
       "name": "SAVANNA 330ML ",
@@ -18259,8 +18259,35 @@
           "code": "P_1773925226529"
         }
       ],
+      "status": "paid",
+      "date": 1775334280801,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 474,
+      "items": [
+        {
+          "name": "TROPICAL GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 6,
+          "code": "P_1773165214687"
+        },
+        {
+          "name": "TROPICAL GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 6,
+          "code": "P_1773165214687"
+        }
+      ],
       "status": "active",
-      "date": 1775334262918
+      "date": 1775334280927
     }
   ],
   "purchaseLog": [
@@ -18614,5 +18641,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:24:36.419Z"
+  "lastSync": "2026-04-04T20:25:00.524Z"
 }
