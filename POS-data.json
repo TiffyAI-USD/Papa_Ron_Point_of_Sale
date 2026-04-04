@@ -9719,12 +9719,12 @@
       "id": 218,
       "items": [
         {
-          "name": "BLACK LABEL 500ML ",
-          "price": 30,
+          "name": "BERNINI BLUSH CAN 500ML",
+          "price": 35,
           "cost": 0,
           "category": "drink",
-          "stock": 54,
-          "code": "P_1773244875193"
+          "stock": 16,
+          "code": "P_1773245784383"
         }
       ],
       "status": "active",
@@ -18845,5 +18845,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:28:36.042Z"
+  "lastSync": "2026-04-04T20:31:18.634Z"
 }
