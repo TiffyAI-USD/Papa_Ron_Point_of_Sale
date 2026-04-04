@@ -17564,6 +17564,14 @@
           "category": "drink",
           "stock": 24,
           "code": "P_1775210238895"
+        },
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773437849538"
         }
       ],
       "status": "active",
@@ -17921,5 +17929,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:00:56.704Z"
+  "lastSync": "2026-04-04T20:01:10.008Z"
 }
