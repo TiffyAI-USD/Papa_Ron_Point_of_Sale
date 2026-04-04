@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -28,
+      "stock": -29,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -24,
+      "stock": -25,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -84,
+      "stock": -86,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -16,
+      "stock": -18,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -42
+      "stock": -43
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -60,
+      "stock": -65,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 40
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -18230,10 +18230,28 @@
           "category": "drink",
           "stock": 41,
           "code": "P_1773245979898"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773926133077"
         }
       ],
+      "status": "paid",
+      "date": 1775334262796,
+      "total": 225,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 473,
+      "items": [],
       "status": "active",
-      "date": 1775334204304
+      "date": 1775334262918
     }
   ],
   "purchaseLog": [
@@ -18587,5 +18605,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:24:10.049Z"
+  "lastSync": "2026-04-04T20:24:22.917Z"
 }
