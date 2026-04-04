@@ -17491,7 +17491,24 @@
     },
     {
       "id": 455,
-      "items": [],
+      "items": [
+        {
+          "name": "VM JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 8,
+          "code": "P_1773164818430"
+        },
+        {
+          "name": "VM JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 8,
+          "code": "P_1773164818430"
+        }
+      ],
       "status": "active",
       "date": 1775332694302
     }
@@ -17847,5 +17864,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T19:58:14.301Z"
+  "lastSync": "2026-04-04T19:58:48.731Z"
 }
