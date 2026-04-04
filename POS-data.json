@@ -9564,7 +9564,16 @@
     },
     {
       "id": 215,
-      "items": [],
+      "items": [
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773769535752"
+        }
+      ],
       "status": "active",
       "date": 1774207757426
     },
@@ -17353,9 +17362,26 @@
     },
     {
       "id": 451,
-      "items": [],
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -28,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -53,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1775245190053
+      "date": 1775298023784
     }
   ],
   "purchaseLog": [
@@ -17699,5 +17725,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-03T19:39:57.131Z"
+  "lastSync": "2026-04-04T10:20:23.802Z"
 }
