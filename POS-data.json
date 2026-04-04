@@ -33,7 +33,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 8
+      "stock": 7
     },
     "P_1773164868475": {
       "name": "HASH JOINT",
@@ -17499,18 +17499,29 @@
           "category": "food",
           "stock": 8,
           "code": "P_1773164818430"
-        },
+        }
+      ],
+      "status": "paid",
+      "date": 1775332736275,
+      "total": 25,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 456,
+      "items": [
         {
-          "name": "VM JOINT",
-          "price": 25,
+          "name": "CREAMY CHICKEN",
+          "price": 135,
           "cost": 0,
           "category": "food",
-          "stock": 8,
-          "code": "P_1773164818430"
+          "stock": -54,
+          "code": "P_1773232120019"
         }
       ],
       "status": "active",
-      "date": 1775332694302
+      "date": 1775332736398
     }
   ],
   "purchaseLog": [
@@ -17864,5 +17875,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T19:58:48.731Z"
+  "lastSync": "2026-04-04T19:59:15.310Z"
 }
