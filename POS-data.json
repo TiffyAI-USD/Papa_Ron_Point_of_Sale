@@ -1087,7 +1087,7 @@
       "price": 15,
       "cost": 0,
       "category": "food",
-      "stock": 38
+      "stock": 37
     },
     "P_1773732771235": {
       "name": "BUTTER",
@@ -18002,9 +18002,37 @@
     },
     {
       "id": 468,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 38,
+          "code": "P_1773689328747"
+        }
+      ],
+      "status": "paid",
+      "date": 1775333898297,
+      "total": 15,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 469,
+      "items": [
+        {
+          "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
+          "price": 160,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773234210075"
+        }
+      ],
       "status": "active",
-      "date": 1775333874784
+      "date": 1775333898420
     }
   ],
   "purchaseLog": [
@@ -18358,5 +18386,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:17:46.156Z"
+  "lastSync": "2026-04-04T20:18:12.342Z"
 }
