@@ -17787,7 +17787,40 @@
     },
     {
       "id": 463,
-      "items": [],
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164747894"
+        }
+      ],
       "status": "active",
       "date": 1775333200358
     }
@@ -18143,5 +18176,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:06:40.353Z"
+  "lastSync": "2026-04-04T20:07:04.471Z"
 }
