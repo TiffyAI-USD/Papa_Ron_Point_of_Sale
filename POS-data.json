@@ -17701,7 +17701,16 @@
     },
     {
       "id": 461,
-      "items": [],
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773245979898"
+        }
+      ],
       "status": "active",
       "date": 1775332997377
     }
@@ -18057,5 +18066,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:03:17.377Z"
+  "lastSync": "2026-04-04T20:03:35.411Z"
 }
