@@ -17529,7 +17529,16 @@
     },
     {
       "id": 457,
-      "items": [],
+      "items": [
+        {
+          "name": "MARGHERITA ",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773233252969"
+        }
+      ],
       "status": "active",
       "date": 1775332765706
     }
@@ -17885,5 +17894,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T19:59:25.706Z"
+  "lastSync": "2026-04-04T19:59:59.492Z"
 }
