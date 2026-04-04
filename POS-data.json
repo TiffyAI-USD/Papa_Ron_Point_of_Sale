@@ -17631,6 +17631,22 @@
           "category": "food",
           "stock": -3,
           "code": "P_1774119200192"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773245915568"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773245915568"
         }
       ],
       "status": "active",
@@ -17988,5 +18004,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:02:09.457Z"
+  "lastSync": "2026-04-04T20:02:16.769Z"
 }
