@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -83,
+      "stock": -84,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -53
+      "stock": -54
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -23,
+      "stock": -24,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -19,
+      "stock": -20,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -74,
+      "stock": -76,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -6,
+      "stock": -8,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -37
+      "stock": -38
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -28
+      "stock": -29
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -807,7 +807,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773506334925": {
       "name": "JAMESON SELECT  RESERVE TOT",
@@ -1122,7 +1122,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773769599079": {
       "name": "OTHER",
@@ -9606,8 +9606,12 @@
           "code": "P_1773505029268"
         }
       ],
-      "status": "active",
-      "date": 1774207757426
+      "status": "paid",
+      "date": 1775298316555,
+      "total": 450,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 216,
@@ -9713,7 +9717,16 @@
     },
     {
       "id": 218,
-      "items": [],
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 54,
+          "code": "P_1773244875193"
+        }
+      ],
       "status": "active",
       "date": 1774208074340
     },
@@ -17757,5 +17770,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T10:25:11.180Z"
+  "lastSync": "2026-04-04T14:46:59.868Z"
 }
