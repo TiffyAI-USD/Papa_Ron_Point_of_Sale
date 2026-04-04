@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 4
+      "stock": 3
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -86,
+      "stock": -87,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -55
+      "stock": -56
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -779,7 +779,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 14
     },
     "P_1773483222791": {
       "name": "SMIRNOFF 1818 1L",
@@ -17692,8 +17692,18 @@
           "code": "P_1773483054408"
         }
       ],
+      "status": "paid",
+      "date": 1775332997239,
+      "total": 230,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 461,
+      "items": [],
       "status": "active",
-      "date": 1775332946968
+      "date": 1775332997377
     }
   ],
   "purchaseLog": [
@@ -18047,5 +18057,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:03:01.246Z"
+  "lastSync": "2026-04-04T20:03:17.377Z"
 }
