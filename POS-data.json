@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -85,
+      "stock": -86,
       "cost": 0,
       "category": "ingredient"
     },
@@ -200,7 +200,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
@@ -17539,8 +17539,18 @@
           "code": "P_1773233252969"
         }
       ],
+      "status": "paid",
+      "date": 1775332808119,
+      "total": 100,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 458,
+      "items": [],
       "status": "active",
-      "date": 1775332765706
+      "date": 1775332808236
     }
   ],
   "purchaseLog": [
@@ -17894,5 +17904,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T19:59:59.492Z"
+  "lastSync": "2026-04-04T20:00:08.232Z"
 }
