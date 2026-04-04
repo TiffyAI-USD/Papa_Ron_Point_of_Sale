@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -30
+      "stock": -31
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -18338,9 +18338,28 @@
     },
     {
       "id": 476,
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -30,
+          "code": "P_1773333545424"
+        }
+      ],
+      "status": "paid",
+      "date": 1775334377784,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 477,
       "items": [],
       "status": "active",
-      "date": 1775334358569
+      "date": 1775334377912
     }
   ],
   "purchaseLog": [
@@ -18694,5 +18713,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:25:52.614Z"
+  "lastSync": "2026-04-04T20:26:13.823Z"
 }
