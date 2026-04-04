@@ -17623,6 +17623,14 @@
           "category": "food",
           "stock": -32,
           "code": "P_1773340830986"
+        },
+        {
+          "name": "ICE BAG",
+          "price": 35,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1774119200192"
         }
       ],
       "status": "active",
@@ -17980,5 +17988,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:01:59.944Z"
+  "lastSync": "2026-04-04T20:02:09.457Z"
 }
