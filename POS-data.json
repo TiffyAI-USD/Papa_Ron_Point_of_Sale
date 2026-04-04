@@ -17738,28 +17738,12 @@
       "id": 462,
       "items": [
         {
-          "name": "MR ORANGE ",
-          "price": 15,
+          "name": "SD JOINT ",
+          "price": 25,
           "cost": 0,
-          "category": "drink",
-          "stock": 11,
-          "code": "P_1773324741065"
-        },
-        {
-          "name": "STONEY CAN 500ML ",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 15,
-          "code": "P_1773927304684"
-        },
-        {
-          "name": "APPLETIZER CAN",
-          "price": 20,
-          "cost": 0,
-          "category": "drink",
-          "stock": 22,
-          "code": "P_1775210238895"
+          "category": "food",
+          "stock": 1,
+          "code": "P_1773164747894"
         }
       ],
       "status": "active",
@@ -18117,5 +18101,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:04:42.759Z"
+  "lastSync": "2026-04-04T20:05:36.033Z"
 }
