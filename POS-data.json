@@ -18249,7 +18249,16 @@
     },
     {
       "id": 473,
-      "items": [],
+      "items": [
+        {
+          "name": "CORONA 355ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 25,
+          "code": "P_1773925226529"
+        }
+      ],
       "status": "active",
       "date": 1775334262918
     }
@@ -18605,5 +18614,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:24:22.917Z"
+  "lastSync": "2026-04-04T20:24:36.419Z"
 }
