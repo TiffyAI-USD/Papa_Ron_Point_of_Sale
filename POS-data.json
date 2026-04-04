@@ -75,7 +75,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 39
+      "stock": 38
     },
     "P_1773165057205": {
       "name": "LOOSE RIZZLA",
@@ -17430,9 +17430,24 @@
     },
     {
       "id": 452,
-      "items": [],
+      "items": [
+        {
+          "name": "RIZZLA PURE HEMP",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 39,
+          "code": "P_1773165040542"
+        }
+      ],
       "status": "active",
       "date": 1775314026774
+    },
+    {
+      "id": 453,
+      "items": [],
+      "status": "active",
+      "date": 1775314065080
     }
   ],
   "purchaseLog": [
@@ -17696,6 +17711,11 @@
         "name": "BLACK LABEL 500ML ",
         "price": 30,
         "date": 1775314025922
+      },
+      {
+        "name": "RIZZLA PURE HEMP",
+        "price": 25,
+        "date": 1775314063939
       }
     ],
     "Marshall": [
@@ -17781,5 +17801,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T14:47:06.774Z"
+  "lastSync": "2026-04-04T14:47:45.080Z"
 }
