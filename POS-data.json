@@ -18435,6 +18435,22 @@
           "category": "drink",
           "stock": 49,
           "code": "P_1773246049692"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 2,
+          "code": "P_1773164795064"
         }
       ],
       "status": "active",
@@ -18792,5 +18808,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-04T20:27:38.704Z"
+  "lastSync": "2026-04-04T20:27:48.899Z"
 }
