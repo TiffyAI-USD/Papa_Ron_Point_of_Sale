@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 45
+      "stock": 44
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -19684,10 +19684,28 @@
           "category": "drink",
           "stock": 45,
           "code": "P_1773246049692"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773324976622"
         }
       ],
+      "status": "paid",
+      "date": 1775422370235,
+      "total": 80,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 518,
+      "items": [],
       "status": "active",
-      "date": 1775422341072
+      "date": 1775422370361
     }
   ],
   "purchaseLog": [
@@ -20051,5 +20069,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:52:35.342Z"
+  "lastSync": "2026-04-05T20:52:50.361Z"
 }
