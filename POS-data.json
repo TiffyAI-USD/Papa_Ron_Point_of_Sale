@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 37
+      "stock": 36
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 45
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 67
+      "stock": 65
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 49
+      "stock": 48
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 63
+      "stock": 60
     },
     "P_1773944852469": {
       "name": "TEQUILAR GOLD PER-TOT",
@@ -1339,7 +1339,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 43
+      "stock": 42
     },
     "P_1774091290480": {
       "name": "FEG",
@@ -19474,10 +19474,28 @@
           "category": "drink",
           "stock": 16,
           "code": "P_1773244875193"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773246049692"
         }
       ],
+      "status": "paid",
+      "date": 1775422115762,
+      "total": 325,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 512,
+      "items": [],
       "status": "active",
-      "date": 1775422019973
+      "date": 1775422115902
     }
   ],
   "purchaseLog": [
@@ -19841,5 +19859,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:48:04.922Z"
+  "lastSync": "2026-04-05T20:48:35.901Z"
 }
