@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 173
+      "stock": 171
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -10515,9 +10515,30 @@
     },
     {
       "id": 239,
-      "items": [],
-      "status": "active",
-      "date": 1774209547503
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 173,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 173,
+          "code": "P_1773939546490"
+        }
+      ],
+      "status": "paid",
+      "date": 1775421083559,
+      "total": 10,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 240,
@@ -18673,6 +18694,12 @@
       "items": [],
       "status": "active",
       "date": 1775406891755
+    },
+    {
+      "id": 489,
+      "items": [],
+      "status": "active",
+      "date": 1775421083863
     }
   ],
   "purchaseLog": [
@@ -19036,5 +19063,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T16:34:51.754Z"
+  "lastSync": "2026-04-05T20:31:17.076Z"
 }
