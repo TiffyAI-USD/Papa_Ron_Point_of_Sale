@@ -1493,7 +1493,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -2
     }
   },
   "recipes": {
@@ -10694,8 +10694,12 @@
           "code": "P_1775421428761"
         }
       ],
-      "status": "active",
-      "date": 1774292673719
+      "status": "paid",
+      "date": 1775421450863,
+      "total": 80,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 246,
@@ -18913,6 +18917,12 @@
       "items": [],
       "status": "active",
       "date": 1775421386530
+    },
+    {
+      "id": 497,
+      "items": [],
+      "status": "active",
+      "date": 1775421450976
     }
   ],
   "purchaseLog": [
@@ -19276,5 +19286,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:37:16.263Z"
+  "lastSync": "2026-04-05T20:37:30.975Z"
 }
