@@ -19316,7 +19316,40 @@
     },
     {
       "id": 509,
-      "items": [],
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 171,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 171,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 171,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 171,
+          "code": "P_1773939546490"
+        }
+      ],
       "status": "active",
       "date": 1775421921777
     }
@@ -19682,5 +19715,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:45:21.776Z"
+  "lastSync": "2026-04-05T20:45:35.586Z"
 }
