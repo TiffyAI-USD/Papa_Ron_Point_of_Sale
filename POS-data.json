@@ -19703,7 +19703,32 @@
     },
     {
       "id": 518,
-      "items": [],
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 63,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773245979898"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773245979898"
+        }
+      ],
       "status": "active",
       "date": 1775422370361
     }
@@ -20069,5 +20094,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:52:50.361Z"
+  "lastSync": "2026-04-05T20:53:10.810Z"
 }
