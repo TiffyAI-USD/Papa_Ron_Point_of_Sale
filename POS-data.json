@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 13
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -19587,10 +19587,28 @@
           "category": "food",
           "stock": -11,
           "code": "P_1774369328057"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 14,
+          "code": "P_1773926133077"
         }
       ],
+      "status": "paid",
+      "date": 1775422236786,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 515,
+      "items": [],
       "status": "active",
-      "date": 1775422198352
+      "date": 1775422236905
     }
   ],
   "purchaseLog": [
@@ -19954,5 +19972,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:50:21.532Z"
+  "lastSync": "2026-04-05T20:50:36.905Z"
 }
