@@ -18770,6 +18770,22 @@
           "category": "drink",
           "stock": 11,
           "code": "P_1773324741065"
+        },
+        {
+          "name": "STONEY CAN 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 15,
+          "code": "P_1773927304684"
+        },
+        {
+          "name": "APPLETIZER CAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1775210238895"
         }
       ],
       "status": "active",
@@ -19137,5 +19153,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:33:04.642Z"
+  "lastSync": "2026-04-05T20:33:24.686Z"
 }
