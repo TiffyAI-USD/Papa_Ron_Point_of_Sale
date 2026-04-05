@@ -18762,6 +18762,14 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773230368674"
+        },
+        {
+          "name": "MR ORANGE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1773324741065"
         }
       ],
       "status": "active",
@@ -19129,5 +19137,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:32:56.115Z"
+  "lastSync": "2026-04-05T20:33:04.642Z"
 }
