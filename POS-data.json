@@ -18627,7 +18627,32 @@
     },
     {
       "id": 487,
-      "items": [],
+      "items": [
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773769535752"
+        },
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773769535752"
+        },
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773769535752"
+        }
+      ],
       "status": "active",
       "date": 1775406506494
     }
@@ -18993,5 +19018,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T16:28:26.494Z"
+  "lastSync": "2026-04-05T16:34:18.982Z"
 }
