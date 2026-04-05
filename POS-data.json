@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -31,
+      "stock": -32,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -27,
+      "stock": -28,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -90,
+      "stock": -92,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -22,
+      "stock": -24,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -45
+      "stock": -46
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 46
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -19195,10 +19195,28 @@
           "category": "drink",
           "stock": 48,
           "code": "P_1773246049692"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -45,
+          "code": "P_1773233691679"
         }
       ],
+      "status": "paid",
+      "date": 1775421728535,
+      "total": 190,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 507,
+      "items": [],
       "status": "active",
-      "date": 1775421697854
+      "date": 1775421728693
     }
   ],
   "purchaseLog": [
@@ -19562,5 +19580,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:41:54.047Z"
+  "lastSync": "2026-04-05T20:42:08.684Z"
 }
