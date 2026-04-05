@@ -18843,6 +18843,14 @@
           "category": "drink",
           "stock": 46,
           "code": "P_1773925849392"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773244875193"
         }
       ],
       "status": "active",
@@ -19210,5 +19218,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:35:05.296Z"
+  "lastSync": "2026-04-05T20:35:14.178Z"
 }
