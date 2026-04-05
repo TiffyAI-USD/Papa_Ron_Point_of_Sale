@@ -19230,6 +19230,14 @@
           "category": "drink",
           "stock": 39,
           "code": "P_1773245979898"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 64,
+          "code": "P_1773944517157"
         }
       ],
       "status": "active",
@@ -19597,5 +19605,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:42:46.226Z"
+  "lastSync": "2026-04-05T20:42:54.939Z"
 }
