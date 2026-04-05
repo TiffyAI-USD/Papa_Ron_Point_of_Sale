@@ -19179,7 +19179,24 @@
     },
     {
       "id": 506,
-      "items": [],
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773246049692"
+        }
+      ],
       "status": "active",
       "date": 1775421697854
     }
@@ -19545,5 +19562,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:41:37.854Z"
+  "lastSync": "2026-04-05T20:41:54.047Z"
 }
