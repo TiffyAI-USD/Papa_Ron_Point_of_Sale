@@ -1297,7 +1297,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 53
+      "stock": 52
     },
     "P_1773930106975": {
       "name": "PEANUTS",
@@ -19054,8 +19054,35 @@
           "code": "P_1773929983658"
         }
       ],
+      "status": "paid",
+      "date": 1775421594224,
+      "total": 10,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 502,
+      "items": [
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773244946839"
+        }
+      ],
       "status": "active",
-      "date": 1775421565536
+      "date": 1775421594341
     }
   ],
   "purchaseLog": [
@@ -19419,5 +19446,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:39:48.889Z"
+  "lastSync": "2026-04-05T20:40:09.235Z"
 }
