@@ -19273,7 +19273,24 @@
     },
     {
       "id": 508,
-      "items": [],
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -30,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -30,
+          "code": "P_1773333432507"
+        }
+      ],
       "status": "active",
       "date": 1775421894754
     }
@@ -19639,5 +19656,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:44:54.752Z"
+  "lastSync": "2026-04-05T20:45:09.897Z"
 }
