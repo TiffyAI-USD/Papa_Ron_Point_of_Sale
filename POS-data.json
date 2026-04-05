@@ -19426,6 +19426,14 @@
           "category": "drink",
           "stock": 67,
           "code": "P_1773324850731"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1774090102240"
         }
       ],
       "status": "active",
@@ -19793,5 +19801,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:47:28.391Z"
+  "lastSync": "2026-04-05T20:47:38.841Z"
 }
