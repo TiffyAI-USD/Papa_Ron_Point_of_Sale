@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 171
+      "stock": 167
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -19350,8 +19350,35 @@
           "code": "P_1773939546490"
         }
       ],
+      "status": "paid",
+      "date": 1775421941143,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 510,
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -25,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -22,
+          "code": "P_1773235049759"
+        }
+      ],
       "status": "active",
-      "date": 1775421921777
+      "date": 1775421941257
     }
   ],
   "purchaseLog": [
@@ -19715,5 +19742,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:45:35.586Z"
+  "lastSync": "2026-04-05T20:46:27.980Z"
 }
