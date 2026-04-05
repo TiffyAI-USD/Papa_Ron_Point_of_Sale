@@ -103,7 +103,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 4
+      "stock": 2
     },
     "P_1773165237846": {
       "name": "GRAPE GUMMIE ",
@@ -18920,9 +18920,36 @@
     },
     {
       "id": 497,
+      "items": [
+        {
+          "name": "TROPICAL GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 4,
+          "code": "P_1773165214687"
+        },
+        {
+          "name": "TROPICAL GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 4,
+          "code": "P_1773165214687"
+        }
+      ],
+      "status": "paid",
+      "date": 1775421467867,
+      "total": 80,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 498,
       "items": [],
       "status": "active",
-      "date": 1775421450976
+      "date": 1775421467992
     }
   ],
   "purchaseLog": [
@@ -19286,5 +19313,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:37:30.975Z"
+  "lastSync": "2026-04-05T20:37:43.812Z"
 }
