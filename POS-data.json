@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 13
+      "stock": 25
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -18907,5 +18907,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T16:24:14.114Z"
+  "lastSync": "2026-04-05T16:24:55.544Z"
 }
