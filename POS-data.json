@@ -19649,7 +19649,24 @@
     },
     {
       "id": 516,
-      "items": [],
+      "items": [
+        {
+          "name": "BRUTAL FRUIT CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 32,
+          "code": "P_1773929465649"
+        },
+        {
+          "name": "BRUTAL FRUIT CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 32,
+          "code": "P_1773929465649"
+        }
+      ],
       "status": "active",
       "date": 1775422277321
     }
@@ -20015,5 +20032,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:51:17.320Z"
+  "lastSync": "2026-04-05T20:52:12.605Z"
 }
