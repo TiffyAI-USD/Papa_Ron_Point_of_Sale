@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -90,
+      "stock": -91,
       "cost": 0,
       "category": "ingredient"
     },
@@ -130,7 +130,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773231967771": {
       "name": "SOMETHING MEATY",
@@ -632,7 +632,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 11
+      "stock": 10
     },
     "P_1773324759000": {
       "name": "SPARLETTA CREAMSODA",
@@ -1262,7 +1262,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 14
     },
     "P_1773929316515": {
       "name": "EXTREME CAN 440ML ",
@@ -1458,7 +1458,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 21
     },
     "P_1775210258847": {
       "name": "GRAPETISER CAN",
@@ -18788,8 +18788,18 @@
           "code": "P_1775210238895"
         }
       ],
+      "status": "paid",
+      "date": 1775421229080,
+      "total": 205,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 493,
+      "items": [],
       "status": "active",
-      "date": 1775421157138
+      "date": 1775421229205
     }
   ],
   "purchaseLog": [
@@ -19153,5 +19163,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:33:24.686Z"
+  "lastSync": "2026-04-05T20:33:49.204Z"
 }
