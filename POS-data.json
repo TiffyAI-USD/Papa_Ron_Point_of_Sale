@@ -1480,6 +1480,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -2
+    },
+    "P_1775406178126": {
+      "name": "COKE 250ML ",
+      "price": 12,
+      "cost": 0,
+      "category": "drink",
+      "stock": 28
     }
   },
   "recipes": {
@@ -10255,32 +10262,7 @@
     },
     {
       "id": 232,
-      "items": [
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        },
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        },
-        {
-          "name": "CASTLE LITE CAN 500ML",
-          "price": 30,
-          "cost": 0,
-          "category": "drink",
-          "stock": 100,
-          "code": "P_1773324850731"
-        }
-      ],
+      "items": [],
       "status": "active",
       "date": 1774209002940
     },
@@ -18556,6 +18538,12 @@
       ],
       "status": "active",
       "date": 1775388194905
+    },
+    {
+      "id": 485,
+      "items": [],
+      "status": "active",
+      "date": 1775388245712
     }
   ],
   "purchaseLog": [
@@ -18919,5 +18907,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T16:20:29.725Z"
+  "lastSync": "2026-04-05T16:23:39.570Z"
 }
