@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -30
+      "stock": -32
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 14
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -19289,10 +19289,36 @@
           "category": "food",
           "stock": -30,
           "code": "P_1773333432507"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773926133077"
         }
       ],
+      "status": "paid",
+      "date": 1775421921629,
+      "total": 160,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 509,
+      "items": [],
       "status": "active",
-      "date": 1775421894754
+      "date": 1775421921777
     }
   ],
   "purchaseLog": [
@@ -19656,5 +19682,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:45:09.897Z"
+  "lastSync": "2026-04-05T20:45:21.776Z"
 }
