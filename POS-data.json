@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -31
+      "stock": -32
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -1220,7 +1220,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 17
     },
     "P_1773926133077": {
       "name": "POWERADE",
@@ -19170,8 +19170,18 @@
           "code": "P_1773333545424"
         }
       ],
+      "status": "paid",
+      "date": 1775421697725,
+      "total": 205,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 506,
+      "items": [],
       "status": "active",
-      "date": 1775421661682
+      "date": 1775421697854
     }
   ],
   "purchaseLog": [
@@ -19535,5 +19545,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:41:28.391Z"
+  "lastSync": "2026-04-05T20:41:37.854Z"
 }
