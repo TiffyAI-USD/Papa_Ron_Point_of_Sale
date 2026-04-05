@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 32
+      "stock": 30
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -19667,8 +19667,27 @@
           "code": "P_1773929465649"
         }
       ],
+      "status": "paid",
+      "date": 1775422340949,
+      "total": 70,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 517,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 45,
+          "code": "P_1773246049692"
+        }
+      ],
       "status": "active",
-      "date": 1775422277321
+      "date": 1775422341072
     }
   ],
   "purchaseLog": [
@@ -20032,5 +20051,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T20:52:12.605Z"
+  "lastSync": "2026-04-05T20:52:35.342Z"
 }
