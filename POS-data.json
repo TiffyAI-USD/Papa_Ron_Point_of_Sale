@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 13
+      "stock": 37
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -18907,5 +18907,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-05T16:23:39.570Z"
+  "lastSync": "2026-04-05T16:24:14.114Z"
 }
