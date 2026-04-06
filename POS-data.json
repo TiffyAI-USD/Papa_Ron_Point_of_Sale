@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 45
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 44
+      "stock": 42
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -20275,10 +20275,24 @@
           "category": "drink",
           "stock": 46,
           "code": "P_1773244946839"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773246049692"
         }
       ],
       "status": "active",
       "date": 1775508484076
+    },
+    {
+      "id": 534,
+      "items": [],
+      "status": "active",
+      "date": 1775508530353
     }
   ],
   "purchaseLog": [
@@ -20557,6 +20571,21 @@
         "name": "HASH JOINT",
         "price": 30,
         "date": 1775493731065
+      },
+      {
+        "name": "CASTLE MILK STOUT",
+        "price": 35,
+        "date": 1775508529267
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1775508529267
+      },
+      {
+        "name": "CASTLE MILK STOUT",
+        "price": 35,
+        "date": 1775508529267
       }
     ],
     "Marshall": [
@@ -20647,5 +20676,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-06T20:48:24.108Z"
+  "lastSync": "2026-04-06T20:48:45.904Z"
 }
