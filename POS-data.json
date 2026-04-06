@@ -19751,7 +19751,16 @@
     },
     {
       "id": 521,
-      "items": [],
+      "items": [
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773437849538"
+        }
+      ],
       "status": "active",
       "date": 1775507763539
     }
@@ -20122,5 +20131,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-06T20:36:03.539Z"
+  "lastSync": "2026-04-06T20:36:30.098Z"
 }
