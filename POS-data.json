@@ -1220,7 +1220,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773926133077": {
       "name": "POWERADE",
@@ -10883,8 +10883,12 @@
           "code": "P_1773925955021"
         }
       ],
-      "status": "active",
-      "date": 1774293612466
+      "status": "paid",
+      "date": 1775588538454,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 253,
@@ -20480,6 +20484,12 @@
       "items": [],
       "status": "active",
       "date": 1775508725215
+    },
+    {
+      "id": 541,
+      "items": [],
+      "status": "active",
+      "date": 1775588538816
     }
   ],
   "purchaseLog": [
@@ -20863,5 +20873,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:01:39.085Z"
+  "lastSync": "2026-04-07T19:02:09.146Z"
 }
