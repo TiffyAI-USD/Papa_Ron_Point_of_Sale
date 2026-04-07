@@ -103,14 +103,14 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 2
+      "stock": 1
     },
     "P_1773165237846": {
       "name": "GRAPE GUMMIE ",
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -3
     },
     "P_1773165261852": {
       "name": "WATERMELON GUMMIE ",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 55
+      "stock": 54
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -1493,7 +1493,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     }
   },
   "recipes": {
@@ -20556,8 +20556,37 @@
           "code": "P_1773165237846"
         }
       ],
+      "status": "paid",
+      "date": 1775588636543,
+      "total": 225,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 543,
+      "items": [
+        {
+          "name": "WW-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1774369328057"
+        }
+      ],
+      "status": "paid",
+      "date": 1775588654085,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 544,
+      "items": [],
       "status": "active",
-      "date": 1775588557635
+      "date": 1775588654225
     }
   ],
   "purchaseLog": [
@@ -20941,5 +20970,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:03:44.589Z"
+  "lastSync": "2026-04-07T19:04:09.572Z"
 }
