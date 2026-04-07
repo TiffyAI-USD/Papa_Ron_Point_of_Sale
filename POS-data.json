@@ -20522,6 +20522,22 @@
           "category": "drink",
           "stock": 55,
           "code": "P_1773925481823"
+        },
+        {
+          "name": "TROPICAL GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 2,
+          "code": "P_1773165214687"
+        },
+        {
+          "name": "GUMMIE HASH",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1775421428761"
         }
       ],
       "status": "active",
@@ -20909,5 +20925,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:02:57.396Z"
+  "lastSync": "2026-04-07T19:03:20.970Z"
 }
