@@ -20657,7 +20657,32 @@
     },
     {
       "id": 547,
-      "items": [],
+      "items": [
+        {
+          "name": "DOUBLE CHICKEN SCHNITZEL. (WITH CHIPS OR SALAD, MUSHROOM SAUCE & MELTED CHEESE)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773235225003"
+        },
+        {
+          "name": "PREGO ROLL",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1773235513634"
+        },
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 8,
+          "code": "P_1773324836625"
+        }
+      ],
       "status": "active",
       "date": 1775588727394
     }
@@ -21043,5 +21068,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:05:20.474Z"
+  "lastSync": "2026-04-07T19:05:44.931Z"
 }
