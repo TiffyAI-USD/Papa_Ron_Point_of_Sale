@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -75,
+      "stock": -80,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -16
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -294,7 +294,7 @@
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
-      "stock": -8,
+      "stock": -10,
       "cost": 0,
       "category": "ingredient"
     },
@@ -303,11 +303,11 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "PREGO ROLL": {
       "name": "PREGO ROLL",
-      "stock": 32,
+      "stock": 31,
       "cost": 0,
       "category": "ingredient"
     },
@@ -316,7 +316,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 8
+      "stock": 7
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -20681,10 +20681,28 @@
           "category": "drink",
           "stock": 8,
           "code": "P_1773324836625"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -15,
+          "code": "P_1773234447154"
         }
       ],
+      "status": "paid",
+      "date": 1775588801240,
+      "total": 240,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 548,
+      "items": [],
       "status": "active",
-      "date": 1775588727394
+      "date": 1775588801376
     }
   ],
   "purchaseLog": [
@@ -21068,5 +21086,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:05:44.931Z"
+  "lastSync": "2026-04-07T19:07:17.327Z"
 }
