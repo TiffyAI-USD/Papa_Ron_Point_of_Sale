@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -100,
+      "stock": -101,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -61
+      "stock": -62
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -28
+      "stock": -30
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -20610,8 +20610,27 @@
           "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1775588690243,
+      "total": 175,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 545,
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -32,
+          "code": "P_1773333432507"
+        }
+      ],
       "status": "active",
-      "date": 1775588654225
+      "date": 1775588690367
     }
   ],
   "purchaseLog": [
@@ -20995,5 +21014,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:04:31.239Z"
+  "lastSync": "2026-04-07T19:04:50.366Z"
 }
