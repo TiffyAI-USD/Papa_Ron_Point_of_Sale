@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -32
+      "stock": -33
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -751,7 +751,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 14
     },
     "P_1773340830986": {
       "name": "BOERIE AND CHIPS",
@@ -20629,8 +20629,37 @@
           "code": "P_1773333432507"
         }
       ],
+      "status": "paid",
+      "date": 1775588706535,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 546,
+      "items": [
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 15,
+          "code": "P_1773340774940"
+        }
+      ],
+      "status": "paid",
+      "date": 1775588727264,
+      "total": 20,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 547,
+      "items": [],
       "status": "active",
-      "date": 1775588690367
+      "date": 1775588727394
     }
   ],
   "purchaseLog": [
@@ -21014,5 +21043,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-07T19:04:50.366Z"
+  "lastSync": "2026-04-07T19:05:20.474Z"
 }
