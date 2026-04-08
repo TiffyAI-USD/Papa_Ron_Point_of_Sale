@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 45
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 45
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -10918,8 +10918,12 @@
           "code": "P_1773324976622"
         }
       ],
-      "status": "active",
-      "date": 1774369177387
+      "status": "paid",
+      "date": 1775659622204,
+      "total": 105,
+      "tip": 30,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 254,
@@ -10942,7 +10946,24 @@
     },
     {
       "id": 255,
-      "items": [],
+      "items": [
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1773236344587"
+        },
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1773236344587"
+        }
+      ],
       "status": "active",
       "date": 1774369245289
     },
@@ -21092,8 +21113,13 @@
         "amount": 15,
         "date": 1774810784782,
         "table": 337
+      },
+      {
+        "amount": 30,
+        "date": 1775659622204,
+        "table": 253
       }
     ]
   },
-  "lastSync": "2026-04-08T14:46:53.147Z"
+  "lastSync": "2026-04-08T15:05:28.000Z"
 }
