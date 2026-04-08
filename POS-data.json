@@ -380,7 +380,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 45
     },
     "P_1773244875193": {
       "name": "BLACK LABEL 500ML ",
@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 40
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -20832,8 +20832,37 @@
           "code": "P_1773246049692"
         }
       ],
+      "status": "paid",
+      "date": 1775674590257,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 553,
+      "items": [
+        {
+          "name": "BLACK LABEL 300MLS",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773244841294"
+        }
+      ],
+      "status": "paid",
+      "date": 1775674610083,
+      "total": 30,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 554,
+      "items": [],
       "status": "active",
-      "date": 1775674566529
+      "date": 1775674610209
     }
   ],
   "purchaseLog": [
@@ -21222,5 +21251,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-08T18:56:21.958Z"
+  "lastSync": "2026-04-08T18:56:45.629Z"
 }
