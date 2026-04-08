@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -101,
+      "stock": -102,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -62
+      "stock": -63
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -10983,8 +10983,12 @@
           "code": "P_1773232120019"
         }
       ],
-      "status": "active",
-      "date": 1774369336386
+      "status": "paid",
+      "date": 1775674566216,
+      "total": 135,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 257,
@@ -20815,6 +20819,21 @@
       ],
       "status": "active",
       "date": 1775674543645
+    },
+    {
+      "id": 552,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 41,
+          "code": "P_1773246049692"
+        }
+      ],
+      "status": "active",
+      "date": 1775674566529
     }
   ],
   "purchaseLog": [
@@ -21203,5 +21222,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-08T18:55:57.451Z"
+  "lastSync": "2026-04-08T18:56:21.958Z"
 }
