@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 1
+      "stock": -1
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -20785,8 +20785,27 @@
           "code": "P_1773164795064"
         }
       ],
+      "status": "paid",
+      "date": 1775660788291,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 551,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -62,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1775660768688
+      "date": 1775674543645
     }
   ],
   "purchaseLog": [
@@ -21175,5 +21194,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-08T15:06:21.303Z"
+  "lastSync": "2026-04-08T18:55:43.672Z"
 }
