@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 13
+      "stock": 12
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -1297,7 +1297,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 52
+      "stock": 51
     },
     "P_1773930106975": {
       "name": "PEANUTS",
@@ -20878,8 +20878,35 @@
           "code": "P_1773926133077"
         }
       ],
+      "status": "paid",
+      "date": 1775674639358,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 555,
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 30,
+          "code": "P_1773245979898"
+        }
+      ],
       "status": "active",
-      "date": 1775674610209
+      "date": 1775674639488
     }
   ],
   "purchaseLog": [
@@ -21268,5 +21295,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-08T18:57:10.035Z"
+  "lastSync": "2026-04-08T18:57:33.126Z"
 }
