@@ -20860,7 +20860,24 @@
     },
     {
       "id": 554,
-      "items": [],
+      "items": [
+        {
+          "name": "PEANUTS & RAISINS ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 52,
+          "code": "P_1773929983658"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 13,
+          "code": "P_1773926133077"
+        }
+      ],
       "status": "active",
       "date": 1775674610209
     }
@@ -21251,5 +21268,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-08T18:56:45.629Z"
+  "lastSync": "2026-04-08T18:57:10.035Z"
 }
