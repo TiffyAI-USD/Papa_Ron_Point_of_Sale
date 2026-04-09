@@ -11006,7 +11006,40 @@
     },
     {
       "id": 257,
-      "items": [],
+      "items": [
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 36,
+          "code": "P_1773689328747"
+        },
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 36,
+          "code": "P_1773689328747"
+        },
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 36,
+          "code": "P_1773689328747"
+        },
+        {
+          "name": "COKE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": 36,
+          "code": "P_1773689328747"
+        }
+      ],
       "status": "active",
       "date": 1774369378616
     },
@@ -21356,5 +21389,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T17:17:23.126Z"
+  "lastSync": "2026-04-09T18:41:31.233Z"
 }
