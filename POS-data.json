@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -105,
+      "stock": -106,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -66
+      "stock": -67
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 6
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -30
+      "stock": -31
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -21150,9 +21150,55 @@
     },
     {
       "id": 562,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -66,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -30,
+          "code": "P_1773333089927"
+        }
+      ],
+      "status": "paid",
+      "date": 1775760275690,
+      "total": 155,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 563,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "paid",
+      "date": 1775760292245,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 564,
       "items": [],
       "status": "active",
-      "date": 1775760250651
+      "date": 1775760292371
     }
   ],
   "purchaseLog": [
@@ -21596,5 +21642,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T18:44:10.650Z"
+  "lastSync": "2026-04-09T18:44:27.005Z"
 }
