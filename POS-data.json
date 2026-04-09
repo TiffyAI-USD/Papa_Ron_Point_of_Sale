@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -32
+      "stock": -33
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 102
+      "stock": 101
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1339,7 +1339,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 39
+      "stock": 37
     },
     "P_1774091290480": {
       "name": "FEG",
@@ -21196,9 +21196,52 @@
     },
     {
       "id": 564,
+      "items": [
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 39,
+          "code": "P_1774090102240"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 39,
+          "code": "P_1774090102240"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 102,
+          "code": "P_1773925481823"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -32,
+          "code": "P_1773333545424"
+        }
+      ],
+      "status": "paid",
+      "date": 1775760337652,
+      "total": 230,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 565,
       "items": [],
       "status": "active",
-      "date": 1775760292371
+      "date": 1775760337766
     }
   ],
   "purchaseLog": [
@@ -21642,5 +21685,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T18:44:27.005Z"
+  "lastSync": "2026-04-09T18:45:06.673Z"
 }
