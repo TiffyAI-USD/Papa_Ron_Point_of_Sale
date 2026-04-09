@@ -1045,7 +1045,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": 4
+      "stock": 44
     },
     "P_1773659508619": {
       "name": "BREAST FILLED ",
@@ -21356,5 +21356,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T17:15:29.990Z"
+  "lastSync": "2026-04-09T17:17:23.126Z"
 }
