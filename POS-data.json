@@ -1494,6 +1494,13 @@
       "cost": 0,
       "category": "food",
       "stock": -4
+    },
+    "P_1775754837347": {
+      "name": "ICE TROPEZ ",
+      "price": 90,
+      "cost": 0,
+      "category": "drink",
+      "stock": 24
     }
   },
   "recipes": {
@@ -21342,5 +21349,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T17:13:27.107Z"
+  "lastSync": "2026-04-09T17:14:28.558Z"
 }
