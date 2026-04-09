@@ -110,7 +110,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773165261852": {
       "name": "WATERMELON GUMMIE ",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -104,
+      "stock": -105,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -65
+      "stock": -66
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -21044,9 +21044,69 @@
     },
     {
       "id": 560,
-      "items": [],
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -65,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773165237846"
+        }
+      ],
+      "status": "paid",
+      "date": 1775760192121,
+      "total": 175,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 561,
+      "items": [
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773244946839"
+        }
+      ],
       "status": "active",
-      "date": 1775760158034
+      "date": 1775760192223
     }
   ],
   "purchaseLog": [
@@ -21445,5 +21505,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T18:42:23.136Z"
+  "lastSync": "2026-04-09T18:42:59.198Z"
 }
