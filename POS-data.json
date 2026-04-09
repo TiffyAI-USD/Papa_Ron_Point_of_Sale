@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -2
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 12
+      "stock": 11
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 8
+      "stock": 7
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 35
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 148
+      "stock": 147
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -21135,10 +21135,24 @@
           "category": "drink",
           "stock": 8,
           "code": "P_1773244875193"
+        },
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 12,
+          "code": "P_1773164868475"
         }
       ],
       "status": "active",
       "date": 1775760192223
+    },
+    {
+      "id": 562,
+      "items": [],
+      "status": "active",
+      "date": 1775760250651
     }
   ],
   "purchaseLog": [
@@ -21269,6 +21283,51 @@
         "name": "WINDHOEK 500ML ",
         "price": 30,
         "date": 1775674805612
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1775760249779
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1775760249779
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1775760249779
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1775760249779
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1775760249779
+      },
+      {
+        "name": "WATER 500MLS",
+        "price": 10,
+        "date": 1775760249779
+      },
+      {
+        "name": "WW JOINT",
+        "price": 25,
+        "date": 1775760249779
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1775760249779
+      },
+      {
+        "name": "HASH JOINT",
+        "price": 30,
+        "date": 1775760249779
       }
     ],
     "Cats": [
@@ -21537,5 +21596,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T18:43:41.650Z"
+  "lastSync": "2026-04-09T18:44:10.650Z"
 }
