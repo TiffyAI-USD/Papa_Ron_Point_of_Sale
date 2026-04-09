@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -102,
+      "stock": -104,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -63
+      "stock": -65
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -33
+      "stock": -34
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -20998,9 +20998,55 @@
     },
     {
       "id": 558,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -63,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1775760127838,
+      "total": 135,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 559,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -64,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773333432507"
+        }
+      ],
+      "status": "paid",
+      "date": 1775760157901,
+      "total": 195,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 560,
       "items": [],
       "status": "active",
-      "date": 1775760103780
+      "date": 1775760158034
     }
   ],
   "purchaseLog": [
@@ -21399,5 +21445,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T18:41:43.780Z"
+  "lastSync": "2026-04-09T18:42:23.136Z"
 }
