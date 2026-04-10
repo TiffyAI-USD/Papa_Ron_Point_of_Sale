@@ -21553,9 +21553,41 @@
     },
     {
       "id": 576,
-      "items": [],
+      "items": [
+        {
+          "name": "SMIRNOF ICE PINE TWIST",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773245016871"
+        }
+      ],
       "status": "active",
       "date": 1775847525422
+    },
+    {
+      "id": 577,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773246049692"
+        }
+      ],
+      "status": "active",
+      "date": 1775847556587
     }
   ],
   "purchaseLog": [
@@ -21999,5 +22031,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-10T18:58:35.549Z"
+  "lastSync": "2026-04-10T18:59:07.930Z"
 }
