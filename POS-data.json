@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 38
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -21586,8 +21586,27 @@
           "code": "P_1773246049692"
         }
       ],
+      "status": "paid",
+      "date": 1775847565673,
+      "total": 70,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 578,
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1773164747894"
+        }
+      ],
       "status": "active",
-      "date": 1775847556587
+      "date": 1775847565791
     }
   ],
   "purchaseLog": [
@@ -22031,5 +22050,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-10T18:59:07.930Z"
+  "lastSync": "2026-04-10T19:03:09.586Z"
 }
