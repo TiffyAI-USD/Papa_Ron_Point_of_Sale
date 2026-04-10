@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -82,7 +82,7 @@
       "price": 1,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     },
     "P_1773165157281": {
       "name": "CREAMSODA GUMMIE ",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 29
+      "stock": 28
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -38
+      "stock": -40
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -21415,10 +21415,36 @@
           "category": "food",
           "stock": -2,
           "code": "P_1773164795064"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 29,
+          "code": "P_1773245979898"
+        },
+        {
+          "name": "LOOSE RIZZLA",
+          "price": 1,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773165057205"
         }
       ],
+      "status": "paid",
+      "date": 1775847390674,
+      "total": 161,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 571,
+      "items": [],
       "status": "active",
-      "date": 1775847340990
+      "date": 1775847390791
     }
   ],
   "purchaseLog": [
@@ -21862,5 +21888,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-10T18:56:00.127Z"
+  "lastSync": "2026-04-10T18:56:23.156Z"
 }
