@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -31
+      "stock": -33
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -37
+      "stock": -38
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 101
+      "stock": 100
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -21293,8 +21293,45 @@
           "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1775847235247,
+      "total": 40,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 567,
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 101,
+          "code": "P_1773925481823"
+        }
+      ],
+      "status": "paid",
+      "date": 1775847270776,
+      "total": 85,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 568,
+      "items": [],
       "status": "active",
-      "date": 1775847213559
+      "date": 1775847270900
     }
   ],
   "purchaseLog": [
@@ -21738,5 +21775,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-10T18:53:23.642Z"
+  "lastSync": "2026-04-10T18:54:13.221Z"
 }
