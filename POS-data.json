@@ -11629,7 +11629,16 @@
     },
     {
       "id": 278,
-      "items": [],
+      "items": [
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773234447154"
+        }
+      ],
       "status": "active",
       "date": 1774464906586
     },
@@ -21239,9 +21248,18 @@
     },
     {
       "id": 565,
-      "items": [],
+      "items": [
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773483607087"
+        }
+      ],
       "status": "active",
-      "date": 1775760337766
+      "date": 1775847187682
     }
   ],
   "purchaseLog": [
@@ -21685,5 +21703,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-09T18:45:06.673Z"
+  "lastSync": "2026-04-10T18:53:07.711Z"
 }
