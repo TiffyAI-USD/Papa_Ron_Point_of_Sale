@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -7
+      "stock": -8
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 5
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 30
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 160
+      "stock": 155
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -21651,10 +21651,60 @@
           "category": "drink",
           "stock": 6,
           "code": "P_1773244875193"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773244946839"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 160,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 160,
+          "code": "P_1773939546490"
         }
       ],
+      "status": "paid",
+      "date": 1775847892966,
+      "total": 230,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 579,
+      "items": [],
       "status": "active",
-      "date": 1775847565791
+      "date": 1775847893182
     }
   ],
   "purchaseLog": [
@@ -22098,5 +22148,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-10T19:03:59.178Z"
+  "lastSync": "2026-04-10T19:04:46.446Z"
 }
