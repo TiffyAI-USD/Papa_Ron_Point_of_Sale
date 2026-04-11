@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 4
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -33
+      "stock": -34
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1514,7 +1514,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -21791,10 +21791,28 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1775936479685"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1775936534148,
+      "total": 65,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 583,
+      "items": [],
       "status": "active",
-      "date": 1775936497024
+      "date": 1775936534270
     }
   ],
   "purchaseLog": [
@@ -22238,5 +22256,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-11T19:41:29.341Z"
+  "lastSync": "2026-04-11T19:41:59.510Z"
 }
