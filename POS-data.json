@@ -1164,7 +1164,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": 3
+      "stock": 2
     },
     "P_1773848095512": {
       "name": "WATER 500MLS",
@@ -21810,9 +21810,28 @@
     },
     {
       "id": 583,
+      "items": [
+        {
+          "name": "BUSICOTTY INDOOR ",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": 3,
+          "code": "P_1773845617854"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936561632,
+      "total": 120,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 584,
       "items": [],
       "status": "active",
-      "date": 1775936534270
+      "date": 1775936561754
     }
   ],
   "purchaseLog": [
@@ -22256,5 +22275,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-11T19:41:59.510Z"
+  "lastSync": "2026-04-11T19:42:34.203Z"
 }
