@@ -21730,7 +21730,16 @@
     },
     {
       "id": 580,
-      "items": [],
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773333089927"
+        }
+      ],
       "status": "active",
       "date": 1775936422587
     }
@@ -22176,5 +22185,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-11T19:40:18.024Z"
+  "lastSync": "2026-04-11T19:40:46.391Z"
 }
