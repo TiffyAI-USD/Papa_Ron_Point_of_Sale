@@ -1508,6 +1508,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 11
+    },
+    "P_1775936479685": {
+      "name": "SPRITE 500ML ",
+      "price": 15,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -21742,6 +21749,52 @@
       ],
       "status": "active",
       "date": 1775936422587
+    },
+    {
+      "id": 581,
+      "items": [
+        {
+          "name": "SPRITE 500ML ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1775936479685"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773333089927"
+        }
+      ],
+      "status": "active",
+      "date": 1775936489330
+    },
+    {
+      "id": 582,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 5,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1775936479685"
+        }
+      ],
+      "status": "active",
+      "date": 1775936497024
     }
   ],
   "purchaseLog": [
@@ -22185,5 +22238,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-11T19:40:46.391Z"
+  "lastSync": "2026-04-11T19:41:29.341Z"
 }
