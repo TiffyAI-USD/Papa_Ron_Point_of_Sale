@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -7
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -108,
+      "stock": -109,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -68
+      "stock": -69
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -304,
+      "stock": -314,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -24
+      "stock": -25
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 1
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -527,14 +527,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1773246049692": {
       "name": "CASTLE MILK STOUT",
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 38
+      "stock": 35
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 93
+      "stock": 91
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 37
+      "stock": 36
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1213,7 +1213,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 45
+      "stock": 44
     },
     "P_1773925955021": {
       "name": "BREEZER BLACKBERRY 440ML",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 155
+      "stock": 145
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 49
+      "stock": 44
     },
     "P_1773944852469": {
       "name": "TEQUILAR GOLD PER-TOT",
@@ -1500,7 +1500,7 @@
       "price": 90,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 22
     },
     "P_1775754899772": {
       "name": "CHILLERS PUNCH",
@@ -21829,9 +21829,403 @@
     },
     {
       "id": 584,
-      "items": [],
+      "items": [
+        {
+          "name": "ICE TROPEZ ",
+          "price": 90,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1775754837347"
+        },
+        {
+          "name": "ICE TROPEZ ",
+          "price": 90,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1775754837347"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936588432,
+      "total": 180,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 585,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -68,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936681892,
+      "total": 135,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 586,
+      "items": [
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "STELLA 330ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773245998876"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936730496,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 587,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 155,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 155,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 155,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 155,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 155,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 155,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 4,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936770241,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 588,
+      "items": [
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773235049759"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936801296,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 589,
+      "items": [
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773482741909"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 149,
+          "code": "P_1773939546490"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936842787,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 590,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 148,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 148,
+          "code": "P_1773939546490"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936861416,
+      "total": 10,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 591,
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 93,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 3,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936900440,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 592,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773944517157"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936974073,
+      "total": 195,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 593,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 2,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "paid",
+      "date": 1775936994715,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 594,
+      "items": [
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 92,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "BREEZER WATERMELON 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 45,
+          "code": "P_1773925849392"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 146,
+          "code": "P_1773939546490"
+        }
+      ],
+      "status": "paid",
+      "date": 1775937265429,
+      "total": 130,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 595,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 1,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773246049692"
+        }
+      ],
       "status": "active",
-      "date": 1775936561754
+      "date": 1775937265542
     }
   ],
   "purchaseLog": [
@@ -22275,5 +22669,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-11T19:42:34.203Z"
+  "lastSync": "2026-04-12T16:07:51.599Z"
 }
