@@ -22546,7 +22546,32 @@
     },
     {
       "id": 604,
-      "items": [],
+      "items": [
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773944517157"
+        }
+      ],
       "status": "active",
       "date": 1776022161579
     }
@@ -23002,5 +23027,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:30:39.848Z"
+  "lastSync": "2026-04-12T19:35:32.362Z"
 }
