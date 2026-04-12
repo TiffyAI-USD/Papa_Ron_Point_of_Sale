@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -1
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -485,7 +485,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 28
+      "stock": 27
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 26
+      "stock": 24
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -22328,10 +22328,28 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1773244875193"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 26,
+          "code": "P_1773245979898"
         }
       ],
+      "status": "paid",
+      "date": 1776020736239,
+      "total": 135,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 599,
+      "items": [],
       "status": "active",
-      "date": 1776020688257
+      "date": 1776020736362
     }
   ],
   "purchaseLog": [
@@ -22785,5 +22803,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:05:05.673Z"
+  "lastSync": "2026-04-12T19:05:36.360Z"
 }
