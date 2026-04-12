@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -25
+      "stock": -26
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -85,
+      "stock": -90,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 23
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 91
+      "stock": 90
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 17
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -40
+      "stock": -41
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -1339,7 +1339,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 37
+      "stock": 36
     },
     "P_1774091290480": {
       "name": "FEG",
@@ -22403,10 +22403,28 @@
           "category": "drink",
           "stock": 91,
           "code": "P_1773324850731"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1774090102240"
         }
       ],
+      "status": "paid",
+      "date": 1776020836650,
+      "total": 260,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 600,
+      "items": [],
       "status": "active",
-      "date": 1776020736362
+      "date": 1776020836778
     }
   ],
   "purchaseLog": [
@@ -22860,5 +22878,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:07:01.931Z"
+  "lastSync": "2026-04-12T19:07:16.776Z"
 }
