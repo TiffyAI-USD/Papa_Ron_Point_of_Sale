@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 22
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -22476,9 +22476,28 @@
     },
     {
       "id": 602,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "paid",
+      "date": 1776021749481,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 603,
       "items": [],
       "status": "active",
-      "date": 1776020914773
+      "date": 1776021749634
     }
   ],
   "purchaseLog": [
@@ -22932,5 +22951,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:09:11.473Z"
+  "lastSync": "2026-04-12T19:22:26.246Z"
 }
