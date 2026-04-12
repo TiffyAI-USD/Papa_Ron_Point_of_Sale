@@ -22363,6 +22363,22 @@
           "category": "food",
           "stock": -40,
           "code": "P_1773340830986"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773245979898"
         }
       ],
       "status": "active",
@@ -22820,5 +22836,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:06:17.004Z"
+  "lastSync": "2026-04-12T19:06:32.591Z"
 }
