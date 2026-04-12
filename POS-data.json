@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -688,7 +688,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 23
     },
     "P_1773324976622": {
       "name": "SAVANNA 500ML DRY",
@@ -22277,9 +22277,36 @@
     },
     {
       "id": 597,
+      "items": [
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773164795064"
+        },
+        {
+          "name": "STELLA CAN 410ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773324961290"
+        }
+      ],
+      "status": "paid",
+      "date": 1776020688120,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 598,
       "items": [],
       "status": "active",
-      "date": 1776020665392
+      "date": 1776020688257
     }
   ],
   "purchaseLog": [
@@ -22733,5 +22760,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:04:11.699Z"
+  "lastSync": "2026-04-12T19:04:35.014Z"
 }
