@@ -22347,7 +22347,24 @@
     },
     {
       "id": 599,
-      "items": [],
+      "items": [
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -40,
+          "code": "P_1773340830986"
+        }
+      ],
       "status": "active",
       "date": 1776020736362
     }
@@ -22803,5 +22820,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:05:36.360Z"
+  "lastSync": "2026-04-12T19:06:17.004Z"
 }
