@@ -1515,6 +1515,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -1
+    },
+    "P_1776106538790": {
+      "name": "RUSSIAN ROLL",
+      "price": 40,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -22693,6 +22700,37 @@
       ],
       "status": "active",
       "date": 1776106506122
+    },
+    {
+      "id": 610,
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "RUSSIAN ROLL",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776106538790"
+        }
+      ],
+      "status": "active",
+      "date": 1776106551220
     }
   ],
   "purchaseLog": [
@@ -23161,5 +23199,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-13T18:55:06.138Z"
+  "lastSync": "2026-04-13T18:55:51.228Z"
 }
