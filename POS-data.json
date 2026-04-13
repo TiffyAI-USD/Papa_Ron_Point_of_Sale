@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -37
+      "stock": -39
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 10
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -1521,7 +1521,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -1
     }
   },
   "recipes": {
@@ -13004,10 +13004,38 @@
           "category": "drink",
           "stock": 12,
           "code": "P_1773926133077"
+        },
+        {
+          "name": "RUSSIAN ROLL",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776106538790"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333432507"
         }
       ],
-      "status": "active",
-      "date": 1774710849287
+      "status": "paid",
+      "date": 1776106601134,
+      "total": 225,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 314,
@@ -22772,6 +22800,21 @@
       ],
       "status": "active",
       "date": 1776106551220
+    },
+    {
+      "id": 611,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -70,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "active",
+      "date": 1776106601379
     }
   ],
   "purchaseLog": [
@@ -23240,5 +23283,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-13T18:56:14.569Z"
+  "lastSync": "2026-04-13T18:56:41.379Z"
 }
