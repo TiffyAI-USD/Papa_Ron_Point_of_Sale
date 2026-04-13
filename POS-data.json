@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 19
+      "stock": 18
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -32,
+      "stock": -33,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -28,
+      "stock": -29,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -92,
+      "stock": -94,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -24,
+      "stock": -26,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -46
+      "stock": -47
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -22832,8 +22832,33 @@
           "code": "P_1773233691679"
         }
       ],
+      "status": "paid",
+      "date": 1776106640590,
+      "total": 120,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 613,
+      "items": [
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 19,
+          "code": "P_1773164980203"
+        }
+      ],
       "status": "active",
-      "date": 1776106618948
+      "date": 1776106640706
+    },
+    {
+      "id": 614,
+      "items": [],
+      "status": "active",
+      "date": 1776106680869
     }
   ],
   "purchaseLog": [
@@ -23105,6 +23130,11 @@
         "name": "BERNINI MIMOSA 500ML",
         "price": 35,
         "date": 1775334715254
+      },
+      {
+        "name": "LUNCH BAR",
+        "price": 10,
+        "date": 1776106679882
       }
     ],
     "Charlie": [
@@ -23302,5 +23332,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-13T18:57:13.240Z"
+  "lastSync": "2026-04-13T18:57:56.198Z"
 }
