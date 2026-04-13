@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 11
+      "stock": 10
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -22589,9 +22589,78 @@
     },
     {
       "id": 605,
+      "items": [
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1773246049692"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 19,
+          "code": "P_1773164980203"
+        }
+      ],
+      "status": "active",
+      "date": 1776090503587
+    },
+    {
+      "id": 606,
+      "items": [
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1773164795064"
+        }
+      ],
+      "status": "active",
+      "date": 1776090550822
+    },
+    {
+      "id": 607,
+      "items": [
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 11,
+          "code": "P_1773164868475"
+        }
+      ],
+      "status": "active",
+      "date": 1776093196548
+    },
+    {
+      "id": 608,
       "items": [],
       "status": "active",
-      "date": 1776022545887
+      "date": 1776093689107
     }
   ],
   "purchaseLog": [
@@ -22950,6 +23019,11 @@
         "name": "CASTLE MILK STOUT",
         "price": 35,
         "date": 1776010095796
+      },
+      {
+        "name": "HASH JOINT",
+        "price": 30,
+        "date": 1776093688187
       }
     ],
     "Marshall": [
@@ -23016,6 +23090,11 @@
         "name": "PREGO & CHIPS",
         "price": 60,
         "date": 1774888778217
+      },
+      {
+        "name": "WW JOINT",
+        "price": 25,
+        "date": 1776093195630
       }
     ],
     "Siya": [
@@ -23045,5 +23124,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-12T19:36:15.901Z"
+  "lastSync": "2026-04-13T15:21:24.103Z"
 }
