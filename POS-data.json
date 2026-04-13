@@ -12980,7 +12980,32 @@
     },
     {
       "id": 313,
-      "items": [],
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773926133077"
+        }
+      ],
       "status": "active",
       "date": 1774710849287
     },
@@ -22727,6 +22752,22 @@
           "category": "food",
           "stock": 0,
           "code": "P_1776106538790"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773926133077"
         }
       ],
       "status": "active",
@@ -23199,5 +23240,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-13T18:55:51.228Z"
+  "lastSync": "2026-04-13T18:56:14.569Z"
 }
