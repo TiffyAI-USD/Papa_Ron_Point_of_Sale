@@ -26,7 +26,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": 1
     },
     "P_1773164818430": {
       "name": "VM JOINT",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": 0
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -23353,5 +23353,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-14T09:52:24.955Z"
+  "lastSync": "2026-04-14T09:52:54.398Z"
 }
