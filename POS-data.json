@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 60
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -1332,7 +1332,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 42
     },
     "P_1774090102240": {
       "name": "RICHELIEU PER-TOT",
@@ -1522,6 +1522,20 @@
       "cost": 0,
       "category": "food",
       "stock": -1
+    },
+    "P_1776160220150": {
+      "name": "OLOF BERGH",
+      "price": 30,
+      "cost": 0,
+      "category": "drink",
+      "stock": 28
+    },
+    "MUSHROOMS_": {
+      "name": "MUSHROOMS ",
+      "stock": 20,
+      "cost": 1.25,
+      "price": 0,
+      "category": "ingredient"
     }
   },
   "recipes": {
@@ -22853,6 +22867,12 @@
       ],
       "status": "active",
       "date": 1776106640706
+    },
+    {
+      "id": 614,
+      "items": [],
+      "status": "active",
+      "date": 1776159878537
     }
   ],
   "purchaseLog": [
@@ -22874,6 +22894,13 @@
       "date": 1774450643340,
       "name": "LETTUCE",
       "qty": 4,
+      "cost": 25,
+      "cat": "Food"
+    },
+    {
+      "date": 1776160294129,
+      "name": "MUSHROOMS ",
+      "qty": 20,
       "cost": 25,
       "cat": "Food"
     }
@@ -23326,5 +23353,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-14T08:29:55.614Z"
+  "lastSync": "2026-04-14T09:51:34.162Z"
 }
