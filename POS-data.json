@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -90,
+      "stock": -100,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -18
+      "stock": -20
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 53
+      "stock": 52
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 15
+      "stock": 13
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -41
+      "stock": -42
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -793,7 +793,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 43
+      "stock": 42
     },
     "P_1773483607087": {
       "name": "BREAKFAST (SERVED FROM 8-11 AM)",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 37
+      "stock": 36
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -1339,7 +1339,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 35
     },
     "P_1774091290480": {
       "name": "FEG",
@@ -23412,8 +23412,12 @@
           "code": "P_1773327642102"
         }
       ],
-      "status": "active",
-      "date": 1776281191925
+      "status": "paid",
+      "date": 1776281532799,
+      "total": 305,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 632,
@@ -23429,6 +23433,12 @@
       ],
       "status": "active",
       "date": 1776281219999
+    },
+    {
+      "id": 633,
+      "items": [],
+      "status": "active",
+      "date": 1776281532939
     }
   ],
   "purchaseLog": [
@@ -23914,5 +23924,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:32:01.465Z"
+  "lastSync": "2026-04-15T19:33:09.651Z"
 }
