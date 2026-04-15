@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 35
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1178,7 +1178,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 54
     },
     "P_1773925053773": {
       "name": "BRUTAL FRUIT BOTTLE 275ML STRABERRY",
@@ -1416,7 +1416,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": -2
+      "stock": -4
     },
     "P_1774944723716": {
       "name": "HENNESSY ",
@@ -14014,8 +14014,12 @@
           "code": "P_1774810123556"
         }
       ],
-      "status": "active",
-      "date": 1774810132066
+      "status": "paid",
+      "date": 1776281232282,
+      "total": 110,
+      "tip": 20,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 334,
@@ -23334,7 +23338,32 @@
     },
     {
       "id": 631,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -41,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -18,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -18,
+          "code": "P_1773234447154"
+        }
+      ],
       "status": "active",
       "date": 1776281191925
     },
@@ -23829,8 +23858,13 @@
         "amount": 30,
         "date": 1775659622204,
         "table": 253
+      },
+      {
+        "amount": 20,
+        "date": 1776281232282,
+        "table": 333
       }
     ]
   },
-  "lastSync": "2026-04-15T19:27:00.015Z"
+  "lastSync": "2026-04-15T19:31:21.030Z"
 }
