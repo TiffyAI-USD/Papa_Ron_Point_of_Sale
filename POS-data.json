@@ -1507,7 +1507,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 11
+      "stock": 10
     },
     "P_1775936479685": {
       "name": "SPRITE 500ML ",
@@ -22913,9 +22913,37 @@
     },
     {
       "id": 615,
-      "items": [],
+      "items": [
+        {
+          "name": "CHILLERS PUNCH",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1775754899772"
+        }
+      ],
+      "status": "paid",
+      "date": 1776280735170,
+      "total": 35,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 616,
+      "items": [
+        {
+          "name": "CHILLERS PUNCH",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1775754899772"
+        }
+      ],
       "status": "active",
-      "date": 1776280689581
+      "date": 1776280735305
     }
   ],
   "purchaseLog": [
@@ -23396,5 +23424,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:18:09.581Z"
+  "lastSync": "2026-04-15T19:18:52.023Z"
 }
