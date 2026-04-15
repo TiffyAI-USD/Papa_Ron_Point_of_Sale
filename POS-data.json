@@ -47,7 +47,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": 7
+      "stock": 4
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 10
+      "stock": 9
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -1543,6 +1543,13 @@
       "cost": 0,
       "category": "drink",
       "stock": 22
+    },
+    "P_1776281211889": {
+      "name": "BONG",
+      "price": 130,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -23318,8 +23325,33 @@
           "code": "P_1773926133077"
         }
       ],
+      "status": "paid",
+      "date": 1776281191808,
+      "total": 200,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 631,
+      "items": [],
       "status": "active",
-      "date": 1776281163403
+      "date": 1776281191925
+    },
+    {
+      "id": 632,
+      "items": [
+        {
+          "name": "BONG",
+          "price": 130,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776281211889"
+        }
+      ],
+      "status": "active",
+      "date": 1776281219999
     }
   ],
   "purchaseLog": [
@@ -23800,5 +23832,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:26:17.939Z"
+  "lastSync": "2026-04-15T19:27:00.015Z"
 }
