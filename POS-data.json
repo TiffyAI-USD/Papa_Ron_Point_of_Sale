@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -39
+      "stock": -40
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -1542,7 +1542,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 25
+      "stock": 22
     }
   },
   "recipes": {
@@ -13956,8 +13956,12 @@
           "code": "P_1776280940059"
         }
       ],
-      "status": "active",
-      "date": 1774809978578
+      "status": "paid",
+      "date": 1776280990831,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 333,
@@ -23091,6 +23095,31 @@
       "items": [],
       "status": "active",
       "date": 1776280900870
+    },
+    {
+      "id": 624,
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -39,
+          "code": "P_1773333432507"
+        }
+      ],
+      "status": "paid",
+      "date": 1776281009719,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 625,
+      "items": [],
+      "status": "active",
+      "date": 1776281009844
     }
   ],
   "purchaseLog": [
@@ -23571,5 +23600,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:22:56.139Z"
+  "lastSync": "2026-04-15T19:23:24.796Z"
 }
