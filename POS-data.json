@@ -737,7 +737,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -40
+      "stock": -42
     },
     "P_1773333545424": {
       "name": "SOMETHING MEATY",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 38
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -23117,9 +23117,61 @@
     },
     {
       "id": 625,
-      "items": [],
+      "items": [
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -40,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "PREGO & CHIPS",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -40,
+          "code": "P_1773333432507"
+        },
+        {
+          "name": "RED BULL 250ML",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773926623691"
+        },
+        {
+          "name": "RED BULL 250ML",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773926623691"
+        }
+      ],
+      "status": "paid",
+      "date": 1776281052821,
+      "total": 170,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 626,
+      "items": [
+        {
+          "name": "RED BULL 250ML",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773926623691"
+        }
+      ],
       "status": "active",
-      "date": 1776281009844
+      "date": 1776281052939
     }
   ],
   "purchaseLog": [
@@ -23600,5 +23652,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:23:24.796Z"
+  "lastSync": "2026-04-15T19:24:02.952Z"
 }
