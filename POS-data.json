@@ -5,21 +5,21 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 7
+      "stock": 6
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 1
+      "stock": 0
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 10
+      "stock": 9
     },
     "P_1773164795064": {
       "name": "WW JOINT",
@@ -23240,8 +23240,43 @@
           "code": "P_1773164768558"
         }
       ],
+      "status": "paid",
+      "date": 1776281136577,
+      "total": 75,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 629,
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 6,
+          "code": "P_1773164727803"
+        }
+      ],
       "status": "active",
-      "date": 1776281105776
+      "date": 1776281136685
     }
   ],
   "purchaseLog": [
@@ -23722,5 +23757,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:25:21.793Z"
+  "lastSync": "2026-04-15T19:25:53.863Z"
 }
