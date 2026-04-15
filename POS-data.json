@@ -618,7 +618,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 10
+      "stock": 9
     },
     "P_1773324726340": {
       "name": "LUCKY CLUB 250ML",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -800,7 +800,7 @@
       "price": 80,
       "cost": 0,
       "category": "food",
-      "stock": -18
+      "stock": -20
     },
     "P_1773505029268": {
       "name": "1 GRAM SS",
@@ -13537,10 +13537,22 @@
           "category": "drink",
           "stock": 10,
           "code": "P_1773251914300"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773327642102"
         }
       ],
-      "status": "active",
-      "date": 1774726453810
+      "status": "paid",
+      "date": 1776280689380,
+      "total": 195,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 327,
@@ -22898,6 +22910,12 @@
       "items": [],
       "status": "active",
       "date": 1776159878537
+    },
+    {
+      "id": 615,
+      "items": [],
+      "status": "active",
+      "date": 1776280689581
     }
   ],
   "purchaseLog": [
@@ -23378,5 +23396,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:17:45.952Z"
+  "lastSync": "2026-04-15T19:18:09.581Z"
 }
