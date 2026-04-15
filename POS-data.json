@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 2
+      "stock": 7
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -548,7 +548,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 20
+      "stock": 26
     },
     "P_1773249187048": {
       "name": "SODAZE ORANGE CREAM ",
@@ -1381,7 +1381,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": 3
     },
     "P_1774369365041": {
       "name": "SD-GRAM",
@@ -23353,5 +23353,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-14T09:52:54.398Z"
+  "lastSync": "2026-04-15T11:08:02.272Z"
 }
