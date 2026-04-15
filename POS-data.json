@@ -5,14 +5,14 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 6
+      "stock": 5
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": -2
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -23275,8 +23275,51 @@
           "code": "P_1773164727803"
         }
       ],
+      "status": "paid",
+      "date": 1776281163287,
+      "total": 75,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 630,
+      "items": [
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 7,
+          "code": "P_1773164886248"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 7,
+          "code": "P_1773164886248"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 7,
+          "code": "P_1773164886248"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1773926133077"
+        }
+      ],
       "status": "active",
-      "date": 1776281136685
+      "date": 1776281163403
     }
   ],
   "purchaseLog": [
@@ -23757,5 +23800,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:25:53.863Z"
+  "lastSync": "2026-04-15T19:26:17.939Z"
 }
