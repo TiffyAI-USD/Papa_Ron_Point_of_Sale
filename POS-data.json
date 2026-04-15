@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -111,
+      "stock": -112,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -71
+      "stock": -72
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 145
+      "stock": 144
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -22970,9 +22970,47 @@
     },
     {
       "id": 618,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 145,
+          "code": "P_1773939546490"
+        }
+      ],
+      "status": "paid",
+      "date": 1776280783469,
+      "total": 5,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 619,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -71,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1776280819780,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 620,
       "items": [],
       "status": "active",
-      "date": 1776280757419
+      "date": 1776280819907
     }
   ],
   "purchaseLog": [
@@ -23453,5 +23491,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:19:13.768Z"
+  "lastSync": "2026-04-15T19:20:10.022Z"
 }
