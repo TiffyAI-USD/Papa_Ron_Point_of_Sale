@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 30
+      "stock": 29
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -23043,9 +23043,28 @@
     },
     {
       "id": 621,
+      "items": [
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 30,
+          "code": "P_1773244946839"
+        }
+      ],
+      "status": "paid",
+      "date": 1776280860088,
+      "total": 30,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 622,
       "items": [],
       "status": "active",
-      "date": 1776280840940
+      "date": 1776280860212
     }
   ],
   "purchaseLog": [
@@ -23526,5 +23545,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:20:34.686Z"
+  "lastSync": "2026-04-15T19:20:56.694Z"
 }
