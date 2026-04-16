@@ -14621,7 +14621,16 @@
     },
     {
       "id": 344,
-      "items": [],
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 60,
+          "code": "P_1773244875193"
+        }
+      ],
       "status": "active",
       "date": 1774811142276
     },
@@ -23436,9 +23445,18 @@
     },
     {
       "id": 633,
-      "items": [],
+      "items": [
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 4,
+          "code": "P_1773164886248"
+        }
+      ],
       "status": "active",
-      "date": 1776281532939
+      "date": 1776352538853
     }
   ],
   "purchaseLog": [
@@ -23924,5 +23942,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-15T19:33:09.651Z"
+  "lastSync": "2026-04-16T15:43:13.642Z"
 }
