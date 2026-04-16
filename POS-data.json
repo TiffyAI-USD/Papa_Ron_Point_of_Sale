@@ -23679,6 +23679,30 @@
           "category": "drink",
           "stock": 42,
           "code": "P_1773245099182"
+        },
+        {
+          "name": "BRUTAL FRUIT CAN 500ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773929465649"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 100,
+          "code": "P_1773925481823"
+        },
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 100,
+          "code": "P_1773925481823"
         }
       ],
       "status": "active",
@@ -24200,5 +24224,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T19:10:30.573Z"
+  "lastSync": "2026-04-16T19:10:52.803Z"
 }
