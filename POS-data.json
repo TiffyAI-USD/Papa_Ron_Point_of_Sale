@@ -429,7 +429,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 42
+      "stock": 40
     },
     "P_1773245128672": {
       "name": "BRUTAL FRUIT BOTTLE 275ML RUBY APPLE",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -34
+      "stock": -37
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 100
+      "stock": 98
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1220,7 +1220,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773926133077": {
       "name": "POWERADE",
@@ -1276,7 +1276,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 27
+      "stock": 26
     },
     "P_1773929556018": {
       "name": "DRY LEMON ",
@@ -23737,8 +23737,18 @@
           "code": "P_1773245099182"
         }
       ],
+      "status": "paid",
+      "date": 1776366730989,
+      "total": 270,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 639,
+      "items": [],
       "status": "active",
-      "date": 1776366581507
+      "date": 1776366731089
     }
   ],
   "purchaseLog": [
@@ -24256,5 +24266,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T19:11:53.521Z"
+  "lastSync": "2026-04-16T19:12:11.089Z"
 }
