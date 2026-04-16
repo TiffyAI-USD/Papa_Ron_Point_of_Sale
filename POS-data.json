@@ -23628,6 +23628,30 @@
           "category": "food",
           "stock": -50,
           "code": "P_1773233691679"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 25,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 25,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773843254060"
         }
       ],
       "status": "active",
@@ -24149,5 +24173,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T19:09:15.527Z"
+  "lastSync": "2026-04-16T19:09:30.372Z"
 }
