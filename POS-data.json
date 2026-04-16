@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 16
+      "stock": 14
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 59
+      "stock": 58
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -1542,7 +1542,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 12
     },
     "P_1776281211889": {
       "name": "BONG",
@@ -23488,6 +23488,12 @@
       ],
       "status": "active",
       "date": 1776355014573
+    },
+    {
+      "id": 635,
+      "items": [],
+      "status": "active",
+      "date": 1776355029371
     }
   ],
   "purchaseLog": [
@@ -23962,6 +23968,23 @@
         "price": 20,
         "date": 1775059878525
       }
+    ],
+    "Beranise": [
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776355028330
+      },
+      {
+        "name": "LUNCH BAR",
+        "price": 10,
+        "date": 1776355028330
+      },
+      {
+        "name": "LUNCH BAR",
+        "price": 10,
+        "date": 1776355028330
+      }
     ]
   },
   "staffTips": {
@@ -23988,5 +24011,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T15:56:54.599Z"
+  "lastSync": "2026-04-16T15:58:48.933Z"
 }
