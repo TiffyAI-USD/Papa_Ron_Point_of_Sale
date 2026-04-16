@@ -23746,7 +23746,24 @@
     },
     {
       "id": 639,
-      "items": [],
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "WW JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 1,
+          "code": "P_1773164795064"
+        }
+      ],
       "status": "active",
       "date": 1776366731089
     }
@@ -24266,5 +24283,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T19:12:11.089Z"
+  "lastSync": "2026-04-16T19:12:33.542Z"
 }
