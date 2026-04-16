@@ -14693,6 +14693,22 @@
           "category": "drink",
           "stock": 52,
           "code": "P_1773245979898"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1774090102240"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 13,
+          "code": "P_1773327642102"
         }
       ],
       "status": "active",
@@ -24090,5 +24106,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T19:07:33.590Z"
+  "lastSync": "2026-04-16T19:08:21.019Z"
 }
