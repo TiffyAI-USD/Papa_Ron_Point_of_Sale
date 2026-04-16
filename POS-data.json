@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 30
+      "stock": 25
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 52
+      "stock": 51
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 13
+      "stock": 12
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -800,7 +800,7 @@
       "price": 80,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -24
     },
     "P_1773505029268": {
       "name": "1 GRAM SS",
@@ -1339,7 +1339,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 33
     },
     "P_1774091290480": {
       "name": "FEG",
@@ -14709,10 +14709,30 @@
           "category": "drink",
           "stock": 13,
           "code": "P_1773327642102"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 30,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1774090102240"
         }
       ],
-      "status": "active",
-      "date": 1774811142276
+      "status": "paid",
+      "date": 1776366535825,
+      "total": 585,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 345,
@@ -23589,6 +23609,12 @@
       ],
       "status": "active",
       "date": 1776366447250
+    },
+    {
+      "id": 637,
+      "items": [],
+      "status": "active",
+      "date": 1776366536066
     }
   ],
   "purchaseLog": [
@@ -24106,5 +24132,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-16T19:08:21.019Z"
+  "lastSync": "2026-04-16T19:08:43.245Z"
 }
