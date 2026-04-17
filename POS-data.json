@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -121,
+      "stock": -123,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -80
+      "stock": -81
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -716,14 +716,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 6
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -41
+      "stock": -43
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 99
+      "stock": 97
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -14945,14 +14945,6 @@
           "code": "P_1773236212998"
         },
         {
-          "name": "RIB RACK",
-          "price": 200,
-          "cost": 0,
-          "category": "food",
-          "stock": -5,
-          "code": "P_1773236212998"
-        },
-        {
           "name": "PORTION OF CHIPS",
           "price": 20,
           "cost": 0,
@@ -14967,10 +14959,54 @@
           "category": "food",
           "stock": -41,
           "code": "P_1773333089927"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 99,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 99,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -80,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773233142239"
         }
       ],
-      "status": "active",
-      "date": 1774888779305
+      "status": "paid",
+      "date": 1776446606626,
+      "total": 565,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 349,
@@ -24527,6 +24563,12 @@
       ],
       "status": "active",
       "date": 1776446524437
+    },
+    {
+      "id": 656,
+      "items": [],
+      "status": "active",
+      "date": 1776446606860
     }
   ],
   "purchaseLog": [
@@ -25049,5 +25091,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-17T17:22:04.455Z"
+  "lastSync": "2026-04-17T17:22:45.120Z"
 }
