@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -117,
+      "stock": -121,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -77
+      "stock": -80
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -401,7 +401,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 14
     },
     "P_1773244946839": {
       "name": "WINDHOEK 500ML ",
@@ -485,7 +485,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 27
+      "stock": 24
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -625,7 +625,7 @@
       "price": 70,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1773324741065": {
       "name": "MR ORANGE ",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 8
+      "stock": 7
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -1199,7 +1199,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 98
+      "stock": 97
     },
     "P_1773925646727": {
       "name": "EXTREME BOTTLED 275ML ",
@@ -1325,7 +1325,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 40
+      "stock": 38
     },
     "P_1773944852469": {
       "name": "TEQUILAR GOLD PER-TOT",
@@ -1346,7 +1346,7 @@
       "price": 3,
       "cost": 0,
       "category": "drink",
-      "stock": -3
+      "stock": -8
     },
     "P_1774119200192": {
       "name": "ICE BAG",
@@ -1557,6 +1557,13 @@
       "cost": 0,
       "category": "food",
       "stock": -2
+    },
+    "P_1776444759875": {
+      "name": "GRAPE GUMMIE PACKET",
+      "price": 250,
+      "cost": 0,
+      "category": "food",
+      "stock": -1
     }
   },
   "recipes": {
@@ -14805,13 +14812,163 @@
     },
     {
       "id": 347,
-      "items": [],
-      "status": "active",
-      "date": 1774884745814
+      "items": [
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -3,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -3,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -3,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -3,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -3,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "CASTLE LAGER 330ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244925945"
+        },
+        {
+          "name": "CASTLE LAGER 330ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244925945"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 8,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "GRAPE GUMMIE PACKET",
+          "price": 250,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776444759875"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -77,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773233142239"
+        },
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773324726340"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444914229,
+      "total": 760,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 348,
-      "items": [],
+      "items": [
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773236212998"
+        },
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773236212998"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -41,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -41,
+          "code": "P_1773333089927"
+        }
+      ],
       "status": "active",
       "date": 1774888779305
     },
@@ -24198,6 +24355,178 @@
       ],
       "status": "active",
       "date": 1776444692714
+    },
+    {
+      "id": 652,
+      "items": [
+        {
+          "name": "CASTLE LAGER 330ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244925945"
+        },
+        {
+          "name": "CASTLE LAGER 330ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773244925945"
+        },
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773324726340"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773233142239"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -77,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "GRAPE GUMMIE PACKET",
+          "price": 250,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776444759875"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 8,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773944517157"
+        }
+      ],
+      "status": "active",
+      "date": 1776444769245
+    },
+    {
+      "id": 653,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -78,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -78,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444939405,
+      "total": 270,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 654,
+      "items": [
+        {
+          "name": "SAVANNA 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 98,
+          "code": "P_1773925481823"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773245915568"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773245915568"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 27,
+          "code": "P_1773245915568"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444986705,
+      "total": 140,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 655,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -80,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773233142239"
+        }
+      ],
+      "status": "active",
+      "date": 1776446524437
     }
   ],
   "purchaseLog": [
@@ -24720,5 +25049,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-17T16:51:47.321Z"
+  "lastSync": "2026-04-17T17:22:04.455Z"
 }
