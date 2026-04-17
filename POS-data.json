@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 14
+      "stock": 13
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -114,
+      "stock": -115,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -74
+      "stock": -75
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -38,
+      "stock": -42,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -34,
+      "stock": -38,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -104,
+      "stock": -112,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -36,
+      "stock": -44,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -52
+      "stock": -56
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -314,
+      "stock": -319,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -14
+      "stock": -15
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 21
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -457,7 +457,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 15
     },
     "P_1773245823301": {
       "name": "BERNINI BLUSH ALCOHOLIC 275ML",
@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 6
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -674,7 +674,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1773324916665": {
       "name": "DRY",
@@ -716,14 +716,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 8
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -37
+      "stock": -41
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1550,6 +1550,13 @@
       "cost": 0,
       "category": "food",
       "stock": 0
+    },
+    "P_1776444433289": {
+      "name": "DAB HIT",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": -2
     }
   },
   "recipes": {
@@ -14738,16 +14745,44 @@
       "id": 345,
       "items": [
         {
-          "name": "BOERIE AND CHIPS",
-          "price": 50,
+          "name": "CREAMY CHICKEN",
+          "price": 135,
           "cost": 0,
           "category": "food",
-          "stock": -42,
-          "code": "P_1773340830986"
+          "stock": -74,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -52,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1773324836625"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773327642102"
         }
       ],
-      "status": "active",
-      "date": 1774884710616
+      "status": "paid",
+      "date": 1776444568037,
+      "total": 295,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 346,
@@ -23868,9 +23903,250 @@
     },
     {
       "id": 644,
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -37,
+          "code": "P_1773333089927"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444404652,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 645,
       "items": [],
       "status": "active",
-      "date": 1776444380893
+      "date": 1776444404749
+    },
+    {
+      "id": 646,
+      "items": [
+        {
+          "name": "DAB HIT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776444433289"
+        },
+        {
+          "name": "DAB HIT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776444433289"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "BERNINI BLUSH SPARKLING 275ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773245808729"
+        },
+        {
+          "name": "BERNINI BLUSH SPARKLING 275ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773245808729"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444492549,
+      "total": 190,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 647,
+      "items": [],
+      "status": "active",
+      "date": 1776444492651
+    },
+    {
+      "id": 648,
+      "items": [
+        {
+          "name": "CAPPY BREAKFAST ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773324865164"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 14,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -40,
+          "code": "P_1773333089927"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444605934,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 649,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -53,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -53,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -53,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773234587229"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1773327642102"
+        }
+      ],
+      "status": "paid",
+      "date": 1776444655230,
+      "total": 480,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 650,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -75,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -75,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1773164747894"
+        }
+      ],
+      "status": "active",
+      "date": 1776444655361
     }
   ],
   "purchaseLog": [
@@ -24393,5 +24669,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-17T16:46:06.064Z"
+  "lastSync": "2026-04-17T16:50:39.911Z"
 }
