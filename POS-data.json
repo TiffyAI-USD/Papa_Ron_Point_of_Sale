@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 5
+      "stock": 3
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 51
+      "stock": 49
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -611,7 +611,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": -8
+      "stock": -9
     },
     "P_1773251914300": {
       "name": "SPARKLING WATER ",
@@ -639,7 +639,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 3
     },
     "P_1773324775883": {
       "name": "APPLETIZER 275ML ",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 88
+      "stock": 85
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -16
+      "stock": -17
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -800,7 +800,7 @@
       "price": 80,
       "cost": 0,
       "category": "food",
-      "stock": -24
+      "stock": -26
     },
     "P_1773505029268": {
       "name": "1 GRAM SS",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 9
+      "stock": 8
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 144
+      "stock": 143
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -1346,7 +1346,7 @@
       "price": 3,
       "cost": 0,
       "category": "drink",
-      "stock": -8
+      "stock": -9
     },
     "P_1774119200192": {
       "name": "ICE BAG",
@@ -1507,7 +1507,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 8
+      "stock": 7
     },
     "P_1775936479685": {
       "name": "SPRITE 500ML ",
@@ -1563,6 +1563,13 @@
       "price": 250,
       "cost": 0,
       "category": "food",
+      "stock": -1
+    },
+    "P_1776537158529": {
+      "name": "SCORE",
+      "price": 12,
+      "cost": 0,
+      "category": "drink",
       "stock": -1
     }
   },
@@ -15020,8 +15027,12 @@
           "code": "P_1773324759000"
         }
       ],
-      "status": "active",
-      "date": 1774891504547
+      "status": "paid",
+      "date": 1776537118081,
+      "total": 20,
+      "tip": 70,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 350,
@@ -15106,9 +15117,30 @@
     },
     {
       "id": 353,
-      "items": [],
-      "status": "active",
-      "date": 1774898547749
+      "items": [
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773483607087"
+        },
+        {
+          "name": "BREAKFAST (SERVED FROM 8-11 AM)",
+          "price": 80,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773483607087"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537221256,
+      "total": 160,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 354,
@@ -15928,9 +15960,38 @@
     },
     {
       "id": 377,
-      "items": [],
-      "status": "active",
-      "date": 1774945377326
+      "items": [
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 9,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 50,
+          "code": "P_1773245979898"
+        },
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773437849538"
+        }
+      ],
+      "status": "paid",
+      "date": 1776455957274,
+      "total": 105,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 378,
@@ -24612,9 +24673,208 @@
     },
     {
       "id": 658,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 51,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "paid",
+      "date": 1776447959304,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 659,
+      "items": [
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 5,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 5,
+          "code": "P_1773164727803"
+        }
+      ],
+      "status": "paid",
+      "date": 1776447982048,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 660,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 50,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "active",
+      "date": 1776447982135
+    },
+    {
+      "id": 661,
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 144,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 88,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 88,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 88,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "GORDON'S SHORT",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": -8,
+          "code": "P_1773251893658"
+        }
+      ],
+      "status": "paid",
+      "date": 1776456039576,
+      "total": 120,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 662,
+      "items": [
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773944517157"
+        },
+        {
+          "name": "JAGERMEISTER  -PER TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 38,
+          "code": "P_1773944517157"
+        }
+      ],
+      "status": "active",
+      "date": 1776537110411
+    },
+    {
+      "id": 663,
+      "items": [
+        {
+          "name": "CHILLERS PUNCH",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 8,
+          "code": "P_1775754899772"
+        }
+      ],
+      "status": "active",
+      "date": 1776537118360
+    },
+    {
+      "id": 664,
+      "items": [
+        {
+          "name": "SCORE",
+          "price": 12,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1776537158529"
+        },
+        {
+          "name": "CHILLERS PUNCH",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 8,
+          "code": "P_1775754899772"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -8,
+          "code": "P_1774091290480"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537184780,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 665,
       "items": [],
       "status": "active",
-      "date": 1776447063670
+      "date": 1776537184882
+    },
+    {
+      "id": 666,
+      "items": [],
+      "status": "active",
+      "date": 1776537221345
     }
   ],
   "purchaseLog": [
@@ -25134,8 +25394,13 @@
         "amount": 20,
         "date": 1776281232282,
         "table": 333
+      },
+      {
+        "amount": 70,
+        "date": 1776537118081,
+        "table": 349
       }
     ]
   },
-  "lastSync": "2026-04-17T17:30:42.509Z"
+  "lastSync": "2026-04-18T18:33:26.064Z"
 }
