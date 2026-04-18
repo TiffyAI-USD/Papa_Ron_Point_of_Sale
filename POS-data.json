@@ -5,14 +5,14 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 3
+      "stock": 2
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -625,7 +625,7 @@
       "price": 70,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1773324741065": {
       "name": "MR ORANGE ",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 1
+      "stock": 0
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -25157,9 +25157,82 @@
     },
     {
       "id": 673,
+      "items": [
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 3,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773164747894"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 1,
+          "code": "P_1773327642102"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537539104,
+      "total": 70,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 674,
+      "items": [
+        {
+          "name": "LUCKY CLUB 250ML",
+          "price": 70,
+          "cost": 0,
+          "category": "drink",
+          "stock": 18,
+          "code": "P_1773324726340"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537557756,
+      "total": 70,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 675,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537580875,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 676,
       "items": [],
       "status": "active",
-      "date": 1776537498299
+      "date": 1776537580971
     }
   ],
   "purchaseLog": [
@@ -25687,5 +25760,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:37:21.136Z"
+  "lastSync": "2026-04-18T18:38:42.594Z"
 }
