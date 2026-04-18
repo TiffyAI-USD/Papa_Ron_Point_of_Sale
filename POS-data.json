@@ -25494,7 +25494,24 @@
     },
     {
       "id": 684,
-      "items": [],
+      "items": [
+        {
+          "name": "EXTREME CAN 440ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 32,
+          "code": "P_1773929316515"
+        },
+        {
+          "name": "BREEZER WATERMELON 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773925849392"
+        }
+      ],
       "status": "active",
       "date": 1776537956301
     }
@@ -26024,5 +26041,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:45:52.043Z"
+  "lastSync": "2026-04-18T18:46:13.642Z"
 }
