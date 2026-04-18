@@ -358,13 +358,13 @@
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
-      "stock": -10,
+      "stock": -11,
       "cost": 0,
       "category": "ingredient"
     },
     "RUSSIAN ": {
       "name": "RUSSIAN ",
-      "stock": -10,
+      "stock": -11,
       "cost": 0,
       "category": "ingredient"
     },
@@ -373,7 +373,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773244841294": {
       "name": "BLACK LABEL 300MLS",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": -1
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -45
+      "stock": -46
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 35
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -25230,9 +25230,101 @@
     },
     {
       "id": 676,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -45,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "RED BULL 250ML",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773926623691"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773236344587"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537621292,
+      "total": 145,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 677,
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -46,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -82,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 45,
+          "code": "P_1773324976622"
+        },
+        {
+          "name": "CASTLE MILK STOUT",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1773246049692"
+        }
+      ],
       "status": "active",
-      "date": 1776537580971
+      "date": 1776537621388
     }
   ],
   "purchaseLog": [
@@ -25760,5 +25852,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:38:42.594Z"
+  "lastSync": "2026-04-18T18:40:12.718Z"
 }
