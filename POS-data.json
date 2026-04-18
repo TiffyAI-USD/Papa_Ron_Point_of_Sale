@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -127,
+      "stock": -128,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -83
+      "stock": -84
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -235,13 +235,13 @@
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
-      "stock": -2,
+      "stock": -3,
       "cost": 0,
       "category": "ingredient"
     },
     "BOERIE SAUSAGE ": {
       "name": "BOERIE SAUSAGE ",
-      "stock": -2,
+      "stock": -3,
       "cost": 0,
       "category": "ingredient"
     },
@@ -250,7 +250,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773234210075": {
       "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -47
+      "stock": -48
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -1374,7 +1374,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1774369328057": {
       "name": "WW-GRAM",
@@ -25348,10 +25348,44 @@
           "category": "food",
           "stock": -83,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -47,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE ROLL",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773233966390"
+        },
+        {
+          "name": "EXTRA SALAD",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1774292726893"
         }
       ],
+      "status": "paid",
+      "date": 1776537830515,
+      "total": 245,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 679,
+      "items": [],
       "status": "active",
-      "date": 1776537780781
+      "date": 1776537830632
     }
   ],
   "purchaseLog": [
@@ -25879,5 +25913,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:42:51.788Z"
+  "lastSync": "2026-04-18T18:43:33.562Z"
 }
