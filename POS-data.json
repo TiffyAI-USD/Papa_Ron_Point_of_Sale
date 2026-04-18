@@ -24939,6 +24939,38 @@
           "category": "drink",
           "stock": 22,
           "code": "P_1773245925943"
+        },
+        {
+          "name": "GRAPETISER ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 8,
+          "code": "P_1773927114267"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 5,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "STRONG BOW 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 20,
+          "code": "P_1773246064834"
+        },
+        {
+          "name": "EXTRA CHEESE",
+          "price": 15,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773327171734"
         }
       ],
       "status": "active",
@@ -25470,5 +25502,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:34:37.222Z"
+  "lastSync": "2026-04-18T18:35:12.664Z"
 }
