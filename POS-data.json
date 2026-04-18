@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -123,
+      "stock": -125,
       "cost": 0,
       "category": "ingredient"
     },
@@ -130,7 +130,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "P_1773231967771": {
       "name": "SOMETHING MEATY",
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -25025,9 +25025,53 @@
     },
     {
       "id": 669,
-      "items": [],
+      "items": [
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -10,
+          "code": "P_1773232963360"
+        },
+        {
+          "name": "FLAMING SPARE RIB",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773230368674"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773164747894"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537421259,
+      "total": 325,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 670,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773245979898"
+        }
+      ],
       "status": "active",
-      "date": 1776537394987
+      "date": 1776537421359
     }
   ],
   "purchaseLog": [
@@ -25555,5 +25599,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:36:06.404Z"
+  "lastSync": "2026-04-18T18:36:50.224Z"
 }
