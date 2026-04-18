@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -42,
+      "stock": -43,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -38,
+      "stock": -39,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -112,
+      "stock": -114,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -44,
+      "stock": -46,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -56
+      "stock": -57
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -257,7 +257,7 @@
       "price": 160,
       "cost": 0,
       "category": "food",
-      "stock": -5
+      "stock": -6
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
@@ -25383,9 +25383,36 @@
     },
     {
       "id": 679,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -56,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
+          "price": 160,
+          "cost": 0,
+          "category": "food",
+          "stock": -5,
+          "code": "P_1773234210075"
+        }
+      ],
+      "status": "paid",
+      "date": 1776537867432,
+      "total": 280,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 680,
       "items": [],
       "status": "active",
-      "date": 1776537830632
+      "date": 1776537867527
     }
   ],
   "purchaseLog": [
@@ -25913,5 +25940,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-18T18:43:33.562Z"
+  "lastSync": "2026-04-18T18:44:15.649Z"
 }
