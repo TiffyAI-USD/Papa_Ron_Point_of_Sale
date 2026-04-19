@@ -96,7 +96,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 4
+      "stock": 3
     },
     "P_1773165214687": {
       "name": "TROPICAL GUMMIE ",
@@ -110,18 +110,18 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 8
+      "stock": 6
     },
     "P_1773165261852": {
       "name": "WATERMELON GUMMIE ",
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 17
+      "stock": 16
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -130,
+      "stock": -132,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -85
+      "stock": -86
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 46
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -33
+      "stock": -34
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 95
+      "stock": 94
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -1192,7 +1192,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 23
     },
     "P_1773925481823": {
       "name": "SAVANNA 330ML ",
@@ -1332,7 +1332,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 42
+      "stock": 36
     },
     "P_1774090102240": {
       "name": "RICHELIEU PER-TOT",
@@ -1360,7 +1360,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 22
     },
     "P_1774208105032": {
       "name": "TEQUILA SILVER",
@@ -15216,10 +15216,86 @@
           "category": "drink",
           "stock": 42,
           "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 42,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 42,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 42,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "BUBBLE GUM GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 4,
+          "code": "P_1773165190985"
+        },
+        {
+          "name": "WATERMELON GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 17,
+          "code": "P_1773165261852"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 47,
+          "code": "P_1773245979898"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 8,
+          "code": "P_1773165237846"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 95,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 8,
+          "code": "P_1773165237846"
         }
       ],
-      "status": "active",
-      "date": 1774898772006
+      "status": "paid",
+      "date": 1776625279680,
+      "total": 975,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
     },
     {
       "id": 355,
@@ -25605,6 +25681,31 @@
       ],
       "status": "active",
       "date": 1776624585539
+    },
+    {
+      "id": 688,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -85,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1776625435204,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 689,
+      "items": [],
+      "status": "active",
+      "date": 1776625435320
     }
   ],
   "purchaseLog": [
@@ -26132,5 +26233,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T18:59:46.667Z"
+  "lastSync": "2026-04-19T19:03:51.398Z"
 }
