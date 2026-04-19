@@ -15240,6 +15240,22 @@
           "category": "drink",
           "stock": 42,
           "code": "P_1773944852469"
+        },
+        {
+          "name": "WATERMELON GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 17,
+          "code": "P_1773165261852"
+        },
+        {
+          "name": "BUBBLE GUM GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 4,
+          "code": "P_1773165190985"
         }
       ],
       "status": "active",
@@ -26156,5 +26172,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T18:50:54.122Z"
+  "lastSync": "2026-04-19T18:51:16.302Z"
 }
