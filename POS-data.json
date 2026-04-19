@@ -25703,7 +25703,32 @@
     },
     {
       "id": 689,
-      "items": [],
+      "items": [
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -12,
+          "code": "P_1773232963360"
+        },
+        {
+          "name": "GRAPETISER ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1773927114267"
+        },
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773437849538"
+        }
+      ],
       "status": "active",
       "date": 1776625435320
     }
@@ -26233,5 +26258,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:03:51.398Z"
+  "lastSync": "2026-04-19T19:04:10.927Z"
 }
