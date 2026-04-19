@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -47,
+      "stock": -48,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -43,
+      "stock": -44,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -122,
+      "stock": -124,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -54,
+      "stock": -56,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -61
+      "stock": -62
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 94
+      "stock": 93
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -26283,8 +26283,18 @@
           "code": "P_1773848095512"
         }
       ],
+      "status": "paid",
+      "date": 1776626640292,
+      "total": 130,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 703,
+      "items": [],
       "status": "active",
-      "date": 1776626608786
+      "date": 1776626640385
     }
   ],
   "purchaseLog": [
@@ -26812,5 +26822,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:23:44.275Z"
+  "lastSync": "2026-04-19T19:24:00.384Z"
 }
