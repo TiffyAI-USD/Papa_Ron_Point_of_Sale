@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -134,
+      "stock": -135,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -87
+      "stock": -88
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -46,
+      "stock": -47,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -42,
+      "stock": -43,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -120,
+      "stock": -122,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -52,
+      "stock": -54,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -60
+      "stock": -61
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -339,
+      "stock": -354,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,14 +283,14 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -16
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -27
+      "stock": -28
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -485,7 +485,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 22
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -35
+      "stock": -36
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 34
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -25963,10 +25963,36 @@
           "category": "drink",
           "stock": 35,
           "code": "P_1773482741909"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773245915568"
+        },
+        {
+          "name": "BERNINI MIMOSA 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1773245915568"
         }
       ],
+      "status": "paid",
+      "date": 1776625996295,
+      "total": 640,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 694,
+      "items": [],
       "status": "active",
-      "date": 1776625934051
+      "date": 1776625996436
     }
   ],
   "purchaseLog": [
@@ -26494,5 +26520,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:12:53.703Z"
+  "lastSync": "2026-04-19T19:13:16.436Z"
 }
