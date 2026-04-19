@@ -26431,6 +26431,14 @@
           "category": "food",
           "stock": -63,
           "code": "P_1773233691679"
+        },
+        {
+          "name": "GORDON'S SHORT",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": -9,
+          "code": "P_1773251893658"
         }
       ],
       "status": "active",
@@ -26962,5 +26970,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:32:59.875Z"
+  "lastSync": "2026-04-19T19:33:13.732Z"
 }
