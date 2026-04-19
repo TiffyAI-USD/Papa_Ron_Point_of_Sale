@@ -15168,6 +15168,22 @@
           "category": "food",
           "stock": -6,
           "code": "P_1773236212998"
+        },
+        {
+          "name": "BREEZER WATERMELON 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1774193275942"
+        },
+        {
+          "name": "BREEZER WATERMELON 330ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1774193275942"
         }
       ],
       "status": "active",
@@ -26084,5 +26100,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T18:49:59.571Z"
+  "lastSync": "2026-04-19T18:50:27.211Z"
 }
