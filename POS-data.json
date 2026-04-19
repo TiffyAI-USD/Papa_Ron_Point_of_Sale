@@ -15144,7 +15144,16 @@
     },
     {
       "id": 354,
-      "items": [],
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773333545424"
+        }
+      ],
       "status": "active",
       "date": 1774898772006
     },
@@ -25517,6 +25526,21 @@
       "items": [],
       "status": "active",
       "date": 1776538015312
+    },
+    {
+      "id": 687,
+      "items": [
+        {
+          "name": "SMIRNOFF ICE BERRY ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773245099182"
+        }
+      ],
+      "status": "active",
+      "date": 1776624585539
     }
   ],
   "purchaseLog": [
@@ -26044,5 +26068,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T11:49:04.706Z"
+  "lastSync": "2026-04-19T18:49:45.614Z"
 }
