@@ -26423,6 +26423,14 @@
           "category": "drink",
           "stock": 38,
           "code": "P_1773944517157"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -63,
+          "code": "P_1773233691679"
         }
       ],
       "status": "active",
@@ -26954,5 +26962,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:32:26.069Z"
+  "lastSync": "2026-04-19T19:32:59.875Z"
 }
