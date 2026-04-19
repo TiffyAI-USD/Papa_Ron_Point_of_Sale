@@ -26057,6 +26057,30 @@
           "category": "food",
           "stock": -51,
           "code": "P_1773340830986"
+        },
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -16,
+          "code": "P_1773234587229"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773244911060"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773244911060"
         }
       ],
       "status": "active",
@@ -26588,5 +26612,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:14:58.378Z"
+  "lastSync": "2026-04-19T19:15:07.849Z"
 }
