@@ -25821,7 +25821,32 @@
     },
     {
       "id": 691,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -49,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -49,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 46,
+          "code": "P_1773245979898"
+        }
+      ],
       "status": "active",
       "date": 1776625837165
     }
@@ -26351,5 +26376,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:10:32.495Z"
+  "lastSync": "2026-04-19T19:11:02.499Z"
 }
