@@ -26292,7 +26292,24 @@
     },
     {
       "id": 703,
-      "items": [],
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -62,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "WINGLETS -5 ",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773234587229"
+        }
+      ],
       "status": "active",
       "date": 1776626640385
     }
@@ -26822,5 +26839,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:25:08.017Z"
+  "lastSync": "2026-04-19T19:25:49.866Z"
 }
