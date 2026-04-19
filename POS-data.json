@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -48,
+      "stock": -49,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -44,
+      "stock": -45,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -124,
+      "stock": -126,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -56,
+      "stock": -58,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -62
+      "stock": -63
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -359,
+      "stock": -364,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 57
+      "stock": 56
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 28
+      "stock": 26
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -485,7 +485,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 21
     },
     "P_1773245925943": {
       "name": "BLACK CROWN 440ML",
@@ -26342,8 +26342,18 @@
           "code": "P_1773245915568"
         }
       ],
+      "status": "paid",
+      "date": 1776626799112,
+      "total": 305,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 704,
+      "items": [],
       "status": "active",
-      "date": 1776626640385
+      "date": 1776626799239
     }
   ],
   "purchaseLog": [
@@ -26871,5 +26881,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:26:24.531Z"
+  "lastSync": "2026-04-19T19:26:39.239Z"
 }
