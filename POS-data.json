@@ -26135,7 +26135,16 @@
     },
     {
       "id": 697,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -53,
+          "code": "P_1773340830986"
+        }
+      ],
       "status": "active",
       "date": 1776626230173
     }
@@ -26665,5 +26674,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:17:10.170Z"
+  "lastSync": "2026-04-19T19:19:14.957Z"
 }
