@@ -25947,6 +25947,22 @@
           "category": "food",
           "stock": -35,
           "code": "P_1773333545424"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -87,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773482741909"
         }
       ],
       "status": "active",
@@ -26478,5 +26494,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:12:29.995Z"
+  "lastSync": "2026-04-19T19:12:53.703Z"
 }
