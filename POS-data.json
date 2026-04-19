@@ -1571,6 +1571,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -1
+    },
+    "P_1776626509033": {
+      "name": "MUSHROOMS SHAK GRAM",
+      "price": 60,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -26184,6 +26191,21 @@
       "items": [],
       "status": "active",
       "date": 1776626423647
+    },
+    {
+      "id": 700,
+      "items": [
+        {
+          "name": "MUSHROOMS SHAK GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 0,
+          "code": "P_1776626509033"
+        }
+      ],
+      "status": "active",
+      "date": 1776626515335
     }
   ],
   "purchaseLog": [
@@ -26711,5 +26733,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:20:20.562Z"
+  "lastSync": "2026-04-19T19:21:55.362Z"
 }
