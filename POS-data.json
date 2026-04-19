@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -132,
+      "stock": -133,
       "cost": 0,
       "category": "ingredient"
     },
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -235,13 +235,13 @@
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
-      "stock": -3,
+      "stock": -4,
       "cost": 0,
       "category": "ingredient"
     },
     "BOERIE SAUSAGE ": {
       "name": "BOERIE SAUSAGE ",
-      "stock": -3,
+      "stock": -4,
       "cost": 0,
       "category": "ingredient"
     },
@@ -250,7 +250,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773234210075": {
       "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -319,
+      "stock": -329,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -25
+      "stock": -26
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -513,7 +513,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 14
+      "stock": 13
     },
     "P_1773245979898": {
       "name": "HUNTERS DRY 440ML",
@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": -1
+      "stock": -2
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -758,14 +758,14 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -48
+      "stock": -49
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -1255,7 +1255,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 6
     },
     "P_1773927304684": {
       "name": "STONEY CAN 500ML ",
@@ -1507,7 +1507,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 6
     },
     "P_1775936479685": {
       "name": "SPRITE 500ML ",
@@ -25751,10 +25751,44 @@
           "category": "food",
           "stock": -48,
           "code": "P_1773340830986"
+        },
+        {
+          "name": "GORDON'S BLUE",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 14,
+          "code": "P_1773245961439"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": -1,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "CHILLERS PUNCH",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 7,
+          "code": "P_1775754899772"
         }
       ],
+      "status": "paid",
+      "date": 1776625521412,
+      "total": 500,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 690,
+      "items": [],
       "status": "active",
-      "date": 1776625435320
+      "date": 1776625521509
     }
   ],
   "purchaseLog": [
@@ -26282,5 +26316,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:04:37.637Z"
+  "lastSync": "2026-04-19T19:05:06.176Z"
 }
