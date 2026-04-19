@@ -15152,6 +15152,22 @@
           "category": "food",
           "stock": -33,
           "code": "P_1773333545424"
+        },
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773232963360"
+        },
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773236212998"
         }
       ],
       "status": "active",
@@ -26068,5 +26084,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T18:49:45.614Z"
+  "lastSync": "2026-04-19T18:49:59.571Z"
 }
