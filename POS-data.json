@@ -25786,7 +25786,24 @@
     },
     {
       "id": 690,
-      "items": [],
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -34,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -86,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
       "date": 1776625521509
     }
@@ -26316,5 +26333,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-19T19:05:06.176Z"
+  "lastSync": "2026-04-19T19:10:20.792Z"
 }
