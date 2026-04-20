@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -143,
+      "stock": -144,
       "cost": 0,
       "category": "ingredient"
     },
@@ -165,7 +165,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773232612440": {
       "name": "MILLIONAIRE ",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -51,
+      "stock": -53,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -47,
+      "stock": -49,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -130,
+      "stock": -134,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -62,
+      "stock": -66,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -65
+      "stock": -67
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -105,
+      "stock": -110,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -21
+      "stock": -22
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -716,14 +716,14 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 1
+      "stock": 0
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -51
+      "stock": -52
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1150,7 +1150,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 47
+      "stock": 46
     },
     "P_1773843254060": {
       "name": "SD JOINT ",
@@ -1374,7 +1374,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "P_1774369328057": {
       "name": "WW-GRAM",
@@ -26949,8 +26949,45 @@
           "code": "P_1773770046991"
         }
       ],
+      "status": "paid",
+      "date": 1776712091979,
+      "total": 260,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 720,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -65,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -65,
+          "code": "P_1773233691679"
+        }
+      ],
+      "status": "paid",
+      "date": 1776712111311,
+      "total": 240,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 721,
+      "items": [],
       "status": "active",
-      "date": 1776712036503
+      "date": 1776712111393
     }
   ],
   "purchaseLog": [
@@ -27523,5 +27560,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T19:08:00.885Z"
+  "lastSync": "2026-04-20T19:08:25.037Z"
 }
