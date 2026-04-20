@@ -1311,7 +1311,7 @@
       "price": 5,
       "cost": 0,
       "category": "food",
-      "stock": 143
+      "stock": 141
     },
     "P_1773939600142": {
       "name": "DUNHIL STUFF",
@@ -26985,9 +26985,32 @@
     },
     {
       "id": 721,
-      "items": [],
+      "items": [
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 143,
+          "code": "P_1773939546490"
+        },
+        {
+          "name": "DUNHIL LOOSE",
+          "price": 5,
+          "cost": 0,
+          "category": "food",
+          "stock": 143,
+          "code": "P_1773939546490"
+        }
+      ],
       "status": "active",
       "date": 1776712111393
+    },
+    {
+      "id": 722,
+      "items": [],
+      "status": "active",
+      "date": 1776712238366
     }
   ],
   "purchaseLog": [
@@ -27506,6 +27529,16 @@
         "name": "SPRITE 500ML ",
         "price": 15,
         "date": 1776699651493
+      },
+      {
+        "name": "DUNHIL LOOSE",
+        "price": 5,
+        "date": 1776712237508
+      },
+      {
+        "name": "DUNHIL LOOSE",
+        "price": 5,
+        "date": 1776712237508
       }
     ],
     "Beranise": [
@@ -27560,5 +27593,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T19:08:40.073Z"
+  "lastSync": "2026-04-20T19:10:32.076Z"
 }
