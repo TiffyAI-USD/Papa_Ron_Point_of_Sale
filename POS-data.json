@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 50
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -1514,7 +1514,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": -1
+      "stock": -2
     },
     "P_1776106538790": {
       "name": "RUSSIAN ROLL",
@@ -26542,6 +26542,27 @@
       ],
       "status": "active",
       "date": 1776699593395
+    },
+    {
+      "id": 706,
+      "items": [
+        {
+          "name": "SPRITE 500ML ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": -1,
+          "code": "P_1775936479685"
+        }
+      ],
+      "status": "active",
+      "date": 1776699636077
+    },
+    {
+      "id": 707,
+      "items": [],
+      "status": "active",
+      "date": 1776699652432
     }
   ],
   "purchaseLog": [
@@ -26937,6 +26958,36 @@
         "name": "BOERIE AND CHIPS",
         "price": 50,
         "date": 1776444337461
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776699635099
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776699635099
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776699635099
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776699635099
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776699635099
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1776699635099
       }
     ],
     "Marshall": [
@@ -27020,6 +27071,11 @@
         "name": "COKE 500ML ",
         "price": 20,
         "date": 1775059878525
+      },
+      {
+        "name": "SPRITE 500ML ",
+        "price": 15,
+        "date": 1776699651493
       }
     ],
     "Beranise": [
@@ -27069,5 +27125,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T15:40:12.627Z"
+  "lastSync": "2026-04-20T15:40:07.542Z"
 }
