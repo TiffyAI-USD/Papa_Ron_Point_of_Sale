@@ -40,14 +40,14 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 8
+      "stock": 7
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": 4
+      "stock": 3
     },
     "P_1773164912626": {
       "name": "GANJA 1-GRAM",
@@ -110,7 +110,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": 6
+      "stock": 4
     },
     "P_1773165261852": {
       "name": "WATERMELON GUMMIE ",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -138,
+      "stock": -139,
       "cost": 0,
       "category": "ingredient"
     },
@@ -151,7 +151,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -3
     },
     "P_1773232359739": {
       "name": "VEGETARIAN ",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -50,
+      "stock": -51,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -46,
+      "stock": -47,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -128,
+      "stock": -130,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -60,
+      "stock": -62,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -64
+      "stock": -65
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 49
+      "stock": 46
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 76
+      "stock": 75
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -807,7 +807,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -17
+      "stock": -18
     },
     "P_1773506334925": {
       "name": "JAMESON SELECT  RESERVE TOT",
@@ -1388,7 +1388,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "LETTUCE": {
       "name": "LETTUCE",
@@ -1556,7 +1556,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -2
+      "stock": -5
     },
     "P_1776444759875": {
       "name": "GRAPE GUMMIE PACKET",
@@ -26602,8 +26602,183 @@
           "code": "P_1773233691679"
         }
       ],
+      "status": "paid",
+      "date": 1776711681615,
+      "total": 150,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 711,
+      "items": [
+        {
+          "name": "PEPPERONI",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1773232222514"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 6,
+          "code": "P_1773165237846"
+        }
+      ],
+      "status": "paid",
+      "date": 1776711711686,
+      "total": 175,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 712,
+      "items": [
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 8,
+          "code": "P_1773164868475"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 49,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "paid",
+      "date": 1776711732452,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 713,
+      "items": [
+        {
+          "name": "SD-GRAM",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -3,
+          "code": "P_1774369365041"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "GRAPE GUMMIE ",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": 5,
+          "code": "P_1773165237846"
+        },
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 4,
+          "code": "P_1773164886248"
+        },
+        {
+          "name": "DAB HIT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1776444433289"
+        },
+        {
+          "name": "DAB HIT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1776444433289"
+        },
+        {
+          "name": "DAB HIT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -2,
+          "code": "P_1776444433289"
+        }
+      ],
+      "status": "paid",
+      "date": 1776711781181,
+      "total": 250,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 714,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "paid",
+      "date": 1776711804050,
+      "total": 60,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 715,
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -48,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -48,
+          "code": "P_1773333089927"
+        }
+      ],
       "status": "active",
-      "date": 1776711630652
+      "date": 1776711804175
     }
   ],
   "purchaseLog": [
@@ -27176,5 +27351,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T19:01:09.679Z"
+  "lastSync": "2026-04-20T19:03:17.889Z"
 }
