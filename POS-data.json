@@ -26907,6 +26907,30 @@
           "category": "food",
           "stock": -4,
           "code": "P_1773232503460"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -21,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -51,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "EXTRA SALAD",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1774292726893"
         }
       ],
       "status": "active",
@@ -27483,5 +27507,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T19:07:32.288Z"
+  "lastSync": "2026-04-20T19:07:47.186Z"
 }
