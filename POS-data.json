@@ -26584,7 +26584,24 @@
     },
     {
       "id": 710,
-      "items": [],
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 76,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -64,
+          "code": "P_1773233691679"
+        }
+      ],
       "status": "active",
       "date": 1776711630652
     }
@@ -27159,5 +27176,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T19:00:30.652Z"
+  "lastSync": "2026-04-20T19:01:09.679Z"
 }
