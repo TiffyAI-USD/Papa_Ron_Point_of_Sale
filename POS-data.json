@@ -1570,7 +1570,7 @@
       "price": 12,
       "cost": 0,
       "category": "drink",
-      "stock": -1
+      "stock": 19
     },
     "P_1776626509033": {
       "name": "MUSHROOMS SHAK GRAM",
@@ -27125,5 +27125,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T18:00:03.732Z"
+  "lastSync": "2026-04-20T18:01:05.119Z"
 }
