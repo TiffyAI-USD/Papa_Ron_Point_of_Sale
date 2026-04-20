@@ -26794,6 +26794,22 @@
           "category": "food",
           "stock": -16,
           "code": "P_1773232963360"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -88,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "BLACK CROWN 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773245925943"
         }
       ],
       "status": "active",
@@ -27370,5 +27386,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-20T19:03:54.747Z"
+  "lastSync": "2026-04-20T19:04:34.770Z"
 }
