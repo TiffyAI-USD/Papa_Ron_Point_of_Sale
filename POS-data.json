@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 50
+      "stock": 49
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -1150,7 +1150,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 47
     },
     "P_1773843254060": {
       "name": "SD JOINT ",
@@ -1346,7 +1346,7 @@
       "price": 3,
       "cost": 0,
       "category": "drink",
-      "stock": -9
+      "stock": -11
     },
     "P_1774119200192": {
       "name": "ICE BAG",
@@ -1570,7 +1570,7 @@
       "price": 12,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1776626509033": {
       "name": "MUSHROOMS SHAK GRAM",
@@ -16514,8 +16514,12 @@
           "code": "P_1774091290480"
         }
       ],
-      "status": "active",
-      "date": 1775025986393
+      "status": "paid",
+      "date": 1776711608927,
+      "total": 48,
+      "tip": 2,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 390,
@@ -26562,6 +26566,27 @@
       ],
       "status": "active",
       "date": 1776711579799
+    },
+    {
+      "id": 709,
+      "items": [
+        {
+          "name": "COKE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 48,
+          "code": "P_1773770046991"
+        }
+      ],
+      "status": "active",
+      "date": 1776711609196
+    },
+    {
+      "id": 710,
+      "items": [],
+      "status": "active",
+      "date": 1776711630652
     }
   ],
   "purchaseLog": [
@@ -27063,6 +27088,11 @@
         "name": "WW JOINT",
         "price": 25,
         "date": 1776093195630
+      },
+      {
+        "name": "COKE ",
+        "price": 15,
+        "date": 1776711629769
       }
     ],
     "Siya": [
@@ -27121,8 +27151,13 @@
         "amount": 70,
         "date": 1776537118081,
         "table": 349
+      },
+      {
+        "amount": 2,
+        "date": 1776711608927,
+        "table": 389
       }
     ]
   },
-  "lastSync": "2026-04-20T18:59:51.443Z"
+  "lastSync": "2026-04-20T19:00:30.652Z"
 }
