@@ -1598,7 +1598,14 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 0
+      "stock": 24
+    },
+    "POTATOES_": {
+      "name": "POTATOES ",
+      "stock": 5,
+      "cost": 15.6,
+      "price": 0,
+      "category": "ingredient"
     }
   },
   "recipes": {
@@ -27079,6 +27086,13 @@
       "qty": 20,
       "cost": 25,
       "cat": "Food"
+    },
+    {
+      "date": 1776781084648,
+      "name": "POTATOES ",
+      "qty": 5,
+      "cost": 78,
+      "cat": "Food"
     }
   ],
   "staffSales": {
@@ -27641,5 +27655,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T14:17:23.430Z"
+  "lastSync": "2026-04-21T14:18:04.664Z"
 }
