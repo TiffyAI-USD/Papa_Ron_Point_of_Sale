@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 43
+      "stock": 42
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -27355,9 +27355,28 @@
     },
     {
       "id": 731,
+      "items": [
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773324976622"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796401044,
+      "total": 45,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 732,
       "items": [],
       "status": "active",
-      "date": 1776796380515
+      "date": 1776796401160
     }
   ],
   "purchaseLog": [
@@ -27957,5 +27976,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T18:33:00.515Z"
+  "lastSync": "2026-04-21T18:33:16.682Z"
 }
