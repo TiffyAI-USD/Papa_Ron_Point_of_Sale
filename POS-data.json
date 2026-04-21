@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 93
+      "stock": 92
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -16551,7 +16551,72 @@
     },
     {
       "id": 390,
-      "items": [],
+      "items": [
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -11,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1773926133077"
+        }
+      ],
       "status": "active",
       "date": 1775026007004
     },
@@ -27039,6 +27104,40 @@
       ],
       "status": "active",
       "date": 1776762274487
+    },
+    {
+      "id": 723,
+      "items": [
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 93,
+          "code": "P_1773848095512"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796078371,
+      "total": 10,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 724,
+      "items": [
+        {
+          "name": "SCORE",
+          "price": 12,
+          "cost": 0,
+          "category": "drink",
+          "stock": 18,
+          "code": "P_1776537158529"
+        }
+      ],
+      "status": "active",
+      "date": 1776796078547
     }
   ],
   "purchaseLog": [
@@ -27638,5 +27737,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T14:18:27.219Z"
+  "lastSync": "2026-04-21T18:28:35.178Z"
 }
