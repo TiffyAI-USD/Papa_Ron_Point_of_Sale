@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 75
+      "stock": 73
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -27374,9 +27374,36 @@
     },
     {
       "id": 732,
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 75,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 75,
+          "code": "P_1773324850731"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796422570,
+      "total": 60,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 733,
       "items": [],
       "status": "active",
-      "date": 1776796401160
+      "date": 1776796422676
     }
   ],
   "purchaseLog": [
@@ -27976,5 +28003,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T18:33:16.682Z"
+  "lastSync": "2026-04-21T18:33:42.675Z"
 }
