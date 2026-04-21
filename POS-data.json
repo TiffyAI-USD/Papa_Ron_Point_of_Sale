@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -144,
+      "stock": -147,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -91
+      "stock": -93
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": -14
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -257,11 +257,11 @@
       "price": 160,
       "cost": 0,
       "category": "food",
-      "stock": -6
+      "stock": -7
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -110,
+      "stock": -115,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -22
+      "stock": -23
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -354,7 +354,7 @@
       "price": 200,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 61
+      "stock": 58
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 44
+      "stock": 43
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -744,14 +744,14 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -36
+      "stock": -38
     },
     "P_1773340774940": {
       "name": "FAN",
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 33
+      "stock": 32
     },
     "P_1773340830986": {
       "name": "BOERIE AND CHIPS",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 21
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -1346,7 +1346,7 @@
       "price": 3,
       "cost": 0,
       "category": "drink",
-      "stock": -11
+      "stock": -18
     },
     "P_1774119200192": {
       "name": "ICE BAG",
@@ -1374,7 +1374,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -7
+      "stock": -9
     },
     "P_1774369328057": {
       "name": "WW-GRAM",
@@ -1542,7 +1542,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 5
     },
     "P_1776281211889": {
       "name": "BONG",
@@ -1570,7 +1570,7 @@
       "price": 12,
       "cost": 0,
       "category": "drink",
-      "stock": 18
+      "stock": 17
     },
     "P_1776626509033": {
       "name": "MUSHROOMS SHAK GRAM",
@@ -16615,10 +16615,22 @@
           "category": "drink",
           "stock": 23,
           "code": "P_1773926133077"
+        },
+        {
+          "name": "SCORE",
+          "price": 12,
+          "cost": 0,
+          "category": "drink",
+          "stock": 18,
+          "code": "P_1776537158529"
         }
       ],
-      "status": "active",
-      "date": 1775026007004
+      "status": "paid",
+      "date": 1776796168321,
+      "total": 53,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 391,
@@ -27138,6 +27150,214 @@
       ],
       "status": "active",
       "date": 1776796078547
+    },
+    {
+      "id": 725,
+      "items": [
+        {
+          "name": "COKE 250ML ",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 6,
+          "code": "P_1776280940059"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796189162,
+      "total": 10,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 726,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 61,
+          "code": "P_1773245979898"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 61,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796208994,
+      "total": 70,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 727,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -91,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "EXTRA SALAD",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1774292726893"
+        },
+        {
+          "name": "EXTRA SALAD",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -7,
+          "code": "P_1774292726893"
+        },
+        {
+          "name": "SAVANNA 500ML DRY",
+          "price": 45,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773324976622"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796252493,
+      "total": 240,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 728,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -92,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796283886,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 729,
+      "items": [
+        {
+          "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
+          "price": 160,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773234210075"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -22,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -36,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -36,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 59,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796337617,
+      "total": 515,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 730,
+      "items": [
+        {
+          "name": "RIB RACK",
+          "price": 200,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773236212998"
+        },
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773233142239"
+        },
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1773340774940"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796380421,
+      "total": 370,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 731,
+      "items": [],
+      "status": "active",
+      "date": 1776796380515
     }
   ],
   "purchaseLog": [
@@ -27737,5 +27957,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T18:28:35.178Z"
+  "lastSync": "2026-04-21T18:33:00.515Z"
 }
