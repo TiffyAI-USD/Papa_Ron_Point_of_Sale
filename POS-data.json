@@ -1507,7 +1507,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 30
     },
     "P_1775936479685": {
       "name": "SPRITE 500ML ",
@@ -1585,6 +1585,20 @@
       "cost": 0,
       "category": "drink",
       "stock": 24
+    },
+    "P_1776780968758": {
+      "name": "CHILLERS PUNCH ICE",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 24
+    },
+    "P_1776781000806": {
+      "name": "CHILLERS PUNCH PEACH AND MANGO ",
+      "price": 35,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -27627,5 +27641,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T14:15:41.668Z"
+  "lastSync": "2026-04-21T14:17:23.430Z"
 }
