@@ -394,7 +394,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 37
     },
     "P_1773244925945": {
       "name": "CASTLE LAGER 330ML",
@@ -27627,5 +27627,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T14:14:31.975Z"
+  "lastSync": "2026-04-21T14:15:41.668Z"
 }
