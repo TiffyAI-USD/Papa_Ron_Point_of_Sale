@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -374,
+      "stock": -384,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -29
+      "stock": -30
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -38
+      "stock": -39
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -57
+      "stock": -59
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -27677,8 +27677,18 @@
           "code": "P_1773235049759"
         }
       ],
+      "status": "paid",
+      "date": 1776883599091,
+      "total": 335,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 743,
+      "items": [],
       "status": "active",
-      "date": 1776883488382
+      "date": 1776883599204
     }
   ],
   "purchaseLog": [
@@ -28278,5 +28288,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:45:02.503Z"
+  "lastSync": "2026-04-22T18:46:39.204Z"
 }
