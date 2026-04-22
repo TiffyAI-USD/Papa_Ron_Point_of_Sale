@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -394,
+      "stock": -404,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -31
+      "stock": -32
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 57
+      "stock": 56
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -27861,9 +27861,47 @@
     },
     {
       "id": 748,
+      "items": [
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 57,
+          "code": "P_1773245979898"
+        }
+      ],
+      "status": "paid",
+      "date": 1776883879129,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 749,
+      "items": [
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -31,
+          "code": "P_1773235049759"
+        }
+      ],
+      "status": "paid",
+      "date": 1776883903165,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 750,
       "items": [],
       "status": "active",
-      "date": 1776883859819
+      "date": 1776883903282
     }
   ],
   "purchaseLog": [
@@ -28463,5 +28501,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:50:54.295Z"
+  "lastSync": "2026-04-22T18:51:37.433Z"
 }
