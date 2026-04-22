@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -12
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -27551,9 +27551,28 @@
     },
     {
       "id": 738,
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773164747894"
+        }
+      ],
+      "status": "paid",
+      "date": 1776883399130,
+      "total": 25,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 739,
       "items": [],
       "status": "active",
-      "date": 1776883371847
+      "date": 1776883399243
     }
   ],
   "purchaseLog": [
@@ -28153,5 +28172,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:42:47.405Z"
+  "lastSync": "2026-04-22T18:43:05.772Z"
 }
