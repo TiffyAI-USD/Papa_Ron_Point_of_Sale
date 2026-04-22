@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -55
+      "stock": -57
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -27616,9 +27616,36 @@
     },
     {
       "id": 741,
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -55,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -55,
+          "code": "P_1773340830986"
+        }
+      ],
+      "status": "paid",
+      "date": 1776883488257,
+      "total": 100,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 742,
       "items": [],
       "status": "active",
-      "date": 1776883448709
+      "date": 1776883488382
     }
   ],
   "purchaseLog": [
@@ -28218,5 +28245,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:44:01.363Z"
+  "lastSync": "2026-04-22T18:44:41.738Z"
 }
