@@ -27775,11 +27775,11 @@
         },
         {
           "name": "SD JOINT ",
-          "price": 25,
+          "price": 50,
           "cost": 0,
           "category": "food",
-          "stock": -12,
-          "code": "P_1773164747894"
+          "stock": -3,
+          "code": "P_1773843254060"
         }
       ],
       "status": "active",
@@ -28383,5 +28383,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:48:18.323Z"
+  "lastSync": "2026-04-22T18:49:40.497Z"
 }
