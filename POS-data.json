@@ -5,14 +5,14 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 2
+      "stock": 1
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -12
+      "stock": -13
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -82,7 +82,7 @@
       "price": 1,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -6
     },
     "P_1773165157281": {
       "name": "CREAMSODA GUMMIE ",
@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -148,
+      "stock": -149,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -93
+      "stock": -94
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -27825,8 +27825,45 @@
           "code": "P_1773164747894"
         }
       ],
+      "status": "paid",
+      "date": 1776883839577,
+      "total": 185,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 747,
+      "items": [
+        {
+          "name": "LOOSE RIZZLA",
+          "price": 1,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773165057205"
+        },
+        {
+          "name": "LOOSE RIZZLA",
+          "price": 1,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773165057205"
+        }
+      ],
+      "status": "paid",
+      "date": 1776883859680,
+      "total": 2,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 748,
+      "items": [],
       "status": "active",
-      "date": 1776883800840
+      "date": 1776883859819
     }
   ],
   "purchaseLog": [
@@ -28426,5 +28463,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:50:21.935Z"
+  "lastSync": "2026-04-22T18:50:54.295Z"
 }
