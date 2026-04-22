@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 46
+      "stock": 40
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -28107,5 +28107,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T10:44:51.770Z"
+  "lastSync": "2026-04-22T10:45:09.053Z"
 }
