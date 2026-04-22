@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 17
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -1606,6 +1606,13 @@
       "cost": 15.6,
       "price": 0,
       "category": "ingredient"
+    },
+    "P_1776796598013": {
+      "name": "AMARULA",
+      "price": 25,
+      "cost": 0,
+      "category": "drink",
+      "stock": -1
     }
   },
   "recipes": {
@@ -27482,6 +27489,25 @@
       "items": [],
       "status": "active",
       "date": 1776796465063
+    },
+    {
+      "id": 736,
+      "items": [
+        {
+          "name": "AMARULA",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1776796598013"
+        }
+      ],
+      "status": "paid",
+      "date": 1776796611724,
+      "total": 25,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     }
   ],
   "purchaseLog": [
@@ -28081,5 +28107,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-21T18:34:20.980Z"
+  "lastSync": "2026-04-22T10:44:19.659Z"
 }
