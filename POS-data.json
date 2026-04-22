@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 58
+      "stock": 57
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -1542,7 +1542,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 5
+      "stock": 4
     },
     "P_1776281211889": {
       "name": "BONG",
@@ -27731,8 +27731,35 @@
           "code": "P_1773245979898"
         }
       ],
+      "status": "paid",
+      "date": 1776883666828,
+      "total": 45,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 745,
+      "items": [
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -17,
+          "code": "P_1773232963360"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -30,
+          "code": "P_1773235049759"
+        }
+      ],
       "status": "active",
-      "date": 1776883638578
+      "date": 1776883666963
     }
   ],
   "purchaseLog": [
@@ -28332,5 +28359,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:47:33.814Z"
+  "lastSync": "2026-04-22T18:48:03.109Z"
 }
