@@ -716,7 +716,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773333089927": {
       "name": "PORTION OF CHIPS",
@@ -1227,7 +1227,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 20
     },
     "P_1773926359252": {
       "name": "LIQUI FRUIT ORANGE 330ML ",
@@ -27704,8 +27704,35 @@
           "code": "P_1773327642102"
         }
       ],
+      "status": "paid",
+      "date": 1776883638459,
+      "total": 40,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 744,
+      "items": [
+        {
+          "name": "COKE 250ML ",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 5,
+          "code": "P_1776280940059"
+        },
+        {
+          "name": "HUNTERS DRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 58,
+          "code": "P_1773245979898"
+        }
+      ],
       "status": "active",
-      "date": 1776883599204
+      "date": 1776883638578
     }
   ],
   "purchaseLog": [
@@ -28305,5 +28332,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:46:57.226Z"
+  "lastSync": "2026-04-22T18:47:33.814Z"
 }
