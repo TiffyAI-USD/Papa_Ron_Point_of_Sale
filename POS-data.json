@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -52
+      "stock": -54
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -27589,9 +27589,36 @@
     },
     {
       "id": 740,
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -52,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -52,
+          "code": "P_1773333089927"
+        }
+      ],
+      "status": "paid",
+      "date": 1776883448595,
+      "total": 40,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 741,
       "items": [],
       "status": "active",
-      "date": 1776883424580
+      "date": 1776883448709
     }
   ],
   "purchaseLog": [
@@ -28191,5 +28218,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:43:38.334Z"
+  "lastSync": "2026-04-22T18:44:01.363Z"
 }
