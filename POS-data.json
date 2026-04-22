@@ -27686,7 +27686,24 @@
     },
     {
       "id": 743,
-      "items": [],
+      "items": [
+        {
+          "name": "POWERADE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1773926133077"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 17,
+          "code": "P_1773327642102"
+        }
+      ],
       "status": "active",
       "date": 1776883599204
     }
@@ -28288,5 +28305,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:46:39.204Z"
+  "lastSync": "2026-04-22T18:46:57.226Z"
 }
