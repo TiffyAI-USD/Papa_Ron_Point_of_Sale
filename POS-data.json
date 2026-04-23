@@ -1122,7 +1122,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -11
+      "stock": -13
     },
     "P_1773769599079": {
       "name": "OTHER",
@@ -27899,9 +27899,39 @@
     },
     {
       "id": 750,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 40,
+          "code": "P_1773244875193"
+        }
+      ],
+      "status": "active",
+      "date": 1776954528918
+    },
+    {
+      "id": 751,
+      "items": [
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 51,
+          "code": "P_1773244946839"
+        }
+      ],
+      "status": "active",
+      "date": 1776962894542
+    },
+    {
+      "id": 752,
       "items": [],
       "status": "active",
-      "date": 1776883903282
+      "date": 1776962902355
     }
   ],
   "purchaseLog": [
@@ -28091,6 +28121,11 @@
         "name": "HASH JOINT",
         "price": 30,
         "date": 1775760249779
+      },
+      {
+        "name": "RAW RIZZLA ",
+        "price": 30,
+        "date": 1776962901388
       }
     ],
     "Cats": [
@@ -28334,6 +28369,11 @@
         "name": "BLACK LABEL 500ML ",
         "price": 30,
         "date": 1776699635099
+      },
+      {
+        "name": "RAW RIZZLA ",
+        "price": 30,
+        "date": 1776954593159
       }
     ],
     "Marshall": [
@@ -28501,5 +28541,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-22T18:51:37.433Z"
+  "lastSync": "2026-04-23T16:48:14.554Z"
 }
