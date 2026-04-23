@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -151,
+      "stock": -152,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -96
+      "stock": -97
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -57
+      "stock": -58
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -1598,7 +1598,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 23
     },
     "POTATOES_": {
       "name": "POTATOES ",
@@ -28221,8 +28221,37 @@
           "code": "P_1773333089927"
         }
       ],
+      "status": "paid",
+      "date": 1776971144297,
+      "total": 155,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 759,
+      "items": [
+        {
+          "name": "CHILLERS PUNCH PEACH AND MANGO ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1776781000806"
+        }
+      ],
+      "status": "paid",
+      "date": 1776971173037,
+      "total": 35,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 760,
+      "items": [],
       "status": "active",
-      "date": 1776970968844
+      "date": 1776971173160
     }
   ],
   "purchaseLog": [
@@ -28832,5 +28861,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-23T19:05:36.185Z"
+  "lastSync": "2026-04-23T19:06:08.109Z"
 }
