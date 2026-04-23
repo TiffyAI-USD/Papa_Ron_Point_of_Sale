@@ -28128,6 +28128,46 @@
           "category": "food",
           "stock": 9,
           "code": "P_1773165214687"
+        },
+        {
+          "name": "GUMMIE HASH",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1775421428761"
+        },
+        {
+          "name": "RAW RIZZLA ",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": -13,
+          "code": "P_1773769535752"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 9,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 9,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "GAS LIGHTER ",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 17,
+          "code": "P_1773333320471"
         }
       ],
       "status": "active",
@@ -28741,5 +28781,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-23T19:00:51.611Z"
+  "lastSync": "2026-04-23T19:01:21.283Z"
 }
