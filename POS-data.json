@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -150,
+      "stock": -151,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -95
+      "stock": -96
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -404,
+      "stock": -424,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -32
+      "stock": -34
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 92
+      "stock": 90
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -28007,9 +28007,88 @@
     },
     {
       "id": 754,
-      "items": [],
+      "items": [
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -32,
+          "code": "P_1773235049759"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 92,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 92,
+          "code": "P_1773848095512"
+        }
+      ],
+      "status": "paid",
+      "date": 1776970692792,
+      "total": 120,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 755,
+      "items": [
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -33,
+          "code": "P_1773235049759"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -95,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1776970733508,
+      "total": 235,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 756,
+      "items": [
+        {
+          "name": "SD JOINT ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773843254060"
+        },
+        {
+          "name": "GRAPETISER CAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 24,
+          "code": "P_1775210258847"
+        }
+      ],
       "status": "active",
-      "date": 1776970633743
+      "date": 1776970733625
     }
   ],
   "purchaseLog": [
@@ -28619,5 +28698,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-23T18:57:05.733Z"
+  "lastSync": "2026-04-23T18:59:43.101Z"
 }
