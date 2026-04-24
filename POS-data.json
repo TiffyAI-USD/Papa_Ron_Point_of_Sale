@@ -28811,12 +28811,28 @@
           "code": "P_1773245979898"
         },
         {
-          "name": "COKE ",
-          "price": 15,
+          "name": "COKE 250ML ",
+          "price": 10,
           "cost": 0,
           "category": "drink",
-          "stock": 46,
-          "code": "P_1773770046991"
+          "stock": 4,
+          "code": "P_1776280940059"
+        },
+        {
+          "name": "COKE 250ML ",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 4,
+          "code": "P_1776280940059"
+        },
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 21,
+          "code": "P_1773164727803"
         }
       ],
       "status": "active",
@@ -29435,5 +29451,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:58:30.545Z"
+  "lastSync": "2026-04-24T18:59:03.796Z"
 }
