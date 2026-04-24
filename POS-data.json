@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 6
+      "stock": 4
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -75,7 +75,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 38
+      "stock": 37
     },
     "P_1773165057205": {
       "name": "LOOSE RIZZLA",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -59,
+      "stock": -62,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -55,
+      "stock": -58,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -146,
+      "stock": -152,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -78,
+      "stock": -84,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,17 +231,17 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -73
+      "stock": -76
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
-      "stock": -4,
+      "stock": -5,
       "cost": 0,
       "category": "ingredient"
     },
     "BOERIE SAUSAGE ": {
       "name": "BOERIE SAUSAGE ",
-      "stock": -4,
+      "stock": -5,
       "cost": 0,
       "category": "ingredient"
     },
@@ -250,7 +250,7 @@
       "price": 40,
       "cost": 0,
       "category": "food",
-      "stock": -4
+      "stock": -5
     },
     "P_1773234210075": {
       "name": "RUMP STEAK (WITH MUSHROOMS SAUCE AND CHIPS)",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -424,
+      "stock": -429,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": -40,
+      "stock": -45,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": -120,
+      "stock": -135,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": -8,
+      "stock": -9,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": -43,
+      "stock": -49,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": -8
+      "stock": -9
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -660,7 +660,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 7
+      "stock": 6
     },
     "P_1773324850731": {
       "name": "CASTLE LITE CAN 500ML",
@@ -814,7 +814,7 @@
       "price": 50,
       "cost": 0,
       "category": "drink",
-      "stock": 48
+      "stock": 44
     },
     "P_1773506473127": {
       "name": "COUVOISIER TOT",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 35
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -28593,8 +28593,72 @@
           "code": "P_1773324836625"
         }
       ],
+      "status": "paid",
+      "date": 1777056940891,
+      "total": 645,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 770,
+      "items": [
+        {
+          "name": "RIZZLA PURE HEMP",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 38,
+          "code": "P_1773165040542"
+        },
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 6,
+          "code": "P_1773164868475"
+        },
+        {
+          "name": "HASH JOINT",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 6,
+          "code": "P_1773164868475"
+        }
+      ],
+      "status": "paid",
+      "date": 1777056975608,
+      "total": 85,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 771,
+      "items": [
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -8,
+          "code": "P_1773235768064"
+        }
+      ],
+      "status": "paid",
+      "date": 1777057012030,
+      "total": 350,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 772,
+      "items": [],
       "status": "active",
-      "date": 1777056867503
+      "date": 1777057012143
     }
   ],
   "purchaseLog": [
@@ -29209,5 +29273,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:55:20.006Z"
+  "lastSync": "2026-04-24T18:56:47.172Z"
 }
