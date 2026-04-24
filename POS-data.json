@@ -1570,7 +1570,7 @@
       "price": 12,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1776626509033": {
       "name": "MUSHROOMS SHAK GRAM",
@@ -1591,7 +1591,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 24
+      "stock": 23
     },
     "P_1776781000806": {
       "name": "CHILLERS PUNCH PEACH AND MANGO ",
@@ -17199,40 +17199,20 @@
       "id": 407,
       "items": [
         {
-          "name": "COKE 500ML ",
-          "price": 20,
+          "name": "SCORE",
+          "price": 12,
           "cost": 0,
           "category": "drink",
-          "stock": 20,
-          "code": "P_1773327642102"
-        },
-        {
-          "name": "LOOSE RIZZLA",
-          "price": 1,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773165057205"
-        },
-        {
-          "name": "LOOSE RIZZLA",
-          "price": 1,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773165057205"
-        },
-        {
-          "name": "LOOSE RIZZLA",
-          "price": 1,
-          "cost": 0,
-          "category": "food",
-          "stock": 0,
-          "code": "P_1773165057205"
+          "stock": 17,
+          "code": "P_1776537158529"
         }
       ],
-      "status": "active",
-      "date": 1775124708184
+      "status": "paid",
+      "date": 1777056625047,
+      "total": 12,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 408,
@@ -28280,6 +28260,12 @@
       "items": [],
       "status": "active",
       "date": 1776971173160
+    },
+    {
+      "id": 761,
+      "items": [],
+      "status": "active",
+      "date": 1777056625286
     }
   ],
   "purchaseLog": [
@@ -28786,6 +28772,11 @@
         "name": "BERNINI BLUSH CAN 500ML",
         "price": 35,
         "date": 1775334688554
+      },
+      {
+        "name": "CHILLERS PUNCH ICE",
+        "price": 35,
+        "date": 1777038565319
       }
     ],
     "Derz": [
@@ -28889,5 +28880,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T10:07:10.910Z"
+  "lastSync": "2026-04-24T18:50:17.440Z"
 }
