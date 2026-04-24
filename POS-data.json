@@ -807,7 +807,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -18
+      "stock": 82
     },
     "P_1773506334925": {
       "name": "JAMESON SELECT  RESERVE TOT",
@@ -28875,5 +28875,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T10:03:00.384Z"
+  "lastSync": "2026-04-24T10:04:28.926Z"
 }
