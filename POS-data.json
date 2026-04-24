@@ -40,7 +40,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 7
+      "stock": 6
     },
     "P_1773164886248": {
       "name": "HASH 1-GRAM",
@@ -625,7 +625,7 @@
       "price": 70,
       "cost": 0,
       "category": "drink",
-      "stock": 17
+      "stock": 16
     },
     "P_1773324741065": {
       "name": "MR ORANGE ",
@@ -28443,8 +28443,67 @@
           "code": "P_1773164868475"
         }
       ],
+      "status": "paid",
+      "date": 1777056833276,
+      "total": 100,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 768,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -69,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -69,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -69,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -69,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -98,
+          "code": "P_1773232120019"
+        },
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -98,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1777056808413
+      "date": 1777056833406
     }
   ],
   "purchaseLog": [
@@ -29059,5 +29118,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:53:45.008Z"
+  "lastSync": "2026-04-24T18:54:11.003Z"
 }
