@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -153,
+      "stock": -155,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -98
+      "stock": -100
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -55,
+      "stock": -59,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -51,
+      "stock": -55,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -138,
+      "stock": -146,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -70,
+      "stock": -78,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -69
+      "stock": -73
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -28502,8 +28502,27 @@
           "code": "P_1773232120019"
         }
       ],
+      "status": "paid",
+      "date": 1777056867378,
+      "total": 750,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 769,
+      "items": [
+        {
+          "name": "BOERIE ROLL",
+          "price": 40,
+          "cost": 0,
+          "category": "food",
+          "stock": -4,
+          "code": "P_1773233966390"
+        }
+      ],
       "status": "active",
-      "date": 1777056833406
+      "date": 1777056867503
     }
   ],
   "purchaseLog": [
@@ -29118,5 +29137,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:54:11.003Z"
+  "lastSync": "2026-04-24T18:54:27.502Z"
 }
