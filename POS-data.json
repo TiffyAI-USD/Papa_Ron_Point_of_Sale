@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": -13
+      "stock": 26
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -28875,5 +28875,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T09:59:51.659Z"
+  "lastSync": "2026-04-24T10:00:50.431Z"
 }
