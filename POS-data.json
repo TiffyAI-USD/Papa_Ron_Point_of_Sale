@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -53,
+      "stock": -55,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -49,
+      "stock": -51,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -134,
+      "stock": -138,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -66,
+      "stock": -70,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -67
+      "stock": -69
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -534,7 +534,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 52
+      "stock": 50
     },
     "P_1773246064834": {
       "name": "STRONG BOW 440ML",
@@ -1122,7 +1122,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": -14
+      "stock": -15
     },
     "P_1773769599079": {
       "name": "OTHER",
@@ -1598,7 +1598,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 23
+      "stock": 22
     },
     "POTATOES_": {
       "name": "POTATOES ",
@@ -28351,8 +28351,37 @@
           "code": "P_1773246049692"
         }
       ],
+      "status": "paid",
+      "date": 1777056739763,
+      "total": 340,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 764,
+      "items": [
+        {
+          "name": "CHILLERS PUNCH PEACH AND MANGO ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 23,
+          "code": "P_1776781000806"
+        }
+      ],
+      "status": "paid",
+      "date": 1777056761100,
+      "total": 35,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 765,
+      "items": [],
       "status": "active",
-      "date": 1777056675941
+      "date": 1777056761213
     }
   ],
   "purchaseLog": [
@@ -28967,5 +28996,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:52:03.898Z"
+  "lastSync": "2026-04-24T18:52:38.066Z"
 }
