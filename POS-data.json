@@ -28519,6 +28519,38 @@
           "category": "food",
           "stock": -4,
           "code": "P_1773233966390"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -73,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -73,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -73,
+          "code": "P_1773233691679"
+        },
+        {
+          "name": "RED BULL 250ML",
+          "price": 25,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773926623691"
         }
       ],
       "status": "active",
@@ -29137,5 +29169,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:54:27.502Z"
+  "lastSync": "2026-04-24T18:55:00.189Z"
 }
