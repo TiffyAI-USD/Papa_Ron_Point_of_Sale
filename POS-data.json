@@ -1577,7 +1577,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -1
+      "stock": -3
     },
     "P_1776780856003": {
       "name": "CASTLE LAGER 500ML ",
@@ -28398,9 +28398,36 @@
     },
     {
       "id": 766,
+      "items": [
+        {
+          "name": "MUSHROOMS SHAK GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1776626509033"
+        },
+        {
+          "name": "MUSHROOMS SHAK GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": -1,
+          "code": "P_1776626509033"
+        }
+      ],
+      "status": "paid",
+      "date": 1777056808308,
+      "total": 120,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 767,
       "items": [],
       "status": "active",
-      "date": 1777056779841
+      "date": 1777056808413
     }
   ],
   "purchaseLog": [
@@ -29015,5 +29042,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:52:54.885Z"
+  "lastSync": "2026-04-24T18:53:23.617Z"
 }
