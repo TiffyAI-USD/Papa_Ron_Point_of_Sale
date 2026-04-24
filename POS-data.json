@@ -1626,7 +1626,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 0
+      "stock": 18
     }
   },
   "recipes": {
@@ -28875,5 +28875,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T09:58:32.642Z"
+  "lastSync": "2026-04-24T09:59:51.659Z"
 }
