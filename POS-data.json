@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -155,
+      "stock": -156,
       "cost": 0,
       "category": "ingredient"
     },
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -14
+      "stock": -15
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -1220,7 +1220,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 37
+      "stock": 34
     },
     "P_1773926133077": {
       "name": "POWERADE",
@@ -1346,7 +1346,7 @@
       "price": 3,
       "cost": 0,
       "category": "drink",
-      "stock": -24
+      "stock": -29
     },
     "P_1774119200192": {
       "name": "ICE BAG",
@@ -1598,7 +1598,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 22
+      "stock": 21
     },
     "POTATOES_": {
       "name": "POTATOES ",
@@ -28715,10 +28715,71 @@
           "category": "drink",
           "stock": -24,
           "code": "P_1774091290480"
+        },
+        {
+          "name": "CHILLERS PUNCH PEACH AND MANGO ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 22,
+          "code": "P_1776781000806"
         }
       ],
+      "status": "paid",
+      "date": 1777057058489,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 774,
+      "items": [
+        {
+          "name": "AFRICAN MEATY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -14,
+          "code": "P_1773233142239"
+        },
+        {
+          "name": "BREEZER BLACKBERRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773925955021"
+        },
+        {
+          "name": "BREEZER BLACKBERRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773925955021"
+        },
+        {
+          "name": "BREEZER BLACKBERRY 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 37,
+          "code": "P_1773925955021"
+        }
+      ],
+      "status": "paid",
+      "date": 1777057089650,
+      "total": 255,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 775,
+      "items": [],
       "status": "active",
-      "date": 1777057028298
+      "date": 1777057089764
     }
   ],
   "purchaseLog": [
@@ -29333,5 +29394,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:57:21.255Z"
+  "lastSync": "2026-04-24T18:57:53.613Z"
 }
