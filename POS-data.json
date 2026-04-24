@@ -1627,6 +1627,13 @@
       "cost": 0,
       "category": "food",
       "stock": 18
+    },
+    "P_1777025117240": {
+      "name": "SS INDOOR ",
+      "price": 50,
+      "cost": 0,
+      "category": "food",
+      "stock": 21
     }
   },
   "recipes": {
@@ -28875,5 +28882,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T10:04:28.926Z"
+  "lastSync": "2026-04-24T10:06:12.381Z"
 }
