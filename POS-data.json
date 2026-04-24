@@ -5,7 +5,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 21
+      "stock": 20
     },
     "P_1773164747894": {
       "name": "SD JOINT ",
@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -115,
+      "stock": -120,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,11 +270,11 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -23
+      "stock": -24
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -429,
+      "stock": -434,
       "cost": 0,
       "category": "ingredient"
     },
@@ -283,7 +283,7 @@
       "price": 60,
       "cost": 0,
       "category": "food",
-      "stock": -18
+      "stock": -19
     },
     "P_1773235049759": {
       "name": "WINGLETS -10",
@@ -520,7 +520,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 56
+      "stock": 55
     },
     "P_1773245998876": {
       "name": "STELLA 330ML",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -59
+      "stock": -61
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -807,7 +807,7 @@
       "price": 30,
       "cost": 0,
       "category": "food",
-      "stock": 82
+      "stock": 77
     },
     "P_1773506334925": {
       "name": "JAMESON SELECT  RESERVE TOT",
@@ -1542,7 +1542,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 4
+      "stock": 2
     },
     "P_1776281211889": {
       "name": "BONG",
@@ -28835,8 +28835,88 @@
           "code": "P_1773164727803"
         }
       ],
+      "status": "paid",
+      "date": 1777057161817,
+      "total": 240,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 776,
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -60,
+          "code": "P_1773340830986"
+        }
+      ],
+      "status": "paid",
+      "date": 1777057180209,
+      "total": 50,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 777,
+      "items": [
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 82,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 82,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 82,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 82,
+          "code": "P_1773505029268"
+        },
+        {
+          "name": "1 GRAM SS",
+          "price": 30,
+          "cost": 0,
+          "category": "food",
+          "stock": 82,
+          "code": "P_1773505029268"
+        }
+      ],
+      "status": "paid",
+      "date": 1777057204714,
+      "total": 150,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 778,
+      "items": [],
       "status": "active",
-      "date": 1777057089764
+      "date": 1777057204860
     }
   ],
   "purchaseLog": [
@@ -29451,5 +29531,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:59:03.796Z"
+  "lastSync": "2026-04-24T18:59:53.223Z"
 }
