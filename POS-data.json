@@ -28263,7 +28263,24 @@
     },
     {
       "id": 761,
-      "items": [],
+      "items": [
+        {
+          "name": "RED VELVET JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 18,
+          "code": "P_1777024672031"
+        },
+        {
+          "name": "RED VELVET JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 18,
+          "code": "P_1777024672031"
+        }
+      ],
       "status": "active",
       "date": 1777056625286
     }
@@ -28880,5 +28897,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:50:17.440Z"
+  "lastSync": "2026-04-24T18:50:42.862Z"
 }
