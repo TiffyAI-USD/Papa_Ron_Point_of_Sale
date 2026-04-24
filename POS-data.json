@@ -1613,6 +1613,20 @@
       "cost": 0,
       "category": "drink",
       "stock": -1
+    },
+    "P_1777024672031": {
+      "name": "RED VELVET JOINT",
+      "price": 25,
+      "cost": 0,
+      "category": "food",
+      "stock": 18
+    },
+    "P_1777024693823": {
+      "name": "RED VELVET GRAM",
+      "price": 30,
+      "cost": 0,
+      "category": "food",
+      "stock": 0
     }
   },
   "recipes": {
@@ -28861,5 +28875,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-23T19:06:27.644Z"
+  "lastSync": "2026-04-24T09:58:32.642Z"
 }
