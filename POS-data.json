@@ -443,7 +443,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 28
+      "stock": 27
     },
     "P_1773245784383": {
       "name": "BERNINI BLUSH CAN 500ML",
@@ -541,7 +541,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 19
+      "stock": 18
     },
     "P_1773246082545": {
       "name": "HUNTERS GOLD CAN 440ML",
@@ -632,7 +632,7 @@
       "price": 15,
       "cost": 0,
       "category": "drink",
-      "stock": 10
+      "stock": 8
     },
     "P_1773324759000": {
       "name": "SPARLETTA CREAMSODA",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 72
+      "stock": 71
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -19
+      "stock": -20
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -1598,7 +1598,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 21
+      "stock": 20
     },
     "POTATOES_": {
       "name": "POTATOES ",
@@ -17232,10 +17232,54 @@
           "category": "drink",
           "stock": 21,
           "code": "P_1776781000806"
+        },
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -19,
+          "code": "P_1773437849538"
+        },
+        {
+          "name": "MR ORANGE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1773324741065"
+        },
+        {
+          "name": "MR ORANGE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1773324741065"
+        },
+        {
+          "name": "FLYING FISH 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 28,
+          "code": "P_1773245680224"
+        },
+        {
+          "name": "STRONG BOW 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773246064834"
         }
       ],
-      "status": "active",
-      "date": 1775124881497
+      "status": "paid",
+      "date": 1777140639992,
+      "total": 215,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
     },
     {
       "id": 409,
@@ -29036,6 +29080,21 @@
       ],
       "status": "active",
       "date": 1777140551242
+    },
+    {
+      "id": 782,
+      "items": [
+        {
+          "name": "SCORE",
+          "price": 12,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1776537158529"
+        }
+      ],
+      "status": "active",
+      "date": 1777140640272
     }
   ],
   "purchaseLog": [
@@ -29650,5 +29709,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T18:09:54.135Z"
+  "lastSync": "2026-04-25T18:12:16.835Z"
 }
