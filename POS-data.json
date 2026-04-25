@@ -29569,7 +29569,32 @@
     },
     {
       "id": 793,
-      "items": [],
+      "items": [
+        {
+          "name": "SOMETHING MEATY",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -42,
+          "code": "P_1773333545424"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 34,
+          "code": "P_1773482741909"
+        },
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 34,
+          "code": "P_1773482741909"
+        }
+      ],
       "status": "active",
       "date": 1777143818626
     }
@@ -30186,5 +30211,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:03:38.626Z"
+  "lastSync": "2026-04-25T19:04:01.030Z"
 }
