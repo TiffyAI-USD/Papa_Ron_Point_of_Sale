@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -163,
+      "stock": -164,
       "cost": 0,
       "category": "ingredient"
     },
@@ -193,7 +193,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -15
+      "stock": -16
     },
     "P_1773233252969": {
       "name": "MARGHERITA ",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -459,
+      "stock": -469,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -36
+      "stock": -37
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -29951,8 +29951,18 @@
           "code": "P_1773233142239"
         }
       ],
+      "status": "paid",
+      "date": 1777144210694,
+      "total": 250,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 805,
+      "items": [],
       "status": "active",
-      "date": 1777144169658
+      "date": 1777144210789
     }
   ],
   "purchaseLog": [
@@ -30567,5 +30577,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:09:50.766Z"
+  "lastSync": "2026-04-25T19:10:21.938Z"
 }
