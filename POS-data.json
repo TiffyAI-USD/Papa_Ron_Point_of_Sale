@@ -17820,6 +17820,30 @@
           "category": "drink",
           "stock": 0,
           "code": "P_1777144124679"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -24,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773327642102"
         }
       ],
       "status": "active",
@@ -30516,5 +30540,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:08:53.694Z"
+  "lastSync": "2026-04-25T19:09:16.553Z"
 }
