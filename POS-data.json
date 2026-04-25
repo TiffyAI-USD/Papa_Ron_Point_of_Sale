@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -62,
+      "stock": -63,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -58,
+      "stock": -59,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -152,
+      "stock": -154,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -84,
+      "stock": -86,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -76
+      "stock": -77
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -667,7 +667,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 68
+      "stock": 66
     },
     "P_1773324865164": {
       "name": "CAPPY BREAKFAST ",
@@ -29736,10 +29736,36 @@
           "category": "food",
           "stock": -76,
           "code": "P_1773233691679"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 68,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 68,
+          "code": "P_1773324850731"
         }
       ],
+      "status": "paid",
+      "date": 1777144001410,
+      "total": 180,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 799,
+      "items": [],
       "status": "active",
-      "date": 1777143966805
+      "date": 1777144001504
     }
   ],
   "purchaseLog": [
@@ -30354,5 +30380,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:06:26.449Z"
+  "lastSync": "2026-04-25T19:06:34.408Z"
 }
