@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -159,
+      "stock": -160,
       "cost": 0,
       "category": "ingredient"
     },
@@ -144,7 +144,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -102
+      "stock": -103
     },
     "P_1773232222514": {
       "name": "PEPPERONI",
@@ -744,7 +744,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -42
+      "stock": -43
     },
     "P_1773340774940": {
       "name": "FAN",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 34
+      "stock": 32
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -29595,8 +29595,37 @@
           "code": "P_1773482741909"
         }
       ],
+      "status": "paid",
+      "date": 1777143853618,
+      "total": 175,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 794,
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -102,
+          "code": "P_1773232120019"
+        }
+      ],
+      "status": "paid",
+      "date": 1777143874592,
+      "total": 135,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 795,
+      "items": [],
       "status": "active",
-      "date": 1777143818626
+      "date": 1777143874705
     }
   ],
   "purchaseLog": [
@@ -30211,5 +30240,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:04:01.030Z"
+  "lastSync": "2026-04-25T19:04:26.604Z"
 }
