@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 7
+      "stock": 5
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -434,
+      "stock": -444,
       "cost": 0,
       "category": "ingredient"
     },
@@ -290,7 +290,7 @@
       "price": 100,
       "cost": 0,
       "category": "food",
-      "stock": -34
+      "stock": -35
     },
     "CHICKEN SCHNITZEL ": {
       "name": "CHICKEN SCHNITZEL ",
@@ -758,7 +758,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -61
+      "stock": -63
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
@@ -1206,7 +1206,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 43
+      "stock": 41
     },
     "P_1773925849392": {
       "name": "BREEZER WATERMELON 440ML",
@@ -29196,9 +29196,93 @@
     },
     {
       "id": 785,
-      "items": [],
+      "items": [
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -61,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -61,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "WINGLETS -10",
+          "price": 100,
+          "cost": 0,
+          "category": "food",
+          "stock": -34,
+          "code": "P_1773235049759"
+        },
+        {
+          "name": "EXTREME BOTTLED 275ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773925646727"
+        },
+        {
+          "name": "EXTREME BOTTLED 275ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 43,
+          "code": "P_1773925646727"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 7,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 7,
+          "code": "P_1773164980203"
+        }
+      ],
+      "status": "paid",
+      "date": 1777140881932,
+      "total": 290,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 786,
+      "items": [
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 16,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "CAPPY MANGO ORANGE",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 6,
+          "code": "P_1773324836625"
+        }
+      ],
       "status": "active",
-      "date": 1777140832126
+      "date": 1777140882065
     }
   ],
   "purchaseLog": [
@@ -29813,5 +29897,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T18:13:39.174Z"
+  "lastSync": "2026-04-25T18:14:33.922Z"
 }
