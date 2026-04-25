@@ -17337,7 +17337,48 @@
     },
     {
       "id": 411,
-      "items": [],
+      "items": [
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1774090102240"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1774090102240"
+        },
+        {
+          "name": "RICHELIEU PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 33,
+          "code": "P_1774090102240"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 15,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 15,
+          "code": "P_1773327642102"
+        }
+      ],
       "status": "active",
       "date": 1775157213135
     },
@@ -29408,12 +29449,6 @@
       "tip": 0,
       "method": "Cash",
       "staff": "Zuko"
-    },
-    {
-      "id": 790,
-      "items": [],
-      "status": "active",
-      "date": 1777141085729
     }
   ],
   "purchaseLog": [
@@ -30028,5 +30063,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T18:17:39.843Z"
+  "lastSync": "2026-04-25T19:01:05.438Z"
 }
