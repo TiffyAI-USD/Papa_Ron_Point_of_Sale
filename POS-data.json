@@ -29110,7 +29110,48 @@
     },
     {
       "id": 783,
-      "items": [],
+      "items": [
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -30,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -30,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -30,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -30,
+          "code": "P_1774091290480"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -30,
+          "code": "P_1774091290480"
+        }
+      ],
       "status": "active",
       "date": 1777140746869
     }
@@ -29727,5 +29768,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T18:12:26.868Z"
+  "lastSync": "2026-04-25T18:12:57.635Z"
 }
