@@ -17216,7 +17216,24 @@
     },
     {
       "id": 408,
-      "items": [],
+      "items": [
+        {
+          "name": "CASTLE LITE CAN 500ML",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 72,
+          "code": "P_1773324850731"
+        },
+        {
+          "name": "CHILLERS PUNCH PEACH AND MANGO ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1776781000806"
+        }
+      ],
       "status": "active",
       "date": 1775124881497
     },
@@ -28914,9 +28931,111 @@
     },
     {
       "id": 778,
-      "items": [],
+      "items": [
+        {
+          "name": "CREAMY CHICKEN",
+          "price": 135,
+          "cost": 0,
+          "category": "food",
+          "stock": -100,
+          "code": "P_1773232120019"
+        }
+      ],
       "status": "active",
-      "date": 1777057204860
+      "date": 1777125323167
+    },
+    {
+      "id": 779,
+      "items": [
+        {
+          "name": "HASH 1-GRAM",
+          "price": 60,
+          "cost": 0,
+          "category": "food",
+          "stock": 3,
+          "code": "P_1773164886248"
+        },
+        {
+          "name": "RIZZLA PURE HEMP",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 37,
+          "code": "P_1773165040542"
+        }
+      ],
+      "status": "active",
+      "date": 1777126401968
+    },
+    {
+      "id": 780,
+      "items": [
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 34,
+          "code": "P_1773482741909"
+        }
+      ],
+      "status": "active",
+      "date": 1777135182896
+    },
+    {
+      "id": 781,
+      "items": [
+        {
+          "name": "STRONG BOW 440ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 19,
+          "code": "P_1773246064834"
+        },
+        {
+          "name": "FLYING FISH 500ML",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 28,
+          "code": "P_1773245680224"
+        },
+        {
+          "name": "MR ORANGE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1773324741065"
+        },
+        {
+          "name": "MR ORANGE ",
+          "price": 15,
+          "cost": 0,
+          "category": "drink",
+          "stock": 10,
+          "code": "P_1773324741065"
+        },
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -19,
+          "code": "P_1773437849538"
+        },
+        {
+          "name": "CHILLERS PUNCH PEACH AND MANGO ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 21,
+          "code": "P_1776781000806"
+        }
+      ],
+      "status": "active",
+      "date": 1777140551242
     }
   ],
   "purchaseLog": [
@@ -29531,5 +29650,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-24T18:59:53.223Z"
+  "lastSync": "2026-04-25T18:09:54.135Z"
 }
