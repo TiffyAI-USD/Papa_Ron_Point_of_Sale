@@ -1346,7 +1346,7 @@
       "price": 3,
       "cost": 0,
       "category": "drink",
-      "stock": -29
+      "stock": -30
     },
     "P_1774119200192": {
       "name": "ICE BAG",
@@ -1570,7 +1570,7 @@
       "price": 12,
       "cost": 0,
       "category": "drink",
-      "stock": 16
+      "stock": 15
     },
     "P_1776626509033": {
       "name": "MUSHROOMS SHAK GRAM",
@@ -29091,10 +29091,28 @@
           "category": "drink",
           "stock": 16,
           "code": "P_1776537158529"
+        },
+        {
+          "name": "FEG",
+          "price": 3,
+          "cost": 0,
+          "category": "drink",
+          "stock": -29,
+          "code": "P_1774091290480"
         }
       ],
+      "status": "paid",
+      "date": 1777140746718,
+      "total": 15,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 783,
+      "items": [],
       "status": "active",
-      "date": 1777140640272
+      "date": 1777140746869
     }
   ],
   "purchaseLog": [
@@ -29709,5 +29727,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T18:12:16.835Z"
+  "lastSync": "2026-04-25T18:12:26.868Z"
 }
