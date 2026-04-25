@@ -723,7 +723,7 @@
       "price": 20,
       "cost": 0,
       "category": "food",
-      "stock": -58
+      "stock": -60
     },
     "P_1773333320471": {
       "name": "GAS LIGHTER ",
@@ -29701,9 +29701,45 @@
     },
     {
       "id": 797,
-      "items": [],
+      "items": [
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -58,
+          "code": "P_1773333089927"
+        },
+        {
+          "name": "PORTION OF CHIPS",
+          "price": 20,
+          "cost": 0,
+          "category": "food",
+          "stock": -58,
+          "code": "P_1773333089927"
+        }
+      ],
+      "status": "paid",
+      "date": 1777143966710,
+      "total": 40,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 798,
+      "items": [
+        {
+          "name": "CHEESE BURGER (WITH SIDE CHIPS)",
+          "price": 120,
+          "cost": 0,
+          "category": "food",
+          "stock": -76,
+          "code": "P_1773233691679"
+        }
+      ],
       "status": "active",
-      "date": 1777143945937
+      "date": 1777143966805
     }
   ],
   "purchaseLog": [
@@ -30318,5 +30354,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:05:41.310Z"
+  "lastSync": "2026-04-25T19:06:26.449Z"
 }
