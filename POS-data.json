@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -164,
+      "stock": -166,
       "cost": 0,
       "category": "ingredient"
     },
@@ -151,7 +151,7 @@
       "price": 135,
       "cost": 0,
       "category": "food",
-      "stock": -3
+      "stock": -4
     },
     "P_1773232359739": {
       "name": "VEGETARIAN ",
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -19
+      "stock": -20
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -274,7 +274,7 @@
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
-      "stock": -469,
+      "stock": -474,
       "cost": 0,
       "category": "ingredient"
     },
@@ -320,25 +320,25 @@
     },
     "CHEESY STRIPS ": {
       "name": "CHEESY STRIPS ",
-      "stock": -50,
+      "stock": -55,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESY POPS": {
       "name": "CHEESY POPS",
-      "stock": -150,
+      "stock": -165,
       "cost": 0,
       "category": "ingredient"
     },
     "RIB RACK": {
       "name": "RIB RACK",
-      "stock": -10,
+      "stock": -11,
       "cost": 0,
       "category": "ingredient"
     },
     "CHEESE GRILLERS": {
       "name": "CHEESE GRILLERS",
-      "stock": -55,
+      "stock": -61,
       "cost": 0,
       "category": "ingredient"
     },
@@ -347,7 +347,7 @@
       "price": 350,
       "cost": 0,
       "category": "food",
-      "stock": -10
+      "stock": -11
     },
     "P_1773236212998": {
       "name": "RIB RACK",
@@ -646,7 +646,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 1
+      "stock": 0
     },
     "P_1773324805766": {
       "name": "SPARLETTA SPARBERRY",
@@ -695,7 +695,7 @@
       "price": 45,
       "cost": 0,
       "category": "drink",
-      "stock": 41
+      "stock": 40
     },
     "P_1773327171734": {
       "name": "EXTRA CHEESE",
@@ -772,7 +772,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 32
+      "stock": 31
     },
     "P_1773483054408": {
       "name": "HEINEKEN 500ML ",
@@ -1248,7 +1248,7 @@
       "price": 25,
       "cost": 0,
       "category": "drink",
-      "stock": 35
+      "stock": 34
     },
     "P_1773927114267": {
       "name": "GRAPETISER ",
@@ -1262,7 +1262,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 30
+      "stock": 29
     },
     "P_1773929316515": {
       "name": "EXTREME CAN 440ML ",
@@ -29960,9 +29960,24 @@
     },
     {
       "id": 805,
+      "items": [
+        {
+          "name": "STONEY CAN 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 30,
+          "code": "P_1773927304684"
+        }
+      ],
+      "status": "active",
+      "date": 1777201004709
+    },
+    {
+      "id": 806,
       "items": [],
       "status": "active",
-      "date": 1777144210789
+      "date": 1777201016718
     }
   ],
   "purchaseLog": [
@@ -30501,6 +30516,46 @@
         "name": "CHEESY POPS -15(SERVED WITH DIP)",
         "price": 50,
         "date": 1776762301301
+      },
+      {
+        "name": "STONEY CAN 500ML ",
+        "price": 20,
+        "date": 1777201015465
+      },
+      {
+        "name": "MUNCHIE PLATTER",
+        "price": 350,
+        "date": 1777201015466
+      },
+      {
+        "name": "PAPA RONY",
+        "price": 150,
+        "date": 1777201015467
+      },
+      {
+        "name": "SPRITE 500ML ",
+        "price": 20,
+        "date": 1777201015467
+      },
+      {
+        "name": "SAVANNA 500ML DRY",
+        "price": 45,
+        "date": 1777201015467
+      },
+      {
+        "name": "APPLETIZER 275ML ",
+        "price": 20,
+        "date": 1777201015467
+      },
+      {
+        "name": "RED BULL 250ML",
+        "price": 25,
+        "date": 1777201015467
+      },
+      {
+        "name": "PEPPERONI",
+        "price": 135,
+        "date": 1777201015468
       }
     ],
     "Siya": [
@@ -30577,5 +30632,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-25T19:10:21.938Z"
+  "lastSync": "2026-04-26T10:56:44.740Z"
 }
