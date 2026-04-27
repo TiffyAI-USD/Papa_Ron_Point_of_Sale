@@ -121,7 +121,7 @@
     },
     "PIZZA BASE ": {
       "name": "PIZZA BASE ",
-      "stock": -166,
+      "stock": -167,
       "cost": 0,
       "category": "ingredient"
     },
@@ -186,7 +186,7 @@
       "price": 150,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -21
     },
     "P_1773233142239": {
       "name": "AFRICAN MEATY",
@@ -1269,7 +1269,7 @@
       "price": 35,
       "cost": 0,
       "category": "drink",
-      "stock": 31
+      "stock": 29
     },
     "P_1773929465649": {
       "name": "BRUTAL FRUIT CAN 500ML ",
@@ -30538,9 +30538,44 @@
     },
     {
       "id": 820,
+      "items": [
+        {
+          "name": "PAPA RONY",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -20,
+          "code": "P_1773232963360"
+        },
+        {
+          "name": "EXTREME CAN 440ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 31,
+          "code": "P_1773929316515"
+        },
+        {
+          "name": "EXTREME CAN 440ML ",
+          "price": 35,
+          "cost": 0,
+          "category": "drink",
+          "stock": 31,
+          "code": "P_1773929316515"
+        }
+      ],
+      "status": "paid",
+      "date": 1777315556388,
+      "total": 220,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 821,
       "items": [],
       "status": "active",
-      "date": 1777315516937
+      "date": 1777315556489
     }
   ],
   "purchaseLog": [
@@ -31230,5 +31265,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:44:57.379Z"
+  "lastSync": "2026-04-27T18:45:46.368Z"
 }
