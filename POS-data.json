@@ -751,7 +751,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 31
+      "stock": 30
     },
     "P_1773340830986": {
       "name": "BOERIE AND CHIPS",
@@ -30573,9 +30573,24 @@
     },
     {
       "id": 821,
-      "items": [],
+      "items": [
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 31,
+          "code": "P_1773340774940"
+        }
+      ],
       "status": "active",
       "date": 1777315556489
+    },
+    {
+      "id": 822,
+      "items": [],
+      "status": "active",
+      "date": 1777315601965
     }
   ],
   "purchaseLog": [
@@ -31211,6 +31226,11 @@
         "name": "DUNHIL LOOSE",
         "price": 5,
         "date": 1776712237508
+      },
+      {
+        "name": "FAN",
+        "price": 20,
+        "date": 1777315601194
       }
     ],
     "Beranise": [
@@ -31265,5 +31285,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:46:13.911Z"
+  "lastSync": "2026-04-27T18:46:41.964Z"
 }
