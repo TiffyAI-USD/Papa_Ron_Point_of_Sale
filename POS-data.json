@@ -18265,7 +18265,40 @@
     },
     {
       "id": 438,
-      "items": [],
+      "items": [
+        {
+          "name": "SPRITE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 31,
+          "code": "P_1773482741909"
+        },
+        {
+          "name": "COKE 500ML ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 11,
+          "code": "P_1773327642102"
+        },
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 32,
+          "code": "P_1773340774940"
+        },
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773235768064"
+        }
+      ],
       "status": "active",
       "date": 1775244795948
     },
@@ -30060,7 +30093,24 @@
     },
     {
       "id": 809,
-      "items": [],
+      "items": [
+        {
+          "name": "FAN",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 32,
+          "code": "P_1773340774940"
+        },
+        {
+          "name": "MUNCHIE PLATTER",
+          "price": 350,
+          "cost": 0,
+          "category": "food",
+          "stock": -11,
+          "code": "P_1773235768064"
+        }
+      ],
       "status": "active",
       "date": 1777315059885
     }
@@ -30717,5 +30767,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:37:19.808Z"
+  "lastSync": "2026-04-27T18:37:52.507Z"
 }
