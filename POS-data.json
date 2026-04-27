@@ -68,7 +68,7 @@
       "price": 10,
       "cost": 0,
       "category": "food",
-      "stock": 5
+      "stock": 3
     },
     "P_1773165040542": {
       "name": "RIZZLA PURE HEMP",
@@ -758,14 +758,14 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -63
+      "stock": -67
     },
     "P_1773437849538": {
       "name": "CHEESY POPS -15(SERVED WITH DIP)",
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -22
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -814,7 +814,7 @@
       "price": 50,
       "cost": 0,
       "category": "drink",
-      "stock": 44
+      "stock": 43
     },
     "P_1773506473127": {
       "name": "COUVOISIER TOT",
@@ -29993,10 +29993,76 @@
           "category": "food",
           "stock": -20,
           "code": "P_1773437849538"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -63,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -63,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -63,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "BOERIE AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -63,
+          "code": "P_1773340830986"
+        },
+        {
+          "name": "JAMESON SELECT  RESERVE TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 44,
+          "code": "P_1773506334925"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 5,
+          "code": "P_1773164980203"
+        },
+        {
+          "name": "LUNCH BAR",
+          "price": 10,
+          "cost": 0,
+          "category": "food",
+          "stock": 5,
+          "code": "P_1773164980203"
         }
       ],
+      "status": "paid",
+      "date": 1777315059784,
+      "total": 370,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 809,
+      "items": [],
       "status": "active",
-      "date": 1777314985825
+      "date": 1777315059885
     }
   ],
   "purchaseLog": [
@@ -30651,5 +30717,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:36:16.225Z"
+  "lastSync": "2026-04-27T18:37:19.808Z"
 }
