@@ -1648,6 +1648,13 @@
       "cost": 0,
       "category": "drink",
       "stock": -4
+    },
+    "P_1777317034807": {
+      "name": "KWV ",
+      "price": 40,
+      "cost": 0,
+      "category": "drink",
+      "stock": 0
     }
   },
   "recipes": {
@@ -18688,6 +18695,14 @@
           "category": "food",
           "stock": -53,
           "code": "P_1773232120019"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773244875193"
         }
       ],
       "status": "active",
@@ -30600,6 +30615,37 @@
       ],
       "status": "active",
       "date": 1777315601965
+    },
+    {
+      "id": 823,
+      "items": [
+        {
+          "name": "KWV ",
+          "price": 40,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1777317034807"
+        },
+        {
+          "name": "KWV ",
+          "price": 40,
+          "cost": 0,
+          "category": "drink",
+          "stock": 0,
+          "code": "P_1777317034807"
+        },
+        {
+          "name": "FLAMING SPARE RIB",
+          "price": 150,
+          "cost": 0,
+          "category": "food",
+          "stock": -6,
+          "code": "P_1773230368674"
+        }
+      ],
+      "status": "active",
+      "date": 1777317041370
     }
   ],
   "purchaseLog": [
@@ -31294,5 +31340,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T19:10:13.750Z"
+  "lastSync": "2026-04-27T19:10:41.383Z"
 }
