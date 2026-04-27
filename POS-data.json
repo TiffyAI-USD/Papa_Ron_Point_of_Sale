@@ -12,7 +12,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 26
+      "stock": 25
     },
     "P_1773164768558": {
       "name": "CHOCOLOKO JOINT ",
@@ -1619,7 +1619,7 @@
       "price": 25,
       "cost": 0,
       "category": "food",
-      "stock": 13
+      "stock": 12
     },
     "P_1777024693823": {
       "name": "RED VELVET GRAM",
@@ -30233,10 +30233,28 @@
           "category": "food",
           "stock": 13,
           "code": "P_1777024672031"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 26,
+          "code": "P_1773164747894"
         }
       ],
+      "status": "paid",
+      "date": 1777315290812,
+      "total": 50,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 814,
+      "items": [],
       "status": "active",
-      "date": 1777315270043
+      "date": 1777315290911
     }
   ],
   "purchaseLog": [
@@ -30891,5 +30909,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:41:10.043Z"
+  "lastSync": "2026-04-27T18:41:30.910Z"
 }
