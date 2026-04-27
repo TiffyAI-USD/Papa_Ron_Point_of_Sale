@@ -261,7 +261,7 @@
     },
     "CHEESY STRIPS": {
       "name": "CHEESY STRIPS",
-      "stock": -130,
+      "stock": -135,
       "cost": 0,
       "category": "ingredient"
     },
@@ -270,7 +270,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -26
+      "stock": -27
     },
     "BUFFALO WINGS": {
       "name": "BUFFALO WINGS",
@@ -387,7 +387,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 39
+      "stock": 36
     },
     "P_1773244911060": {
       "name": "CASTLE LITE 330ML ",
@@ -408,7 +408,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 51
+      "stock": 50
     },
     "P_1773244970029": {
       "name": "HUNTERS DRY BOTTLE ",
@@ -765,7 +765,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -22
+      "stock": -23
     },
     "P_1773482741909": {
       "name": "SPRITE 500ML ",
@@ -821,7 +821,7 @@
       "price": 50,
       "cost": 0,
       "category": "drink",
-      "stock": 12
+      "stock": 10
     },
     "P_1773656525333": {
       "name": "RED PEPPDR",
@@ -1332,7 +1332,7 @@
       "price": 30,
       "cost": 0,
       "category": "drink",
-      "stock": 36
+      "stock": 35
     },
     "P_1774090102240": {
       "name": "RICHELIEU PER-TOT",
@@ -30480,10 +30480,67 @@
           "category": "drink",
           "stock": 51,
           "code": "P_1773244946839"
+        },
+        {
+          "name": "TEQUILAR GOLD PER-TOT",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 36,
+          "code": "P_1773944852469"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773506473127"
+        },
+        {
+          "name": "COUVOISIER TOT",
+          "price": 50,
+          "cost": 0,
+          "category": "drink",
+          "stock": 12,
+          "code": "P_1773506473127"
         }
       ],
       "status": "active",
       "date": 1777315445298
+    },
+    {
+      "id": 819,
+      "items": [
+        {
+          "name": "CHEESY STRIPS -5 (SERVED WITH DIP) ",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -26,
+          "code": "P_1773234447154"
+        },
+        {
+          "name": "CHEESY POPS -15(SERVED WITH DIP)",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -22,
+          "code": "P_1773437849538"
+        }
+      ],
+      "status": "paid",
+      "date": 1777315516834,
+      "total": 100,
+      "tip": 0,
+      "method": "Cash",
+      "staff": "Zuko"
+    },
+    {
+      "id": 820,
+      "items": [],
+      "status": "active",
+      "date": 1777315516937
     }
   ],
   "purchaseLog": [
@@ -30678,6 +30735,41 @@
         "name": "RAW RIZZLA ",
         "price": 30,
         "date": 1776962901388
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1777315496419
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1777315496419
+      },
+      {
+        "name": "BLACK LABEL 500ML ",
+        "price": 30,
+        "date": 1777315496419
+      },
+      {
+        "name": "WINDHOEK 500ML ",
+        "price": 30,
+        "date": 1777315496419
+      },
+      {
+        "name": "TEQUILAR GOLD PER-TOT",
+        "price": 30,
+        "date": 1777315496419
+      },
+      {
+        "name": "COUVOISIER TOT",
+        "price": 50,
+        "date": 1777315496419
+      },
+      {
+        "name": "COUVOISIER TOT",
+        "price": 50,
+        "date": 1777315496419
       }
     ],
     "Cats": [
@@ -31138,5 +31230,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:44:05.297Z"
+  "lastSync": "2026-04-27T18:44:57.379Z"
 }
