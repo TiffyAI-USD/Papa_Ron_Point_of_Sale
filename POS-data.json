@@ -358,13 +358,13 @@
     },
     "RUSSIAN ROLL": {
       "name": "RUSSIAN ROLL",
-      "stock": -20,
+      "stock": -22,
       "cost": 0,
       "category": "ingredient"
     },
     "RUSSIAN ": {
       "name": "RUSSIAN ",
-      "stock": -20,
+      "stock": -22,
       "cost": 0,
       "category": "ingredient"
     },
@@ -373,7 +373,7 @@
       "price": 50,
       "cost": 0,
       "category": "food",
-      "stock": -20
+      "stock": -22
     },
     "P_1773244841294": {
       "name": "BLACK LABEL 300MLS",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 89
+      "stock": 87
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -30405,9 +30405,85 @@
     },
     {
       "id": 817,
-      "items": [],
+      "items": [
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -20,
+          "code": "P_1773236344587"
+        },
+        {
+          "name": "RUSSIAN ROLL AND CHIPS",
+          "price": 50,
+          "cost": 0,
+          "category": "food",
+          "stock": -20,
+          "code": "P_1773236344587"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 89,
+          "code": "P_1773848095512"
+        },
+        {
+          "name": "WATER 500MLS",
+          "price": 10,
+          "cost": 0,
+          "category": "drink",
+          "stock": 89,
+          "code": "P_1773848095512"
+        }
+      ],
+      "status": "paid",
+      "date": 1777315445194,
+      "total": 120,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 818,
+      "items": [
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 39,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 39,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "BLACK LABEL 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 39,
+          "code": "P_1773244875193"
+        },
+        {
+          "name": "WINDHOEK 500ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 51,
+          "code": "P_1773244946839"
+        }
+      ],
       "status": "active",
-      "date": 1777315415214
+      "date": 1777315445298
     }
   ],
   "purchaseLog": [
@@ -31062,5 +31138,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:43:30.274Z"
+  "lastSync": "2026-04-27T18:44:05.297Z"
 }
