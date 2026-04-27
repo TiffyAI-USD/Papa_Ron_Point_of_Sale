@@ -204,25 +204,25 @@
     },
     "BURGER ROLL": {
       "name": "BURGER ROLL",
-      "stock": -63,
+      "stock": -64,
       "cost": 0,
       "category": "ingredient"
     },
     "PATTY ": {
       "name": "PATTY ",
-      "stock": -59,
+      "stock": -60,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED CHEESE ": {
       "name": "SLICED CHEESE ",
-      "stock": -154,
+      "stock": -156,
       "cost": 0,
       "category": "ingredient"
     },
     "SLICED BACON": {
       "name": "SLICED BACON",
-      "stock": -86,
+      "stock": -88,
       "cost": 0,
       "category": "ingredient"
     },
@@ -231,7 +231,7 @@
       "price": 120,
       "cost": 0,
       "category": "food",
-      "stock": -77
+      "stock": -78
     },
     "BOERIE ROLL": {
       "name": "BOERIE ROLL",
@@ -1171,7 +1171,7 @@
       "price": 10,
       "cost": 0,
       "category": "drink",
-      "stock": 90
+      "stock": 89
     },
     "P_1773924866567": {
       "name": "SMIRNOFF ICE STORM",
@@ -1255,7 +1255,7 @@
       "price": 20,
       "cost": 0,
       "category": "drink",
-      "stock": 6
+      "stock": 5
     },
     "P_1773927304684": {
       "name": "STONEY CAN 500ML ",
@@ -30179,10 +30179,28 @@
           "category": "drink",
           "stock": 90,
           "code": "P_1773848095512"
+        },
+        {
+          "name": "GRAPETISER ",
+          "price": 20,
+          "cost": 0,
+          "category": "drink",
+          "stock": 6,
+          "code": "P_1773927114267"
         }
       ],
+      "status": "paid",
+      "date": 1777315251136,
+      "total": 150,
+      "tip": 0,
+      "method": "Card",
+      "staff": "Zuko"
+    },
+    {
+      "id": 812,
+      "items": [],
       "status": "active",
-      "date": 1777315137221
+      "date": 1777315251231
     }
   ],
   "purchaseLog": [
@@ -30837,5 +30855,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T18:40:19.255Z"
+  "lastSync": "2026-04-27T18:40:51.230Z"
 }
