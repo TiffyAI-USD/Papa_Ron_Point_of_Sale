@@ -18732,12 +18732,20 @@
       "id": 452,
       "items": [
         {
-          "name": "RIZZLA PURE HEMP",
+          "name": "SS JOINT",
           "price": 25,
           "cost": 0,
           "category": "food",
-          "stock": 39,
-          "code": "P_1773165040542"
+          "stock": 19,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "SD JOINT ",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 25,
+          "code": "P_1773164747894"
         }
       ],
       "status": "active",
@@ -31366,5 +31374,5 @@
       }
     ]
   },
-  "lastSync": "2026-04-27T19:11:24.927Z"
+  "lastSync": "2026-04-28T09:40:20.150Z"
 }
