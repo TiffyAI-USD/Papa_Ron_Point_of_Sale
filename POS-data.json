@@ -18730,7 +18730,24 @@
     },
     {
       "id": 452,
-      "items": [],
+      "items": [
+        {
+          "name": "SS JOINT",
+          "price": 25,
+          "cost": 0,
+          "category": "food",
+          "stock": 19,
+          "code": "P_1773164727803"
+        },
+        {
+          "name": "CASTLE LITE 330ML ",
+          "price": 30,
+          "cost": 0,
+          "category": "drink",
+          "stock": 35,
+          "code": "P_1773244911060"
+        }
+      ],
       "status": "active",
       "date": 1775314026774
     },
@@ -31438,5 +31455,5 @@
       }
     ]
   },
-  "lastSync": "2026-10-09T16:32:45.225Z"
+  "lastSync": "2026-10-14T10:33:39.977Z"
 }
